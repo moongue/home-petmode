@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Carlito';
+  src: local('Carlito'), url('../font/carlito/Carlito.woff2') format('woff2'), url('../font/carlito/Carlito.woff') format('woff'), url('../font/carlito/Carlito.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Carlito';
+  src: local('Carlito Italic'), local('Carlito-Italic'), url('../font/carlito/Carlitoitalic.woff2') format('woff2'), url('../font/carlito/Carlitoitalic.woff') format('woff'), url('../font/carlito/Carlitoitalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Carlito';
+  src: local('Carlito Bold'), local('Carlito-Bold'), url('../font/carlito/Carlitobold.woff2') format('woff2'), url('../font/carlito/Carlitobold.woff') format('woff'), url('../font/carlito/Carlitobold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Carlito';
+  src: local('Carlito Bold Italic'), local('Carlito-BoldItalic'), url('../font/carlito/Carlitobolditalic.woff2') format('woff2'), url('../font/carlito/Carlitobolditalic.woff') format('woff'), url('../font/carlito/Carlitobolditalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}

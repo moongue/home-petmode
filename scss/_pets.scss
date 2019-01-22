@@ -1,0 +1,123 @@
+.pets {
+  padding-top: 72px;
+  .container {
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include sm-block() {
+        flex-direction: column;
+      }
+
+      .place-an-ad {
+        position: relative;
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          border-bottom: 1px dotted $dull-blue;
+          font-size: 16px;
+          &:before {
+            content: '';
+            background: url(../images/place-an-ad.png), no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            width: 17px;
+            height: 100%;
+            left: -20px;
+          }
+        }
+      }
+    }
+    .containerPets {
+      padding-top: 5px;
+
+      @include row-flex();
+      @include lg-block() {
+        justify-content: center;
+      }
+
+      .containerPetsBlock {
+        padding-top: 30px;
+        position: relative;
+        user-select: none;
+        max-width: 220px;
+
+        @include col();
+        @include size(2.4);
+        @include size-lg(4);
+        @include size-sm(6);
+        @include size-xs(12);
+
+        &__price {
+          position: absolute;
+          top: 40px;
+          left: 10px;
+          color: $white;
+
+          &:hover {
+            background-color: $sunflower-yellow;
+            border-radius: 7px;
+            transition: all .4s;
+            cursor: pointer;
+          }
+        }
+        &__breed {
+          font-size: 14.5px;
+          color: $mocha;
+          text-transform: uppercase;
+          padding-top: 10px;
+          &-cat {
+            color: $light-plum;
+          }
+        }
+        &__selling {
+          font-size: 22.5px;
+          color: $black;
+          padding-top: 10px;
+        }
+        &__sex-birth {
+          font-size: 14.5px;
+          color: $warm-grey;
+          font-weight: normal;
+        }
+      }
+    }
+    .buttons {
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      @include lg-block() {
+        flex-direction: column;
+      }
+
+      button {
+        width: 580px;
+        height: 44px;
+        margin-top: 20px;
+        background-color: $sunflower-yellow;
+        color: $black;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 3px;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include lg-block() {
+          width: 100%;
+        }
+
+        img {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}

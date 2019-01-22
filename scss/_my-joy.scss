@@ -1,0 +1,55 @@
+.my-joy {
+  padding-top: 72px;
+    .title {
+      span {
+        color: $pinkish-grey;
+      }
+      &:nth-child(2n) {
+        padding-right: 148px;
+      }
+    }
+  .content-my-joy {
+    padding-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    .myJoyNews {
+      display: flex;
+      padding-top: 20px;
+      &Flex {
+        &__title {
+          font-size: 33px;
+          color: $black;
+          @include sm(font-size, 24px);
+        }
+        &__description {
+          padding-top: 10px;
+          font-size: 16px;
+          color: $warm-grey;
+        }
+        &User {
+          display: flex;
+          align-items: center;
+          padding-top: 20px;
+          &Information {
+            padding-left: 12px;
+            &__name {
+              font-size: 14.5px;
+              color: $black;
+            }
+            &__date {
+              font-size: 14px;
+              color: $warm-grey;
+
+            }
+          }
+          &__like {
+            padding-left: 24px;
+          }
+        }
+      }
+    }
+    .popular-stories {
+
+    }
+  }
+}

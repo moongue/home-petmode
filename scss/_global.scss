@@ -1,0 +1,18 @@
+body {
+  font-family: 'Carlito';
+  background-color: #fff;
+  font-weight: bold;
+}
+.wrapper {
+  @include wrapper();
+}
+h2 {
+  font-size: 33px;
+  color: $black;
+  @include sm(font-size, 24px);
+  @include sm(text-align, center);
+}
+h3 {
+  font-size: 24.5px;
+  color: $black;
+}

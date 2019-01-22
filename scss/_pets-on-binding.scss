@@ -1,0 +1,91 @@
+.pets-on-binding {
+  padding-top: 72px;
+  .content-pets-on-binding {
+    display: flex;
+    justify-content: space-between;
+
+    @include md-block() {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .containerPets {
+      padding-top: 5px;
+
+      @include row-flex();
+      @include lg-block() {
+        justify-content: center;
+      }
+
+      .containerPetsBlock {
+        padding-top: 30px;
+        position: relative;
+        user-select: none;
+        max-width: 220px;
+
+        @include col();
+        @include size(3.8);
+        @include size-lg(6);
+        @include size-md(12);
+
+        &__price {
+          position: absolute;
+          top: 40px;
+          left: 10px;
+          color: $white;
+
+          &:hover {
+            background-color: $sunflower-yellow;
+            border-radius: 7px;
+            transition: all .4s;
+            cursor: pointer;
+          }
+        }
+        &__breed {
+          font-size: 14.5px;
+          color: $mocha;
+          text-transform: uppercase;
+          padding-top: 10px;
+          &-cat {
+            color: $light-plum;
+          }
+        }
+        &__selling {
+          font-size: 22.5px;
+          color: $black;
+          padding-top: 10px;
+        }
+        &__sex-birth {
+          font-size: 14.5px;
+          color: $warm-grey;
+          font-weight: normal;
+        }
+      }
+    }
+    .banner-pets-on-binding {
+      padding-top: 30px;
+      display: flex;
+      justify-content: center;
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .more-pets {
+
+
+    @include lg-block() {
+      padding-top: 20px;
+    }
+    @include md(text-align, center);
+
+    a {
+      color: $dull-blue;
+      text-decoration: none;
+      font-size: 16px;
+      border-bottom: 1px solid $dull-blue-two;
+    }
+  }
+}
