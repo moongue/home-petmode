@@ -6,13 +6,36 @@ body {
 .wrapper {
   @include wrapper();
 }
-h2 {
-  font-size: 33px;
-  color: $black;
-  @include sm(font-size, 24px);
-  @include sm(text-align, center);
+.title {
+  h2 {
+    font-size: 33px;
+    color: $black;
+
+    @include sm(font-size, 24px);
+    @include sm(text-align, center);
+
+    span {
+      color: $pinkish-grey;
+      font-weight: normal;
+      font-size: 24.5px;
+    }
+  }
 }
 h3 {
   font-size: 24.5px;
   color: $black;
+  span {
+    color: $pinkish-grey;
+    font-weight: normal;
+    font-size: 24.5px;
+  }
+}
+.show-more{
+  padding-top: 30px;
+  a {
+    color: $dull-blue;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid $dull-blue-two;
+  }
 }

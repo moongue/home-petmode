@@ -34,6 +34,9 @@
       padding-top: 5px;
 
       @include row-flex();
+      @include fix-block() {
+        justify-content: center;
+      }
       @include lg-block() {
         justify-content: center;
       }
@@ -46,7 +49,7 @@
 
         @include col();
         @include size(2.4);
-        @include size-lg(4);
+        @include size-fix(4);
         @include size-sm(6);
         @include size-xs(12);
 
@@ -98,6 +101,7 @@
         width: 580px;
         height: 44px;
         margin-top: 20px;
+        cursor: pointer;
         background-color: $sunflower-yellow;
         color: $black;
         text-align: center;

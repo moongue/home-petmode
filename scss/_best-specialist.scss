@@ -1,0 +1,121 @@
+.best-specialist {
+  background-color: $off-white;
+  padding-bottom: 80px;
+  .title-with-button {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include lg-block {
+      flex-direction: column;
+    }
+
+    .title {
+      h2 {
+
+        @include lg(text-align, center);
+
+      }
+      .profession {
+        display: flex;
+        padding-top: 15px;
+
+        @include md-block() {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        li {
+          padding-right: 20px;
+          padding-top: 15px;
+          a {
+            color: $dull-blue;
+            font-size: 16px;
+            text-decoration: none;
+            border-bottom: 1px solid $dull-blue-two;
+          }
+        }
+      }
+    }
+    .join {
+      background: none;
+      border-radius: 4px;
+      color: $black;
+      font-size: 18px;
+      font-weight: bold;
+      border: 2px solid $sunflower-yellow;
+      height: 44px;
+      width: 228px;
+      @include lg-block() {
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      &:hover,
+      active {
+        outline: none;
+        cursor: pointer;
+        background-color: $sunflower-yellow;
+        color: $navy-green;
+        transition: all .4s;
+      }
+    }
+  }
+  .specialists {
+    padding-top: 30px;
+
+    @include row-flex();
+
+    &Block {
+      padding-top: 40px;
+      display: flex;
+
+      @include col();
+      @include size(4);
+      @include size-lg(6);
+      @include size-sm(12);
+      @include sm(justify-content, center);
+
+      &Description {
+        padding-left: 27px;
+        display: flex;
+        flex-direction: column;
+        &__qualification {
+          color: $warm-grey;
+          font-size: 14.5px;
+          text-transform: uppercase;
+          p {
+            display: flex;
+            align-items: center;
+            img {
+              padding-left: 10px;
+            }
+            .quantity {
+              color: $black;
+              padding-left: 3px;
+              font-weight: normal;
+            }
+            .number {
+              font-weight: normal;
+              padding-left: 2px;
+            }
+          }
+        }
+        &__name {
+          font-size: 22.5px;
+          color: $black;
+          padding-top: 10px;
+        }
+        &__merits {
+          font-size: 14px;
+          line-height: normal;
+          color: $warm-grey;
+          min-width: 207px;
+          padding-top: 8px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

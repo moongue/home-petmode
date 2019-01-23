@@ -1,0 +1,116 @@
+.clubs-and-shelters {
+  padding-top: 65px;
+  .wrapper {
+    border-bottom: 1px solid $white-two;
+  }
+  .title {
+    
+    @include lg-block() {
+      text-align: center;
+    }
+    
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @include lg-block() {
+      flex-direction: column;
+    }
+
+    .shelter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 15px;
+      width: 830px;
+
+      @include lg-block() {
+        margin: 0 auto;
+      }
+      @include md-block() {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      @include xs-block() {
+        justify-content: center;
+      }
+
+      &Block {
+        flex-basis: 235px;
+        padding-top: 20px;
+        display: flex;
+        &Description {
+          padding-left: 27px;
+          display: flex;
+          flex-direction: column;
+          &__qualification {
+            color: $warm-grey;
+            font-size: 14.5px;
+            text-transform: uppercase;
+            p {
+              display: flex;
+              align-items: center;
+              img {
+                padding-left: 10px;
+              }
+              .quantity {
+                color: $black;
+                padding-left: 3px;
+                font-weight: normal;
+              }
+              .number {
+                font-weight: normal;
+                padding-left: 2px;
+              }
+            }
+          }
+          &__name {
+            font-size: 22.5px;
+            color: $black;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 35px;
+
+    @include lg-block() {
+      justify-content: center;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      width: 280px;
+      height: 56px;
+      background-color: $pale-grey;
+      border: none;
+      outline: none;
+      color: $dull-blue;
+      font-size: 16px;
+      text-decoration: none;
+
+      @include lg-block() {
+        width: 100%;
+      }
+    }
+    #register-shelter {
+      margin-top: 20px;
+    }
+  }
+  .show-more {
+    padding-bottom: 69px;
+  }
+}
+
+
+

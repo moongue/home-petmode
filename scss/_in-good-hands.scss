@@ -1,0 +1,97 @@
+.in-good-hands {
+  padding-top: 70px;
+  .wrapper{
+    border-bottom: 1px solid $white-two;
+    .title {
+      padding-bottom: 30px;
+    }
+    .containerPets {
+      padding-top: 5px;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      @include row-flex();
+      @include lg-block() {
+        justify-content: center;
+      }
+
+      .containerPetsBlock {
+        padding-top: 10px;
+        position: relative;
+        user-select: none;
+        max-width: 220px;
+
+        @include col();
+        @include size(2.4);
+        @include size-fix(4);
+        @include size-sm(6);
+        @include size-xs(12);
+
+        &__add {
+          background-color: $pale-grey;
+          border-radius: 3px;
+          padding-top: 0;
+        }
+        &__will-give {
+          position: absolute;
+          top: 15px;
+          left: 10px;
+          color: $white;
+
+          &:hover {
+            background-color: $sunflower-yellow;
+            border-radius: 7px;
+            transition: all .4s;
+            cursor: pointer;
+          }
+        }
+        &__breed {
+          font-size: 14.5px;
+          color: $mocha;
+          text-transform: uppercase;
+          padding-top: 10px;
+          &-cat {
+            color: $light-plum;
+          }
+        }
+        &__selling {
+          font-size: 22.5px;
+          color: $black;
+          padding-top: 10px;
+        }
+        &__sex-birth {
+          font-size: 14.5px;
+          color: $warm-grey;
+          font-weight: normal;
+        }
+      }
+      .place-an-ad {
+        flex-direction: column;
+        margin-top: 10px;
+        background-color: $pale-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 220px;
+        min-height: 218px;
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: $dull-blue;
+          img {
+            padding-bottom: 20px;
+          }
+           p {
+             border-bottom: 1px dotted $dull-blue-two;
+           }
+        }
+      }
+    }
+  }
+  .show-more {
+    padding-bottom: 69px;
+  }
+}

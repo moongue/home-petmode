@@ -1,34 +1,44 @@
-.my-joy {
-  padding-top: 72px;
-  padding-bottom: 67px;
-  .title {
-
-    &:nth-child(2n) {
-      padding-right: 148px;
-    }
-  }
+.news {
+  padding-top: 70px;
   .content-my-joy {
     display: flex;
     justify-content: space-between;
 
-    @include md-block {
+    @include lg-block {
       flex-direction: column;
+    }
+    
+    .title {
+      @include lg-block() {
+        text-align: center;
+      }
     }
     .myJoyNews {
       display: flex;
       justify-content: space-between;
       padding-top: 20px;
       max-width: 780px;
-     &__img {
 
-        @include sm-block() {
+      @include lg-block() {
+        justify-content: center;
+        max-width: 100%;
+      }
+
+      @include sm-block() {
+        justify-content: flex-start;
+      }
+
+      &__img {
+
+        @include xs-block() {
           display: none;
         }
       }
       &Flex {
         &__title {
-          font-size: 33px;
+          font-size: 24.5px;
           color: $black;
+          max-width: 430px;
 
           @include sm(font-size, 24px);
         }
@@ -49,11 +59,7 @@
           align-items: center;
           padding-top: 20px;
           &Information {
-            padding-left: 12px;
-            &__name {
-              font-size: 14.5px;
-              color: $black;
-            }
+
             &__date {
               font-size: 14px;
               color: $warm-grey;
@@ -68,21 +74,14 @@
         }
       }
     }
-    .popular-stories {
-      padding-left: 50px;
-
-      @include md-block() {
-        padding-left: 0;
-        padding-top: 30px;
-      }
-      .myJoyNewsFlex {
-        &__title {
-          font-size: 20.5px;
-        }
-        &User {
-          padding-top: 13px;
-          padding-bottom: 30px;
-        }
+    .banner-news {
+      padding-top: 44px;
+      display: flex;
+      justify-content: center;
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
       }
     }
   }

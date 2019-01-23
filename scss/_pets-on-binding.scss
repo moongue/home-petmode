@@ -1,5 +1,8 @@
 .pets-on-binding {
   padding-top: 72px;
+  .wrapper {
+    border-bottom: 1px solid $white-two;
+  }
   .content-pets-on-binding {
     display: flex;
     justify-content: space-between;
@@ -73,19 +76,13 @@
       }
     }
   }
-  .more-pets {
-
+  .show-more {
+    padding-bottom: 75px;
 
     @include lg-block() {
       padding-top: 20px;
     }
     @include md(text-align, center);
 
-    a {
-      color: $dull-blue;
-      text-decoration: none;
-      font-size: 16px;
-      border-bottom: 1px solid $dull-blue-two;
-    }
   }
 }
