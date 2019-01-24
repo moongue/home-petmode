@@ -1,4 +1,4 @@
-.my-joy {
+#my-joy {
   padding-top: 72px;
   padding-bottom: 67px;
   .title {
@@ -59,7 +59,8 @@
             &__date {
               font-size: 14px;
               color: $warm-grey;
-
+              font-weight: normal;
+              padding-top: 4px;
             }
           }
           &__like {

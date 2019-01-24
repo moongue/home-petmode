@@ -9,23 +9,22 @@ function menuLogic () {
         e.preventDefault();
         $menuBlock.toggleClass(openClass);
     });
-};
+}
 
-function slider () {
-    $('.slider').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 1000,
-    });
-};
+
+
 
 function popup (){
-  $('.sign-in').magnificPopup()
+  $('.sign-in').magnificPopup();
+  $('.sign-up').magnificPopup();
+}
+
+function tabs() {
+    $('.tabs').lightTabs();
 }
 
 $(window).on('load', function() {
     menuLogic();
-    slider();
     popup();
+    tabs();
 });

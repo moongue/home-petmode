@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery/jquery-1.12.4.min.js"></script>
     <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/script.js"></script>
 
@@ -16,7 +16,7 @@
 </head>
 <body>
 <!--HEADER-->
-<header class="header">
+<header id="header">
     <div class="wrapper">
         <div class="container-header">
             <div class="logo">
@@ -29,9 +29,9 @@
 
             <nav class="menu">
                 <ul class="menu-a">
-                    <li><a href="#">Питомцы</a></li>
-                    <li><a href="#">Специалисты</a></li>
-                    <li><a href="#">Моя радость</a></li>
+                    <li><a href="#pets">Питомцы</a></li>
+                    <li><a href="#best-specialist">Специалисты</a></li>
+                    <li><a href="#my-joy">Моя радость</a></li>
                     <li><a href="#">Конкурсы</a></li>
                     <li><a href="#" class="more">Ещё</a></li>
                 </ul>
@@ -47,9 +47,47 @@
 
             <div class="account menu">
                 <ul class="ul-account">
-                    <li><a href="#" class="sign-up">Зарегестрироваться</a></li>
+                    <li><a href="#sign-up-form" class="sign-up">Зарегестрироваться</a></li>
                     <li><a href="#sign-in-form" class="sign-in">Войти</a></li>
                 </ul>
+            </div>
+
+            <div id="sign-up-form" class="mfp-hide white-popup-block">
+                <div class="tabs">
+                    <ul>
+                        <li>Пользователь</li>
+                        <li>Специалист</li>
+                        <li>Заводчик</li>
+                        <li>Клуб</li>
+                        <li>Приют</li>
+                    </ul>
+                    <div>
+                        <div class="register-user">
+                            <div class="title"><h2>Регистрация</br> пользователя</h2></div>
+                            <div class="login-with">
+                                <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a
+                                        href="#">Google</a>
+                                </p>
+                            </div>
+
+                            <div class="inputs">
+                                <div class="inputs-name">
+                                    <input type="text" placeholder="Имя" class="name">
+                                    <input type="text" placeholder="Фамилия" class="surname">
+                                </div>
+                                <input type="email" placeholder="Адрес електронной почты" class="email">
+                                <input type="password" placeholder="Пароль" class="password">
+                            </div>
+                            <button class="go-in" type="button">Войти</button>
+                            <div class="have-account">
+                                <p>У вас уже есть аккаунт? <a href="#">Войти</a></p>
+                            </div>
+                        </div>
+                        <div>Второе содержимое</div>
+                        <div>Третье содержимое</div>
+                    </div>
+                </div>
+
             </div>
 
             <div id="sign-in-form" class="mfp-hide white-popup-block">
@@ -63,7 +101,7 @@
                     <input type="email" placeholder="Адрес електронной почты" class="email">
                     <input type="password" placeholder="Пароль" class="password">
                 </div>
-                <button id="go-in" type="button">Войти</button>
+                <button class="go-in" type="button">Войти</button>
                 <div class="no-account">
                     <p>У вас нет аккаунта? <a href="#">Зарегистрируйтесь</a></p>
                 </div>
@@ -87,7 +125,7 @@
 <!--END HEADER-->
 
 <!--PETS-->
-<section class="pets">
+<section id="pets">
     <div class="wrapper">
         <div class="container">
             <div class="title">
@@ -179,7 +217,7 @@
 <!--END PETS-->
 
 <!--PETS ON BINDING-->
-<section class="pets-on-binding">
+<section id="pets-on-binding">
     <div class="wrapper">
         <div class="title">
             <h2>Питомцы на вязку</h2>
@@ -218,7 +256,7 @@
 <!--END PETS ON BINDING-->
 
 <!--MY JOY-->
-<section class="my-joy">
+<section id="my-joy">
     <div class="wrapper">
         <div class="content-my-joy">
             <div class="container-flex">
@@ -288,7 +326,7 @@
                                 </div>
                                 <div class="myJoyNewsFlexUserInformation">
                                     <div class="myJoyNewsFlexUserInformation__name">Олег Иванов</div>
-                                    <div class="JoyNewsFlexUserInformation__date">28 августа 2018</div>
+                                    <div class="myJoyNewsFlexUserInformation__date">28 августа 2018</div>
                                 </div>
                                 <div class="myJoyNewsFlexUser__like">
                                     <img src="images/like.png" alt="like"> 1 140
@@ -304,7 +342,7 @@
                                 </div>
                                 <div class="myJoyNewsFlexUserInformation">
                                     <div class="myJoyNewsFlexUserInformation__name">Олег Иванов</div>
-                                    <div class="JoyNewsFlexUserInformation__date">28 августа 2018</div>
+                                    <div class="myJoyNewsFlexUserInformation__date">28 августа 2018</div>
                                 </div>
                                 <div class="myJoyNewsFlexUser__like">
                                     <img src="images/like.png" alt="like"> 1 574
@@ -318,7 +356,7 @@
                                 </div>
                                 <div class="myJoyNewsFlexUserInformation">
                                     <div class="myJoyNewsFlexUserInformation__name">Олег Иванов</div>
-                                    <div class="JoyNewsFlexUserInformation__date">28 августа 2018</div>
+                                    <div class="myJoyNewsFlexUserInformation__date">28 августа 2018</div>
                                 </div>
                                 <div class="myJoyNewsFlexUser__like">
                                     <img src="images/like.png" alt="like"> 963
@@ -337,7 +375,7 @@
 <!--END MY JOY-->
 
 <!--BEST SPECIALISTS-->
-<section class="best-specialist">
+<section id="best-specialist">
     <div class="wrapper">
         <div class="title-with-button">
             <div class="title">
@@ -459,7 +497,7 @@
 <!--END BEST SPECIALIST-->
 
 <!--IN GOOD HANDS-->
-<section class="in-good-hands">
+<section id="in-good-hands">
     <div class="wrapper">
         <div class="container">
             <div class="title">
@@ -513,7 +551,7 @@
 <!--END IN GOOD HANDS-->
 
 <!--NEWS-->
-<section class="news">
+<section id="news">
     <div class="wrapper">
         <div class="content-my-joy">
             <div class="container-flex">
@@ -596,7 +634,7 @@
 <!--END NEWS-->
 
 <!--CLUBS AND SHELTERS-->
-<section class="clubs-and-shelters">
+<section id="clubs-and-shelters">
     <div class="wrapper">
         <div class="title">
             <h2>Клубы и приюты</h2>
@@ -690,7 +728,7 @@
 <!--AND CLUBS AND SHELTERS-->
 
 <!--FOOTER-->
-<footer class="footer">
+<footer id="footer">
     <div class="wrapper">
         <div class="container">
             <div class="one-block logo">
@@ -698,11 +736,11 @@
             </div>
             <div class="one-block">
                 <ul class="menu">
-                    <li><a href="#">Питомцы</a></li>
-                    <li><a href="#">Специалисты</a></li>
-                    <li><a href="#">Моя радость</a></li>
+                    <li><a href="#pets">Питомцы</a></li>
+                    <li><a href="#best-specialist">Специалисты</a></li>
+                    <li><a href="#my-joy">Моя радость</a></li>
                     <li><a href="#">Конкурсы</a></li>
-                    <li><a href="#">Новости</a></li>
+                    <li><a href="#news">Новости</a></li>
                     <li><a href="#">Рейтинг</a></li>
                     <li><a href="#">Выставка</a></li>
                     <li><a href="#">Благотворительность</a></li>

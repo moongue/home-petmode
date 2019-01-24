@@ -1,5 +1,4 @@
-.footer {
-  padding-top: 33px;
+#footer {
   padding-bottom: 39px;
   .container {
     display: flex;
@@ -12,14 +11,16 @@
       flex-direction: column;
     }
     .one-block {
+      padding-top: 30px;
 
       @include fix-block() {
         display: flex;
         justify-content: center;
+        padding-top: 10px;
       }
 
       &.logo {
-        width: 130px;
+        width: 126px;
       }
       .menu {
         padding-left: 97px;
