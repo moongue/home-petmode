@@ -6,11 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="plugins/slick-slider/slick.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/script.js"></script>
 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="plugins/slick-slider/slick.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Home Petmode</title>
 </head>
@@ -28,7 +28,7 @@
             </a>
 
             <nav class="menu">
-                <ul>
+                <ul class="menu-a">
                     <li><a href="#">Питомцы</a></li>
                     <li><a href="#">Специалисты</a></li>
                     <li><a href="#">Моя радость</a></li>
@@ -45,9 +45,28 @@
             </div>
 
 
-            <div class="account">
-                <div class="sign-up"><a href="#">Зарегестрироваться</a></div>
-                <div class="sign-in"><a href="#">Войти</a></div>
+            <div class="account menu">
+                <ul class="ul-account">
+                    <li><a href="#" class="sign-up">Зарегестрироваться</a></li>
+                    <li><a href="#sign-in-form" class="sign-in">Войти</a></li>
+                </ul>
+            </div>
+
+            <div id="sign-in-form" class="mfp-hide white-popup-block">
+                <div class="title"><h2>Вход</h2></div>
+                <div class="login-with">
+                    <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a href="#">Google</a>
+                    </p>
+                </div>
+
+                <div class="inputs">
+                    <input type="email" placeholder="Адрес електронной почты" class="email">
+                    <input type="password" placeholder="Пароль" class="password">
+                </div>
+                <button id="go-in" type="button">Войти</button>
+                <div class="no-account">
+                    <p>У вас нет аккаунта? <a href="#">Зарегистрируйтесь</a></p>
+                </div>
             </div>
         </div>
 
@@ -151,8 +170,8 @@
                 </div>
             </div>
             <div class="buttons">
-                <button id="buy-dog"><img src="images/dog.png" alt="Dog">Хочу завести собаку</button>
-                <button id="buy-cat"><img src="images/cat.png" alt="Cat">Хочу завести кошку</button>
+                <button id="buy-dog" type="button"><img src="images/dog.png" alt="Dog">Хочу завести собаку</button>
+                <button id="buy-cat" type="button"><img src="images/cat.png" alt="Cat">Хочу завести кошку</button>
             </div>
         </div>
     </div>
@@ -673,58 +692,46 @@
 <!--FOOTER-->
 <footer class="footer">
     <div class="wrapper">
-        <div class="containers">
-            <div class="first-container">
-                <div class="container-flex">
-                    <div class="one-block">
-                        <a href=""><img src="images/logo.png" alt="Logo" class="logo"></a>
-                    </div>
-                </div>
-                <div class="container-flex grid">
-                    <div class="one-block">
-                        <a href="#">Питомцы</a>
-                        <a href="#">Специалисты</a>
-                    </div>
-                    <div class="one-block">
-                        <a href="#">Моя радость</a>
-                        <a href="#">Конкурсы</a>
-                    </div>
-                    <div class="one-block">
-                        <a href="#">Новости</a>
-                        <a href="#">Рейтинг</a>
-                    </div>
-                    <div class="one-block">
-                        <a href="#">Выставка</a>
-                        <a href="#">Благотворительность</a>
-                    </div>
-                    <div class="one-block">
-                        <div class="social-network">
-                            <a href="#"><img src="images/telegram-icon.png" alt="Telegram Icon"></a>
-                            <a href="#"><img src="images/instagram-icon.png" alt="Instagram Icon"></a>
-                            <a href="#"><img src="images/vk-icon.png" alt="VK Icon"></a>
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="one-block logo">
+                <a href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="one-block">
+                <ul class="menu">
+                    <li><a href="#">Питомцы</a></li>
+                    <li><a href="#">Специалисты</a></li>
+                    <li><a href="#">Моя радость</a></li>
+                    <li><a href="#">Конкурсы</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Рейтинг</a></li>
+                    <li><a href="#">Выставка</a></li>
+                    <li><a href="#">Благотворительность</a></li>
+                </ul>
+            </div>
+            <div class="one-block">
+                <ul class="social-network">
+                    <li><a href="#"><img src="images/telegram-icon.png" alt="Telegram Icon"></a></li>
+                    <li><a href="#"><img src="images/instagram-icon.png" alt="Instagram Icon"></a></li>
+                    <li><a href="#"><img src="images/vk-icon.png" alt="VK Icon"></a></li>
+                </ul>
+            </div>
+            <div class="one-block order">
+                <div class="copyright">
+                    © 2017, Petdmode</br>
+                    Все права защищены
                 </div>
             </div>
-            <div class="second-container">
-                <div class="one-block">
-                    <div class="copyright">
-                        © 2017, Petdmode</br>
-                        Все права защищены
-                    </div>
-                </div>
-                <div class="one-block">
-                    <ul>
-                        <li><a href="#">О проекте</a></li>
-                        <li><a href="#">Помощь</a></li>
-                        <li><a href="#">Реклама</a></li>
-                        <li><a href="#">Правила</a></li>
-                    </ul>
-                </div>
-                <div class="one-block righted">
-                    <div class="yod">
-                        <p>Разработано <img src="images/yod.png" alt="YOD"></p>
-                    </div>
+            <div class="one-block">
+                <ul class="another-menu">
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Реклама</a></li>
+                    <li><a href="#">Правила</a></li>
+                </ul>
+            </div>
+            <div class="one-block righted">
+                <div class="yod">
+                    <p>Разработано <img src="images/yod.png" alt="YOD"></p>
                 </div>
             </div>
         </div>

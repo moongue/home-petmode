@@ -13,8 +13,13 @@
     align-items: center;
     padding-top: 30px;
 
+    @include xs-block() {
+      justify-content: inherit;
+    }
+
     .mobile-menu-toggle {
       display: none;
+
       @include md-block() {
         display: inline-block;
         font-size: 50px;
@@ -24,12 +29,14 @@
         top: 30px;
         right: 0;
       }
+
     }
     .menu {
 
       @include md-block {
         display: none;
       }
+
       ul {
         list-style: none;
         display: flex;
@@ -58,11 +65,15 @@
         display: block;
         position: absolute;
         width: 100%;
-        top: 82px;
+        top: 60px;
+        .menu-a {
+          padding-top: 45px;
+        }
         ul {
           display: flex;
           flex-direction: column;
           align-items: center;
+          padding-top: 20px;
           li {
             width: 100%;
             text-align: center;
@@ -74,6 +85,9 @@
     .search {
       display: flex;
       align-items: center;
+
+      @include xs(padding-left, 15px);
+
       #search {
         background: none;
         border: none;
@@ -95,12 +109,19 @@
       }
 
       @include xs-block() {
-        flex-direction: column;
-        padding-right: 30px;
-        font-size: 12px;
+        display: none;
+      }
+      &.is-open {
+        .ul-account {
+          display: flex;
+          flex-direction: row;
+        }
       }
       .sign-up {
         padding-right: 38px;
+
+        @include sm(padding-right, 15px);
+        @include xs(padding-right, 0);
       }
       a {
         text-decoration: none;
@@ -112,6 +133,7 @@
       }
     }
   }
+
   .container-banner {
     padding-top: 150px;
     max-width: 770px;
@@ -133,10 +155,12 @@
 
       @include xs-block() {
         display: flex;
+        padding-top: 30px;
         flex-direction: column;
         justify-content: flex-start;
-        width: 320px;
+        width: 100%;
       }
+
       input {
         background: none;
         border-radius: 4px;
@@ -149,6 +173,7 @@
         @include sm-block() {
           padding: 19px 45px 14px;
         }
+
         &:hover,
         active {
           outline: none;
@@ -173,16 +198,96 @@
       font-size: 16px;
       font-weight: normal;
 
-      @include xs(font-size, 12px);
+      @include xs-block() {
+        font-size: 12px;
+        padding-top: 12px;
+      }
+
       a {
         text-decoration: none;
         color: $beige;
         border-bottom: 1px dotted $beige;
-        &:hover{
+        &:hover {
           color: $sunflower-yellow;
           transition: all .4s;
         }
       }
     }
   }
+}
+
+#sign-in-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  color: $warm-grey;
+  font-size: 14px;
+  margin: 0 auto;
+  height: 450px;
+  max-width: 540px;
+  background-color: $white;
+  font-weight: normal;
+  a {
+    text-decoration: none;
+    color: $dull-blue;
+    border-bottom: 1px dotted $dull-blue-two;
+    font-size: 14px;
+  }
+  .title {
+    padding-top: 55px;
+    font-weight: bold;
+  }
+  .login-with {
+    padding-top: 20px;
+    font-weight: normal;
+  }
+  .inputs {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    input {
+      background: none;
+      border: 1px solid $camo-green;
+      border-radius: 4px;
+      outline: none;
+      box-sizing: border-box;
+      padding-left: 15px;
+      padding-right: 40px;
+      color: $warm-grey;
+      font-size: 16px;
+      max-width: 376px;
+      height: 47px;
+    }
+    .password {
+      margin-top: 17px;
+      background: url("../images/password-icon.png") no-repeat 95% 50%;
+    }
+    .email {
+      background: url("../images/email-icon.png") no-repeat 95% 50%;
+    }
+  }
+  #go-in {
+    margin-top: 30px;
+    padding-top: 4px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: $black;
+    font-weight: bold;
+    width: 270px;
+    height: 48px;
+    background-color: $sunflower-yellow;
+    cursor: pointer;
+  }
+  .no-account {
+    padding-top: 30px;
+  }
+}
+
+.mfp-close {
+  position: absolute;
+  font-size: 32px;
 }

@@ -4,11 +4,11 @@
     border-bottom: 1px solid $white-two;
   }
   .title {
-    
+
     @include lg-block() {
       text-align: center;
     }
-    
+
   }
   .container {
     display: flex;
@@ -32,7 +32,6 @@
         flex-wrap: wrap;
         width: 100%;
       }
-
       @include xs-block() {
         justify-content: center;
       }
@@ -102,6 +101,7 @@
       @include lg-block() {
         width: 100%;
       }
+
     }
     #register-shelter {
       margin-top: 20px;

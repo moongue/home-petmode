@@ -20,7 +20,12 @@ function slider () {
     });
 };
 
+function popup (){
+  $('.sign-in').magnificPopup()
+}
+
 $(window).on('load', function() {
     menuLogic();
     slider();
+    popup();
 });
