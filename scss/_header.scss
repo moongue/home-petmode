@@ -105,7 +105,7 @@
       font-size: 16px;
 
       @include md-block() {
-        padding-right: 100px;
+        margin-right: 100px;
       }
 
       @include xs-block() {
@@ -259,7 +259,7 @@
       outline: none;
       box-sizing: border-box;
       padding-left: 15px;
-      padding-right: 40px;
+      padding-right: 55px;
       color: $warm-grey;
       font-size: 16px;
       max-width: 376px;
@@ -272,10 +272,10 @@
     }
     .password {
       margin-top: 17px;
-      background: url("../images/password-icon.png") no-repeat 95% 50%;
+      background: url("../images/password-icon.png") no-repeat 96% 50%;
     }
     .email {
-      background: url("../images/email-icon.png") no-repeat 95% 50%;
+      background: url("../images/email-icon.png") no-repeat 96% 50%;
     }
   }
   .go-in {
@@ -299,56 +299,177 @@
 }
 
 #sign-up-form {
-  max-width: 650px;
-  height: 520px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 720px;
+  height: 645px;
+  background-color: $white;
   border-radius: 4px;
+  margin: 0 auto;
+  position: relative;
   color: $warm-grey;
   font-size: 14px;
-  margin: 0 auto;
-  background-color: $white;
   font-weight: normal;
 
-    .tabs .register-user {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  @include sm-block() {
+    height: 880px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $dull-blue;
+    border-bottom: 1px dotted $dull-blue-two;
+    font-size: 14px;
+  }
+  > div {
+    .register-user,
+    .register-specialist,
+    .register-breeder,
+    .register-club,
+    .register-shelter {
+      text-align: center;
+      padding-top: 25px;
+      max-width: 584px;
+      margin: 0 auto;
       .title {
-        padding-top: 55px;
         font-weight: bold;
-        h2 {
-          text-align: center;
+        padding-top: 40px;
+      }
+      .login-with {
+        padding-top: 25px;
+      }
+      .inputs {
+        .inputs-name, .work-experience-and-qualification {
+          display: flex;
+          justify-content: space-between;
+          padding: 35px 0 17px;
+          .name, .surname, .work-experience, .qualification{
+            width: 285px;
+            border: 1px solid $camo-green;
+            border-radius: 4px;
+            outline: none;
+            box-sizing: border-box;
+            padding-left: 15px;
+            padding-right: 55px;
+            color: $warm-grey;
+            font-size: 16px;
+            height: 47px;
+
+            background: url("../images/icon-register-user.png") no-repeat 89% 50%;
+            &:focus,
+            active {
+              color: $black;
+            }
+          }
+        }
+        .inputs-name, .work-experience-and-qualification{
+
+          .work-experience  {
+            background: url("../images/icon-star.png") no-repeat 89% 50%;
+          }
+          @include sm-block() {
+            display: flex;
+            flex-direction: column;
+            .name, .surname, .work-experience, .qualification {
+              width: 100%;
+              background-position: 95% 50%;
+            }
+            .surname, .work-experience {
+              margin-top: 17px;
+            }
+          }
+
+
+        }
+        .work-experience-and-qualification {
+          padding-top: 0;
+        }
+        .password, .email {
+          width: 100%;
+          height: 47px;
+          background: none;
+          border: 1px solid $camo-green;
+          border-radius: 4px;
+          outline: none;
+          box-sizing: border-box;
+          padding-left: 15px;
+          padding-right: 55px;
+          color: $warm-grey;
+          font-size: 16px;
+          &:focus,
+          active {
+            color: $black;
+          }
+        }
+        .password {
+          margin-top: 17px;
+          background: url("../images/password-icon.png") no-repeat 95% 50%;
+        }
+        .email {
+          background: url("../images/email-icon.png") no-repeat 95% 50%;
         }
       }
+      .go-in {
+        margin-top: 30px;
+        padding-top: 4px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: $black;
+        font-weight: bold;
+        width: 270px;
+        height: 48px;
+        background-color: $sunflower-yellow;
+        cursor: pointer;
+      }
+      .have-account {
+        padding-top: 30px;
+      }
     }
+    .register-specialist {
+      height: 615px;
+    }
+  }
 
   ul {
     margin: 0;
     padding: 0;
-    &:after {
-      content: "";
-      display: block;
-      clear: both;
-      height: 5px;
-      background: #46c765;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include sm-block() {
+      flex-direction: column;
     }
-    li {
-      margin: 0;
+
+    li {  margin: 0;
       cursor: pointer;
       display: block;
-      float: left;
-      padding: 10px 15px;
-      background: #e9eaeb;
-      color: #707070;
-      .active, .active:hover {
-        background: #46c765;
-        color: #fff;
+      padding: 20px 44px;
+      border-right: 1px solid $white-two;
+      border-bottom: 1px solid $white-two;
+      color: $warm-grey;
+      text-align: center;
+
+      @include sm-block() {
+        padding: 10px 44px;
+      }
+
+      &.active, .active:hover {
+        background-color: $white-two;
+        font-weight: bold;
+        color: $black;
+        border-bottom: 2px solid $sunflower-yellow;
       }
       &:hover {
         background: #d6d6d7;
+      }
+      &:last-child {
+        border-right: none;
+        padding-right: 43px;
+        border-top-right-radius: 4px;
+      }
+      &:first-child {
+        border-top-left-radius: 4px;
       }
     }
   }
@@ -357,6 +478,7 @@
 
 .mfp-close {
   position: absolute;
-  font-size: 32px;
+  filter: grayscale(100%);
+  font-size: 42px;
 }
 

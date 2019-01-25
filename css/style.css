@@ -254,7 +254,7 @@ h3 span {
 
 @media screen and (max-width: 960px) {
   #header .container-header .account {
-    padding-right: 100px;
+    margin-right: 100px;
   }
 }
 
@@ -472,7 +472,7 @@ h3 span {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 15px;
-  padding-right: 40px;
+  padding-right: 55px;
   color: #807b76;
   font-size: 16px;
   max-width: 376px;
@@ -486,11 +486,11 @@ h3 span {
 
 #sign-in-form .inputs .password {
   margin-top: 17px;
-  background: url("../images/password-icon.png") no-repeat 95% 50%;
+  background: url("../images/password-icon.png") no-repeat 96% 50%;
 }
 
 #sign-in-form .inputs .email {
-  background: url("../images/email-icon.png") no-repeat 95% 50%;
+  background: url("../images/email-icon.png") no-repeat 96% 50%;
 }
 
 #sign-in-form .go-in {
@@ -513,85 +513,486 @@ h3 span {
 }
 
 #sign-up-form {
-  max-width: 650px;
-  height: 520px;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  max-width: 720px;
+  height: 645px;
+  background-color: #ffffff;
   border-radius: 4px;
+  margin: 0 auto;
+  position: relative;
   color: #807b76;
   font-size: 14px;
-  margin: 0 auto;
-  background-color: #ffffff;
   font-weight: normal;
 }
 
-#sign-up-form .tabs .register-user {
+@media screen and (max-width: 780px) {
+  #sign-up-form {
+    height: 880px;
+  }
+}
+
+#sign-up-form a {
+  text-decoration: none;
+  color: #506aa1;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.13);
+  font-size: 14px;
+}
+
+#sign-up-form > div .register-user,
+#sign-up-form > div .register-specialist,
+#sign-up-form > div .register-breeder,
+#sign-up-form > div .register-club,
+#sign-up-form > div .register-shelter {
+  text-align: center;
+  padding-top: 25px;
+  max-width: 584px;
+  margin: 0 auto;
+}
+
+#sign-up-form > div .register-user .title,
+#sign-up-form > div .register-specialist .title,
+#sign-up-form > div .register-breeder .title,
+#sign-up-form > div .register-club .title,
+#sign-up-form > div .register-shelter .title {
+  font-weight: bold;
+  padding-top: 40px;
+}
+
+#sign-up-form > div .register-user .login-with,
+#sign-up-form > div .register-specialist .login-with,
+#sign-up-form > div .register-breeder .login-with,
+#sign-up-form > div .register-club .login-with,
+#sign-up-form > div .register-shelter .login-with {
+  padding-top: 25px;
+}
+
+#sign-up-form > div .register-user .inputs .inputs-name,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-specialist .inputs .inputs-name,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-breeder .inputs .inputs-name,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-club .inputs .inputs-name,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-shelter .inputs .inputs-name,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 35px 0 17px;
 }
 
-#sign-up-form .tabs .register-user .title {
-  padding-top: 55px;
+#sign-up-form > div .register-user .inputs .inputs-name .name,
+#sign-up-form > div .register-user .inputs .inputs-name .surname,
+#sign-up-form > div .register-user .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-user .inputs .inputs-name .qualification,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .name,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification,
+#sign-up-form > div .register-specialist .inputs .inputs-name .name,
+#sign-up-form > div .register-specialist .inputs .inputs-name .surname,
+#sign-up-form > div .register-specialist .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-specialist .inputs .inputs-name .qualification,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .name,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .qualification,
+#sign-up-form > div .register-breeder .inputs .inputs-name .name,
+#sign-up-form > div .register-breeder .inputs .inputs-name .surname,
+#sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-breeder .inputs .inputs-name .qualification,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .name,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification,
+#sign-up-form > div .register-club .inputs .inputs-name .name,
+#sign-up-form > div .register-club .inputs .inputs-name .surname,
+#sign-up-form > div .register-club .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-club .inputs .inputs-name .qualification,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .name,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .qualification,
+#sign-up-form > div .register-shelter .inputs .inputs-name .name,
+#sign-up-form > div .register-shelter .inputs .inputs-name .surname,
+#sign-up-form > div .register-shelter .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-shelter .inputs .inputs-name .qualification,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .name,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .qualification {
+  width: 285px;
+  border: 1px solid rgba(209, 193, 174, 0.7);
+  border-radius: 4px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 55px;
+  color: #807b76;
+  font-size: 16px;
+  height: 47px;
+  background: url("../images/icon-register-user.png") no-repeat 89% 50%;
+}
+
+#sign-up-form > div .register-user .inputs .inputs-name .name:focus,
+#sign-up-form > div .register-user .inputs .inputs-name .name active,
+#sign-up-form > div .register-user .inputs .inputs-name .surname:focus,
+#sign-up-form > div .register-user .inputs .inputs-name .surname active,
+#sign-up-form > div .register-user .inputs .inputs-name .work-experience:focus,
+#sign-up-form > div .register-user .inputs .inputs-name .work-experience active,
+#sign-up-form > div .register-user .inputs .inputs-name .qualification:focus,
+#sign-up-form > div .register-user .inputs .inputs-name .qualification active,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .name:focus,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .name active,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname:focus,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname active,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience:focus,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience active,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification:focus,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification active,
+#sign-up-form > div .register-specialist .inputs .inputs-name .name:focus,
+#sign-up-form > div .register-specialist .inputs .inputs-name .name active,
+#sign-up-form > div .register-specialist .inputs .inputs-name .surname:focus,
+#sign-up-form > div .register-specialist .inputs .inputs-name .surname active,
+#sign-up-form > div .register-specialist .inputs .inputs-name .work-experience:focus,
+#sign-up-form > div .register-specialist .inputs .inputs-name .work-experience active,
+#sign-up-form > div .register-specialist .inputs .inputs-name .qualification:focus,
+#sign-up-form > div .register-specialist .inputs .inputs-name .qualification active,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .name:focus,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .name active,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname:focus,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname active,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience:focus,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience active,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .qualification:focus,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .qualification active,
+#sign-up-form > div .register-breeder .inputs .inputs-name .name:focus,
+#sign-up-form > div .register-breeder .inputs .inputs-name .name active,
+#sign-up-form > div .register-breeder .inputs .inputs-name .surname:focus,
+#sign-up-form > div .register-breeder .inputs .inputs-name .surname active,
+#sign-up-form > div .register-breeder .inputs .inputs-name .work-experience:focus,
+#sign-up-form > div .register-breeder .inputs .inputs-name .work-experience active,
+#sign-up-form > div .register-breeder .inputs .inputs-name .qualification:focus,
+#sign-up-form > div .register-breeder .inputs .inputs-name .qualification active,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .name:focus,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .name active,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname:focus,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname active,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience:focus,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience active,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification:focus,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification active,
+#sign-up-form > div .register-club .inputs .inputs-name .name:focus,
+#sign-up-form > div .register-club .inputs .inputs-name .name active,
+#sign-up-form > div .register-club .inputs .inputs-name .surname:focus,
+#sign-up-form > div .register-club .inputs .inputs-name .surname active,
+#sign-up-form > div .register-club .inputs .inputs-name .work-experience:focus,
+#sign-up-form > div .register-club .inputs .inputs-name .work-experience active,
+#sign-up-form > div .register-club .inputs .inputs-name .qualification:focus,
+#sign-up-form > div .register-club .inputs .inputs-name .qualification active,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .name:focus,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .name active,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname:focus,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname active,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience:focus,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience active,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .qualification:focus,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .qualification active,
+#sign-up-form > div .register-shelter .inputs .inputs-name .name:focus,
+#sign-up-form > div .register-shelter .inputs .inputs-name .name active,
+#sign-up-form > div .register-shelter .inputs .inputs-name .surname:focus,
+#sign-up-form > div .register-shelter .inputs .inputs-name .surname active,
+#sign-up-form > div .register-shelter .inputs .inputs-name .work-experience:focus,
+#sign-up-form > div .register-shelter .inputs .inputs-name .work-experience active,
+#sign-up-form > div .register-shelter .inputs .inputs-name .qualification:focus,
+#sign-up-form > div .register-shelter .inputs .inputs-name .qualification active,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .name:focus,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .name active,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname:focus,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname active,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience:focus,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience active,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .qualification:focus,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .qualification active {
+  color: #343434;
+}
+
+#sign-up-form > div .register-user .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-specialist .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-club .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-shelter .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience {
+  background: url("../images/icon-star.png") no-repeat 89% 50%;
+}
+
+@media screen and (max-width: 780px) {
+  #sign-up-form > div .register-user .inputs .inputs-name,
+  #sign-up-form > div .register-user .inputs .work-experience-and-qualification,
+  #sign-up-form > div .register-specialist .inputs .inputs-name,
+  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification,
+  #sign-up-form > div .register-breeder .inputs .inputs-name,
+  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification,
+  #sign-up-form > div .register-club .inputs .inputs-name,
+  #sign-up-form > div .register-club .inputs .work-experience-and-qualification,
+  #sign-up-form > div .register-shelter .inputs .inputs-name,
+  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  #sign-up-form > div .register-user .inputs .inputs-name .name,
+  #sign-up-form > div .register-user .inputs .inputs-name .surname,
+  #sign-up-form > div .register-user .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-user .inputs .inputs-name .qualification,
+  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .name,
+  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification,
+  #sign-up-form > div .register-specialist .inputs .inputs-name .name,
+  #sign-up-form > div .register-specialist .inputs .inputs-name .surname,
+  #sign-up-form > div .register-specialist .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-specialist .inputs .inputs-name .qualification,
+  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .name,
+  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .qualification,
+  #sign-up-form > div .register-breeder .inputs .inputs-name .name,
+  #sign-up-form > div .register-breeder .inputs .inputs-name .surname,
+  #sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-breeder .inputs .inputs-name .qualification,
+  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .name,
+  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification,
+  #sign-up-form > div .register-club .inputs .inputs-name .name,
+  #sign-up-form > div .register-club .inputs .inputs-name .surname,
+  #sign-up-form > div .register-club .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-club .inputs .inputs-name .qualification,
+  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .name,
+  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .qualification,
+  #sign-up-form > div .register-shelter .inputs .inputs-name .name,
+  #sign-up-form > div .register-shelter .inputs .inputs-name .surname,
+  #sign-up-form > div .register-shelter .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-shelter .inputs .inputs-name .qualification,
+  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .name,
+  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .qualification {
+    width: 100%;
+    background-position: 95% 50%;
+  }
+
+  #sign-up-form > div .register-user .inputs .inputs-name .surname,
+  #sign-up-form > div .register-user .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-specialist .inputs .inputs-name .surname,
+  #sign-up-form > div .register-specialist .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-breeder .inputs .inputs-name .surname,
+  #sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-club .inputs .inputs-name .surname,
+  #sign-up-form > div .register-club .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-shelter .inputs .inputs-name .surname,
+  #sign-up-form > div .register-shelter .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience {
+    margin-top: 17px;
+  }
+}
+
+#sign-up-form > div .register-user .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-club .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification {
+  padding-top: 0;
+}
+
+#sign-up-form > div .register-user .inputs .password,
+#sign-up-form > div .register-user .inputs .email,
+#sign-up-form > div .register-specialist .inputs .password,
+#sign-up-form > div .register-specialist .inputs .email,
+#sign-up-form > div .register-breeder .inputs .password,
+#sign-up-form > div .register-breeder .inputs .email,
+#sign-up-form > div .register-club .inputs .password,
+#sign-up-form > div .register-club .inputs .email,
+#sign-up-form > div .register-shelter .inputs .password,
+#sign-up-form > div .register-shelter .inputs .email {
+  width: 100%;
+  height: 47px;
+  background: none;
+  border: 1px solid rgba(209, 193, 174, 0.7);
+  border-radius: 4px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 55px;
+  color: #807b76;
+  font-size: 16px;
+}
+
+#sign-up-form > div .register-user .inputs .password:focus,
+#sign-up-form > div .register-user .inputs .password active,
+#sign-up-form > div .register-user .inputs .email:focus,
+#sign-up-form > div .register-user .inputs .email active,
+#sign-up-form > div .register-specialist .inputs .password:focus,
+#sign-up-form > div .register-specialist .inputs .password active,
+#sign-up-form > div .register-specialist .inputs .email:focus,
+#sign-up-form > div .register-specialist .inputs .email active,
+#sign-up-form > div .register-breeder .inputs .password:focus,
+#sign-up-form > div .register-breeder .inputs .password active,
+#sign-up-form > div .register-breeder .inputs .email:focus,
+#sign-up-form > div .register-breeder .inputs .email active,
+#sign-up-form > div .register-club .inputs .password:focus,
+#sign-up-form > div .register-club .inputs .password active,
+#sign-up-form > div .register-club .inputs .email:focus,
+#sign-up-form > div .register-club .inputs .email active,
+#sign-up-form > div .register-shelter .inputs .password:focus,
+#sign-up-form > div .register-shelter .inputs .password active,
+#sign-up-form > div .register-shelter .inputs .email:focus,
+#sign-up-form > div .register-shelter .inputs .email active {
+  color: #343434;
+}
+
+#sign-up-form > div .register-user .inputs .password,
+#sign-up-form > div .register-specialist .inputs .password,
+#sign-up-form > div .register-breeder .inputs .password,
+#sign-up-form > div .register-club .inputs .password,
+#sign-up-form > div .register-shelter .inputs .password {
+  margin-top: 17px;
+  background: url("../images/password-icon.png") no-repeat 95% 50%;
+}
+
+#sign-up-form > div .register-user .inputs .email,
+#sign-up-form > div .register-specialist .inputs .email,
+#sign-up-form > div .register-breeder .inputs .email,
+#sign-up-form > div .register-club .inputs .email,
+#sign-up-form > div .register-shelter .inputs .email {
+  background: url("../images/email-icon.png") no-repeat 95% 50%;
+}
+
+#sign-up-form > div .register-user .go-in,
+#sign-up-form > div .register-specialist .go-in,
+#sign-up-form > div .register-breeder .go-in,
+#sign-up-form > div .register-club .go-in,
+#sign-up-form > div .register-shelter .go-in {
+  margin-top: 30px;
+  padding-top: 4px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #343434;
   font-weight: bold;
+  width: 270px;
+  height: 48px;
+  background-color: #ffd800;
+  cursor: pointer;
 }
 
-#sign-up-form .tabs .register-user .title h2 {
-  text-align: center;
+#sign-up-form > div .register-user .have-account,
+#sign-up-form > div .register-specialist .have-account,
+#sign-up-form > div .register-breeder .have-account,
+#sign-up-form > div .register-club .have-account,
+#sign-up-form > div .register-shelter .have-account {
+  padding-top: 30px;
+}
+
+#sign-up-form > div .register-specialist {
+  height: 615px;
 }
 
 #sign-up-form ul {
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-#sign-up-form ul:after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 5px;
-  background: #46c765;
+@media screen and (max-width: 780px) {
+  #sign-up-form ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 #sign-up-form ul li {
   margin: 0;
   cursor: pointer;
   display: block;
-  float: left;
-  padding: 10px 15px;
-  background: #e9eaeb;
-  color: #707070;
+  padding: 20px 44px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  color: #807b76;
+  text-align: center;
 }
 
-#sign-up-form ul li .active,
+@media screen and (max-width: 780px) {
+  #sign-up-form ul li {
+    padding: 10px 44px;
+  }
+}
+
+#sign-up-form ul li.active,
 #sign-up-form ul li .active:hover {
-  background: #46c765;
-  color: #fff;
+  background-color: #eeeeee;
+  font-weight: bold;
+  color: #343434;
+  border-bottom: 2px solid #ffd800;
 }
 
 #sign-up-form ul li:hover {
   background: #d6d6d7;
 }
 
+#sign-up-form ul li:last-child {
+  border-right: none;
+  padding-right: 43px;
+  border-top-right-radius: 4px;
+}
+
+#sign-up-form ul li:first-child {
+  border-top-left-radius: 4px;
+}
+
 .mfp-close {
   position: absolute;
-  font-size: 32px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  font-size: 42px;
 }
 
 #pets {

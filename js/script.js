@@ -1,5 +1,5 @@
 function menuLogic () {
-    var $header = $('.header');
+    var $header = $('#header');
     var $mobileMenuTrigger = $('.mobile-menu-toggle', $header);
     var $menuBlock = $('.menu', $header);
     var openClass = 'is-open';
