@@ -383,10 +383,6 @@
   color: $warm-grey;
   font-size: 14px;
   font-weight: normal;
-
-  @include sm-block() {
-  }
-
   a {
     text-decoration: none;
     color: $dull-blue;
