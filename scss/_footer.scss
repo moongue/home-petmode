@@ -30,8 +30,11 @@
         height: 69px;
         width: 711px;
 
-        @include sm-block() {
+        @include fix-block() {
           padding-left: 0;
+          align-items: center;
+        }
+        @include sm-block() {
           width: 560px;
         }
         @include xs-block() {
@@ -58,6 +61,7 @@
       .social-network {
         display: flex;
         padding-left: 80px;
+        align-items: center;
 
         @include fix-block() {
           padding: 15px 0;

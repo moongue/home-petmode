@@ -23,17 +23,21 @@
                 <a href="#"><img src="images/logo.png" alt="Logo"></a>
             </div>
 
-            <a href="#" class="mobile-menu-toggle">
-                &#9776;
-            </a>
-
             <nav class="menu">
                 <ul class="menu-a">
                     <li><a href="#pets">Питомцы</a></li>
                     <li><a href="#best-specialist">Специалисты</a></li>
                     <li><a href="#my-joy">Моя радость</a></li>
                     <li><a href="#">Конкурсы</a></li>
-                    <li><a href="#" class="more">Ещё</a></li>
+                    <li><label class="link" for="hider" id="more">Ещё</label>
+                        <input type="checkbox" id="hider">
+                        <ul class="content">
+                            <li><a href="#news">Новости</a></li>
+                            <li><a href="#">Рейтинг</a></li>
+                            <li><a href="#">Выставка</a></li>
+                            <li><a href="#">Благотворительность</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
 
@@ -41,18 +45,21 @@
                 <label for="search">
                     <img src="images/search.png" alt="Search">
                 </label>
-                <input type="text" placeholder="Что ищём?" id="search">
+                <input type="text" placeholder="Что ищeм?" id="search">
             </div>
 
 
-            <div class="account menu">
+            <div class="account">
                 <ul class="ul-account">
                     <li><a href="#sign-up-form" class="sign-up">Зарегестрироваться</a></li>
                     <li><a href="#sign-in-form" class="sign-in">Войти</a></li>
                 </ul>
             </div>
-
+            <a href="#" class="mobile-menu-toggle">
+                &#9776;
+            </a>
             <div id="sign-up-form" class="mfp-hide white-popup-block">
+                <button type="button" onClick="closePopup();" class="mfp-close"><img src="images/close.png" alt="Close"></button>
                 <div class="tabs">
                     <ul>
                         <li>Пользователь</li>
@@ -175,42 +182,43 @@
                             </div>
                         </div>
 
-                    <div class="register-shelter">
-                        <div class="title"><h2>Регистрация</br> приюта</h2></div>
-                        <div class="login-with">
-                            <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a
-                                    href="#">Google</a>
-                            </p>
-                        </div>
+                        <div class="register-shelter">
+                            <div class="title"><h2>Регистрация</br> приюта</h2></div>
+                            <div class="login-with">
+                                <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a
+                                        href="#">Google</a>
+                                </p>
+                            </div>
 
-                        <div class="inputs">
-                            <div class="inputs-name">
-                                <input type="text" placeholder="Имя" class="name">
-                                <input type="text" placeholder="Фамилия" class="surname">
+                            <div class="inputs">
+                                <div class="inputs-name">
+                                    <input type="text" placeholder="Имя" class="name">
+                                    <input type="text" placeholder="Фамилия" class="surname">
+                                </div>
+                                <div class="work-experience-and-qualification">
+                                    <select name="selectQualification" class="qualification">
+                                        <option>Специальность</option>
+                                        <option>Специальность</option>
+                                        <option>Специальность</option>
+                                        <option>Специальность</option>
+                                    </select>
+                                    <input type="text" placeholder="Опыт работы" class="work-experience">
+                                </div>
+                                <input type="email" placeholder="Адрес електронной почты" class="email">
+                                <input type="password" placeholder="Пароль" class="password">
                             </div>
-                            <div class="work-experience-and-qualification">
-                                <select name="selectQualification" class="qualification">
-                                    <option>Специальность</option>
-                                    <option>Специальность</option>
-                                    <option>Специальность</option>
-                                    <option>Специальность</option>
-                                </select>
-                                <input type="text" placeholder="Опыт работы" class="work-experience">
+                            <button class="go-in" type="button">Зарегестрироваться</button>
+                            <div class="have-account">
+                                <p>У вас уже есть аккаунт? <a href="#">Войти</a></p>
                             </div>
-                            <input type="email" placeholder="Адрес електронной почты" class="email">
-                            <input type="password" placeholder="Пароль" class="password">
                         </div>
-                        <button class="go-in" type="button">Зарегестрироваться</button>
-                        <div class="have-account">
-                            <p>У вас уже есть аккаунт? <a href="#">Войти</a></p>
-                        </div>
-                    </div>
                     </div>
                 </div>
 
             </div>
 
             <div id="sign-in-form" class="mfp-hide white-popup-block">
+                <button type="button" onClick="closePopup();" class="mfp-close"><img src="images/close.png" alt="Close"></button>
                 <div class="title"><h2>Вход</h2></div>
                 <div class="login-with">
                     <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a href="#">Google</a>
@@ -233,8 +241,8 @@
             <h1>Petmode — крупнейшее сообщество
                 домашних животных</h1>
             <div class="buttons">
-                <input type="button" value="Завести питомца">
-                <input type="button" value="Продать питомца">
+                <input type="button" value="Завести питомца" id="have-a-pet">
+                <input type="button" value="Продать питомца" id="sell-pet">
             </div>
             <div class="register-specialist">
                 <p>Вы ветеренар, кинолог или грумер? <a href="#">Зарегистрируйтесь специалистом</a></p>
@@ -256,76 +264,76 @@
                 </div>
             </div>
             <div class="containerPets">
-                <div class="containerPetsBlock">
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-1.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-2.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">Немецкая овчарка</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-3.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">МОПС</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-4.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">Лабрадор ретривер</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-5.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed containerPetsBlock__breed-cat">Шотландская вислоухая</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-6.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed containerPetsBlock__breed-cat">Невская маскарадная</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-7.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">Сибирский хаски</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-8.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed containerPetsBlock__breed-cat">Рэгдолл</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-9.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">Бигль</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-10.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">Папильон</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
+                </a>
             </div>
             <div class="buttons">
                 <button id="buy-dog" type="button"><img src="images/dog.png" alt="Dog">Хочу завести собаку</button>
@@ -344,31 +352,31 @@
         </div>
         <div class="content-pets-on-binding">
             <div class="containerPets">
-                <div class="containerPetsBlock">
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-1.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-2.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">Немецкая овчарка</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-3.png" alt="Pet"></div>
                     <div class="containerPetsBlock__price">3 000 руб.</div>
                     <div class="containerPetsBlock__breed">МОПС</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
+                </a>
             </div>
-            <div class="banner-pets-on-binding">
+            <a href="#" class="banner-pets-on-binding">
                 <img src="images/banner.png" alt="Banner">
-            </div>
+            </a>
         </div>
         <div class="show-more"><a href="#">Смотреть всех питомцев на вязку (500+)</a></div>
     </div>
@@ -385,7 +393,7 @@
                 </div>
                 <div class="myJoyNews">
                     <div class="myJoyNewsFlex">
-                        <div class="myJoyNewsFlex__title">История о приключениях</div>
+                        <a href="#" class="myJoyNewsFlex__title">История о приключениях</a>
                         <div class="myJoyNewsFlex__description">Потрясающий нюх собак давно используется для помощи
                             человеку, но
                             оказывается, их обоняние помогает не только ... <span
@@ -408,9 +416,9 @@
                 </div>
                 <div class="myJoyNews">
                     <div class="myJoyNewsFlex">
-                        <div class="myJoyNewsFlex__title">Собаки-диагносты: как животные
+                        <a href="#" class="myJoyNewsFlex__title">Собаки-диагносты: как животные
                             определяют рак
-                        </div>
+                        </a>
                         <div class="myJoyNewsFlex__description">Потрясающий нюх собак давно используется для помощи
                             человеку, но
                             оказывается, их обоняние помогает не только ... <span
@@ -439,7 +447,7 @@
                     </div>
                     <div class="myJoyNews">
                         <div class="myJoyNewsFlex">
-                            <div class="myJoyNewsFlex__title">История о приключениях четвероногого</div>
+                            <a href="#" class="myJoyNewsFlex__title">История о приключениях четвероногого</a>
                             <div class="myJoyNewsFlexUser">
                                 <div class="myJoyNewsFlexUser__img">
                                     <img src="images/icon-user-2.png" alt="Icon User">
@@ -453,9 +461,9 @@
                                 </div>
                             </div>
 
-                            <div class="myJoyNewsFlex__title">Собаки-диагносты: как животные
+                            <a href="#" class="myJoyNewsFlex__title">Собаки-диагносты: как животные
                                 определяют рак
-                            </div>
+                            </a>
                             <div class="myJoyNewsFlexUser">
                                 <div class="myJoyNewsFlexUser__img">
                                     <img src="images/icon-user-3.png" alt="Icon User">
@@ -469,7 +477,7 @@
                                 </div>
                             </div>
 
-                            <div class="myJoyNewsFlex__title">История о приключениях</div>
+                            <a href="#" class="myJoyNewsFlex__title">История о приключениях</a>
                             <div class="myJoyNewsFlexUser">
                                 <div class="myJoyNewsFlexUser__img">
                                     <img src="images/icon-user-4.png" alt="Icon User">
@@ -518,7 +526,7 @@
         </div>
 
         <div class="specialists">
-            <div class="specialistsBlock">
+            <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
                     <img src="images/specialist-photo-1.png" alt="Specialist Photo">
                 </div>
@@ -532,8 +540,8 @@
                         средним
                     </div>
                 </div>
-            </div>
-            <div class="specialistsBlock">
+            </a>
+            <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
                     <img src="images/specialist-photo-2.png" alt="Specialist Photo">
                 </div>
@@ -547,8 +555,8 @@
                         средним
                     </div>
                 </div>
-            </div>
-            <div class="specialistsBlock">
+            </a>
+            <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
                     <img src="images/specialist-photo-3.png" alt="Specialist Photo">
                 </div>
@@ -562,8 +570,8 @@
                         средним
                     </div>
                 </div>
-            </div>
-            <div class="specialistsBlock">
+            </a>
+            <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
                     <img src="images/specialist-photo-4.png" alt="Specialist Photo">
                 </div>
@@ -577,8 +585,8 @@
                         средним
                     </div>
                 </div>
-            </div>
-            <div class="specialistsBlock">
+            </a>
+            <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
                     <img src="images/specialist-photo-5.png" alt="Specialist Photo">
                 </div>
@@ -592,8 +600,8 @@
                         средним
                     </div>
                 </div>
-            </div>
-            <div class="specialistsBlock">
+            </a>
+            <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
                     <img src="images/specialist-photo-6.png" alt="Specialist Photo">
                 </div>
@@ -607,7 +615,7 @@
                         средним
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
         <div class="show-more">
             <a href="#">Смотреть всех специалистов (800+)</a>
@@ -624,42 +632,42 @@
                 <h2>В добрые руки <span> — помогаем каждому питомцу обрести свой дом</span></h2>
             </div>
             <div class="containerPets">
-                <div class="containerPetsBlock">
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-1.png" alt="Pet"></div>
                     <div class="containerPetsBlock__will-give">В добрые руки</div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-2.png" alt="Pet"></div>
                     <div class="containerPetsBlock__will-give">В добрые руки</div>
                     <div class="containerPetsBlock__breed">Немецкая овчарка</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-3.png" alt="Pet"></div>
                     <div class="containerPetsBlock__will-give">В добрые руки</div>
                     <div class="containerPetsBlock__breed">МОПС</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
-                <div class="containerPetsBlock">
+                </a>
+                <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/pets-4.png" alt="Pet"></div>
                     <div class="containerPetsBlock__will-give">В добрые руки</div>
                     <div class="containerPetsBlock__breed">МОПС</div>
                     <div class="containerPetsBlock__selling">Продам щенка</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
-                </div>
+                </a>
 
-                <div class="place-an-ad">
-                    <a href="#">
+                <a href="#" class="place-an-ad">
+                    <div href="#">
                         <img src="images/place-an-2.png" alt="Place an ad">
                         <p>Разместить</p>
                         <p>обьявление</p>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="show-more">
@@ -680,9 +688,9 @@
                 </div>
                 <div class="myJoyNews">
                     <div class="myJoyNewsFlex">
-                        <div class="myJoyNewsFlex__title">День защиты черного кота: как соцсети
+                        <a href="#" class="myJoyNewsFlex__title">День защиты черного кота: как соцсети
                             помогают бороться с суевериями
-                        </div>
+                        </a>
                         <div class="myJoyNewsFlex__description">Международный день признательности к черным котам
                             (#BlackCatAppreciationDay) уже не первый год ...
                             <span
@@ -701,9 +709,9 @@
                 </div>
                 <div class="myJoyNews">
                     <div class="myJoyNewsFlex">
-                        <div class="myJoyNewsFlex__title">Редкий случай: инфекция собаки привела
+                        <a href="#" class="myJoyNewsFlex__title">Редкий случай: инфекция собаки привела
                             к ампутации рук и ног у мужчины
-                        </div>
+                        </a>
                         <div class="myJoyNewsFlex__description">48-летний мужчина из Висконсина (США) заразился редкой
                             инфекцией крови, которая привела к ампутации ... <span
                                     class="read-more">Читать полностью</span>
@@ -721,10 +729,9 @@
                 </div>
                 <div class="myJoyNews">
                     <div class="myJoyNewsFlex">
-                        <div class="myJoyNewsFlex__title">Как соцсети помогают бороться
+                        <a href="#" class="myJoyNewsFlex__title">Как соцсети помогают бороться
                             с суевериями
-
-                        </div>
+                        </a>
                         <div class="myJoyNewsFlex__description">Международный день признательности к черным котам уже
                             не первый год отмечается 17 августа. В этот день ... <span
                                     class="read-more">Читать полностью</span>
@@ -742,9 +749,9 @@
                 </div>
             </div>
 
-            <div class="banner-news">
+            <a href="#" class="banner-news">
                 <img src="images/banner-news.png" alt="Banner">
-            </div>
+            </a>
         </div>
         <div class="show-more">
             <a href="#">Читать все новости</a>

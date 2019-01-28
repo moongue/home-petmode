@@ -12,12 +12,22 @@
 
       .place-an-ad {
         position: relative;
+
+        @include sm-block() {
+          margin-top: 15px;
+        }
+
         a {
           display: flex;
           align-items: center;
           text-decoration: none;
+          color: $dull-blue;
           border-bottom: 1px dotted $dull-blue;
           font-size: 16px;
+          &:hover {
+            opacity: .4;
+            transition: all .2s;
+          }
           &:before {
             content: '';
             background: url(../images/place-an-ad.png), no-repeat center center;
@@ -43,6 +53,7 @@
 
       .containerPetsBlock {
         padding-top: 30px;
+        text-decoration: none;
         position: relative;
         user-select: none;
         max-width: 220px;

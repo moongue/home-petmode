@@ -6,6 +6,16 @@ body {
 .wrapper {
   @include wrapper();
 }
+
+input::-webkit-input-placeholder       {text-indent: 0;   transition: text-indent 0.4s ease;}
+input::-moz-placeholder                {text-indent: 0;   transition: text-indent 0.4s ease;}
+input:-moz-placeholder                 {text-indent: 0;   transition: text-indent 0.4s ease;}
+input:-ms-input-placeholder            {text-indent: 0;   transition: text-indent 0.4s ease;}
+input:focus::-webkit-input-placeholder {text-indent: 600px; transition: text-indent 0.4s ease;}
+input:focus::-moz-placeholder          {text-indent: 600px; transition: text-indent 0.4s ease;}
+input:focus:-moz-placeholder           {text-indent: 600px; transition: text-indent 0.4s ease;}
+input:focus:-ms-input-placeholder      {text-indent: 600px; transition: text-indent 0.4s ease;}
+
 .title {
   h2 {
     font-size: 33px;
@@ -37,5 +47,9 @@ h3 {
     font-size: 16px;
     text-decoration: none;
     border-bottom: 1px solid $dull-blue-two;
+    &:hover {
+      opacity: .4;
+      transition: all .3s;
+    }
   }
 }

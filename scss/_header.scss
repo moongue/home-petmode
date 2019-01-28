@@ -14,7 +14,7 @@
     padding-top: 30px;
 
     @include xs-block() {
-      justify-content: inherit;
+      justify-content: space-between;
     }
 
     .mobile-menu-toggle {
@@ -25,9 +25,7 @@
         font-size: 50px;
         text-decoration: none;
         color: $white;
-        position: absolute;
-        top: 30px;
-        right: 0;
+
       }
 
     }
@@ -36,7 +34,19 @@
       @include md-block {
         display: none;
       }
+      #hider {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        &:checked + .content {
+          display: block;
+        }
+      }
 
+      .content {
+        position: absolute;
+        display: none;
+      }
       ul {
         list-style: none;
         display: flex;
@@ -51,72 +61,132 @@
               color: $sunflower-yellow;
               transition: all .4s;
             }
+            @include md-block() {
+              &:hover {
+                color: $white;
+              }
+            }
           }
-          .more {
-            border-bottom: dotted 1px $white;
+          #more {
+            color: $white;
+            border-bottom: 1px dotted $white;
+            cursor: pointer;
             &:hover {
-              border-bottom: dotted 1px $sunflower-yellow;
-              transition: all 0.4s;
+              color: $sunflower-yellow;
+              border-bottom: 1px dotted $sunflower-yellow;
+              transition: all .4s;
+            }
+            @include md-block() {
+              &:hover {
+                color: $white;
+              }
+            }
+          }
+          > ul {
+            li {
+              padding: 5px 0;
             }
           }
         }
       }
+
       &.is-open {
         display: block;
         position: absolute;
         width: 100%;
-        top: 60px;
-        .menu-a {
-          padding-top: 45px;
+        top: 135px;
+        margin-left: -30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        background-color: $sunflower-yellow;
+        ul li .content {
+          display: none;
+          position: inherit;
         }
+
+        @include md-block() {
+          top: 90px;
+        }
+        @include sm-block() {
+          top: 90px;
+          margin-left: -15px;
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+        @include xs-block() {
+          top: 135px;
+        }
+
         ul {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding-top: 20px;
+
           li {
             width: 100%;
             text-align: center;
             padding: 6px 0 6px;
+
           }
         }
       }
     }
-    .search {
-      display: flex;
-      align-items: center;
-
-      @include xs(padding-left, 15px);
-
-      #search {
-        background: none;
-        border: none;
-        outline: none;
-        padding-left: 10px;
-        font-size: 16px;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    #search {
+      background: none;
+      border: none;
+      outline: none;
+      padding-left: 10px;
+      color: white;
+      width: 120px;
+      &::-webkit-input-placeholder {
         color: $camo-green;
-        opacity: 0.7;
-        width: 120px;
+      }
+      &::-moz-placeholder {
+        color: $camo-green;
+      }
+      &:-moz-placeholder {
+        color: $camo-green;
+      }
+      &:-ms-input-placeholder {
+        color: $camo-green;
       }
     }
-    .account {
+  }
+  .account {
+
+    @include xs-block() {
+      &.is-open-account {
+        width: 100%;
+        position: absolute;
+        top: 86px;
+        background-color: $sunflower-yellow;
+        margin-left: -15px;
+        padding-right: 15px;
+        padding-left: 15px;
+        .ul-account {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          li:last-child {
+            padding-top: 12px;
+            padding-bottom: 6px;
+          }
+        }
+      }
+    }
+    .ul-account {
       display: flex;
       justify-content: space-between;
       font-size: 16px;
 
-      @include md-block() {
-        margin-right: 100px;
-      }
-
       @include xs-block() {
         display: none;
       }
-      &.is-open {
-        .ul-account {
-          display: flex;
-          flex-direction: row;
-        }
-      }
+
       .sign-up {
         padding-right: 38px;
 
@@ -133,84 +203,82 @@
       }
     }
   }
+}
 
-  .container-banner {
-    padding-top: 150px;
-    max-width: 770px;
-    h1 {
-      font-size: 48px;
-      color: $white;
+.container-banner {
+  padding-top: 150px;
+  max-width: 770px;
+  h1 {
+    font-size: 48px;
+    color: $white;
+
+    @include sm-block() {
+      font-size: 36px;
+    }
+
+    @include xs-block() {
+      font-size: 28px;
+    }
+  }
+
+  .buttons {
+    padding-top: 49px;
+
+    @include xs-block() {
+      display: flex;
+      padding-top: 30px;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    #sell-pet, #have-a-pet {
+      background: none;
+      border-radius: 4px;
+      color: $sunflower-yellow;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      border: 2px solid $sunflower-yellow;
+      padding: 19px 70px 14px;
 
       @include sm-block() {
-        font-size: 36px;
+        padding: 19px 45px 14px;
       }
 
-      @include xs-block() {
-        font-size: 28px;
-      }
-    }
+      &:nth-child(2n) {
+        margin-left: 20px;
 
-    .buttons {
-      padding-top: 49px;
-
-      @include xs-block() {
-        display: flex;
-        padding-top: 30px;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 100%;
-      }
-
-      input {
-        background: none;
-        border-radius: 4px;
-        color: $sunflower-yellow;
-        font-size: 18px;
-        font-weight: bold;
-        border: 2px solid $sunflower-yellow;
-        padding: 19px 70px 14px;
-
-        @include sm-block() {
-          padding: 19px 45px 14px;
-        }
-
-        &:hover,
-        active {
-          outline: none;
-          cursor: pointer;
-          background-color: $sunflower-yellow;
-          color: $navy-green;
-          transition: all .4s;
-        }
-        &:nth-child(2n) {
-          margin-left: 20px;
-
-          @include xs-block() {
-            margin-left: 0;
-            margin-top: 10px;
-          }
+        @include xs-block() {
+          margin-left: 0;
+          margin-top: 10px;
         }
       }
     }
-    .register-specialist {
-      padding-top: 24px;
+    #have-a-pet {
+      outline: none;
+      background-color: $sunflower-yellow;
+      color: $navy-green;
+    }
+  }
+  .register-specialist {
+    padding-top: 24px;
+    color: $beige;
+    font-size: 16px;
+    font-weight: normal;
+
+    @include xs-block() {
+      font-size: 12px;
+      padding-top: 12px;
+    }
+
+    a {
+      text-decoration: none;
       color: $beige;
-      font-size: 16px;
-      font-weight: normal;
-
-      @include xs-block() {
-        font-size: 12px;
-        padding-top: 12px;
-      }
-
-      a {
-        text-decoration: none;
-        color: $beige;
-        border-bottom: 1px dotted $beige;
-        &:hover {
-          color: $sunflower-yellow;
-          transition: all .4s;
-        }
+      border-bottom: 1px dotted $beige;
+      &:hover {
+        color: $sunflower-yellow;
+        transition: all .4s;
       }
     }
   }
@@ -295,12 +363,19 @@
   .no-account {
     padding-top: 30px;
   }
-
+  .mfp-close {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    top: 0;
+    right: 0;
+  }
 }
 
 #sign-up-form {
   max-width: 720px;
-  height: 645px;
+  height: auto;
   background-color: $white;
   border-radius: 4px;
   margin: 0 auto;
@@ -310,7 +385,6 @@
   font-weight: normal;
 
   @include sm-block() {
-    height: 880px;
   }
 
   a {
@@ -341,7 +415,7 @@
           display: flex;
           justify-content: space-between;
           padding: 35px 0 17px;
-          .name, .surname, .work-experience, .qualification{
+          .name, .surname, .work-experience, .qualification {
             width: 285px;
             border: 1px solid $camo-green;
             border-radius: 4px;
@@ -360,9 +434,14 @@
             }
           }
         }
-        .inputs-name, .work-experience-and-qualification{
-
-          .work-experience  {
+        .inputs-name, .work-experience-and-qualification {
+          .qualification {
+            background: url("../images/select-icon.png") no-repeat 89% 50%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+          .work-experience {
             background: url("../images/icon-star.png") no-repeat 89% 50%;
           }
           @include sm-block() {
@@ -376,7 +455,6 @@
               margin-top: 17px;
             }
           }
-
 
         }
         .work-experience-and-qualification {
@@ -423,11 +501,10 @@
       }
       .have-account {
         padding-top: 30px;
+        padding-bottom: 30px;
       }
     }
-    .register-specialist {
-      height: 615px;
-    }
+
   }
 
   ul {
@@ -441,17 +518,21 @@
       flex-direction: column;
     }
 
-    li {  margin: 0;
+    li {
+      margin: 0;
       cursor: pointer;
       display: block;
-      padding: 20px 44px;
+      width: 144px;
+      padding: 20px 0;
       border-right: 1px solid $white-two;
       border-bottom: 1px solid $white-two;
       color: $warm-grey;
       text-align: center;
 
       @include sm-block() {
-        padding: 10px 44px;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
       }
 
       &.active, .active:hover {
@@ -465,7 +546,6 @@
       }
       &:last-child {
         border-right: none;
-        padding-right: 43px;
         border-top-right-radius: 4px;
       }
       &:first-child {
@@ -473,12 +553,14 @@
       }
     }
   }
-
+  .mfp-close {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    top: 0;
+    right: 0;
+  }
 }
 
-.mfp-close {
-  position: absolute;
-  filter: grayscale(100%);
-  font-size: 42px;
-}
 

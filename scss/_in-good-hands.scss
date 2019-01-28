@@ -19,6 +19,7 @@
         padding-top: 10px;
         position: relative;
         user-select: none;
+        text-decoration: none;
         max-width: 220px;
 
         @include col();
@@ -70,11 +71,12 @@
         margin-top: 10px;
         background-color: $pale-grey;
         display: flex;
+        text-decoration: none;
         justify-content: center;
         align-items: center;
         flex-basis: 220px;
         min-height: 218px;
-        a {
+        > div {
           text-decoration: none;
           font-size: 16px;
           display: flex;

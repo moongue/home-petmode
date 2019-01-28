@@ -20,7 +20,6 @@
       max-width: 780px;
 
       @include lg-block() {
-        justify-content: center;
         max-width: 100%;
       }
 
@@ -40,6 +39,7 @@
           font-size: 24.5px;
           color: $black;
           max-width: 430px;
+          text-decoration: none;
 
           @include sm(font-size, 24px);
         }

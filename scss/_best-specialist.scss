@@ -71,6 +71,7 @@
     &Block {
       padding-top: 40px;
       display: flex;
+      text-decoration: none;
 
       @include col();
       @include size(4);
@@ -84,7 +85,7 @@
         flex-direction: column;
 
         @include xs-block {
-          padding-left: 2px;
+          padding-left: 12px;
         }
 
         &__qualification {
@@ -117,7 +118,6 @@
           font-size: 14px;
           line-height: normal;
           color: $warm-grey;
-          min-width: 207px;
           padding-top: 8px;
           font-weight: normal;
         }
