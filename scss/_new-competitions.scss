@@ -1,0 +1,335 @@
+#new-competitions {
+  color: $black-font;
+  padding-top: 30px;
+  .content-new-competitions {
+    .filter {
+      display: flex;
+      justify-content: space-between;
+
+      @include xs-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+      .competition {
+        font-size: 14px;
+      }
+      .filter-simplified {
+        display: flex;
+
+        @include xs-block() {
+          padding-top: 15px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        li {
+          color: $black-two-50;
+
+          @include xs(margin-top, 10px);
+          a {
+            text-decoration: none;
+            color: $black-two-50;
+            font-weight: normal;
+            font-size: 14px;
+            padding: 0 5px;
+            &.active-simplified-filter {
+              color: $black-font;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    .more-filter {
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+
+      @include xs(padding-top, 10px);
+      label {
+        display: none;
+        background: none;
+        font-size: 14px;
+        color: $black-font;
+        border: 1px solid $sunflower-yellow;
+        border-radius: 4px;
+        padding: 8px 12px;
+        margin-top: 15px;
+        outline: none;
+        @include sm-block() {
+          display: block;
+        }
+      }
+      #show-filter {
+        display: none;
+      }
+      input[type=checkbox]:checked ~ .specific-filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        li {
+          margin: 15px;
+
+          a {
+            border: none;
+            &.active-more-filter {
+              border-radius: inherit;
+              background: none;
+              border-bottom: 1px solid $sunflower-yellow;
+            }
+          }
+        }
+      }
+      @include md-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+      .specific-filter, .cat-or-dog-filter {
+        display: flex;
+        li {
+          a {
+            padding: 11px 32px;
+            color: $black-two-50;
+            font-size: 14px;
+            font-weight: normal;
+            text-decoration: none;
+            border: 1px solid $white-bg;
+            border-left: none;
+            &.first {
+              border-radius: 4px 0 0 4px;
+              border-left: 1px solid $white-bg;
+            }
+            &.last {
+
+              border-radius: 0 4px 4px 0;
+            }
+            &.active-more-filter {
+              color: #000000;
+              font-weight: bold;
+              background-color: $sunflower-yellow;
+              border: 1px solid $sunflower-yellow;
+            }
+          }
+        }
+      }
+      .specific-filter {
+        @include sm-block() {
+          display: none;
+        }
+      }
+      .cat-or-dog-filter {
+        margin-left: auto;
+
+        @include md-block() {
+          margin-left: 0;
+          margin-top: 40px;
+        }
+        li {
+          a {
+            &.cat-filter {
+              border-left: 1px solid $white-bg;
+              border-radius: 4px 0 0 4px;
+            }
+            &.dog-filter {
+              border-radius: 0 4px 4px 0;
+            }
+          }
+        }
+      }
+      .close-filter {
+        margin-left: 18px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: normal;
+        color: $black-two-50;
+        display: flex;
+        align-items: center;
+
+        @include md-block() {
+          margin-top: 30px;
+        }
+        img {
+          padding-right: 7px;
+        }
+      }
+    }
+    .title-competition {
+      padding-top: 75px;
+      font-size: 24px;
+      color: $black-font;
+      font-weight: normal;
+
+      @include xs(text-align, center);
+    }
+    .competition-blocks {
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+
+      @include fix-block() {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .competition-big-block {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        max-width: 570px;
+
+        @include sm-block {
+          align-items: center;
+          min-width: 100%;
+        }
+        .competition-two-block {
+          display: flex;
+          justify-content: space-between;
+          :nth-child(2n) {
+            margin-left: 20px;
+
+            @include sm-block() {
+              margin-left: 0;
+            }
+          }
+
+          @include sm-block() {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+        .create-competition {
+          max-width: 570px;
+          height: 273px;
+          border: 1px solid $white-bg;
+          border-radius: 8px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          @include sm(width, 98%);
+          .semicircle-left {
+            position: absolute;
+            left: -16px;
+          }
+          .semicircle-right {
+            position: absolute;
+            transform: rotate(180deg);
+            right: -16px;
+          }
+          .title-competition-block {
+            font-size: 24px;
+            color: $black-font;
+            span {
+              color: $sunflower-yellow;
+            }
+          }
+          #create-competition-two {
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 14px;
+            padding: 13px 35px;
+            background: none;
+            color: #000;
+            border: 1px solid $sunflower-yellow;
+            border-radius: 4px;
+
+          }
+        }
+      }
+      .competition-block {
+        border-bottom: 1px solid $white-bg;
+        padding-bottom: 20px;
+
+        @include fix-block() {
+          margin-bottom: 15px;
+        }
+        .img-with-icon {
+          position: relative;
+          width: 270px;
+          a {
+            :first-child {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+          }
+          .icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          &.big-img-with-icon {
+            width: 570px;
+
+            @include sm-block() {
+              width: 100%;
+            }
+          }
+        }
+        .name-competition {
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 0 !important;
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            color: $black-font;
+          }
+          .state {
+            margin-left: 13px;
+            padding: 4px 10px;
+            font-weight: normal;
+            border: 1px solid $sunflower-yellow;
+            border-radius: 9px;
+            font-size: 14px;
+            color: $black-two-50;
+            &.to-press-left {
+              margin-right: auto;
+            }
+          }
+        }
+        .activity-competition {
+          display: flex;
+          justify-content: space-between;
+          color: $black-two-50;
+          padding-top: 15px;
+          font-size: 14px;
+          .like {
+            display: flex;
+            align-items: center;
+            img {
+              padding-right: 10px;
+            }
+          }
+          .took-part {
+            display: flex;
+            align-items: center;
+            margin-left: 18px;
+            margin-right: auto;
+
+            img {
+              padding-right: 10px;
+            }
+          }
+          .organizer {
+            font-weight: normal;
+            margin-right: auto;
+            margin-left: 25px;
+            flex-grow: 1;
+
+            @include xs(display, none);
+            .name-organizer {
+              font-weight: bold;
+              padding-left: 5px;
+              color: $black-font;
+            }
+          }
+        }
+      }
+    }
+  }
+}

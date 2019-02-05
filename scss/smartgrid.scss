@@ -1,6 +1,7 @@
 $columns: 12;
 $atom: (100% / $columns);
 
+$break_sidebar: 1380px;
 $break_fix: 1200px;
 $break_lg: 1100px;
 $break_md: 960px;
@@ -8,6 +9,7 @@ $break_sm: 780px;
 $break_xs: 560px;
 
 $offset: 30px;
+$offset_sidebar: $offset;
 $offset_fix: $offset;
 $offset_lg: $offset;
 $offset_md: $offset;
@@ -15,6 +17,7 @@ $offset_sm: $offset;
 $offset_xs: $offset;
 
 $offset_one_side: ($offset / 2);
+$offset_sidebar_one_side: ($offset_sidebar / 2);
 $offset_fix_one_side: ($offset_fix / 2);
 $offset_lg_one_side: ($offset_lg / 2);
 $offset_md_one_side: ($offset_md / 2);
@@ -90,6 +93,11 @@ $fields_sm: 15px;
     width: #{calc(#{$val} - #{$offset})};
 }
 
+@mixin size-sidebar($n){
+    $val: 100% / $columns * $n;
+    @include sidebar(width, #{calc(#{$val} - #{$offset_sidebar})});
+}
+
 @mixin size-fix($n){
     $val: 100% / $columns * $n;
     @include fix(width, #{calc(#{$val} - #{$offset_fix})});
@@ -145,6 +153,38 @@ $fields_sm: 15px;
 @mixin shift-padding-right($n){
     $val: 100% / $columns * $n;
     padding-right: #{calc(#{$val} + #{$offset_one_side})};
+}
+
+@mixin shift-sidebar($n){
+    $val: 100% / $columns * $n;
+    @include sidebar(margin-left, #{calc(#{$val} + #{$offset_sidebar_one_side})});
+    @include sidebar(margin-right, #{calc(#{$val} + #{$offset_sidebar_one_side})});
+}
+
+@mixin shift-sidebar-left($n){
+    $val: 100% / $columns * $n;
+    @include sidebar(margin-left, #{calc(#{$val} + #{$offset_sidebar_one_side})});
+}
+
+@mixin shift-sidebar-right($n){
+    $val: 100% / $columns * $n;
+    @include sidebar(margin-right, #{calc(#{$val} + #{$offset_sidebar_one_side})});
+}
+
+@mixin shift-sidebar-padding($n){
+    $val: 100% / $columns * $n;
+    @include sidebar(padding-left, #{calc(#{$val} + #{$offset_sidebar_one_side})});
+    @include sidebar(padding-right, #{calc(#{$val} + #{$offset_sidebar_one_side})});
+}
+
+@mixin shift-sidebar-padding-left($n){
+    $val: 100% / $columns * $n;
+    @include sidebar(padding-left, #{calc(#{$val} + #{$offset_sidebar_one_side})});
+}
+
+@mixin shift-sidebar-padding-right($n){
+    $val: 100% / $columns * $n;
+    @include sidebar(padding-right, #{calc(#{$val} + #{$offset_sidebar_one_side})});
 }
 
 @mixin shift-fix($n){
@@ -305,6 +345,18 @@ $fields_sm: 15px;
 @mixin shift-xs-padding-right($n){
     $val: 100% / $columns * $n;
     @include xs(padding-right, #{calc(#{$val} + #{$offset_xs_one_side})});
+}
+
+@mixin sidebar($name, $value){
+    @media screen and (max-width: $break_sidebar){
+        #{$name}: $value;
+    }
+}
+
+@mixin sidebar-block(){
+    @media screen and (max-width: $break_sidebar){
+        @content;
+    }
 }
 
 @mixin fix($name, $value){

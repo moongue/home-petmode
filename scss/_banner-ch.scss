@@ -1,0 +1,123 @@
+#banner-ch {
+  padding-top: 65px;
+  font-weight: normal;
+  color: $black-font;
+  .content-banner {
+    display: flex;
+    background: url("../images/image-bg-ch.png") no-repeat 100%;
+
+    @include md-block() {
+      flex-direction: column;
+      background: none;
+    }
+    .d-flex {
+
+      @include md-block() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #create-competition {
+        background-color: $white-bg;
+        color: $black-two-50;
+        font-size: 14px;
+        cursor: pointer;
+        text-align: center;
+        padding: 13px 27px;
+        border-radius: 4px;
+        font-weight: normal;
+        border: none;
+        outline: none;
+
+        @include md(margin-top, 15px);
+      }
+      .winner {
+        padding-top: 65px;
+
+        @include md-block() {
+          align-self: flex-start;
+        }
+        .new-winner {
+          font-size: 14px;
+          img {
+            padding-right: 5px;
+          }
+        }
+        .block-winner {
+          position: relative;
+          padding-top: 15px;
+          .user-winner {
+            position: absolute;
+            top: 38px;
+            left: 20px;
+            width: 258px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .block-description {
+              .name-user {
+                font-size: 18px;
+                .specification {
+                  margin-left: 5px;
+                  padding: 2px 10px;
+                  border: 1px solid $sunflower-yellow;
+                  border-radius: 9px;
+                  font-size: 14px;
+                  color: $black-two-50;
+                }
+              }
+              .competition {
+                padding-top: 7px;
+                font-size: 14px;
+                color: $black-two-50;
+                .name-competition {
+                  text-decoration: none;
+                  color: $black-font;
+                  font-size: 16px;
+                  font-weight: bold;
+                  border-bottom: 1px solid $black-font;
+                }
+              }
+            }
+          }
+          .count-applause-block {
+            position: absolute;
+            top: 113px;
+            left: 60px;
+            .oval {
+              position: absolute;
+            }
+            .applause {
+              position: absolute;
+              top: -8px;
+              left: -17px;
+            }
+            .count-applause {
+              position: absolute;
+              left: 50px;
+              top: 14px;
+              color: $black-two-50;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .title-banner {
+      text-align: center;
+      font-size: 32px;
+      padding: 63px 0 0 65px;
+      font-weight: bold;
+
+      @include md-block() {
+        order: -1;
+        padding: 0;
+      }
+      @include xs(font-size, 28px);
+      span {
+        font-weight: normal;
+        line-height: 45px;
+      }
+    }
+  }
+}

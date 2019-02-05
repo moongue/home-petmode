@@ -12,11 +12,6 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
-
-    @include xs-block() {
-      justify-content: space-between;
-    }
-
     .mobile-menu-toggle {
       display: none;
 
@@ -131,74 +126,74 @@
         }
       }
     }
-  }
-  .search {
-    display: flex;
-    align-items: center;
-    #search {
-      background: none;
-      border: none;
-      outline: none;
-      padding-left: 10px;
-      color: white;
-      width: 120px;
-      &::-webkit-input-placeholder {
-        color: $camo-green;
-      }
-      &::-moz-placeholder {
-        color: $camo-green;
-      }
-      &:-moz-placeholder {
-        color: $camo-green;
-      }
-      &:-ms-input-placeholder {
-        color: $camo-green;
-      }
-    }
-  }
-  .account {
-
-    @include xs-block() {
-      &.is-open-account {
-        width: 100%;
-        position: absolute;
-        top: 86px;
-        background-color: $sunflower-yellow;
-        margin-left: -15px;
-        padding-right: 15px;
-        padding-left: 15px;
-        .ul-account {
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          li:last-child {
-            padding-top: 12px;
-            padding-bottom: 6px;
-          }
+    .search {
+      display: flex;
+      align-items: center;
+      #search {
+        background: none;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        color: white;
+        width: 120px;
+        &::-webkit-input-placeholder {
+          color: $camo-green;
+        }
+        &::-moz-placeholder {
+          color: $camo-green;
+        }
+        &:-moz-placeholder {
+          color: $camo-green;
+        }
+        &:-ms-input-placeholder {
+          color: $camo-green;
         }
       }
     }
-    .ul-account {
-      display: flex;
-      justify-content: space-between;
-      font-size: 16px;
+    .account {
 
       @include xs-block() {
-        display: none;
+        &.is-open-account {
+          width: 100%;
+          position: absolute;
+          top: 86px;
+          background-color: $sunflower-yellow;
+          margin-left: -15px;
+          padding-right: 15px;
+          padding-left: 15px;
+          .ul-account {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            li:last-child {
+              padding-top: 12px;
+              padding-bottom: 6px;
+            }
+          }
+        }
       }
+      .ul-account {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
 
-      .sign-up {
-        padding-right: 38px;
+        @include xs-block() {
+          display: none;
+        }
 
-        @include sm(padding-right, 15px);
-        @include xs(padding-right, 0);
-      }
-      a {
-        text-decoration: none;
-        color: $white;
-        &:hover {
-          color: $sunflower-yellow;
-          transition: all .4s;
+        .sign-up {
+          padding-right: 38px;
+
+          @include sm(padding-right, 15px);
+          @include xs(padding-right, 0);
+        }
+        a {
+          text-decoration: none;
+          color: $white;
+          &:hover {
+            color: $sunflower-yellow;
+            transition: all .4s;
+          }
         }
       }
     }

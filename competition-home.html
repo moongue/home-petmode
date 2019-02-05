@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Конкурсы</title>
+</head>
+<body>
+
+<!--HEADER-->
+<header id="header-ch">
+    <div class="wrapper">
+        <div class="container-header">
+            <div class="logo">
+                <a href="#"><img src="images/small-logo.png" alt="Logo"></a>
+            </div>
+
+            <a href="#" class="lines">
+                <img src="images/lines.png" alt="lines">
+            </a>
+
+            <nav class="menu">
+                <ul class="menu-a">
+                    <li><a href="#">Питомцы</a></li>
+                    <li><a href="#">Специалисты</a></li>
+                    <li><a href="#">Моя радость</a></li>
+                    <li class="active-menu"><a href="#">Конкурсы</a></li>
+                    <li><label class="link" for="hider" id="more">Ещё <span>...</span></label>
+                        <input type="checkbox" id="hider">
+                        <ul class="content">
+                            <li><a href="#news">Новости</a></li>
+                            <li><a href="#">Рейтинг</a></li>
+                            <li><a href="#">Выставка</a></li>
+                            <li><a href="#">Благотворительность</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="search">
+                <input type="text" placeholder="Поиск" id="search">
+                <label for="search">
+                    <img src="images/vector.png" alt="Search">
+                </label>
+            </div>
+            <a href="#" class="user">
+                <div class="name-user">Иван</div>
+                <img src="images/user.png" alt="User Icon">
+            </a>
+        </div>
+    </div>
+</header>
+
+<!--END HEADER-->
+
+<!--SIDEBAR-->
+<div class="sidebar-menu">
+    <input type="checkbox" id="show-sidebar">
+    <label for="show-sidebar"><img src="images/sidebar-icon-add.png" alt="select-icon"></label>
+    <ul class="sidebar">
+        <li><a href="#"><img src="images/sidebar-icon-user.png" alt="Icon User"></a></li>
+        <li><a href="#"><img src="images/sidebar-icon-alert.png" alt="Icon Alert"></a><a href="#"><img
+                src="images/notification-bg.png" alt="Notification" class="notification-bg"><span class="notification-count">2</span></a></li>
+        <li><a href="#"><img src="images/sidebar-icon-message.png" alt="Icon Message"></a></li>
+        <li><a href="#"><img src="images/sidebar-icon-store.png" alt="Icon Store"></a></li>
+        <li><a href="#"><img src="images/sidebar-icon-add.png" alt="Icon Add"></a></li>
+    </ul>
+</div>
+<!--END SIDEBAR-->
+
+<!--BANNER-->
+<div class="bg-ellipse">
+    <section id="banner-ch">
+        <div class="wrapper">
+            <div class="content-banner">
+                <div class="d-flex">
+                    <input type="button" value="Создать Конкурс" id="create-competition">
+
+                    <div class="winner">
+                        <div class="new-winner">
+                            <img src="images/cup.png" alt="Cup"> Новый победитель:
+                        </div>
+                        <div class="block-winner">
+
+                            <img src="images/union.png" alt="union" class="union">
+
+                            <div class="user-winner">
+                                <img src="images/account-user-icon.png" alt="Account user icon">
+
+                                <div class="block-description">
+                                    <div class="name-user">
+                                        Анна Иванова <span class="specification">Заводчик</span>
+                                    </div>
+                                    <div class="competition">
+                                        Конкурс: <a href="#" class="name-competition">&#171 Первые шаги &#187</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="count-applause-block">
+                                <img src="images/oval.png" alt="oval" class="oval">
+                                <img src="images/applause.png" alt="Applause" class="applause">
+                                <div class="count-applause">25</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-banner">
+                    Учавствуй в конкурсе питомцев </br><span>Выигрывай призы!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END BANNER-->
+
+    <!--NEW COMPETITIONS-->
+    <section id="new-competitions">
+        <div class="wrapper">
+            <div class="content-new-competitions">
+                <div class="filter">
+                    <div class="competition">
+                        Конкурсы:
+                    </div>
+                    <ul class="filter-simplified">
+                        <li><a href="#">По популярности</a> |</li>
+                        <li><a href="#">Дате</a> |</li>
+                        <li><a href="#">Типу</a> |</li>
+                        <li><a href="#" class="active-simplified-filter">По питомцам</a></li>
+                    </ul>
+                </div>
+                <div class="more-filter">
+                    <input type="checkbox" id="show-filter">
+                    <label for="show-filter">Фильтр <img src="images/select-icon.png" alt="select-icon"></label>
+                    <ul class="specific-filter">
+                        <li><a href="#" class="first active-more-filter">Все</a></li>
+                        <li><a href="#">Активные</a></li>
+                        <li><a href="#">Завершенные</a></li>
+                        <li><a href="#" class="last">С мои учасием</a></li>
+                    </ul>
+
+                    <ul class="cat-or-dog-filter">
+                        <li><a href="#" class="cat-filter active-more-filter">Кошки</a></li>
+                        <li><a href="#" class="dog-filter">Собаки</a></li>
+                    </ul>
+
+                    <a href="#" class="close-filter"><img src="images/close-filter.png" alt="Close filter"> отменить
+                        фильтр</a>
+                </div>
+                <div class="title-competition">
+                    Новые конкурсы:
+                </div>
+                <div class="competition-blocks">
+                    <div class="competition-block">
+                        <div class="img-with-icon big-img-with-icon">
+                            <a href="#"><img src="images/dog-competition.png" alt="Dog">
+                                <img src="images/dog-icon-competition.png" alt="Icon dog" class="icon"></a>
+                        </div>
+                        <div class="name-competition">
+                            <a href="#">Забавные животные</a> <span class="state to-press-left">Активный</span>
+                        </div>
+                        <div class="activity-competition">
+                            <div class="like">
+                                <img src="images/like.png" alt="Like"> 25
+                            </div>
+                            <div class="took-part">
+                                <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                            </div>
+                            <div class="organizer">
+                                Организатор: <span class="name-organizer">Добрые руки</span>
+                            </div>
+                            <div class="seen">
+                                <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                            </div>
+                        </div>
+                    </div>
+                    <div class="competition-big-block">
+                        <div class="competition-two-block">
+                            <div class="competition-block">
+                                <div class="img-with-icon">
+                                    <a href="#"><img src="images/cat-competition.png" alt="Cat">
+                                        <img src="images/cat-icon-competition.png" alt="Cat icon" class="icon"></a>
+                                </div>
+                                <div class="name-competition">
+                                    <a href="#">Забавные животные</a> <span class="state">Активный</span>
+                                </div>
+                                <div class="activity-competition">
+                                    <div class="like">
+                                        <img src="images/like.png" alt="Like"> 25
+                                    </div>
+                                    <div class="took-part">
+                                        <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                                    </div>
+                                    <div class="seen">
+                                        <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="competition-block">
+                                <div class="img-with-icon">
+                                    <a href="#"><img src="images/cat-competition.png" alt="Cat">
+                                        <img src="images/cat-icon-competition.png" alt="Cat icon" class="icon">
+                                    </a>
+                                </div>
+                                <div class="name-competition">
+                                    <a href="#">Забавные животные</a> <span class="state">Активный</span>
+                                </div>
+                                <div class="activity-competition">
+                                    <div class="like">
+                                        <img src="images/like.png" alt="Like"> 25
+                                    </div>
+                                    <div class="took-part">
+                                        <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                                    </div>
+                                    <div class="seen">
+                                        <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="create-competition">
+                            <div class="title-competition-block">
+                                Создай <span>Свой</span> Конкурс
+                            </div>
+                            <input type="button" id="create-competition-two" value="Создать Конкурс">
+                            <img src="images/semicircle.png" alt="semicircle" class="semicircle-left">
+                            <img src="images/semicircle.png" alt="semicircle" class="semicircle-right">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--END NEW COMPETITIONS-->
+
+<!--COMPETITION-->
+<section id="competitions">
+    <div class="wrapper">
+        <div class="title-competition">
+            Конкурсы:
+        </div>
+        <div class="content-competitions">
+            <div class="row-competition">
+                <div class="competition-block">
+                    <div class="img-with-icon">
+                        <a href="#"><img src="images/cat-competition-wider.png" alt="Cat">
+                            <img src="images/cat-icon-competition.png" alt="Cat icon" class="icon"></a>
+                    </div>
+                    <div class="name-competition">
+                        <a href="#">Забавные животные</a> <span class="state">Активный</span>
+                    </div>
+                    <div class="activity-competition">
+                        <div class="like">
+                            <img src="images/like.png" alt="Like"> 25
+                        </div>
+                        <div class="took-part">
+                            <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                        </div>
+                        <div class="seen">
+                            <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                        </div>
+                    </div>
+                </div>
+                <div class="competition-block">
+                    <div class="img-with-icon">
+                        <a href="#"><img src="images/cat-competition-wider.png" alt="Cat">
+                            <img src="images/cat-icon-competition.png" alt="Cat icon" class="icon"></a>
+                    </div>
+                    <div class="name-competition">
+                        <a href="#">Забавные животные</a> <span class="state">Активный</span>
+                    </div>
+                    <div class="activity-competition">
+                        <div class="like">
+                            <img src="images/like.png" alt="Like"> 25
+                        </div>
+                        <div class="took-part">
+                            <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                        </div>
+                        <div class="seen">
+                            <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                        </div>
+                    </div>
+                </div>
+                <div class="competition-block">
+                    <div class="img-with-icon">
+                        <a href="#"><img src="images/cat-competition-wider.png" alt="Cat">
+                            <img src="images/cat-icon-competition.png" alt="Cat icon" class="icon"></a>
+                    </div>
+                    <div class="name-competition">
+                        <a href="#">Забавные животные</a> <span class="state">Активный</span>
+                    </div>
+                    <div class="activity-competition">
+                        <div class="like">
+                            <img src="images/like.png" alt="Like"> 25
+                        </div>
+                        <div class="took-part">
+                            <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                        </div>
+                        <div class="seen">
+                            <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-competition">
+                <div class="competition-block">
+                    <div class="img-with-icon">
+                        <a href="#"><img src="images/cat-competition-big.png" alt="Cat">
+                            <img src="images/cat-icon-competition.png" alt="Cat icon" class="icon"></a>
+                    </div>
+                    <div class="name-competition">
+                        <a href="#">Забавные животные</a> <span class="state">Активный</span>
+                    </div>
+                    <div class="activity-competition">
+                        <div class="like">
+                            <img src="images/like.png" alt="Like"> 25
+                        </div>
+                        <div class="took-part">
+                            <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                        </div>
+                        <div class="seen">
+                            <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                        </div>
+                    </div>
+                </div>
+                <div class="take-part">
+                    <div class="take-part-block">
+                        <div class="title-take-part">
+                            Учавствуй в конкурсе питомцев <span>Выигрывай призы!</span>
+                        </div>
+                        <div class="description-take-part">
+                            Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя
+                        </div>
+                        <input type="button" value="Участвовать" id="btn-take-part">
+                    </div>
+                    <div class="name-competition">
+                        <a href="#">Промо акция</a> <span class="time">00 : 03 : 15</span>
+                    </div>
+                    <div class="activity-competition">
+                        <div class="like">
+                            <img src="images/like.png" alt="Like"> 25
+                        </div>
+                        <div class="took-part">
+                            <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                        </div>
+                        <div class="seen">
+                            <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                        </div>
+                    </div>
+                </div>
+                <div class="col-competition">
+                    <div class="competition-block">
+                        <div class="img-with-icon">
+                            <a href="#"><img src="images/cat-competition-wider.png" alt="Cat">
+                                <img src="images/cat-icon-competition.png" alt="Cat icon" class="icon"></a>
+                        </div>
+                        <div class="name-competition">
+                            <a href="#">Забавные животные</a> <span class="state">Активный</span>
+                        </div>
+                        <div class="activity-competition">
+                            <div class="like">
+                                <img src="images/like.png" alt="Like"> 25
+                            </div>
+                            <div class="took-part">
+                                <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                            </div>
+                            <div class="seen">
+                                <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                            </div>
+                        </div>
+                    </div>
+                    <div class="competition-block">
+                        <div class="img-with-icon">
+                            <a href="#"><img src="images/cat-competition-wider.png" alt="Cat">
+                                <img src="images/cat-icon-competition.png" alt="Cat icon" class="icon"></a>
+                        </div>
+                        <div class="name-competition">
+                            <a href="#">Забавные животные</a> <span class="state">Активный</span>
+                        </div>
+                        <div class="activity-competition">
+                            <div class="like">
+                                <img src="images/like.png" alt="Like"> 25
+                            </div>
+                            <div class="took-part">
+                                <img src="images/took-part-icon.png" alt="Took part icon"> 6
+                            </div>
+                            <div class="seen">
+                                <img src="images/seen-icon.png" alt="Seen Icon"> 153
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/loading.png" alt="loading" class="loading">
+        </div>
+    </div>
+</section>
+<!--END COMPETITION-->
+</body>
+</html>

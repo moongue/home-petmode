@@ -24,6 +24,19 @@ function menuLogic2() {
     });
 }
 
+function menuLogicCh() {
+    var $header = $('#header-ch');
+    var $mobileMenuTrigger = $('.lines', $header);
+    var $menuBlock = $('.menu', $header);
+    var openClass = 'is-open';
+
+    // Toggle main menu.
+    $mobileMenuTrigger.on('click', function (e) {
+        e.preventDefault();
+        $menuBlock.toggleClass(openClass);
+    });
+}
+
 function closePopup() {
     $.magnificPopup.close();
 }
@@ -38,6 +51,7 @@ function popup() {
     });
 }
 
+
 function tabs() {
     $('.tabs').lightTabs();
 }
@@ -45,6 +59,7 @@ function tabs() {
 $(window).on('load', function () {
     menuLogic();
     menuLogic2();
+    menuLogicCh();
     popup();
     closePopup();
     tabs();

@@ -16,6 +16,9 @@ var settings = {
         fields: '30px' /* side fields */
     },
     breakPoints: {
+        sidebar: {
+            width: '1380px' /* sidebar fix */
+        },
         fix: {
             width: '1200px' /* fix bag with offset */
         },

@@ -1,0 +1,238 @@
+#competitions {
+  .title-competition {
+    font-size: 24px;
+    color: $black-font;
+    font-weight: normal;
+    padding-top: 45px;
+
+    @include xs(text-align, center);
+  }
+  .content-competitions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .row-competition {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 30px;
+
+      @include fix-block() {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      :nth-child(2) {
+        margin-left: 20px;
+      }
+
+      @include sm-block() {
+        :nth-child(2) {
+          margin-left: 0;
+        }
+      }
+      .col-competition {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include fix-block() {
+          flex-direction: row;
+        }
+        @include sm-block() {
+          flex-direction: column;
+          :nth-child(2) {
+            margin-left: 0;
+          }
+        }
+      }
+      .take-part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid $white-bg;
+        width: 366px;
+        padding-bottom: 20px;
+
+        @include fix-block() {
+          margin-bottom: 15px;
+        }
+        @include xs-block() {
+          max-width: 366px;
+          width: 100%;
+        }
+        .take-part-block {
+          border: 1px solid $white-bg;
+          border-radius: 8px;
+          padding: 50px 0 0 36px;
+          height: 556px;
+          width: 370px;
+          box-sizing: border-box;
+
+          @include xs-block() {
+            width: 100%;
+          }
+          .title-take-part {
+            font-size: 40px;
+            width: 224px;
+            color: $black-font;
+            font-weight: bold;
+            span {
+              font-weight: normal;
+            }
+          }
+          .description-take-part {
+            font-size: 14px;
+            width: 240px;
+            font-weight: normal;
+            line-height: 24px;
+            color: $black-two-50;
+            padding-top: 43px;
+          }
+          #btn-take-part {
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 70px;
+            color: #000;
+            background: none;
+            outline: none;
+            padding: 13px 36px;
+            border: 1px solid $sunflower-yellow;
+            border-radius: 8px;
+          }
+        }
+        .name-competition {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 20px;
+          margin-left: 0 !important;
+          width: 366px;
+
+          @include xs-block() {
+            width: 100%;
+          }
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            color: $black-font;
+          }
+        }
+        .activity-competition {
+          display: flex;
+          justify-content: space-between;
+          color: $black-two-50;
+          padding-top: 19px;
+          font-size: 14px;
+          width: 366px;
+
+          @include xs-block() {
+            width: 100%;
+          }
+          .like {
+            display: flex;
+            align-items: center;
+            img {
+              padding-right: 10px;
+            }
+          }
+          .took-part {
+            display: flex;
+            align-items: center;
+            margin-left: 18px;
+            margin-right: auto;
+
+            img {
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+      .competition-block {
+        border-bottom: 1px solid $white-bg;
+        padding-bottom: 20px;
+
+        @include fix-block() {
+          margin-bottom: 15px;
+        }
+        .img-with-icon {
+          position: relative;
+          a {
+            :first-child {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+          }
+          .icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          &.big-img-with-icon {
+            width: 570px;
+
+            @include sm-block() {
+              width: 100%;
+            }
+          }
+        }
+        .name-competition {
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 0 !important;
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            color: $black-font;
+          }
+          .state {
+            margin-left: 13px;
+            padding: 4px 10px;
+            font-weight: normal;
+            border: 1px solid $sunflower-yellow;
+            border-radius: 9px;
+            font-size: 14px;
+            color: $black-two-50;
+            &.to-press-left {
+              margin-right: auto;
+            }
+          }
+        }
+        .activity-competition {
+          display: flex;
+          justify-content: space-between;
+          color: $black-two-50;
+          padding-top: 15px;
+          font-size: 14px;
+          .like {
+            display: flex;
+            align-items: center;
+            img {
+              padding-right: 10px;
+            }
+          }
+          .took-part {
+            display: flex;
+            align-items: center;
+            margin-left: 18px;
+            margin-right: auto;
+
+            img {
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    .loading {
+      margin: 0 auto;
+      padding-top: 65px;
+      padding-bottom: 72px;
+      width: 52px;
+      height: 51px;
+    }
+  }
+}

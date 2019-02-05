@@ -3,18 +3,50 @@ body {
   background-color: #fff;
   font-weight: bold;
 }
+
 .wrapper {
   @include wrapper();
 }
 
-input::-webkit-input-placeholder       {text-indent: 0;   transition: text-indent 0.4s ease;}
-input::-moz-placeholder                {text-indent: 0;   transition: text-indent 0.4s ease;}
-input:-moz-placeholder                 {text-indent: 0;   transition: text-indent 0.4s ease;}
-input:-ms-input-placeholder            {text-indent: 0;   transition: text-indent 0.4s ease;}
-input:focus::-webkit-input-placeholder {text-indent: 600px; transition: text-indent 0.4s ease;}
-input:focus::-moz-placeholder          {text-indent: 600px; transition: text-indent 0.4s ease;}
-input:focus:-moz-placeholder           {text-indent: 600px; transition: text-indent 0.4s ease;}
-input:focus:-ms-input-placeholder      {text-indent: 600px; transition: text-indent 0.4s ease;}
+input::-webkit-input-placeholder {
+  text-indent: 0;
+  transition: text-indent 0.4s ease;
+}
+
+input::-moz-placeholder {
+  text-indent: 0;
+  transition: text-indent 0.4s ease;
+}
+
+input:-moz-placeholder {
+  text-indent: 0;
+  transition: text-indent 0.4s ease;
+}
+
+input:-ms-input-placeholder {
+  text-indent: 0;
+  transition: text-indent 0.4s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+  text-indent: 600px;
+  transition: text-indent 0.4s ease;
+}
+
+input:focus::-moz-placeholder {
+  text-indent: 600px;
+  transition: text-indent 0.4s ease;
+}
+
+input:focus:-moz-placeholder {
+  text-indent: 600px;
+  transition: text-indent 0.4s ease;
+}
+
+input:focus:-ms-input-placeholder {
+  text-indent: 600px;
+  transition: text-indent 0.4s ease;
+}
 
 .title {
   h2 {
@@ -31,6 +63,7 @@ input:focus:-ms-input-placeholder      {text-indent: 600px; transition: text-ind
     }
   }
 }
+
 h3 {
   font-size: 24.5px;
   color: $black;
@@ -40,7 +73,8 @@ h3 {
     font-size: 24.5px;
   }
 }
-.show-more{
+
+.show-more {
   padding-top: 30px;
   a {
     color: $dull-blue;
@@ -52,4 +86,63 @@ h3 {
       transition: all .3s;
     }
   }
+}
+
+.sidebar-menu {
+  position: fixed;
+  left: 37px;
+  z-index: 999;
+
+  .notification-bg {
+    position: absolute;
+    left: 11px;
+    bottom: -20px;
+  }
+  .notification-count {
+    color: $white;
+    position: absolute;
+    bottom: 2px;
+    right: 3px;
+  }
+  #show-sidebar {
+    display: none;
+  }
+  input[type=checkbox]:checked ~ .sidebar {
+    opacity: 1;
+    visibility: visible;
+    transition: all .4s;
+  }
+  input[type=checkbox]:checked ~ label {
+    transform: rotate(45deg);
+    transition: all .4s;
+  }
+
+  label {
+    display: none;
+    @include sidebar-block() {
+      display: block;
+      position: fixed;
+      bottom: 10px;
+    }
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+
+    @include sidebar-block() {
+      visibility: hidden;
+      opacity: 0;
+    }
+    li {
+      position: relative;
+      padding-top: 15px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.bg-ellipse {
+  background: url("../images/ellipse.png") no-repeat 100% 0;
 }
