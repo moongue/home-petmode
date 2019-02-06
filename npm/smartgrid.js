@@ -32,6 +32,9 @@ var settings = {
             width: '780px',
             fields: '15px' /* set fields only if you want to change container.fields */
         },
+        arrow: {
+            width: '624px'
+        },
         xs: {
             width: '560px'
         }

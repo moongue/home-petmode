@@ -1,0 +1,114 @@
+#entries {
+  margin-top: 174px;
+  .content-entries {
+    display: flex;
+    flex-direction: column;
+    .title-entries-with-filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include md-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+      .title {
+        font-size: 24px;
+        color: $black-font;
+        font-weight: normal;
+
+        @include md(text-align, center);
+      }
+      #create-competition {
+        margin-left: auto;
+        padding: 13px 27px;
+
+        @include md-block() {
+          margin: 15px 0 25px;
+        }
+      }
+      .all-works-my {
+        display: flex;
+        margin-left: 30px;
+
+        @include md-block() {
+          margin-left: 0;
+        }
+        li {
+          a {
+            padding: 11px 32px;
+            color: $black-two-50;
+            font-size: 14px;
+            font-weight: normal;
+            text-decoration: none;
+            border: 1px solid $sunflower-yellow;
+            border-left: none;
+            &.first {
+              border-radius: 4px 0 0 4px;
+              border-left: 1px solid $white-bg;
+            }
+            &.last {
+              border-radius: 0 8px 8px 0;
+            }
+            &.active-filter {
+              color: #000000;
+              font-weight: bold;
+              background-color: $sunflower-yellow;
+              border: 1px solid $sunflower-yellow;
+            }
+          }
+        }
+      }
+    }
+    .blocks-entries {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 19px;
+
+      @include lg-block() {
+        justify-content: space-around;
+      }
+      .block-entries {
+        border-bottom: 1px solid $white-bg;
+        padding-bottom: 20px;
+        padding-top: 31px;
+        max-width: 330px;
+
+        @include fix-block() {
+          margin-bottom: 15px;
+        }
+        .img-entries {
+          position: relative;
+          a {
+            :first-child {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+        .name-entries {
+          padding-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 0 !important;
+          a {
+            text-decoration: none;
+            font-size: 16px;
+            color: $black-font;
+          }
+          .participants {
+            font-size: 14px;
+            color: $black-40;
+            font-weight: normal;
+            .count-participants {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

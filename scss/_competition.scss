@@ -177,62 +177,8 @@
             }
           }
         }
-        .name-competition {
-          padding-top: 20px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-left: 0 !important;
-          a {
-            text-decoration: none;
-            font-size: 16px;
-            color: $black-font;
-          }
-          .state {
-            margin-left: 13px;
-            padding: 4px 10px;
-            font-weight: normal;
-            border: 1px solid $sunflower-yellow;
-            border-radius: 9px;
-            font-size: 14px;
-            color: $black-two-50;
-            &.to-press-left {
-              margin-right: auto;
-            }
-          }
-        }
-        .activity-competition {
-          display: flex;
-          justify-content: space-between;
-          color: $black-two-50;
-          padding-top: 15px;
-          font-size: 14px;
-          .like {
-            display: flex;
-            align-items: center;
-            img {
-              padding-right: 10px;
-            }
-          }
-          .took-part {
-            display: flex;
-            align-items: center;
-            margin-left: 18px;
-            margin-right: auto;
-
-            img {
-              padding-right: 10px;
-            }
-          }
-        }
       }
-    }
-    .loading {
-      margin: 0 auto;
-      padding-top: 65px;
-      padding-bottom: 72px;
-      width: 52px;
-      height: 51px;
     }
   }
 }
+

@@ -1,0 +1,182 @@
+#competition-card {
+  padding-top: 64px;
+  .content-competition-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    @include md-block(){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .img-competition-card {
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .description-competition-card {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      margin-left: 27px;
+      border-bottom: 1px solid $white-bg;
+
+      @include md-block() {
+        padding-top: 15px;
+        margin-left: 0;
+        width: 100%;
+      }
+      .competition-card-title, .nomination {
+        display: flex;
+        justify-content: space-between;
+        .date {
+          font-size: 14px;
+          color: $black-font;
+          font-weight: 600;
+
+          @include xs(padding-top, 10px);
+        }
+        .competition-card-name, .nomination-name {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-bottom: 20px;
+          h2 {
+            padding-top: 20px;
+            font-size: 24px;
+            color: $black-font;
+            font-weight: normal;
+          }
+          p {
+            font-size: 14px;
+            color: $black-40;
+            font-weight: normal;
+          }
+        }
+      }
+      .nomination {
+        padding-top: 28px;
+
+        @include xs-block {
+          flex-direction: column;
+        }
+        .nomination-name {
+          padding-bottom: 0;
+        }
+      }
+      .competition-card-title {
+        border-bottom: 1px solid $white-bg;
+      }
+      .specification {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+
+        @include xs-block() {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .specification-description {
+          width: 327px;
+
+          @include md-block() {
+            width: 60%;
+          }
+          @include xs(width, 100%);
+          h4 {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: $black-font;
+            img {
+              padding-right: 10px;
+            }
+          }
+          p {
+            line-height: 24px;
+            padding-top: 22px;
+            font-size: 14px;
+            color: $black-60;
+            font-weight: normal;
+            .read-more {
+              color: $black-40;
+              text-decoration: none;
+            }
+          }
+        }
+        .to-become {
+          display: flex;
+          flex-direction: column;
+
+          @include xs-block() {
+            width: 60%;
+          }
+          input {
+            padding: 11px 26px;
+            color: $black-two-50;
+            background-color: $white-bg;
+            font-weight: normal;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+          }
+          @include xs-block() {
+            #to-become-partner {
+              margin-top: 12px;
+            }
+          }
+          #to-become-sponsor {
+            margin-top: 12px;
+          }
+        }
+      }
+      .competition-position-participate {
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+
+        @include xs-block() {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .participate #participate {
+          padding: 16px 35px;
+          border: 1px solid $sunflower-yellow;
+          color: #000;
+          cursor: pointer;
+          font-size: 16px;
+          background: none;
+          border-radius: 4px;
+        }
+        .competition-position {
+          font-size: 14px;
+          padding-left: 30px;
+
+          @include xs-block() {
+            padding-left: 0;
+            padding-top: 15px;
+          }
+          h4 {
+            color: $black-font;
+          }
+          .docs {
+            color: $white-bg;
+            padding-top: 6px;
+            a {
+              color: $blue-link;
+              font-weight: normal;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .activity-competition {
+        padding-top: 36px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}

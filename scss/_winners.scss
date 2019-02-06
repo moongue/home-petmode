@@ -1,0 +1,157 @@
+#winners {
+  .content-winners {
+    .filter-competition {
+      padding-top: 68px;
+      display: flex;
+      justify-content: center;
+
+      @include xs-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+      @include xs(padding-top, 10px);
+      li {
+
+        @include xs-block() {
+          margin-top: 25px;
+        }
+        a {
+          padding: 11px 32px;
+          color: $black-two-50;
+          font-size: 14px;
+          font-weight: normal;
+          text-decoration: none;
+          border: 1px solid $sunflower-yellow;
+          border-left: none;
+
+          @include xs-block {
+            border: none;
+            border-bottom: 1px solid $sunflower-yellow;
+          }
+          &.first {
+            border-radius: 4px 0 0 4px;
+            border-left: 1px solid $white-bg;
+            @include xs(border-radius, 0);
+          }
+          &.last {
+            border-radius: 0 4px 4px 0;
+            @include xs(border-radius, 0);
+          }
+          &.active {
+            color: #000000;
+            font-weight: bold;
+            background-color: $sunflower-yellow;
+            border: 1px solid $sunflower-yellow;
+            @include xs(border-radius, 4px);
+          }
+        }
+      }
+    }
+    .slider {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 120px;
+      height: 250px;
+      max-width: 600px;
+      margin: 0 auto;
+      .slick-slide > div {
+        text-align: center !important;
+      }
+      .slide {
+        margin: 8px 15px;
+        width: 170px !important;
+        height: 232px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        border-radius: 8px;
+        .block-winner {
+          background-color: $white-bg;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          height: 144px;
+          .cup {
+            position: absolute;
+            top: 11px;
+            right: 11px;
+          }
+          .place {
+            font-size: 12px;
+            padding-top: 36px;
+            color: $black-40;
+            font-style: italic;
+          }
+          .place-number {
+            color: #000;
+            font-size: 24px;
+            padding-top: 10px;
+            font-weight: normal;
+          }
+          .wreaths {
+            position: absolute;
+            top: 67px;
+          }
+        }
+        .name-winner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .participants {
+            padding-top: 21px;
+            font-size: 14px;
+            color: $black-40;
+            font-weight: normal;
+            .count-participants {
+              color: $red;
+            }
+          }
+          .name {
+            color: $black-font;
+            font-size: 15px;
+            padding-top: 12px;
+          }
+        }
+      }
+      .winner {
+        border: 1px solid $sunflower-yellow;
+        border-radius: 8px;
+        width: 200px !important;
+      }
+      .slick-arrow {
+        position: absolute;
+        outline: none;
+        font-size: 0;
+        height: 88px;
+        width: 88px;
+        border: none;
+        background-color: $white;
+        z-index: 998;
+        &:hover {
+          filter: brightness(80%);
+          transition: all .3s;
+        }
+        &.slick-prev {
+          left: -325px;
+          background: url("../images/slick-arrow-prev.png") no-repeat;
+          @include sidebar(left, -230px);
+          @include lg(left, -120px);
+          @include md(left, -43px);
+          @include sm(left, 20px);
+          @include arrow(left, 10%);
+        }
+        &.slick-next {
+          right: -325px;
+          background: url("../images/slick-arrow-next.png") no-repeat;
+          @include sidebar(right, -230px);
+          @include lg(right, -120px);
+          @include md(right, -43px);
+          @include sm(right, 20px);
+          @include arrow(right, 10%);
+        }
+      }
+    }
+  }
+}

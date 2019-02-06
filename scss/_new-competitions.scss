@@ -293,28 +293,6 @@
           }
         }
         .activity-competition {
-          display: flex;
-          justify-content: space-between;
-          color: $black-two-50;
-          padding-top: 15px;
-          font-size: 14px;
-          .like {
-            display: flex;
-            align-items: center;
-            img {
-              padding-right: 10px;
-            }
-          }
-          .took-part {
-            display: flex;
-            align-items: center;
-            margin-left: 18px;
-            margin-right: auto;
-
-            img {
-              padding-right: 10px;
-            }
-          }
           .organizer {
             font-weight: normal;
             margin-right: auto;

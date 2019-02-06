@@ -40,6 +40,7 @@ function menuLogicCh() {
 function closePopup() {
     $.magnificPopup.close();
 }
+
 function popup() {
     $('.sign-in').magnificPopup({
         showCloseBtn: false,
@@ -51,10 +52,38 @@ function popup() {
     });
 }
 
-
 function tabs() {
     $('.tabs').lightTabs();
 }
+
+
+function slider() {
+    $('.slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        speed: 1000,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 780,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 624,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+}
+
 
 $(window).on('load', function () {
     menuLogic();
@@ -63,4 +92,5 @@ $(window).on('load', function () {
     popup();
     closePopup();
     tabs();
+    slider();
 });
