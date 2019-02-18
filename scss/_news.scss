@@ -7,7 +7,7 @@
     @include lg-block {
       flex-direction: column;
     }
-    
+
     .title {
       @include lg-block() {
         text-align: center;

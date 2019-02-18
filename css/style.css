@@ -154,6 +154,13 @@ h3 span {
   transition: all .3s;
 }
 
+.read-more {
+  color: #506aa1;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
 #create-competition {
   background-color: #e9e9e9;
   color: rgba(52, 52, 52, 0.5);
@@ -1766,12 +1773,6 @@ h3 span {
   max-width: 484px;
 }
 
-#my-joy .content-my-joy .myJoyNewsFlex__description .read-more {
-  color: #506aa1;
-  font-size: 14px;
-  cursor: pointer;
-}
-
 #my-joy .content-my-joy .myJoyNewsFlexUser {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2754,6 +2755,21 @@ h3 span {
   align-items: center;
 }
 
+#header-ch .container-header .menu ul .search-hide-desktop {
+  display: none;
+}
+
+@media screen and (max-width: 560px) {
+  #header-ch .container-header .menu ul .search-hide-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 #header-ch .container-header .menu ul li {
   padding: 28px 15px;
 }
@@ -2859,6 +2875,9 @@ h3 span {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 10px;
+  background-color: #f3f3f3;
+  padding: 5px 15px;
+  border-radius: 15px;
 }
 
 @media screen and (max-width: 960px) {
@@ -2869,38 +2888,61 @@ h3 span {
 
 @media screen and (max-width: 560px) {
   #header-ch .container-header .search {
-    margin-right: 5px;
+    margin: 6px 0;
+    display: none;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 
-#header-ch .container-header .search #search {
+#header-ch .container-header .search #search,
+#header-ch .container-header .search #search-mob {
   background: none;
   border: none;
   outline: none;
   padding-left: 10px;
   color: #4c4c4c;
-  width: 60px;
+  width: 80px;
 }
 
-#header-ch .container-header .search #search::-webkit-input-placeholder {
+#header-ch .container-header .search #search::-webkit-input-placeholder,
+#header-ch .container-header .search #search-mob::-webkit-input-placeholder {
   color: rgba(209, 193, 174, 0.7);
 }
 
-#header-ch .container-header .search #search::-moz-placeholder {
+#header-ch .container-header .search #search::-moz-placeholder,
+#header-ch .container-header .search #search-mob::-moz-placeholder {
   color: rgba(209, 193, 174, 0.7);
 }
 
-#header-ch .container-header .search #search:-moz-placeholder {
+#header-ch .container-header .search #search:-moz-placeholder,
+#header-ch .container-header .search #search-mob:-moz-placeholder {
   color: rgba(209, 193, 174, 0.7);
 }
 
-#header-ch .container-header .search #search:-ms-input-placeholder {
+#header-ch .container-header .search #search:-ms-input-placeholder,
+#header-ch .container-header .search #search-mob:-ms-input-placeholder {
   color: rgba(209, 193, 174, 0.7);
 }
 
 #header-ch .container-header .search img {
   -webkit-filter: contrast(10%);
   filter: contrast(10%);
+}
+
+@media screen and (max-width: 560px) {
+  #header-ch .container-header .search img {
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #header-ch .container-header #search-mob {
+    width: 300px !important;
+    padding-right: 20px;
+  }
 }
 
 #header-ch .container-header .user {
@@ -4595,6 +4637,1382 @@ h3 span {
 
 #entries .content-entries .blocks-entries .block-entries .name-entries .participants .count-participants {
   color: #d86c65;
+}
+
+.page-create-competition .container-step-one,
+.page-create-competition .container-step-two,
+.page-create-competition .container-step-three,
+.page-create-competition .container-create-finish {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 93px;
+}
+
+.page-create-competition .container-step-one .title-create-competition,
+.page-create-competition .container-step-two .title-create-competition,
+.page-create-competition .container-step-three .title-create-competition,
+.page-create-competition .container-create-finish .title-create-competition {
+  text-align: center;
+  padding-top: 36px;
+  color: #4c4c4c;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.page-create-competition .container-step-one .title-create-competition span,
+.page-create-competition .container-step-two .title-create-competition span,
+.page-create-competition .container-step-three .title-create-competition span,
+.page-create-competition .container-create-finish .title-create-competition span {
+  font-weight: normal;
+  font-size: 16px;
+  padding-left: 17px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.page-create-competition .container-step-one .title-create-competition img,
+.page-create-competition .container-step-two .title-create-competition img,
+.page-create-competition .container-step-three .title-create-competition img,
+.page-create-competition .container-create-finish .title-create-competition img {
+  width: 100%;
+  height: auto;
+}
+
+.page-create-competition .container-step-one .container-registration-competition,
+.page-create-competition .container-step-two .container-registration-competition,
+.page-create-competition .container-step-three .container-registration-competition,
+.page-create-competition .container-create-finish .container-registration-competition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 45px;
+}
+
+.page-create-competition .container-step-one .container-registration-competition > div,
+.page-create-competition .container-step-two .container-registration-competition > div,
+.page-create-competition .container-step-three .container-registration-competition > div,
+.page-create-competition .container-create-finish .container-registration-competition > div {
+  margin: 0 15px;
+}
+
+@media screen and (max-width: 780px) {
+  .page-create-competition .container-step-one .container-registration-competition > div,
+  .page-create-competition .container-step-two .container-registration-competition > div,
+  .page-create-competition .container-step-three .container-registration-competition > div,
+  .page-create-competition .container-create-finish .container-registration-competition > div {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .page-create-competition .container-step-one .container-registration-competition,
+  .page-create-competition .container-step-two .container-registration-competition,
+  .page-create-competition .container-step-three .container-registration-competition,
+  .page-create-competition .container-create-finish .container-registration-competition {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.page-create-competition .container-step-one .container-registration-competition .loading-photo-block,
+.page-create-competition .container-step-two .container-registration-competition .loading-photo-block,
+.page-create-competition .container-step-three .container-registration-competition .loading-photo-block,
+.page-create-competition .container-create-finish .container-registration-competition .loading-photo-block {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  width: 370px;
+  height: 296px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .page-create-competition .container-step-one .container-registration-competition .loading-photo-block,
+  .page-create-competition .container-step-two .container-registration-competition .loading-photo-block,
+  .page-create-competition .container-step-three .container-registration-competition .loading-photo-block,
+  .page-create-competition .container-create-finish .container-registration-competition .loading-photo-block {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .page-create-competition .container-step-one .container-registration-competition .loading-photo-block,
+  .page-create-competition .container-step-two .container-registration-competition .loading-photo-block,
+  .page-create-competition .container-step-three .container-registration-competition .loading-photo-block,
+  .page-create-competition .container-create-finish .container-registration-competition .loading-photo-block {
+    width: 300px;
+  }
+}
+
+.page-create-competition .container-step-one .container-registration-competition .loading-photo-block img,
+.page-create-competition .container-step-two .container-registration-competition .loading-photo-block img,
+.page-create-competition .container-step-three .container-registration-competition .loading-photo-block img,
+.page-create-competition .container-create-finish .container-registration-competition .loading-photo-block img {
+  padding-top: 123px;
+  opacity: .5;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .loading-photo-block a,
+.page-create-competition .container-step-two .container-registration-competition .loading-photo-block a,
+.page-create-competition .container-step-three .container-registration-competition .loading-photo-block a,
+.page-create-competition .container-create-finish .container-registration-competition .loading-photo-block a {
+  text-decoration: none;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.4);
+  padding-top: 4px;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+}
+
+.page-create-competition .container-step-one .container-registration-competition .buttons-create-finish,
+.page-create-competition .container-step-two .container-registration-competition .buttons-create-finish,
+.page-create-competition .container-step-three .container-registration-competition .buttons-create-finish,
+.page-create-competition .container-create-finish .container-registration-competition .buttons-create-finish {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .buttons-create-finish > input,
+.page-create-competition .container-step-two .container-registration-competition .buttons-create-finish > input,
+.page-create-competition .container-step-three .container-registration-competition .buttons-create-finish > input,
+.page-create-competition .container-create-finish .container-registration-competition .buttons-create-finish > input {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 560px) {
+  .page-create-competition .container-step-one .container-registration-competition .buttons-create-finish,
+  .page-create-competition .container-step-two .container-registration-competition .buttons-create-finish,
+  .page-create-competition .container-step-three .container-registration-competition .buttons-create-finish,
+  .page-create-competition .container-create-finish .container-registration-competition .buttons-create-finish {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .page-create-competition .container-step-one .container-registration-competition .buttons-create-finish > input,
+  .page-create-competition .container-step-two .container-registration-competition .buttons-create-finish > input,
+  .page-create-competition .container-step-three .container-registration-competition .buttons-create-finish > input,
+  .page-create-competition .container-create-finish .container-registration-competition .buttons-create-finish > input {
+    margin: 0;
+  }
+}
+
+.page-create-competition .container-step-one .container-registration-competition .next-step-create,
+.page-create-competition .container-step-one .container-registration-competition .next-personal-account,
+.page-create-competition .container-step-two .container-registration-competition .next-step-create,
+.page-create-competition .container-step-two .container-registration-competition .next-personal-account,
+.page-create-competition .container-step-three .container-registration-competition .next-step-create,
+.page-create-competition .container-step-three .container-registration-competition .next-personal-account,
+.page-create-competition .container-create-finish .container-registration-competition .next-step-create,
+.page-create-competition .container-create-finish .container-registration-competition .next-personal-account {
+  background: none;
+  outline: none;
+  border: 1px solid #ffd800;
+  border-radius: 4px;
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.5);
+  font-weight: normal;
+  width: 170px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .on-page-competition,
+.page-create-competition .container-step-two .container-registration-competition .on-page-competition,
+.page-create-competition .container-step-three .container-registration-competition .on-page-competition,
+.page-create-competition .container-create-finish .container-registration-competition .on-page-competition {
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.5);
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: normal;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 370px;
+}
+
+@media screen and (max-width: 960px) {
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner {
+    width: 300px;
+  }
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .title-input,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .title-input,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .title-input,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .title-input,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .title-input,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .title-input,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .title-input,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .title-input {
+  font-size: 16px;
+  color: #4c4c4c;
+  padding-top: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .title-input:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .title-input:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .title-input:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .title-input:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .title-input:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .title-input:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .title-input:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .title-input:first-child {
+  padding-top: 0;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .title-input span,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .title-input span,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .title-input span,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .title-input span,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .title-input span,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .title-input span,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .title-input span,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .title-input span {
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.5);
+  font-weight: normal;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .styles-input,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition textarea,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .styles-input,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner textarea,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .styles-input,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition textarea,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .styles-input,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner textarea,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .styles-input,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition textarea,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .styles-input,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner textarea,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .styles-input,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition textarea,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .styles-input,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner textarea {
+  width: 100%;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 13px;
+  font-size: 13px;
+  color: rgba(52, 52, 52, 0.5);
+  height: 40px;
+  margin-top: 8px;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .styles-input::-webkit-input-placeholder,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition textarea::-webkit-input-placeholder,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .styles-input::-webkit-input-placeholder,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner textarea::-webkit-input-placeholder,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .styles-input::-webkit-input-placeholder,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition textarea::-webkit-input-placeholder,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .styles-input::-webkit-input-placeholder,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner textarea::-webkit-input-placeholder,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .styles-input::-webkit-input-placeholder,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition textarea::-webkit-input-placeholder,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .styles-input::-webkit-input-placeholder,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner textarea::-webkit-input-placeholder,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .styles-input::-webkit-input-placeholder,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition textarea::-webkit-input-placeholder,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .styles-input::-webkit-input-placeholder,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner textarea::-webkit-input-placeholder {
+  color: rgba(52, 52, 52, 0.5);
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .styles-input.add,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition textarea.add,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .styles-input.add,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner textarea.add,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .styles-input.add,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition textarea.add,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .styles-input.add,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner textarea.add,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .styles-input.add,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition textarea.add,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .styles-input.add,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner textarea.add,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .styles-input.add,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition textarea.add,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .styles-input.add,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner textarea.add {
+  padding-left: 38px;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  background: url("../images/add-icon.png") no-repeat 5% center;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition textarea,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner textarea,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition textarea,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner textarea,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition textarea,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner textarea,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition textarea,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner textarea {
+  height: 136px;
+  text-align: left;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .loading-document,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .loading-document,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .loading-document,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .loading-document,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .loading-document,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .loading-document,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .loading-document,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .loading-document {
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 960px) {
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition .loading-document,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .loading-document,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition .loading-document,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .loading-document,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition .loading-document,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .loading-document,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition .loading-document,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .loading-document {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition .loading-document,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .loading-document,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition .loading-document,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .loading-document,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition .loading-document,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .loading-document,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition .loading-document,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .loading-document {
+    width: 300px;
+  }
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .loading-document .btn-loading-documents,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .loading-document .btn-loading-documents,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .loading-document .btn-loading-documents,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .loading-document .btn-loading-documents,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  color: rgba(52, 52, 52, 0.5);
+  border: 1px solid #e9e9e9;
+  width: 220px;
+  height: 40px;
+  padding: 0 17px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .loading-document .btn-loading-documents > img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small > img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents > img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small > img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .loading-document .btn-loading-documents > img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small > img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents > img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small > img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .loading-document .btn-loading-documents > img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small > img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents > img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small > img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .loading-document .btn-loading-documents > img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small > img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents > img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small > img {
+  opacity: .5;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition .loading-document .btn-loading-documents-small,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .loading-document .btn-loading-documents-small {
+  margin-left: 15px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 47px;
+  height: 40px;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner {
+  width: 780px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 28px;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place:first-child {
+  padding-top: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .first-place-block,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .second-place-block,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .third-place-block,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .first-place-block,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .second-place-block,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .third-place-block,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .first-place-block,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .second-place-block,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .third-place-block,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .first-place-block,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .second-place-block,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .third-place-block,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .first-place-block,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .second-place-block,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .third-place-block,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .first-place-block,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .second-place-block,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .third-place-block,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .first-place-block,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .second-place-block,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .third-place-block,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .first-place-block,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .second-place-block,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .third-place-block,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .first-place-block,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .second-place-block,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .third-place-block,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .first-place-block,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .second-place-block,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .third-place-block,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .first-place-block,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .second-place-block,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .third-place-block,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .first-place-block,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .second-place-block,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .third-place-block {
+  width: 370px;
+  margin: 0 15px;
+}
+
+@media screen and (max-width: 960px) {
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .first-place-block:first-child,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .second-place-block:first-child,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .third-place-block:first-child,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .first-place-block:first-child,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .second-place-block:first-child,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .third-place-block:first-child,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .first-place-block:first-child,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .second-place-block:first-child,
+  .page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .third-place-block:first-child,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .first-place-block:first-child,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .second-place-block:first-child,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .third-place-block:first-child,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .first-place-block:first-child,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .second-place-block:first-child,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .third-place-block:first-child,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .first-place-block:first-child,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .second-place-block:first-child,
+  .page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .third-place-block:first-child,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .first-place-block:first-child,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .second-place-block:first-child,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .third-place-block:first-child,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .first-place-block:first-child,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .second-place-block:first-child,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .third-place-block:first-child,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .first-place-block:first-child,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .second-place-block:first-child,
+  .page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .third-place-block:first-child,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .first-place-block:first-child,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .second-place-block:first-child,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .third-place-block:first-child,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .first-place-block:first-child,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .second-place-block:first-child,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .third-place-block:first-child,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .first-place-block:first-child,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .second-place-block:first-child,
+  .page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .third-place-block:first-child {
+    padding-bottom: 10px;
+  }
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo {
+  width: 78px;
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo:first-child,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo:first-child {
+  margin-left: 0;
+}
+
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-one .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-two .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-step-three .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .first-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .second-place .third-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .first-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .second-place-block .block-with-photo .one-photo img,
+.page-create-competition .container-create-finish .container-registration-competition .information-about-competition-winner .third-place .third-place-block .block-with-photo .one-photo img {
+  opacity: .5;
+}
+
+.page-create-competition .container-step-one .create-competition-complete,
+.page-create-competition .container-step-two .create-competition-complete,
+.page-create-competition .container-step-three .create-competition-complete,
+.page-create-competition .container-create-finish .create-competition-complete {
+  padding-top: 108px;
+  display: block;
+}
+
+.page-create-competition .container-step-one .create-competition-complete img,
+.page-create-competition .container-step-two .create-competition-complete img,
+.page-create-competition .container-step-three .create-competition-complete img,
+.page-create-competition .container-create-finish .create-competition-complete img {
+  width: 100%;
+  height: auto;
+}
+
+.page-create-competition .container-step-one .create-competition-complete .registration-competition-congratulation,
+.page-create-competition .container-step-two .create-competition-complete .registration-competition-congratulation,
+.page-create-competition .container-step-three .create-competition-complete .registration-competition-congratulation,
+.page-create-competition .container-create-finish .create-competition-complete .registration-competition-congratulation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #4c4c4c;
+  font-size: 16px;
+  padding-top: 42px;
+}
+
+.page-create-competition .container-step-one .create-competition-complete .registration-competition-congratulation span,
+.page-create-competition .container-step-two .create-competition-complete .registration-competition-congratulation span,
+.page-create-competition .container-step-three .create-competition-complete .registration-competition-congratulation span,
+.page-create-competition .container-create-finish .create-competition-complete .registration-competition-congratulation span {
+  color: rgba(52, 52, 52, 0.5);
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 15px;
+}
+
+.two-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  .two-blocks {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.two-blocks #news-page {
+  padding-top: 48px;
+}
+
+@media screen and (max-width: 780px) {
+  .two-blocks #news-page {
+    width: 100%;
+  }
+}
+
+.two-blocks #news-page .container-news-page .title-news-page h1 {
+  font-size: 24px;
+  color: #4c4c4c;
+}
+
+.two-blocks #news-page .container-news-page .title-news-page .description-news-page {
+  font-size: 14px;
+  padding-top: 18px;
+  color: rgba(52, 52, 52, 0.6);
+  font-weight: normal;
+  max-width: 446px;
+  line-height: 19px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 770px;
+  padding-top: 33px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news:first-child {
+  padding-top: 45px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news > img {
+  width: 100%;
+  height: auto;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .title-one-news {
+  font-size: 24px;
+  padding-top: 22px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .title-one-news a {
+  color: #4c4c4c;
+  text-decoration: none;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .description-one-news {
+  color: rgba(52, 52, 52, 0.6);
+  font-size: 14px;
+  padding-top: 15px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .activity-competition {
+  width: 300px;
+  font-weight: normal;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .activity-competition .repost,
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .activity-competition .like,
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .activity-competition .seen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .activity-competition .repost img,
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .activity-competition .like img,
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .activity-competition .seen img {
+  padding-right: 7px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary {
+  padding-top: 47px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .title-commentary {
+  font-size: 24px;
+  color: #4c4c4c;
+  text-decoration: none;
+  position: relative;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .title-commentary .counter-comments {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 35px;
+}
+
+@media screen and (max-width: 560px) {
+  .two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-left: 22px;
+}
+
+@media screen and (max-width: 560px) {
+  .two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person {
+    padding-left: 0;
+  }
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person .name-data-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 560px) {
+  .two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person .name-data-rating {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 5px;
+  }
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person .name-data-rating .name {
+  font-size: 16px;
+  color: #4c4c4c;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person .name-data-rating .date {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+  padding-left: 18px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 560px) {
+  .two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person .name-data-rating .date {
+    padding-left: 0;
+  }
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person .name-data-rating .rating {
+  padding-left: 18px;
+}
+
+@media screen and (max-width: 560px) {
+  .two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person .name-data-rating .rating {
+    padding-left: 0;
+  }
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .one-comments .block-description-person .comment {
+  padding-top: 8px;
+  color: rgba(52, 52, 52, 0.6);
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  max-width: 472px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .add-comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 39px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .add-comments .title-input {
+  font-size: 16px;
+  color: #4c4c4c;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .add-comments .add-comment {
+  margin-top: 16px;
+  width: 100%;
+  height: 80px;
+  color: rgba(52, 52, 52, 0.6);
+  font-size: 14px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  opacity: .5;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .add-comments .send-comments {
+  border-radius: 4px;
+  margin-top: 16px;
+  height: 40px;
+  width: 170px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #4c4c4c;
+  font-size: 14px;
+  background-color: #ffef99;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .not-active-acc .not-active-message {
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.6);
+  font-weight: normal;
+  padding-top: 15px;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .not-active-acc .not-active-message a {
+  text-decoration: none;
+  color: #506aa1;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .not-active-acc .add-comment {
+  opacity: .3;
+  background: none;
+}
+
+.two-blocks #news-page .container-news-page .blocks-news .one-block-news .commentary .not-active-acc .send-comments {
+  opacity: .3;
+  cursor: auto;
+}
+
+.two-blocks #news-page .pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 70px;
+}
+
+.two-blocks #news-page .pages .list-pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.two-blocks #news-page .pages .list-pages li {
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 560px) {
+  .two-blocks #news-page .pages .list-pages li:nth-child(n+4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .two-blocks #news-page .pages .list-pages li:last-child {
+    display: block;
+  }
+}
+
+.two-blocks #news-page .pages .list-pages li a {
+  padding: 9px 15px;
+  background-color: #f3f3f3;
+  text-decoration: none;
+  color: rgba(52, 52, 52, 0.5);
+  font-weight: normal;
+  border-radius: 50%;
+}
+
+.two-blocks #news-page .pages .list-pages li a.all-pages {
+  padding: 9px 25px;
+  border-radius: 20px;
+}
+
+.two-blocks #recommended {
+  margin-top: 172px;
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .two-blocks #recommended {
+    display: none;
+  }
+}
+
+.two-blocks #recommended .title-recommended {
+  font-size: 24px;
+  color: #4c4c4c;
+  line-height: 32px;
+}
+
+.two-blocks #recommended .popular {
+  background-color: #f8f8f8;
+  padding: 38px 16px 40px 36px;
+}
+
+.two-blocks #recommended .popular .one-block-popular {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 29px;
+  width: 317px;
+}
+
+.two-blocks #recommended .popular .one-block-popular .title-one-block-popular {
+  font-size: 16px;
+}
+
+.two-blocks #recommended .popular .one-block-popular .title-one-block-popular a {
+  color: #4c4c4c;
+  text-decoration: none;
+}
+
+.two-blocks #recommended .popular .one-block-popular .description-one-block-popular {
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(52, 52, 52, 0.6);
+  padding-top: 9px;
+  font-weight: normal;
+}
+
+.two-blocks #recommended .popular .one-block-popular .date-one-block-popular {
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.two-blocks #recommended .show-more a {
+  font-weight: normal;
+  border-bottom: none;
+}
+
+.two-blocks #recommended .in-good-hands {
+  padding-top: 46px;
+}
+
+.two-blocks #recommended .in-good-hands .one-block-in-good-hands {
+  margin-top: 25px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.two-blocks #recommended .in-good-hands .one-block-in-good-hands .img-in-good-hands {
+  position: relative;
+}
+
+.two-blocks #recommended .in-good-hands .one-block-in-good-hands .img-in-good-hands .in-good-hands-text {
+  position: absolute;
+  font-size: 14px;
+  color: #ffffff;
+  top: 21px;
+  left: 21px;
+}
+
+.two-blocks #recommended .in-good-hands .one-block-in-good-hands .img-in-good-hands .will-give {
+  position: absolute;
+  font-size: 16px;
+  color: #ffffff;
+  bottom: 21px;
+  left: 21px;
+}
+
+.two-blocks #recommended .in-good-hands .one-block-in-good-hands .description-in-good-hands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-weight: normal;
+}
+
+.two-blocks #recommended .in-good-hands .one-block-in-good-hands .description-in-good-hands .breed {
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.6);
+  background-color: #fffbe6;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+.two-blocks #recommended .in-good-hands .one-block-in-good-hands .description-in-good-hands .characteristic {
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.6);
+}
+
+.two-blocks #recommended .in-good-hands button {
+  font-size: 14px;
+  margin-top: 30px;
+  color: #4c4c4c;
+  font-weight: normal;
+  background-color: #ffef99;
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.two-blocks #recommended .in-good-hands button img {
+  padding-right: 15px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

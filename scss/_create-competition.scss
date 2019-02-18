@@ -1,0 +1,262 @@
+.page-create-competition {
+  .container-step-one, .container-step-two, .container-step-three, .container-create-finish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 93px;
+    .title-create-competition {
+      text-align: center;
+      padding-top: 36px;
+      color: $black-font;
+      font-size: 16px;
+      font-weight: normal;
+      span {
+        font-weight: normal;
+        font-size: 16px;
+        padding-left: 17px;
+        color: $black-40;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .container-registration-competition {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 45px;
+      > div {
+        margin: 0 15px;
+        @include sm-block() {
+          margin: 0;
+        }
+      }
+      @include sm-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+      .loading-photo-block {
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        width: 370px;
+        height: 296px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include md(width, 330px);
+        @include xs-block() {
+          width: 300px;
+        }
+        img {
+          padding-top: 123px;
+          opacity: .5;
+        }
+        a {
+          text-decoration: none;
+          font-weight: normal;
+          color: $black-40;
+          padding-top: 4px;
+          border-bottom: 1px dotted $black-40;
+        }
+      }
+      .buttons-create-finish {
+        display: flex;
+        justify-content: center;
+        margin-top: 48px;
+        > input {
+          margin: 0 10px;
+        }
+
+        @include xs-block() {
+          flex-direction: column;
+          align-items: center;
+          > input {
+            margin: 0;
+          }
+        }
+      }
+      .next-step-create, .next-personal-account{
+        background: none;
+        outline: none;
+        border: 1px solid $sunflower-yellow;
+        border-radius: 4px;
+        font-size: 14px;
+        color: $black-two-50;
+        font-weight: normal;
+        width: 170px;
+        height: 40px;
+        cursor: pointer;
+        margin-top: 24px;
+      }
+      .on-page-competition {
+        font-size: 14px;
+        color: $black-two-50;
+        background: none;
+        border: none;
+        outline: none;
+        font-weight: normal;
+        height: 40px;
+        cursor: pointer;
+        margin-top: 24px;
+      }
+      .information-about-competition, .information-about-competition-winner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 370px;
+
+        @include md(width, 330px);
+        @include sm(padding-top, 15px);
+        @include xs-block() {
+          width: 300px;
+        }
+        .title-input {
+          font-size: 16px;
+          color: $black-font;
+          padding-top: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          &:first-child {
+            padding-top: 0;
+          }
+          span {
+            font-size: 14px;
+            color: $black-two-50;
+            font-weight: normal;
+          }
+        }
+        .styles-input, textarea {
+          width: 100%;
+          outline: none;
+          box-sizing: border-box;
+          padding-left: 13px;
+          font-size: 13px;
+          color: $black-two-50;
+          height: 40px;
+          margin-top: 8px;
+          border: 1px solid $white-bg;
+          border-radius: 4px;
+          font-weight: 400;
+          &::-webkit-input-placeholder {
+            color: $black-two-50;
+          }
+          &.add {
+            padding-left: 38px;
+            font-size: 13px;
+            cursor: pointer;
+            text-align: left;
+            background: url("../images/add-icon.png") no-repeat 5% center;
+          }
+        }
+        textarea {
+          height: 136px;
+          text-align: left;
+        }
+        .loading-document {
+          margin-top: 8px;
+          display: flex;
+
+          @include md(width, 330px);
+          @include xs(width, 300px);
+          .btn-loading-documents, .btn-loading-documents-small {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            color: $black-two-50;
+            border: 1px solid $white-bg;
+            width: 220px;
+            height: 40px;
+            padding: 0 17px;
+            outline: none;
+            cursor: pointer;
+            border-radius: 4px;
+            position: relative;
+            > img {
+              opacity: .5;
+            }
+          }
+          .btn-loading-documents-small {
+            margin-left: 15px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            width: 47px;
+            height: 40px;
+          }
+        }
+      }
+      .information-about-competition-winner {
+        width: 780px;
+        align-items: center;
+        .first-place, .second-place, .third-place {
+          display: flex;
+          justify-content: center;
+          padding-top: 28px;
+          &:first-child {
+            padding-top: 0;
+          }
+
+          @include md-block() {
+            flex-direction: column;
+          }
+          .first-place-block, .second-place-block, .third-place-block {
+            width: 370px;
+            margin: 0 15px;
+            @include md-block() {
+              &:first-child {
+                padding-bottom: 10px;
+              }
+            }
+            .block-with-photo {
+              display: flex;
+              padding-top: 10px;
+              .one-photo {
+                width: 78px;
+                height: 72px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #f8f8f8;
+                border: 1px solid $white-bg;
+                border-radius: 8px;
+                margin-left: 20px;
+                cursor: pointer;
+                &:first-child {
+                  margin-left: 0;
+                }
+                img {
+                  opacity: .5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .create-competition-complete {
+      padding-top: 108px;
+      display: block;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .registration-competition-congratulation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $black-font;
+        font-size: 16px;
+        padding-top: 42px;
+        span {
+          color: $black-two-50;
+          font-size: 14px;
+          font-weight: 600;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}

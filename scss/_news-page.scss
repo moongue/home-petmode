@@ -1,0 +1,343 @@
+.two-blocks {
+  display: flex;
+  justify-content: space-between;
+
+  @include fix-block() {
+    justify-content: center;
+  }
+  #news-page {
+    padding-top: 48px;
+
+    @include sm-block() {
+      width: 100%;
+    }
+    .container-news-page {
+      .title-news-page {
+        h1 {
+          font-size: 24px;
+          color: $black-font;
+        }
+        .description-news-page {
+          font-size: 14px;
+          padding-top: 18px;
+          color: $black-60;
+          font-weight: normal;
+          max-width: 446px;
+          line-height: 19px;
+        }
+      }
+      .blocks-news {
+        display: flex;
+        flex-direction: column;
+        .one-block-news {
+          display: flex;
+          flex-direction: column;
+          max-width: 770px;
+          padding-top: 33px;
+          &:first-child {
+            padding-top: 45px;
+          }
+          > img {
+            width: 100%;
+            height: auto;
+          }
+          .title-one-news {
+            font-size: 24px;
+            padding-top: 22px;
+            a {
+              color: $black-font;
+              text-decoration: none;
+            }
+          }
+          .description-one-news {
+            color: $black-60;
+            font-size: 14px;
+            padding-top: 15px;
+            font-weight: normal;
+            line-height: 20px;
+          }
+          .activity-competition {
+            width: 300px;
+            font-weight: normal;
+            .repost, .like, .seen {
+              display: flex;
+              align-items: center;
+              img {
+                padding-right: 7px;
+              }
+            }
+          }
+          .commentary {
+            padding-top: 47px;
+            .title-commentary {
+              font-size: 24px;
+              color: $black-font;
+              text-decoration: none;
+              position: relative;
+              .counter-comments {
+                position: absolute;
+                color: $black-40;
+                font-size: 14px;
+                font-weight: normal;
+              }
+            }
+            .one-comments {
+              display: flex;
+              align-items: center;
+              padding-top: 35px;
+
+              @include xs-block() {
+                flex-direction: column;
+              }
+              .block-description-person {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 22px;
+
+                @include xs-block() {
+                  padding-left: 0;
+                }
+                .name-data-rating {
+                  display: flex;
+                  align-items: center;
+
+                  @include xs-block() {
+                    flex-direction: column;
+                    margin: 0 auto;
+                    padding-top: 5px;
+                  }
+                  .name {
+                    font-size: 16px;
+                    color: $black-font;
+                  }
+                  .date {
+                    font-size: 14px;
+                    color: $black-40;
+                    padding-left: 18px;
+                    font-weight: normal;
+
+                    @include xs-block() {
+                      padding-left: 0;
+                    }
+                  }
+                  .rating {
+                    padding-left: 18px;
+
+                    @include xs-block() {
+                      padding-left: 0;
+                    }
+                  }
+                }
+                .comment {
+                  padding-top: 8px;
+                  color: $black-60;
+                  line-height: 20px;
+                  font-size: 14px;
+                  font-weight: normal;
+                  max-width: 472px;
+                }
+              }
+            }
+            .add-comments {
+              display: flex;
+              flex-direction: column;
+              padding-top: 39px;
+              .title-input {
+                font-size: 16px;
+                color: $black-font;
+              }
+              .add-comment {
+                margin-top: 16px;
+                width: 100%;
+                height: 80px;
+                color: $black-60;
+                font-size: 14px;
+                outline: none;
+                border: 1px solid $black-40;
+                border-radius: 4px;
+                opacity: .5;
+              }
+              .send-comments {
+                border-radius: 4px;
+                margin-top: 16px;
+                height: 40px;
+                width: 170px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+                color: $black-font;
+                font-size: 14px;
+                background-color: $yellow-three;
+              }
+            }
+            .not-active-acc {
+              .not-active-message {
+                font-size: 14px;
+                color: $black-60;
+                font-weight: normal;
+                padding-top: 15px;
+                a {
+                  text-decoration: none;
+                  color: $dull-blue;
+                }
+              }
+              .add-comment {
+                opacity: .3;
+                background: none;
+              }
+              .send-comments {
+                opacity: .3;
+                cursor: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    .pages {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 70px;
+      .list-pages {
+        display: flex;
+        li {
+          padding: 0 8px;
+
+          &:nth-child(n+4) {
+            @include xs-block() {
+              display: none;
+            }
+          }
+          &:last-child {
+            @include xs-block() {
+              display: block;
+            }
+          }
+          a {
+            padding: 9px 15px;
+            background-color: $white-three;
+            text-decoration: none;
+            color: $black-two-50;
+            font-weight: normal;
+            border-radius: 50%;
+            &.all-pages {
+              padding: 9px 25px;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #recommended {
+    margin-top: 172px;
+    margin-left: 15px;
+
+    @include fix-block() {
+      display: none;
+    }
+    .title-recommended {
+      font-size: 24px;
+      color: $black-font;
+      line-height: 32px;
+    }
+    .popular {
+      background-color: #f8f8f8;
+      padding: 38px 16px 40px 36px;
+      .one-block-popular {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 29px;
+        width: 317px;
+        .title-one-block-popular {
+          font-size: 16px;
+          a {
+            color: $black-font;
+            text-decoration: none;
+          }
+        }
+        .description-one-block-popular {
+          font-size: 14px;
+          line-height: 19px;
+          color: $black-60;
+          padding-top: 9px;
+          font-weight: normal;
+        }
+        .date-one-block-popular {
+          padding-top: 10px;
+          color: $black-40;
+          font-size: 14px;
+          font-weight: normal;
+        }
+      }
+    }
+    .show-more {
+      a {
+        font-weight: normal;
+        border-bottom: none;
+      }
+    }
+    .in-good-hands {
+      padding-top: 46px;
+      .one-block-in-good-hands {
+        margin-top: 25px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        .img-in-good-hands {
+          position: relative;
+          .in-good-hands-text {
+            position: absolute;
+            font-size: 14px;
+            color: $white;
+            top: 21px;
+            left: 21px;
+          }
+          .will-give {
+            position: absolute;
+            font-size: 16px;
+            color: $white;
+            bottom: 21px;
+            left: 21px;
+          }
+        }
+        .description-in-good-hands {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 20px;
+          font-weight: normal;
+          .breed {
+            font-size: 14px;
+            color: $black-60;
+            background-color: $yellow-two;
+            padding: 5px 8px;
+            border-radius: 4px;
+          }
+          .characteristic {
+            font-size: 14px;
+            color: $black-60;
+          }
+        }
+      }
+      button {
+        font-size: 14px;
+        margin-top: 30px;
+        color: $black-font;
+        font-weight: normal;
+        background-color: $yellow-three;
+        width: 100%;
+        border: none;
+        outline: none;
+        height: 40px;
+        border-radius: 4px;
+        cursor: pointer;
+        img {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
