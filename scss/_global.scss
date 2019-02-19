@@ -48,12 +48,31 @@ input:focus:-ms-input-placeholder {
   transition: text-indent 0.4s ease;
 }
 
+#search-services:focus::-webkit-input-placeholder {
+  text-indent: 100%;
+  transition: text-indent 0.4s ease;
+}
+
+#search-services:focus::-moz-placeholder {
+  text-indent: 100%;
+  transition: text-indent 0.4s ease;
+}
+
+#search-services:focus:-moz-placeholder {
+  text-indent: 100%;
+  transition: text-indent 0.4s ease;
+}
+
+#search-services:focus:-ms-input-placeholder {
+  text-indent: 100%;
+  transition: text-indent 0.4s ease;
+}
+
 .title {
   h2 {
-    font-size: 33px;
-    color: $black;
+    font-size: 24px;
+    color: $black-font;
 
-    @include sm(font-size, 24px);
     @include sm(text-align, center);
 
     span {
@@ -75,12 +94,20 @@ h3 {
 }
 
 .show-more {
-  padding-top: 30px;
+  margin-top: 64px;
+  text-align: center;
+  background-color: $white-bg;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   a {
-    color: $dull-blue;
-    font-size: 16px;
+    color: $black-80;
+    font-weight: normal;
+    font-size: 14px;
     text-decoration: none;
-    border-bottom: 1px solid $dull-blue-two;
     &:hover {
       opacity: .4;
       transition: all .3s;
@@ -155,6 +182,42 @@ h3 {
     }
   }
 }
+.pages {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 70px auto;
+
+  .list-pages {
+    display: flex;
+    li {
+      padding: 0 8px;
+
+      &:nth-child(n+4) {
+        @include xs-block() {
+          display: none;
+        }
+      }
+      &:last-child {
+        @include xs-block() {
+          display: block;
+        }
+      }
+      a {
+        padding: 9px 15px;
+        background-color: $white-three;
+        text-decoration: none;
+        color: $black-two-50;
+        font-weight: normal;
+        border-radius: 50%;
+        &.all-pages {
+          padding: 9px 25px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
 .loading {
   margin: 0 auto;
   padding-top: 65px;
@@ -216,7 +279,28 @@ h3 {
     }
   }
 }
+.register-specialist {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: $white-four;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  color: $black-80;
+  outline: none;
+  img {
+    padding-right: 10px;
+  }
 
+  @include lg-block() {
+    margin: 20px auto 0;
+    text-align: center;
+  }
+}
 .bg-ellipse {
   background: url("../images/ellipse.png") no-repeat 100% 0;
 }

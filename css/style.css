@@ -102,15 +102,37 @@ input:focus:-ms-input-placeholder {
   transition: text-indent 0.4s ease;
 }
 
-.title h2 {
-  font-size: 33px;
-  color: #343434;
+#search-services:focus::-webkit-input-placeholder {
+  text-indent: 100%;
+  -webkit-transition: text-indent 0.4s ease;
+  -o-transition: text-indent 0.4s ease;
+  transition: text-indent 0.4s ease;
 }
 
-@media screen and (max-width: 780px) {
-  .title h2 {
-    font-size: 24px;
-  }
+#search-services:focus::-moz-placeholder {
+  text-indent: 100%;
+  -webkit-transition: text-indent 0.4s ease;
+  -o-transition: text-indent 0.4s ease;
+  transition: text-indent 0.4s ease;
+}
+
+#search-services:focus:-moz-placeholder {
+  text-indent: 100%;
+  -webkit-transition: text-indent 0.4s ease;
+  -o-transition: text-indent 0.4s ease;
+  transition: text-indent 0.4s ease;
+}
+
+#search-services:focus:-ms-input-placeholder {
+  text-indent: 100%;
+  -webkit-transition: text-indent 0.4s ease;
+  -o-transition: text-indent 0.4s ease;
+  transition: text-indent 0.4s ease;
+}
+
+.title h2 {
+  font-size: 24px;
+  color: #4c4c4c;
 }
 
 @media screen and (max-width: 780px) {
@@ -137,14 +159,28 @@ h3 span {
 }
 
 .show-more {
-  padding-top: 30px;
+  margin-top: 64px;
+  text-align: center;
+  background-color: #e9e9e9;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .show-more a {
-  color: #506aa1;
-  font-size: 16px;
+  color: rgba(52, 52, 52, 0.8);
+  font-weight: normal;
+  font-size: 14px;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
 }
 
 .show-more a:hover {
@@ -259,6 +295,54 @@ h3 span {
   padding-right: 10px;
 }
 
+.pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin: 70px auto;
+}
+
+.pages .list-pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pages .list-pages li {
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 560px) {
+  .pages .list-pages li:nth-child(n+4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .pages .list-pages li:last-child {
+    display: block;
+  }
+}
+
+.pages .list-pages li a {
+  padding: 9px 15px;
+  background-color: #f3f3f3;
+  text-decoration: none;
+  color: rgba(52, 52, 52, 0.5);
+  font-weight: normal;
+  border-radius: 50%;
+}
+
+.pages .list-pages li a.all-pages {
+  padding: 9px 25px;
+  border-radius: 20px;
+}
+
 .loading {
   margin: 0 auto;
   padding-top: 65px;
@@ -343,6 +427,38 @@ h3 span {
 
 .sidebar-menu .sidebar li a {
   text-decoration: none;
+}
+
+.register-specialist {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 40px;
+  background-color: #f6f6f6;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  color: rgba(52, 52, 52, 0.8);
+  outline: none;
+}
+
+.register-specialist img {
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+  .register-specialist {
+    margin: 20px auto 0;
+    text-align: center;
+  }
 }
 
 .bg-ellipse {
@@ -709,7 +825,7 @@ h3 span {
   color: #3b3308;
 }
 
-.container-banner .register-specialist {
+.container-banner .register-specialist-banner {
   padding-top: 24px;
   color: #f5e4d4;
   font-size: 16px;
@@ -717,19 +833,19 @@ h3 span {
 }
 
 @media screen and (max-width: 560px) {
-  .container-banner .register-specialist {
+  .container-banner .register-specialist-banner {
     font-size: 12px;
     padding-top: 12px;
   }
 }
 
-.container-banner .register-specialist a {
+.container-banner .register-specialist-banner a {
   text-decoration: none;
   color: #f5e4d4;
   border-bottom: 1px dotted #f5e4d4;
 }
 
-.container-banner .register-specialist a:hover {
+.container-banner .register-specialist-banner a:hover {
   color: #ffd800;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
@@ -867,7 +983,7 @@ h3 span {
 }
 
 #sign-up-form > div .register-user,
-#sign-up-form > div .register-specialist,
+#sign-up-form > div .register-specialist-form,
 #sign-up-form > div .register-breeder,
 #sign-up-form > div .register-club,
 #sign-up-form > div .register-shelter {
@@ -878,7 +994,7 @@ h3 span {
 }
 
 #sign-up-form > div .register-user .title,
-#sign-up-form > div .register-specialist .title,
+#sign-up-form > div .register-specialist-form .title,
 #sign-up-form > div .register-breeder .title,
 #sign-up-form > div .register-club .title,
 #sign-up-form > div .register-shelter .title {
@@ -887,7 +1003,7 @@ h3 span {
 }
 
 #sign-up-form > div .register-user .login-with,
-#sign-up-form > div .register-specialist .login-with,
+#sign-up-form > div .register-specialist-form .login-with,
 #sign-up-form > div .register-breeder .login-with,
 #sign-up-form > div .register-club .login-with,
 #sign-up-form > div .register-shelter .login-with {
@@ -896,8 +1012,8 @@ h3 span {
 
 #sign-up-form > div .register-user .inputs .inputs-name,
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-specialist .inputs .inputs-name,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification,
 #sign-up-form > div .register-breeder .inputs .inputs-name,
 #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification,
 #sign-up-form > div .register-club .inputs .inputs-name,
@@ -921,14 +1037,14 @@ h3 span {
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname,
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-specialist .inputs .inputs-name .name,
-#sign-up-form > div .register-specialist .inputs .inputs-name .surname,
-#sign-up-form > div .register-specialist .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-specialist .inputs .inputs-name .qualification,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .name,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .qualification,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .name,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .surname,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .name,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification,
 #sign-up-form > div .register-breeder .inputs .inputs-name .name,
 #sign-up-form > div .register-breeder .inputs .inputs-name .surname,
 #sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
@@ -983,22 +1099,22 @@ h3 span {
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience active,
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification:focus,
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification active,
-#sign-up-form > div .register-specialist .inputs .inputs-name .name:focus,
-#sign-up-form > div .register-specialist .inputs .inputs-name .name active,
-#sign-up-form > div .register-specialist .inputs .inputs-name .surname:focus,
-#sign-up-form > div .register-specialist .inputs .inputs-name .surname active,
-#sign-up-form > div .register-specialist .inputs .inputs-name .work-experience:focus,
-#sign-up-form > div .register-specialist .inputs .inputs-name .work-experience active,
-#sign-up-form > div .register-specialist .inputs .inputs-name .qualification:focus,
-#sign-up-form > div .register-specialist .inputs .inputs-name .qualification active,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .name:focus,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .name active,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname:focus,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname active,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience:focus,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience active,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .qualification:focus,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .qualification active,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .name:focus,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .name active,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .surname:focus,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .surname active,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience:focus,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience active,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification:focus,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification active,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .name:focus,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .name active,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname:focus,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname active,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience:focus,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience active,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification:focus,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification active,
 #sign-up-form > div .register-breeder .inputs .inputs-name .name:focus,
 #sign-up-form > div .register-breeder .inputs .inputs-name .name active,
 #sign-up-form > div .register-breeder .inputs .inputs-name .surname:focus,
@@ -1052,8 +1168,8 @@ h3 span {
 
 #sign-up-form > div .register-user .inputs .inputs-name .qualification,
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-specialist .inputs .inputs-name .qualification,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .qualification,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification,
 #sign-up-form > div .register-breeder .inputs .inputs-name .qualification,
 #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification,
 #sign-up-form > div .register-club .inputs .inputs-name .qualification,
@@ -1068,8 +1184,8 @@ h3 span {
 
 #sign-up-form > div .register-user .inputs .inputs-name .work-experience,
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-specialist .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience,
+#sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience,
 #sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
 #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience,
 #sign-up-form > div .register-club .inputs .inputs-name .work-experience,
@@ -1082,8 +1198,8 @@ h3 span {
 @media screen and (max-width: 780px) {
   #sign-up-form > div .register-user .inputs .inputs-name,
   #sign-up-form > div .register-user .inputs .work-experience-and-qualification,
-  #sign-up-form > div .register-specialist .inputs .inputs-name,
-  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification,
+  #sign-up-form > div .register-specialist-form .inputs .inputs-name,
+  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification,
   #sign-up-form > div .register-breeder .inputs .inputs-name,
   #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification,
   #sign-up-form > div .register-club .inputs .inputs-name,
@@ -1107,14 +1223,14 @@ h3 span {
   #sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname,
   #sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
   #sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification,
-  #sign-up-form > div .register-specialist .inputs .inputs-name .name,
-  #sign-up-form > div .register-specialist .inputs .inputs-name .surname,
-  #sign-up-form > div .register-specialist .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-specialist .inputs .inputs-name .qualification,
-  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .name,
-  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .qualification,
+  #sign-up-form > div .register-specialist-form .inputs .inputs-name .name,
+  #sign-up-form > div .register-specialist-form .inputs .inputs-name .surname,
+  #sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification,
+  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .name,
+  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification,
   #sign-up-form > div .register-breeder .inputs .inputs-name .name,
   #sign-up-form > div .register-breeder .inputs .inputs-name .surname,
   #sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
@@ -1147,10 +1263,10 @@ h3 span {
   #sign-up-form > div .register-user .inputs .inputs-name .work-experience,
   #sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname,
   #sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-specialist .inputs .inputs-name .surname,
-  #sign-up-form > div .register-specialist .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-specialist .inputs .work-experience-and-qualification .work-experience,
+  #sign-up-form > div .register-specialist-form .inputs .inputs-name .surname,
+  #sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience,
+  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname,
+  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience,
   #sign-up-form > div .register-breeder .inputs .inputs-name .surname,
   #sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
   #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname,
@@ -1168,7 +1284,7 @@ h3 span {
 }
 
 #sign-up-form > div .register-user .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-specialist .inputs .work-experience-and-qualification,
+#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification,
 #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification,
 #sign-up-form > div .register-club .inputs .work-experience-and-qualification,
 #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification {
@@ -1177,8 +1293,8 @@ h3 span {
 
 #sign-up-form > div .register-user .inputs .password,
 #sign-up-form > div .register-user .inputs .email,
-#sign-up-form > div .register-specialist .inputs .password,
-#sign-up-form > div .register-specialist .inputs .email,
+#sign-up-form > div .register-specialist-form .inputs .password,
+#sign-up-form > div .register-specialist-form .inputs .email,
 #sign-up-form > div .register-breeder .inputs .password,
 #sign-up-form > div .register-breeder .inputs .email,
 #sign-up-form > div .register-club .inputs .password,
@@ -1203,10 +1319,10 @@ h3 span {
 #sign-up-form > div .register-user .inputs .password active,
 #sign-up-form > div .register-user .inputs .email:focus,
 #sign-up-form > div .register-user .inputs .email active,
-#sign-up-form > div .register-specialist .inputs .password:focus,
-#sign-up-form > div .register-specialist .inputs .password active,
-#sign-up-form > div .register-specialist .inputs .email:focus,
-#sign-up-form > div .register-specialist .inputs .email active,
+#sign-up-form > div .register-specialist-form .inputs .password:focus,
+#sign-up-form > div .register-specialist-form .inputs .password active,
+#sign-up-form > div .register-specialist-form .inputs .email:focus,
+#sign-up-form > div .register-specialist-form .inputs .email active,
 #sign-up-form > div .register-breeder .inputs .password:focus,
 #sign-up-form > div .register-breeder .inputs .password active,
 #sign-up-form > div .register-breeder .inputs .email:focus,
@@ -1223,7 +1339,7 @@ h3 span {
 }
 
 #sign-up-form > div .register-user .inputs .password,
-#sign-up-form > div .register-specialist .inputs .password,
+#sign-up-form > div .register-specialist-form .inputs .password,
 #sign-up-form > div .register-breeder .inputs .password,
 #sign-up-form > div .register-club .inputs .password,
 #sign-up-form > div .register-shelter .inputs .password {
@@ -1232,7 +1348,7 @@ h3 span {
 }
 
 #sign-up-form > div .register-user .inputs .email,
-#sign-up-form > div .register-specialist .inputs .email,
+#sign-up-form > div .register-specialist-form .inputs .email,
 #sign-up-form > div .register-breeder .inputs .email,
 #sign-up-form > div .register-club .inputs .email,
 #sign-up-form > div .register-shelter .inputs .email {
@@ -1240,7 +1356,7 @@ h3 span {
 }
 
 #sign-up-form > div .register-user .go-in,
-#sign-up-form > div .register-specialist .go-in,
+#sign-up-form > div .register-specialist-form .go-in,
 #sign-up-form > div .register-breeder .go-in,
 #sign-up-form > div .register-club .go-in,
 #sign-up-form > div .register-shelter .go-in {
@@ -1259,7 +1375,7 @@ h3 span {
 }
 
 #sign-up-form > div .register-user .have-account,
-#sign-up-form > div .register-specialist .have-account,
+#sign-up-form > div .register-specialist-form .have-account,
 #sign-up-form > div .register-breeder .have-account,
 #sign-up-form > div .register-club .have-account,
 #sign-up-form > div .register-shelter .have-account {
@@ -1367,43 +1483,25 @@ h3 span {
 }
 
 #pets .container .title .place-an-ad {
-  position: relative;
+  width: 270px;
+  background-color: #ffef99;
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.8);
+  font-weight: normal;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+#pets .container .title .place-an-ad img {
+  padding-right: 15px;
 }
 
 @media screen and (max-width: 780px) {
   #pets .container .title .place-an-ad {
     margin-top: 15px;
   }
-}
-
-#pets .container .title .place-an-ad a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-decoration: none;
-  color: #506aa1;
-  border-bottom: 1px dotted #506aa1;
-  font-size: 16px;
-}
-
-#pets .container .title .place-an-ad a:hover {
-  opacity: .4;
-  -webkit-transition: all .2s;
-  -o-transition: all .2s;
-  transition: all .2s;
-}
-
-#pets .container .title .place-an-ad a:before {
-  content: '';
-  background: url(../images/place-an-ad.png), no-repeat center center;
-  background-size: cover;
-  position: absolute;
-  width: 17px;
-  height: 100%;
-  left: -20px;
 }
 
 #pets .container .containerPets {
@@ -1441,22 +1539,28 @@ h3 span {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  max-width: 220px;
+  max-width: 370px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
-  width: calc(20% - 30px);
+  width: calc(33.33333% - 30px);
 }
 
-@media screen and (max-width: 1200px) {
-  #pets .container .containerPets .containerPetsBlock {
-    width: calc(33.33333% - 30px);
-  }
-}
-
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 960px) {
   #pets .container .containerPets .containerPetsBlock {
     width: calc(50% - 30px);
   }
@@ -1468,42 +1572,49 @@ h3 span {
   }
 }
 
-#pets .container .containerPets .containerPetsBlock__price {
+#pets .container .containerPets .containerPetsBlock__img {
+  position: relative;
+}
+
+#pets .container .containerPets .containerPetsBlock__img img {
+  width: 100%;
+  height: auto;
+}
+
+#pets .container .containerPets .containerPetsBlock__img--price {
   position: absolute;
-  top: 40px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   color: #ffffff;
 }
 
-#pets .container .containerPets .containerPetsBlock__price:hover {
-  background-color: #ffd800;
-  border-radius: 7px;
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
-  cursor: pointer;
+#pets .container .containerPets .containerPetsBlock__img--selling {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 16px;
+  color: #ffffff;
 }
 
 #pets .container .containerPets .containerPetsBlock__breed {
-  font-size: 14.5px;
-  color: #a0664f;
-  text-transform: uppercase;
-  padding-top: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 5px 8px;
+  background-color: #ffef99;
+  font-weight: normal;
+  color: rgba(52, 52, 52, 0.8);
+  border-radius: 4px;
 }
 
 #pets .container .containerPets .containerPetsBlock__breed-cat {
   color: #a04f76;
 }
 
-#pets .container .containerPets .containerPetsBlock__selling {
-  font-size: 22.5px;
-  color: #343434;
-  padding-top: 10px;
-}
-
 #pets .container .containerPets .containerPetsBlock__sex-birth {
-  font-size: 14.5px;
-  color: #807b76;
+  margin-top: 20px;
+  text-align: right;
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.6);
   font-weight: normal;
 }
 
@@ -1567,6 +1678,7 @@ h3 span {
 
 #pets-on-binding .wrapper {
   border-bottom: 1px solid #eeeeee;
+  padding-bottom: 75px;
 }
 
 #pets-on-binding .content-pets-on-binding {
@@ -1691,10 +1803,6 @@ h3 span {
   width: auto;
   max-width: 100%;
   height: auto;
-}
-
-#pets-on-binding .show-more {
-  padding-bottom: 75px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -1838,9 +1946,9 @@ h3 span {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 1100px) {
@@ -1850,6 +1958,10 @@ h3 span {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+}
+
+#best-specialist .title-with-button .register-specialist {
+  background-color: #ffef99;
 }
 
 @media screen and (max-width: 1100px) {
@@ -1862,7 +1974,9 @@ h3 span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 15px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 790px;
 }
 
 @media screen and (max-width: 960px) {
@@ -1877,14 +1991,17 @@ h3 span {
 
 #best-specialist .title-with-button .title .profession li {
   padding-right: 20px;
-  padding-top: 15px;
+  padding-top: 35px;
 }
 
 #best-specialist .title-with-button .title .profession li a {
   color: #506aa1;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: normal;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+  padding: 11px 20px;
+  background-color: #e9e9e9;
 }
 
 #best-specialist .title-with-button .join {
@@ -1928,7 +2045,7 @@ h3 span {
 }
 
 #best-specialist .specialistsBlock {
-  padding-top: 40px;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1970,6 +2087,9 @@ h3 span {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 560px) {
@@ -1979,9 +2099,8 @@ h3 span {
 }
 
 #best-specialist .specialistsBlockDescription__qualification {
-  color: #807b76;
-  font-size: 14.5px;
-  text-transform: uppercase;
+  color: #4c4c4c;
+  font-size: 16px;
 }
 
 #best-specialist .specialistsBlockDescription__qualification p {
@@ -1999,19 +2118,22 @@ h3 span {
 
 #best-specialist .specialistsBlockDescription__qualification p .quantity {
   color: #343434;
-  padding-left: 3px;
+  padding-left: 10px;
   font-weight: normal;
 }
 
 #best-specialist .specialistsBlockDescription__qualification p .number {
   font-weight: normal;
-  padding-left: 2px;
+  padding-left: 7px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #best-specialist .specialistsBlockDescription__name {
-  font-size: 22.5px;
-  color: #343434;
+  font-size: 14px;
+  color: #4c4c4c;
   padding-top: 10px;
+  font-weight: normal;
 }
 
 #best-specialist .specialistsBlockDescription__merits {
@@ -2028,6 +2150,7 @@ h3 span {
 
 #in-good-hands .wrapper {
   border-bottom: 1px solid #eeeeee;
+  border-bottom: 69px;
 }
 
 #in-good-hands .wrapper .title {
@@ -2184,10 +2307,6 @@ h3 span {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.13);
 }
 
-#in-good-hands .show-more {
-  padding-bottom: 69px;
-}
-
 #news {
   padding-top: 70px;
 }
@@ -2317,6 +2436,7 @@ h3 span {
 
 #clubs-and-shelters .wrapper {
   border-bottom: 1px solid #eeeeee;
+  border-bottom: 69px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -2486,10 +2606,6 @@ h3 span {
 
 #clubs-and-shelters .buttons #register-shelter {
   margin-top: 20px;
-}
-
-#clubs-and-shelters .show-more {
-  padding-bottom: 69px;
 }
 
 #footer {
@@ -2928,8 +3044,8 @@ h3 span {
 }
 
 #header-ch .container-header .search img {
-  -webkit-filter: contrast(10%);
-  filter: contrast(10%);
+  -webkit-filter: opacity(30%);
+  filter: opacity(30%);
 }
 
 @media screen and (max-width: 560px) {
@@ -5823,54 +5939,6 @@ h3 span {
   cursor: auto;
 }
 
-.two-blocks #news-page .pages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  margin: 70px;
-}
-
-.two-blocks #news-page .pages .list-pages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.two-blocks #news-page .pages .list-pages li {
-  padding: 0 8px;
-}
-
-@media screen and (max-width: 560px) {
-  .two-blocks #news-page .pages .list-pages li:nth-child(n+4) {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 560px) {
-  .two-blocks #news-page .pages .list-pages li:last-child {
-    display: block;
-  }
-}
-
-.two-blocks #news-page .pages .list-pages li a {
-  padding: 9px 15px;
-  background-color: #f3f3f3;
-  text-decoration: none;
-  color: rgba(52, 52, 52, 0.5);
-  font-weight: normal;
-  border-radius: 50%;
-}
-
-.two-blocks #news-page .pages .list-pages li a.all-pages {
-  padding: 9px 25px;
-  border-radius: 20px;
-}
-
 .two-blocks #recommended {
   margin-top: 172px;
   margin-left: 15px;
@@ -6013,6 +6081,415 @@ h3 span {
 
 .two-blocks #recommended .in-good-hands button img {
   padding-right: 15px;
+}
+
+#services .container-services {
+  padding-top: 48px;
+}
+
+#services .container-services .title-services-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 780px) {
+  #services .container-services .title-services-button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+#services .container-services .title-services-button h1 {
+  line-height: 32px;
+  font-size: 24px;
+  color: #4c4c4c;
+}
+
+#services .container-services .search-services {
+  padding-top: 32px;
+}
+
+#services .container-services .search-services input {
+  width: 100%;
+  height: 40px;
+  background: url("../images/vector.png") no-repeat 10px 50%;
+  font-size: 14px;
+  color: #4c4c4c;
+  border: 1px solid #e9e9e9;
+  line-height: 20px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+#services .container-services .example-services {
+  padding-top: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: normal;
+}
+
+#services .container-services .example-services p {
+  padding-right: 8px;
+}
+
+#services .container-services .example-services input {
+  padding: 5px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: normal;
+  margin-right: 8px;
+  color: #506aa1;
+  background-color: #f6f6f6;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+#services .container-services .filter-services {
+  padding-top: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#services .container-services .filter-services .one-filter {
+  padding-right: 10px;
+  margin-top: 5px;
+}
+
+#services .container-services .filter-services .one-filter:first-child {
+  padding-left: 0;
+}
+
+#services .container-services .filter-services .one-filter button {
+  padding: 13px 80px 13px 21px;
+  color: rgba(52, 52, 52, 0.8);
+  background-color: #f6f6f6;
+  font-weight: normal;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 4px;
+}
+
+#services .container-services .filter-services .one-filter button img {
+  position: absolute;
+  right: 22px;
+  top: 16.5px;
+}
+
+#services .container-services .filter-services .one-filter .fix-menu {
+  display: none;
+  width: 264px;
+  position: absolute;
+}
+
+#services .container-services .filter-services .one-filter .hide-dropdown {
+  height: 136px;
+  padding: 32px 0 0 19px;
+  width: 264px;
+  border: 1px solid #e9e9e9;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #ffffff;
+  position: relative;
+  border-radius: 4px;
+  top: 10px;
+  z-index: 300;
+}
+
+#services .container-services .filter-services .one-filter .hide-dropdown:before {
+  bottom: 100%;
+  left: 15%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+#services .container-services .filter-services .one-filter .hide-dropdown li {
+  padding: 5px 0;
+  list-style: none;
+}
+
+#services .container-services .filter-services .one-filter .hide-dropdown li label {
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(52, 52, 52, 0.6);
+}
+
+#services .container-services .filter-services .one-filter .hide-dropdown li .styles-checkbox {
+  display: none;
+}
+
+#services .container-services .filter-services .one-filter .hide-dropdown li input[type=radio] + label:before {
+  content: "\2713";
+  color: transparent;
+  display: inline-block;
+  border: 1px solid #e9e9e9;
+  font-size: 20px;
+  line-height: 22px;
+  border-radius: 4px;
+  margin: -5px 5px 0 0;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: color ease .3s;
+  -o-transition: color ease .3s;
+  transition: color ease .3s;
+}
+
+#services .container-services .filter-services .one-filter .hide-dropdown li input[type=radio]:checked + label:before {
+  background-color: #ffd800;
+  color: #000;
+}
+
+#services .container-services .filter-services .one-filter .hide-dropdown li input[type=radio]:checked + label {
+  color: rgba(52, 52, 52, 0.8);
+  font-weight: bold;
+}
+
+#services .container-services .filter-services .one-filter .hide-dropdown:before {
+  border-bottom-color: #e9e9e9;
+  border-width: 12px;
+  margin-left: -20px;
+}
+
+#services .container-services .filter-services .one-filter .city:hover + .fix-menu {
+  display: block;
+}
+
+#services .container-services .filter-services .one-filter .fix-menu:hover {
+  display: block;
+}
+
+#services .container-services .all-services {
+  padding-top: 30px;
+}
+
+#services .container-services .all-services .title-count {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(52, 52, 52, 0.6);
+}
+
+#services .container-services .all-services .title-count .count-services {
+  color: rgba(52, 52, 52, 0.8);
+}
+
+#services .container-services .all-services .blocks-services {
+  padding-top: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+@media screen and (max-width: 1200px) {
+  #services .container-services .all-services .blocks-services {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+#services .container-services .all-services .blocks-services .one-block-services {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(33.33333% - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  padding-top: 19px;
+  width: 370px !important;
+}
+
+@media screen and (max-width: 560px) {
+  #services .container-services .all-services .blocks-services .one-block-services {
+    width: 100% !important;
+  }
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .img-block {
+  position: relative;
+  color: #000;
+}
+
+@media screen and (max-width: 560px) {
+  #services .container-services .all-services .blocks-services .one-block-services .img-block {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #services .container-services .all-services .blocks-services .one-block-services .img-block img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .img-block .price {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .img-block .description-services {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex img {
+  border-radius: 50%;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex .block-description-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 10px;
+  width: 100%;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex .block-description-person .block-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: normal;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex .block-description-person .block-top .name {
+  color: #4c4c4c;
+  font-size: 14px;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex .block-description-person .block-top .qualification {
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.6);
+  text-align: center;
+  padding: 5px 14px;
+  background-color: #fffbe6;
+  border-radius: 4px;
+  margin-left: 11px;
+  margin-right: auto;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex .block-description-person .block-top .city {
+  color: rgba(52, 52, 52, 0.6);
+  font-size: 14px;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex .block-description-person .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  color: #4c4c4c;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex .block-description-person .rating .all {
+  padding-left: 7px;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .block-flex .block-description-person .rating .all .all-count {
+  color: #ffd800;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .person-services .description-qualification {
+  line-height: 20px;
+  font-size: 14px;
+  color: rgba(52, 52, 52, 0.6);
+  padding-top: 14px;
+  font-weight: normal;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .block-adv {
+  width: 100%;
+  height: 100%;
+}
+
+#services .container-services .all-services .blocks-services .one-block-services .pages {
+  width: 55%;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

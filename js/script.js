@@ -57,6 +57,8 @@ function tabs() {
 }
 
 
+
+
 function slider() {
     $('.slider').slick({
         infinite: true,
@@ -84,6 +86,12 @@ function slider() {
     });
 }
 
+$(".hide-dropdown li input").on("click", function() {
+
+    $(".hide-dropdown li input").removeAttr("checked"); // Снимаем чекбокс со всей группы
+    $(this).prop("checked", true); // Оставляем выбранный чекбокс
+
+});
 
 $(window).on('load', function () {
     menuLogic();

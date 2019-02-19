@@ -5,12 +5,15 @@
     padding-top: 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     @include lg-block {
       flex-direction: column;
     }
 
+    .register-specialist {
+      background-color: $yellow-three;
+    }
     .title {
       h2 {
 
@@ -19,8 +22,8 @@
       }
       .profession {
         display: flex;
-        padding-top: 15px;
-
+        flex-wrap: wrap;
+        max-width: 790px;
         @include md-block() {
           flex-wrap: wrap;
           justify-content: center;
@@ -28,12 +31,15 @@
 
         li {
           padding-right: 20px;
-          padding-top: 15px;
+          padding-top: 35px;
           a {
             color: $dull-blue;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: normal;
             text-decoration: none;
-            border-bottom: 1px solid $dull-blue-two;
+            border-radius: 4px;
+            padding: 11px 20px;
+            background-color: $white-bg;
           }
         }
       }
@@ -69,7 +75,7 @@
     @include row-flex();
 
     &Block {
-      padding-top: 40px;
+      margin-top: 40px;
       display: flex;
       text-decoration: none;
 
@@ -83,15 +89,15 @@
         padding-left: 27px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
 
         @include xs-block {
           padding-left: 12px;
         }
 
         &__qualification {
-          color: $warm-grey;
-          font-size: 14.5px;
-          text-transform: uppercase;
+          color: $black-font;
+          font-size: 16px;
           p {
             display: flex;
             align-items: center;
@@ -100,19 +106,22 @@
             }
             .quantity {
               color: $black;
-              padding-left: 3px;
+              padding-left: 10px;
               font-weight: normal;
             }
             .number {
               font-weight: normal;
-              padding-left: 2px;
+              padding-left: 7px;
+              font-size: 14px;
+              color: $black-40;
             }
           }
         }
         &__name {
-          font-size: 22.5px;
-          color: $black;
+          font-size: 14px;
+          color: $black-font;
           padding-top: 10px;
+          font-weight: normal;
         }
         &__merits {
           font-size: 14px;

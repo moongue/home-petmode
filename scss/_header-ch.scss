@@ -162,7 +162,7 @@
         }
       }
       img {
-        filter: contrast(10%);
+        filter: opacity(30%);
         @include xs-block() {
           padding-right: 10px;
         }

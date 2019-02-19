@@ -195,41 +195,6 @@
         }
       }
     }
-    .pages {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      margin: 70px;
-      .list-pages {
-        display: flex;
-        li {
-          padding: 0 8px;
-
-          &:nth-child(n+4) {
-            @include xs-block() {
-              display: none;
-            }
-          }
-          &:last-child {
-            @include xs-block() {
-              display: block;
-            }
-          }
-          a {
-            padding: 9px 15px;
-            background-color: $white-three;
-            text-decoration: none;
-            color: $black-two-50;
-            font-weight: normal;
-            border-radius: 50%;
-            &.all-pages {
-              padding: 9px 25px;
-              border-radius: 20px;
-            }
-          }
-        }
-      }
-    }
   }
   #recommended {
     margin-top: 172px;

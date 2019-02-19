@@ -2,6 +2,8 @@
   padding-top: 72px;
   .wrapper {
     border-bottom: 1px solid $white-two;
+    padding-bottom: 75px;
+
   }
   .content-pets-on-binding {
     display: flex;
@@ -78,7 +80,6 @@
     }
   }
   .show-more {
-    padding-bottom: 75px;
 
     @include lg-block() {
       padding-top: 20px;

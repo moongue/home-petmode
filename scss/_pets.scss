@@ -11,33 +11,22 @@
       }
 
       .place-an-ad {
-        position: relative;
-
+        width: 270px;
+        background-color: $yellow-three;
+        font-size: 14px;
+        color: $black-80;
+        font-weight: normal;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        img {
+          padding-right: 15px;
+        }
         @include sm-block() {
           margin-top: 15px;
         }
 
-        a {
-          display: flex;
-          align-items: center;
-          text-decoration: none;
-          color: $dull-blue;
-          border-bottom: 1px dotted $dull-blue;
-          font-size: 16px;
-          &:hover {
-            opacity: .4;
-            transition: all .2s;
-          }
-          &:before {
-            content: '';
-            background: url(../images/place-an-ad.png), no-repeat center center;
-            background-size: cover;
-            position: absolute;
-            width: 17px;
-            height: 100%;
-            left: -20px;
-          }
-        }
       }
     }
     .containerPets {
@@ -56,44 +45,54 @@
         text-decoration: none;
         position: relative;
         user-select: none;
-        max-width: 220px;
+        max-width: 370px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
 
         @include col();
-        @include size(2.4);
-        @include size-fix(4);
-        @include size-sm(6);
+        @include size(4);
+        @include size-md(6);
         @include size-xs(12);
-
-        &__price {
-          position: absolute;
-          top: 40px;
-          left: 10px;
-          color: $white;
-
-          &:hover {
-            background-color: $sunflower-yellow;
-            border-radius: 7px;
-            transition: all .4s;
-            cursor: pointer;
+        &__img {
+          position: relative;
+          img {
+            width: 100%;
+            height: auto;
+          }
+          &--price {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: $white;
+          }
+          &--selling {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 16px;
+            color: $white;
           }
         }
         &__breed {
-          font-size: 14.5px;
-          color: $mocha;
-          text-transform: uppercase;
-          padding-top: 10px;
+          margin-top: 20px;
+          font-size: 14px;
+          padding: 5px 8px;
+          background-color: $yellow-three;
+          font-weight: normal;
+          color: $black-80;
+          border-radius: 4px;
           &-cat {
             color: $light-plum;
           }
         }
-        &__selling {
-          font-size: 22.5px;
-          color: $black;
-          padding-top: 10px;
-        }
         &__sex-birth {
-          font-size: 14.5px;
-          color: $warm-grey;
+          margin-top: 20px;
+          text-align: right;
+          font-size: 14px;
+          color: $black-60;
           font-weight: normal;
         }
       }
