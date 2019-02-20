@@ -115,33 +115,6 @@
               font-weight: normal;
               color: $black-60;
             }
-            .styles-checkbox {
-              display: none;
-            }
-            input[type=radio] + label:before {
-              content: "\2713";
-              color: transparent;
-              display: inline-block;
-              border: 1px solid $white-bg;
-              font-size: 20px;
-              line-height: 22px;
-              border-radius: 4px;
-              margin: -5px 5px 0 0;
-              height: 20px;
-              width: 20px;
-              text-align: center;
-              vertical-align: middle;
-              transition: color ease .3s;
-            }
-
-            input[type=radio]:checked + label:before {
-              background-color: $sunflower-yellow;
-              color: #000;
-            }
-            input[type=radio]:checked + label {
-              color: $black-80;
-              font-weight: bold;
-            }
           }
         }
         .hide-dropdown:before {

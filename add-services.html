@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Конкурсы</title>
+</head>
+<body>
+
+<!--HEADER-->
+<header id="header-ch">
+    <div class="wrapper">
+        <div class="container-header">
+            <div class="logo">
+                <a href="#"><img src="images/small-logo.png" alt="Logo"></a>
+            </div>
+
+            <a href="#" class="lines">
+                <img src="images/lines.png" alt="lines">
+            </a>
+
+            <nav class="menu">
+                <ul class="menu-a">
+                    <li class="search-hide-desktop search">
+                        <input type="text" placeholder="Поиск" id="search-mob">
+                        <label for="search">
+                            <img src="images/vector.png" alt="Search">
+                        </label>
+                    </li>
+                    <li><a href="#">Питомцы</a></li>
+                    <li><a href="#">Специалисты</a></li>
+                    <li><a href="#">Моя радость</a></li>
+                    <li class="active-menu"><a href="#">Конкурсы</a></li>
+                    <li><label class="link" for="hider" id="more">Ещё <span>...</span></label>
+                        <input type="checkbox" id="hider">
+                        <ul class="content">
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Рейтинг</a></li>
+                            <li><a href="#">Выставка</a></li>
+                            <li><a href="#">Благотворительность</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="search">
+                <input type="text" placeholder="Поиск" id="search">
+                <label for="search">
+                    <img src="images/vector.png" alt="Search">
+                </label>
+            </div>
+            <a href="#" class="user">
+                <div class="name-user">Иван</div>
+                <img src="images/user.png" alt="User Icon">
+            </a>
+        </div>
+    </div>
+</header>
+<!--END HEADER-->
+
+
+<!--ADD SERVICES-->
+<section id="add-services">
+    <div class="wrapper">
+        <div class="container-add-services">
+            <h1>Добавления услуг</h1>
+            <div class="two-blocks-add">
+                <div class="first-block">
+                    <div class="title-block">
+                        Общая информация
+                    </div>
+                    <div class="select-services-block">
+                        <select name="service-section" id="service-section">
+                            <option>Раздел услуги</option>
+                            <option>Раздел услуги</option>
+                            <option>Раздел услуги</option>
+                        </select>
+                        <select name="type-of-service" id="type-of-service">
+                            <option>Вид услуги</option>
+                            <option>Вид услуги</option>
+                            <option>Вид услуги</option>
+                        </select>
+                    </div>
+                    <input type="text" placeholder="Заголовки" class="styles-input headlines">
+                    <textarea placeholder="Описание" name="description-service" id="description-service" cols="30"
+                              rows="10"
+                              maxlength="500">
+                    </textarea>
+                    <p>Не больше 500 символов</p>
+
+                    <div class="teg-block">
+                        <button class="teg cat">
+                            Кошка <a href="#"><img src="images/delete-teg-icon.png" alt="Delete"></a>
+                        </button>
+                        <button class="teg humor">
+                            Юмор <a href="#"><img src="images/delete-teg-icon.png" alt="Delete"></a>
+                        </button>
+                    </div>
+                    <p>Не больше 10 тегов</p>
+
+                    <input type="text" placeholder="Стоимость" class="styles-input input-price">
+
+                    <div class="additional-service">
+                        <ul>
+                            <li>
+                                <div class="block">
+                                    <input type="radio" id="city1" name="city" class="styles-checkbox"/>
+                                    <label for="city1">Выделить объявление</label>
+                                    <p>Яркое выделение среди других предложений</p>
+                                </div>
+                                <div class="price">100 &#8381;</div>
+                            </li>
+                            <li>
+                                <div class="block">
+                                    <input type="radio" id="city2" name="city" class="styles-checkbox" checked/>
+                                    <label for="city2">Закрепить объявление</label>
+                                    <p>Закрявляем объявление на 24 часа в начале страницы</p>
+                                </div>
+                                <div class="price">150 &#8381;</div>
+                            </li>
+                            <li>
+                                <div class="block">
+                                    <input type="radio" id="city3" name="city" class="styles-checkbox"/>
+                                    <label for="city3">Опубликовать немедленно</label>
+                                    <p>Публикуем объявление без модерации</p>
+                                </div>
+                                <div class="price">50 &#8381;</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="button-with-text">
+                        <input type="button" value="Отправить на модерацию" class="send-for-moderation">
+                        <div class="the-cost">
+                            К оплате <span class="count-the-cost">100 руб.</span> Деньги спишутся с вашего счета после прохождения модерации
+                        </div>
+                    </div>
+                </div>
+                <div class="second-block">
+                    <div class="title-block">
+                        Фото услуги
+                    </div>
+                    <div class="loading-photo-block">
+                        <img src="images/loading-photo-icon.png" alt="Loading Photo">
+                        <a href="#">Загрузить Фото</a>
+                    </div>
+                    <p>Допустимый формат изображений: png, jpg, gif</p>
+                    <div class="account-features">
+                        <div class="title">
+                            Возможности с аккаунтом
+                        </div>
+                        <ul class="features">
+                            <li>— Бесплатное выделение объявления, раз в неделю </li>
+                            <li>— Бесплатное закрепление объявлений, 2 раз в неделю</li>
+                            <li>— Мгновенная публикация объявлений</li>
+                        </ul>
+                        <div class="price">
+                            Стоимость <span class="count-price">700 &#8381; / месяц </span>
+                        </div>
+                        <input type="button" value="Активировать PRO" class="activated-pro">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--END ADD SERVICES-->
+</body>
+</html>

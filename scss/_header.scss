@@ -11,21 +11,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
-    .mobile-menu-toggle {
-      display: none;
+    height: 72px;
+    .lines {
+      margin-left: 10px;
+      pointer-events: none;
+      cursor: default;
 
       @include md-block() {
-        display: inline-block;
-        font-size: 50px;
-        text-decoration: none;
-        color: $white;
-
+        margin-right: auto;
+        pointer-events: auto;
+        cursor: pointer;
       }
-
     }
     .menu {
-
+      flex-basis: auto;
+      display: flex;
+      justify-content: center;
       @include md-block {
         display: none;
       }
@@ -46,35 +47,47 @@
         list-style: none;
         display: flex;
         align-items: center;
+        .search-hide-desktop {
+          display: none;
+          @include xs-block() {
+            display: flex;
+            align-items: center;
+          }
+        }
         li {
-          padding: 0 15px;
+          padding: 28px 15px;
           a {
             text-decoration: none;
             color: $white;
             font-size: 16px;
+            font-weight: normal;
+
+            @include md-block() {
+              color: $sunflower-yellow;
+            }
             &:hover {
               color: $sunflower-yellow;
               transition: all .4s;
-            }
-            @include md-block() {
-              &:hover {
-                color: $white;
-              }
             }
           }
           #more {
             color: $white;
-            border-bottom: 1px dotted $white;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+
+            @include md-block() {
+              color: $sunflower-yellow;
+            }
             &:hover {
               color: $sunflower-yellow;
-              border-bottom: 1px dotted $sunflower-yellow;
               transition: all .4s;
             }
-            @include md-block() {
-              &:hover {
-                color: $white;
-              }
+            span {
+              padding-left: 10px;
+              font-size: 22px;
+              padding-bottom: 10px;
             }
           }
           > ul {
@@ -83,42 +96,40 @@
             }
           }
         }
+        .active-menu {
+          border-bottom: 2px solid $sunflower-yellow;
+          z-index: 2;
+          > a {
+            color: $sunflower-yellow;
+          }
+        }
       }
-
       &.is-open {
         display: block;
         position: absolute;
         width: 100%;
-        top: 135px;
+        top: 73px;
         margin-left: -30px;
         padding-right: 30px;
         padding-left: 30px;
-        background-color: $sunflower-yellow;
+        background-color: $white;
+        box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
         ul li .content {
           display: none;
           position: inherit;
         }
 
-        @include md-block() {
-          top: 90px;
-        }
         @include sm-block() {
-          top: 90px;
           margin-left: -15px;
           padding-right: 15px;
           padding-left: 15px;
         }
-        @include xs-block() {
-          top: 135px;
-        }
-
         ul {
           display: flex;
           flex-direction: column;
           align-items: center;
 
           li {
-            width: 100%;
             text-align: center;
             padding: 6px 0 6px;
 
@@ -129,25 +140,65 @@
     .search {
       display: flex;
       align-items: center;
-      #search {
+      margin-right: 10px;
+      background-color: $white-bg-30;
+      padding: 5px 15px;
+      border-radius: 15px;
+
+      @include md-block() {
+        margin-right: 100px;
+      }
+      @include xs-block() {
+        margin: 6px 0;
+        display: none;
+        width: 100%;
+        justify-content: space-between;
+        background-color: $sunflower-yellow;
+      }
+
+      #search, #search-mob {
         background: none;
         border: none;
         outline: none;
         padding-left: 10px;
-        color: white;
-        width: 120px;
+        color: $white;
+        width: 80px;
         &::-webkit-input-placeholder {
-          color: $camo-green;
+          color: $white;
         }
         &::-moz-placeholder {
-          color: $camo-green;
+          color: $white;
         }
         &:-moz-placeholder {
-          color: $camo-green;
+          color: $white;
         }
         &:-ms-input-placeholder {
-          color: $camo-green;
+          color: $white;
         }
+      }
+      img {
+        filter: contrast(10%);
+        @include xs-block() {
+          padding-right: 10px;
+        }
+      }
+    }
+    #search-mob {
+      @include xs-block() {
+        width: 300px !important;
+        padding-right: 20px;
+      }
+    }
+    .user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      .name-user {
+        font-size: 16px;
+        color: $white;
+        padding-right: 15px;
+        font-weight: normal;
       }
     }
     .account {
@@ -178,7 +229,7 @@
         font-size: 16px;
 
         @include xs-block() {
-          display: none;
+          flex-direction: column;
         }
 
         .sign-up {
@@ -198,87 +249,106 @@
       }
     }
   }
-}
-
-.container-banner {
-  padding-top: 150px;
-  max-width: 770px;
-  h1 {
-    font-size: 48px;
-    color: $white;
-
-    @include sm-block() {
-      font-size: 36px;
-    }
+  .container-banner {
+    padding-top: 150px;
+    max-width: 770px;
 
     @include xs-block() {
-      font-size: 28px;
+      padding-top: 110px;
     }
-  }
-
-  .buttons {
-    padding-top: 49px;
-
-    @include xs-block() {
-      display: flex;
-      padding-top: 30px;
-      flex-direction: column;
-      justify-content: flex-start;
-      width: 100%;
-    }
-
-    #sell-pet, #have-a-pet {
-      background: none;
-      border-radius: 4px;
-      color: $sunflower-yellow;
-      cursor: pointer;
-      font-size: 18px;
-      font-weight: bold;
-      border: 2px solid $sunflower-yellow;
-      padding: 19px 70px 14px;
+    h1 {
+      font-size: 40px;
+      color: $white;
+      line-height: 48px;
 
       @include sm-block() {
-        padding: 19px 45px 14px;
+        font-size: 36px;
       }
 
-      &:nth-child(2n) {
-        margin-left: 20px;
+      @include xs-block() {
+        font-size: 28px;
+      }
+    }
 
-        @include xs-block() {
+    .buttons {
+      padding-top: 49px;
+
+      @include xs-block() {
+        display: flex;
+        padding-top: 30px;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      #sell-pet, #have-a-pet {
+        background: none;
+        border-radius: 4px;
+        color: $white;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        border: 1px solid $white;
+        padding: 14px 50px ;
+
+        @include sm-block() {
+          padding: 19px 0;
+          width: 100%;
           margin-left: 0;
           margin-top: 10px;
         }
+
+        &:nth-child(2n) {
+          margin-left: 20px;
+
+          @include sm-block() {
+            margin-left: 0;
+            margin-top: 10px;
+          }
+        }
+      }
+      #have-a-pet {
+        outline: none;
+        background-color: $white;
+        color: $black-60;
+      }
+      #sell-pet {
+        padding: 14px 70px;
       }
     }
-    #have-a-pet {
-      outline: none;
-      background-color: $sunflower-yellow;
-      color: $navy-green;
-    }
-  }
-  .register-specialist-banner {
-    padding-top: 24px;
-    color: $beige;
-    font-size: 16px;
-    font-weight: normal;
-
-    @include xs-block() {
-      font-size: 12px;
-      padding-top: 12px;
-    }
-
-    a {
-      text-decoration: none;
+    .register-specialist-banner {
+      padding-top: 24px;
       color: $beige;
-      border-bottom: 1px dotted $beige;
-      &:hover {
-        color: $sunflower-yellow;
-        transition: all .4s;
+      font-size: 16px;
+      font-weight: normal;
+
+      @include xs-block() {
+        font-size: 12px;
+        padding-top: 12px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $beige;
+        border-bottom: 1px dotted $beige;
+        &:hover {
+          color: $sunflower-yellow;
+          transition: all .4s;
+        }
       }
     }
   }
-
+  .eyeliner {
+    height: 1px;
+    width: 100%;
+    background-color: $white-bg-30;
+    position: absolute;
+    top: 72px;
+    z-index: 1;
+  }
 }
+
+
 
 #sign-in-form {
   position: relative;

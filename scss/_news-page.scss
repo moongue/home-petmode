@@ -54,11 +54,12 @@
             font-size: 14px;
             padding-top: 15px;
             font-weight: normal;
-            line-height: 20px;
+            line-height: 24px;
           }
           .activity-competition {
             width: 300px;
             font-weight: normal;
+            padding-top: 25px;
             .repost, .like, .seen {
               display: flex;
               align-items: center;
@@ -211,6 +212,7 @@
     .popular {
       background-color: #f8f8f8;
       padding: 38px 16px 40px 36px;
+      border-radius: 4px;
       .one-block-popular {
         display: flex;
         flex-direction: column;
