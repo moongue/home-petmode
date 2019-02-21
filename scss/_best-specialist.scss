@@ -1,6 +1,14 @@
-#best-specialist {
+#best-specialist, #specialist {
   background-color: $off-white;
   padding-bottom: 80px;
+
+  &#specialist {
+    background-color: $white;
+    padding-bottom: 0;
+  }
+  .specialists {
+    padding-bottom: 40px;
+  }
   .title-with-button {
     padding-top: 60px;
     display: flex;
@@ -9,10 +17,6 @@
 
     @include lg-block {
       flex-direction: column;
-    }
-
-    .register-specialist {
-      background-color: $yellow-three;
     }
     .title {
       h2 {
@@ -44,31 +48,78 @@
         }
       }
     }
-    .join {
-      background: none;
-      border-radius: 4px;
-      color: $black;
-      font-size: 18px;
-      font-weight: bold;
-      border: 2px solid $sunflower-yellow;
-      height: 44px;
-      width: 228px;
-
-      @include lg-block() {
-        margin-top: 20px;
+  }
+  .top-specialist {
+    .block-will-turn {
+      display: flex;
+      justify-content: flex-start;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border-top: 1px solid $white-bg;
+      flex-wrap: wrap;
+      @include md-block() {
+        justify-content: space-between;
+      }
+      @include xs-block() {
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
       }
+      &.yellow-theme {
+        background-color: $yellow-two;
+        border-radius: 4px;
 
-      &:hover,
-      active {
+      }
+      > * {
+        width: 33%;
+      }
+      > .specialistsBlock {
+        @include size-sm(6);
+        @include md-block() {
+          width: 300px;
+        }
+        @include xs-block() {
+          width: 280px;
+        }
+      }
+      > .description-specialist {
+        @include xs-block() {
+          width: 100%;
+          padding-top: 10px;
+        }
+      }
+      .description-specialist {
+        font-size: 14px;
+        color: $black-60;
+        font-weight: normal;
+        line-height: 20px;
+      }
+      .btn-will-turn {
+        max-width: 270px;
+        background-color: $white-bg;
+        font-size: 14px;
+        color: $black-80;
+        height: 40px;
+        border: none;
         outline: none;
-        cursor: pointer;
-        background-color: $sunflower-yellow;
-        color: $navy-green;
-        transition: all .4s;
+        border-radius: 4px;
+        margin-left: auto;
+        &.active-btn-will-turn {
+          background-color: $yellow-three;
+        }
+
+        @include md-block() {
+          margin-top: 15px;
+          min-width: 100% !important;
+          margin-left: 0;
+        }
+        @include xs-block() {
+          max-width: 160px !important;
+        }
       }
     }
   }
+  //SPECIALIST
   .specialists {
     padding-top: 30px;
 
@@ -85,16 +136,42 @@
       @include size-sm(12);
       @include sm(justify-content, center);
 
+      &.fix-indent {
+        margin-left: 0;
+        margin-top: 0;
+      }
+
+      &__img {
+        position: relative;
+        height: 104px;
+        .icon-top-one {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        .icon-top-two {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .icon-royal {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
       &Description {
         padding-left: 27px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
+        align-items: flex-start;
         @include xs-block {
           padding-left: 12px;
         }
-
+        &.fix-height {
+          height: 104px;
+        }
         &__qualification {
           color: $black-font;
           font-size: 16px;
@@ -120,17 +197,24 @@
         &__name {
           font-size: 14px;
           color: $black-font;
-          padding-top: 10px;
           font-weight: normal;
         }
         &__merits {
           font-size: 14px;
           line-height: normal;
-          color: $warm-grey;
-          padding-top: 8px;
+          color: $black-40;
+          font-weight: normal;
+        }
+        &__city {
+          font-size: 14px;
+          color: $black-60;
+          padding: 5px 14px;
+          background-color: $yellow-two;
+          border-radius: 4px;
           font-weight: normal;
         }
       }
     }
   }
+  //END SPECIALIST
 }

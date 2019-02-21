@@ -1,260 +1,129 @@
 #services {
-  .container-services {
-    padding-top: 48px;
-    .title-services-button {
-      display: flex;
-      justify-content: space-between;
 
-      @include sm-block() {
+  .all-services {
+    padding-top: 30px;
+    .title-count {
+      font-size: 14px;
+      line-height: 20px;
+      color: $black-60;
+      .count-services {
+        color: $black-80;
+      }
+    }
+    .blocks-services {
+      padding-top: 23px;
+
+      @include row-flex();
+      @include fix-block() {
+        justify-content: center;
+      }
+      .one-block-services {
+        @include col();
+        @include size(4);
+
+        display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
-      }
-      h1 {
-        line-height: 32px;
-        font-size: 24px;
-        color: $black-font;
-      }
-    }
-    .search-services {
-      padding-top: 32px;
-      input {
-        width: 100%;
-        height: 40px;
-        background: url("../images/vector.png") no-repeat 10px 50%;
-        font-size: 14px;
-        color: $black-font;
-        border: 1px solid $white-bg;
-        line-height: 20px;
-        outline: none;
-        box-sizing: border-box;
-        padding-left: 30px;
-      }
-    }
-    .example-services {
-      padding-top: 21px;
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      align-items: center;
-      font-weight: normal;
-      p {
-        padding-right: 8px;
-      }
-      input {
-        padding: 5px 15px;
-        font-size: 14px;
-        cursor: pointer;
-        font-weight: normal;
-        margin-right: 8px;
-        color: $dull-blue;
-        background-color: $white-four;
-        border: none;
-        outline: none;
-        border-radius: 4px;
-        margin-top: 5px;
-      }
-    }
-    .filter-services {
-      padding-top: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      .one-filter {
-        padding-right: 10px;
-        margin-top: 5px;
-        &:first-child {
-          padding-left: 0;
+        text-decoration: none;
+        padding-top: 19px;
+        width: 370px !important;
+
+        @include xs-block() {
+          width: 100% !important;
         }
-        button {
-          padding: 13px 80px 13px 21px;
-          color: $black-80;
-          background-color: $white-four;
-          font-weight: normal;
-          font-size: 14px;
-          border: none;
-          outline: none;
+        .img-block {
           position: relative;
-          border-radius: 4px;
+          color: #000;
+
+          @include xs(width, 100%);
           img {
-            position: absolute;
-            right: 22px;
-            top: 16.5px;
-          }
-        }
-        .fix-menu {
-          display: none;
-          width: 264px;
-          position: absolute;
-        }
-        .hide-dropdown {
-          height: 136px;
-          padding: 32px 0 0 19px;
-          width: 264px;
-          border: 1px solid $white-bg;
-          box-sizing: border-box;
-          background: $white;
-          position: relative;
-          border-radius: 4px;
-          top: 10px;
-          z-index: 300;
-          &:before {
-            bottom: 100%;
-            left: 15%;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-          }
-          li {
-            padding: 5px 0;
-            list-style: none;
-            label {
-              font-size: 14px;
-              font-weight: normal;
-              color: $black-60;
+            @include xs-block() {
+              width: 100%;
+              height: auto;
             }
           }
+          .price {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+            color: $white;
+          }
+          .description-services {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 16px;
+            color: $white;
+          }
         }
-        .hide-dropdown:before {
-          border-bottom-color: $white-bg;
-          border-width: 12px;
-          margin-left: -20px;
-        }
-        .city:hover + .fix-menu {
-          display: block;
-        }
-        .fix-menu:hover {
-          display: block;
-        }
-      }
-    }
-    .all-services {
-      padding-top: 30px;
-      .title-count {
-        font-size: 14px;
-        line-height: 20px;
-        color: $black-60;
-        .count-services {
-          color: $black-80;
-        }
-      }
-      .blocks-services {
-        padding-top: 23px;
-
-        @include row-flex();
-        @include fix-block() {
-          justify-content: center;
-        }
-        .one-block-services {
-          @include col();
-          @include size(4);
-
+        .person-services {
           display: flex;
           flex-direction: column;
-          align-items: center;
-          text-decoration: none;
-          padding-top: 19px;
-          width: 370px !important;
-
-          @include xs-block() {
-            width: 100% !important;
-          }
-          .img-block {
-            position: relative;
-            color: #000;
-
-            @include xs(width, 100%);
-            img {
-              @include xs-block() {
-                width: 100%;
-                height: auto;
-              }
-            }
-            .price {
-              position: absolute;
-              top: 20px;
-              left: 20px;
-              font-size: 14px;
-              color: $white;
-            }
-            .description-services {
-              position: absolute;
-              bottom: 20px;
-              left: 20px;
-              font-size: 16px;
-              color: $white;
-            }
-          }
-          .person-services {
+          justify-content: space-between;
+          padding-top: 20px;
+          .block-flex {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding-top: 20px;
-            .block-flex {
+            img {
+              border-radius: 50%;
+            }
+            .block-description-person {
               display: flex;
-              img {
-                border-radius: 50%;
-              }
-              .block-description-person {
+              flex-direction: column;
+              padding-left: 10px;
+              width: 100%;
+              .block-top {
                 display: flex;
-                flex-direction: column;
-                padding-left: 10px;
-                width: 100%;
-                .block-top {
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  font-weight: normal;
-                  .name {
-                    color: $black-font;
-                    font-size: 14px;
-                  }
-                  .qualification {
-                    font-size: 14px;
-                    color: $black-60;
-                    text-align: center;
-                    padding: 5px 14px;
-                    background-color: $yellow-two;
-                    border-radius: 4px;
-                    margin-left: 11px;
-                    margin-right: auto;
-                  }
-                  .city {
-                    color: $black-60;
-                    font-size: 14px;
-                  }
-                }
-                .rating {
-                  display: flex;
-                  align-items: center;
-                  font-size: 14px;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: normal;
+                .name {
                   color: $black-font;
-                  .all {
-                    padding-left: 7px;
-                    .all-count {
-                      color: $sunflower-yellow;
-                    }
+                  font-size: 14px;
+                }
+                .qualification {
+                  font-size: 14px;
+                  color: $black-60;
+                  text-align: center;
+                  padding: 5px 14px;
+                  background-color: $yellow-two;
+                  border-radius: 4px;
+                  margin-left: 11px;
+                  margin-right: auto;
+                }
+                .city {
+                  color: $black-60;
+                  font-size: 14px;
+                }
+              }
+              .rating {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: $black-font;
+                .all {
+                  padding-left: 7px;
+                  .all-count {
+                    color: $sunflower-yellow;
                   }
                 }
               }
             }
-            .description-qualification {
-              line-height: 20px;
-              font-size: 14px;
-              color: $black-60;
-              padding-top: 14px;
-              font-weight: normal;
-            }
           }
-          .block-adv {
-            width: 100%;
-            height: 100%;
+          .description-qualification {
+            line-height: 20px;
+            font-size: 14px;
+            color: $black-60;
+            padding-top: 14px;
+            font-weight: normal;
           }
-          .pages {
-            width: 55%;
-          }
+        }
+        .block-adv {
+          width: 100%;
+          height: 100%;
+        }
+        .pages {
+          width: 55%;
         }
       }
     }

@@ -60,7 +60,8 @@
                 </ul>
             </div>
             <div id="sign-up-form" class="mfp-hide white-popup-block">
-                <button type="button" onClick="closePopup();" class="mfp-close"><img src="images/close.png" alt="Close"></button>
+                <button type="button" onClick="closePopup();" class="mfp-close"><img src="images/close.png" alt="Close">
+                </button>
                 <div class="tabs">
                     <ul>
                         <li>Пользователь</li>
@@ -219,7 +220,8 @@
             </div>
 
             <div id="sign-in-form" class="mfp-hide white-popup-block">
-                <button type="button" onClick="closePopup();" class="mfp-close"><img src="images/close.png" alt="Close"></button>
+                <button type="button" onClick="closePopup();" class="mfp-close"><img src="images/close.png" alt="Close">
+                </button>
                 <div class="title"><h2>Вход</h2></div>
                 <div class="login-with">
                     <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a href="#">Google</a>
@@ -499,7 +501,9 @@
                 </ul>
             </div>
 
-            <input type="button" value="Присоедениться" class="join">
+            <button class="register-specialist yellow-theme">
+                <img src="images/register-specialist.png" alt="Register">Зарегистрироваться специалистом
+            </button>
         </div>
 
         <div class="specialists">
@@ -508,11 +512,11 @@
                     <img src="images/specialist-photo-1.png" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Игорь Титов</div>
                     <div class="specialistsBlockDescription__qualification">
                         <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
-                    <div class="specialistsBlockDescription__name">Игорь Титов</div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
                         средним
                     </div>
@@ -523,11 +527,11 @@
                     <img src="images/specialist-photo-2.png" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Наталья Смирнова</div>
                     <div class="specialistsBlockDescription__qualification">
                         <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
-                    <div class="specialistsBlockDescription__name">Наталья Смирнова</div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
                         средним
                     </div>
@@ -538,11 +542,11 @@
                     <img src="images/specialist-photo-3.png" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Ольга Иванова</div>
                     <div class="specialistsBlockDescription__qualification">
                         <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
-                    <div class="specialistsBlockDescription__name">Ольга Иванова</div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
                         средним
                     </div>
@@ -553,11 +557,11 @@
                     <img src="images/specialist-photo-4.png" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Александр Иванов</div>
                     <div class="specialistsBlockDescription__qualification">
                         <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
-                    <div class="specialistsBlockDescription__name">Александр Иванов</div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
                         средним
                     </div>
@@ -568,11 +572,11 @@
                     <img src="images/specialist-photo-5.png" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Мария Титова</div>
                     <div class="specialistsBlockDescription__qualification">
                         <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
-                    <div class="specialistsBlockDescription__name">Мария Титова</div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
                         средним
                     </div>
@@ -583,11 +587,11 @@
                     <img src="images/specialist-photo-6.png" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Николай Смирнов</div>
                     <div class="specialistsBlockDescription__qualification">
                         <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
-                    <div class="specialistsBlockDescription__name">Николай Смирнов</div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
                         средним
                     </div>
@@ -820,12 +824,17 @@
             </div>
 
             <div class="buttons">
-                <a href="#" id="register-club">Зарегестрировать клуб</a>
-                <a href="#" id="register-shelter">Зарегестрировать приют</a>
+                <button id="register-club" class="yellow-theme">Зарегестрировать клуб</button>
+                <button id="register-shelter" class="yellow-theme">Зарегестрировать приют</button>
             </div>
         </div>
-        <div class="show-more">
-            <a href="#">Смотреть все клубы</a> <a href="#">Приюты</a>
+        <div class="two-blocks">
+            <div class="show-more">
+                <a href="#">Смотреть все клубы</a>
+            </div>
+            <div class="show-more">
+                <a href="#">Приюты</a>
+            </div>
         </div>
     </div>
 </section>

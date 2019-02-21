@@ -5,10 +5,13 @@
   .content-banner {
     display: flex;
     background: url("../images/image-bg-ch.png") no-repeat 100%;
+    height: 264px;
+    position: relative;
 
     @include md-block() {
       flex-direction: column;
       background: none;
+      height: auto;
     }
     .d-flex {
 
@@ -92,12 +95,14 @@
     .title-banner {
       text-align: center;
       font-size: 32px;
-      padding: 63px 0 0 65px;
       font-weight: bold;
-
+      padding-top: 63px;
+      position: absolute;
+      width: 100%;
       @include md-block() {
         order: -1;
         padding: 0;
+        position: inherit;
       }
       @include xs(font-size, 28px);
       span {
