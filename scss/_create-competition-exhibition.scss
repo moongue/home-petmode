@@ -1,10 +1,10 @@
-.page-create-competition {
+.page-create-competition, .page-create-exhibition {
   .container-step-one, .container-step-two, .container-step-three, .container-create-finish {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 93px;
-    .title-create-competition {
+    .title-create-competition, .title-create-exhibition {
       text-align: center;
       padding-top: 36px;
       color: $black-font;
@@ -20,8 +20,25 @@
         width: 100%;
         height: auto;
       }
+      .stages {
+        display: flex;
+        justify-content: space-around;
+        color: $black-40;
+        font-size: 14px;
+        line-height: 19px;
+        li {
+          width: 25%;
+
+          @include xs-block() {
+            font-size: 10px;
+          }
+          &.active {
+            color: $black-font;
+          }
+        }
+      }
     }
-    .container-registration-competition {
+    .container-registration-competition, .container-registration-exhibition {
       display: flex;
       justify-content: space-between;
       padding-top: 45px;
@@ -34,6 +51,53 @@
       @include sm-block() {
         flex-direction: column;
         align-items: center;
+      }
+      &.container-registration-exhibition {
+        .block-with-photo {
+          width: 370px;
+          margin-top: 24px;
+          .one-photo {
+            border: none;
+            width: 85px;
+          }
+        }
+        .loading-video-block {
+          margin-top: 32px;
+        }
+        .more-filter {
+          @include xs(padding-top, 32px);
+          .cat-or-dog-filter, .yes-or-no {
+            li {
+              a {
+                font-weight: normal;
+                &.active-more-filter {
+                  background-color: $yellow-three;
+                  border: 1px solid $white-bg;
+                }
+              }
+            }
+          }
+        }
+        .title-input-nomination {
+          padding-top: 31px !important;
+        }
+        .loading-document {
+          button {
+            border: none !important;
+            color: $black-80 !important;
+          }
+        }
+        .terms-of-use {
+          font-size: 14px;
+          color: $black-60;
+          padding-top: 32px;
+          font-weight: normal;
+          a {
+            color: $black-60;
+            text-decoration: none;
+            border-bottom: 1px dotted $black-60;
+          }
+        }
       }
       .buttons-create-finish {
         display: flex;
@@ -51,7 +115,7 @@
           }
         }
       }
-      .next-step-create, .next-personal-account{
+      .next-step-create, .next-personal-account, .next-step-create-exhibition, .publish-create-exhibition {
         background: none;
         outline: none;
         border: 1px solid $sunflower-yellow;
@@ -63,6 +127,11 @@
         height: 40px;
         cursor: pointer;
         margin-top: 24px;
+        &.next-step-create-exhibition, &.publish-create-exhibition, &.next-personal-account {
+          border: none;
+          background-color: $yellow-three;
+          color: $black-80;
+        }
       }
       .on-page-competition {
         font-size: 14px;
@@ -75,13 +144,14 @@
         cursor: pointer;
         margin-top: 24px;
       }
-      .information-about-competition, .information-about-competition-winner {
+      .information-about-competition,
+      .information-about-competition-winner,
+      .information-about-exhibition {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         width: 370px;
 
-        @include md(width, 330px);
         @include sm(padding-top, 15px);
         @include xs-block() {
           width: 300px;
@@ -100,29 +170,41 @@
             font-size: 14px;
             color: $black-two-50;
             font-weight: normal;
+            a {
+              text-decoration: none;
+              color: $black-40;
+            }
           }
         }
-        .styles-input, textarea {
-          width: 100%;
-          outline: none;
-          box-sizing: border-box;
-          padding-left: 13px;
-          font-size: 13px;
-          color: $black-two-50;
-          height: 40px;
-          margin-top: 8px;
-          border: 1px solid $white-bg;
-          border-radius: 4px;
-          font-weight: 400;
-          &::-webkit-input-placeholder {
-            color: $black-two-50;
-          }
-          &.add {
-            padding-left: 38px;
-            font-size: 13px;
+        .company-dop {
+          display: flex;
+          justify-content: flex-start;
+          padding-top: 16px;
+          padding-bottom: 8px;
+          button {
+            background-color: $white-bg-30;
+            border-radius: 4px;
+            color: $black-80;
+            font-size: 14px;
+            padding: 10px 20px;
             cursor: pointer;
-            text-align: left;
-            background: url("../images/add-icon.png") no-repeat 5% center;
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+            &:nth-child(n + 2) {
+              margin-left: 10px;
+            }
+            img {
+              padding-right: 9px;
+            }
+          }
+        }
+        .more-filter {
+          .cat-or-dog-filter {
+            @include md-block() {
+              margin-top: 0;
+            }
           }
         }
         textarea {
@@ -163,6 +245,7 @@
           }
         }
       }
+
       .information-about-competition-winner {
         width: 780px;
         align-items: center;
@@ -185,40 +268,40 @@
                 padding-bottom: 10px;
               }
             }
-            .block-with-photo {
-              display: flex;
-              padding-top: 10px;
-              .one-photo {
-                width: 78px;
-                height: 72px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #f8f8f8;
-                border: 1px solid $white-bg;
-                border-radius: 8px;
-                margin-left: 20px;
-                cursor: pointer;
-                &:first-child {
-                  margin-left: 0;
-                }
-                img {
-                  opacity: .5;
-                }
-              }
-            }
           }
         }
       }
     }
-    .create-competition-complete {
+    .block-with-photo {
+      display: flex;
+      padding-top: 10px;
+      .one-photo {
+        width: 78px;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f8f8;
+        border: 1px solid $white-bg;
+        border-radius: 8px;
+        margin-left: 20px;
+        cursor: pointer;
+        &:first-child {
+          margin-left: 0;
+        }
+        img {
+          opacity: .5;
+        }
+      }
+    }
+    .create-competition-complete, .create-exhibition-complete  {
       padding-top: 108px;
       display: block;
       img {
         width: 100%;
         height: auto;
       }
-      .registration-competition-congratulation {
+      .registration-competition-congratulation, .registration-exhibition-congratulation {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -228,8 +311,8 @@
         span {
           color: $black-two-50;
           font-size: 14px;
-          font-weight: 600;
           padding-top: 15px;
+          font-weight: normal;
         }
       }
     }

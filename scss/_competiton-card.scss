@@ -106,32 +106,7 @@
             }
           }
         }
-        .to-become {
-          display: flex;
-          flex-direction: column;
 
-          @include xs-block() {
-            width: 60%;
-          }
-          input {
-            padding: 11px 26px;
-            color: $black-two-50;
-            background-color: $white-bg;
-            font-weight: normal;
-            border-radius: 4px;
-            border: none;
-            outline: none;
-            cursor: pointer;
-          }
-          @include xs-block() {
-            #to-become-partner {
-              margin-top: 12px;
-            }
-          }
-          #to-become-sponsor {
-            margin-top: 12px;
-          }
-        }
       }
       .competition-position-participate {
         padding-top: 30px;

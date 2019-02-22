@@ -342,7 +342,7 @@ h3 {
 
 //BTN REGISTER SPECIALIST
 
-.register-specialist, #register-club, #register-shelter,#btn-place-an-exhibition {
+.register-specialist, #register-club, #register-shelter,#btn-place-an-exhibition, #apply {
   width: 300px;
   display: flex;
   align-items: center;
@@ -404,6 +404,19 @@ h3 {
     text-align: left;
     background: url("../images/add-icon.png") no-repeat 5% center;
   }
+  &.add-small {
+    width: 270px;
+  }
+  &.create-price-exhibition {
+    width: 182px;
+  }
+  &.create-type-exhibition,
+  &.create-federation-exhibition,
+  &.create-class-exhibition,
+  &.create-breed-exhibition {
+    width: 270px;
+  }
+
 }
 textarea {
   height: 136px;
@@ -442,7 +455,7 @@ textarea {
   font-weight: bold;
 }
 
-.loading-photo-block {
+.loading-photo-block, .loading-video-block {
   background-color: #f8f8f8;
   border-radius: 8px;
   width: 370px;
@@ -451,7 +464,7 @@ textarea {
   flex-direction: column;
   align-items: center;
 
-  @include md(width, 330px);
+  //@include md(width, 330px);
   @include xs-block() {
     width: 300px;
   }
@@ -469,6 +482,36 @@ textarea {
 }
 
 //END STYLIZATION CHECKBOX
+
+//BTN TO BECOME
+.to-become {
+  display: flex;
+  flex-direction: column;
+
+  @include xs-block() {
+    width: 60%;
+  }
+  input {
+    padding: 11px 26px;
+    color: $black-80;
+    background-color: $white-bg;
+    font-weight: normal;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  @include xs-block() {
+    #to-become-partner {
+      margin-top: 12px;
+    }
+  }
+  #to-become-sponsor {
+    margin-top: 12px;
+  }
+}
+
+//END BTN TO BECOME
 
 //HEADER CONTAINER FILTER
 
@@ -706,7 +749,7 @@ textarea {
     flex-direction: column;
     align-items: center;
   }
-  .specific-filter, .cat-or-dog-filter {
+  .specific-filter, .cat-or-dog-filter, .yes-or-no {
     display: flex;
     li {
       a {
@@ -739,7 +782,7 @@ textarea {
       display: none;
     }
   }
-  .cat-or-dog-filter {
+  .cat-or-dog-filter, .yes-or-no {
     margin-left: auto;
 
     @include md-block() {
@@ -748,11 +791,11 @@ textarea {
     }
     li {
       a {
-        &.cat-filter {
+        &.cat-filter, &.filter-yes{
           border-left: 1px solid $white-bg;
           border-radius: 4px 0 0 4px;
         }
-        &.dog-filter {
+        &.dog-filter, &.filter-no {
           border-radius: 0 4px 4px 0;
         }
       }

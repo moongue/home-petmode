@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Создание выставки</title>
+</head>
+<body>
+<!--HEADER-->
+<header id="header-ch">
+    <div class="wrapper">
+        <div class="container-header">
+            <div class="logo">
+                <a href="#"><img src="images/small-logo.png" alt="Logo"></a>
+            </div>
+
+            <a href="#" class="lines">
+                <img src="images/lines.png" alt="lines">
+            </a>
+
+            <nav class="menu">
+                <ul class="menu-a">
+                    <li class="search-hide-desktop search">
+                        <input type="text" placeholder="Поиск" id="search-mob">
+                        <label for="search">
+                            <img src="images/vector.png" alt="Search">
+                        </label>
+                    </li>
+                    <li><a href="#">Питомцы</a></li>
+                    <li><a href="#">Специалисты</a></li>
+                    <li><a href="#">Моя радость</a></li>
+                    <li class="active-menu"><a href="#">Конкурсы</a></li>
+                    <li><label class="link" for="hider" id="more">Ещё <span>...</span></label>
+                        <input type="checkbox" id="hider">
+                        <ul class="content">
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Рейтинг</a></li>
+                            <li><a href="#">Выставка</a></li>
+                            <li><a href="#">Благотворительность</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="search">
+                <input type="text" placeholder="Поиск" id="search">
+                <label for="search">
+                    <img src="images/vector.png" alt="Search">
+                </label>
+            </div>
+            <a href="#" class="user">
+                <div class="name-user">Иван</div>
+                <img src="images/user.png" alt="User Icon">
+            </a>
+        </div>
+    </div>
+</header>
+<!--END HEADER-->
+
+<!--STEP-TWO-->
+<section class="page-create-exhibition">
+    <div class="wrapper">
+        <div class="container-step-two">
+            <div class="title-create-exhibition">
+                <h1>Создание Выставки <span>Шаг 2</span></h1>
+                <img src="images/create-exhibition-step-two.png" alt="Step Two">
+                <ul class="stages">
+                    <li>Основное</li>
+                    <li class="active">Критерии</li>
+                    <li>Организационное</li>
+                    <li>Финиш</li>
+                </ul>
+            </div>
+            <div class="container-registration-exhibition">
+                <div class="information-about-exhibition">
+                    <div class="title-input">
+                        Для кого выставка?
+                    </div>
+                    <div class="more-filter">
+                        <ul class="cat-or-dog-filter">
+                            <li><a href="#" class="cat-filter">Кошки</a></li>
+                            <li><a href="#" class="dog-filter active-more-filter">Собаки</a></li>
+                        </ul>
+                    </div>
+                    <div class="title-input  title-input-nomination">
+                        Номинация
+                    </div>
+                    <input type="text" placeholder="Самый самый"
+                           class="create-the-most-of-most-exhibition styles-input">
+                    <input type="button" value="Добавить" class="add styles-input">
+                    <div class="title-input">
+                        Тип
+                    </div>
+                    <input type="text" placeholder="Выставка" class="create-type-exhibition styles-input">
+                    <div class="title-input">
+                        Цена
+                    </div>
+                    <input type="text" placeholder="300 000" class="create-price-exhibition styles-input">
+                    <div class="title-input">
+                        Федерация
+                    </div>
+                    <input type="text" placeholder="Название" class="create-federation-exhibition styles-input">
+                    <div class="title-input">
+                        Класс
+                    </div>
+                    <input type="text" placeholder="Класс" class="create-class-exhibition styles-input">
+                    <div class="title-input">
+                        Порода
+                    </div>
+                    <input type="text" placeholder="Сиамская" class="create-breed-exhibition styles-input">
+                    <input type="button" value="Добавить" class="add add-small styles-input">
+                </div>
+                <div class="information-about-exhibition">
+                    <div class="title-input">
+                        У вас есть спонсоры? Хотите рассказать?
+                    </div>
+                    <input type="text" placeholder="Компания ООО" class="create-company-exhibition styles-input">
+                    <div class="company-dop">
+                        <button><img src="images/icon-loading-small.png" alt="Icon loading"> Добавить лого</button>
+                        <button>Указать реквизиты</button>
+                    </div>
+                    <input type="button" value="Добавить" class="add styles-input">
+                    <div class="title-input">
+                        Жюри
+                    </div>
+                    <input type="text" placeholder="ФИО" class="create-fio styles-input">
+                    <input type="text" placeholder="Квалификация" class="create-qualification styles-input">
+
+                    <input type="button" value="Добавить" class="add styles-input">
+
+                    <input type="button" value="Дальше" class="next-step-create-exhibition">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--END STEP TWO-->
+</body>
+</html>

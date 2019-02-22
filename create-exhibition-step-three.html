@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Создание выставки</title>
+</head>
+<body>
+<!--HEADER-->
+<header id="header-ch">
+    <div class="wrapper">
+        <div class="container-header">
+            <div class="logo">
+                <a href="#"><img src="images/small-logo.png" alt="Logo"></a>
+            </div>
+
+            <a href="#" class="lines">
+                <img src="images/lines.png" alt="lines">
+            </a>
+
+            <nav class="menu">
+                <ul class="menu-a">
+                    <li class="search-hide-desktop search">
+                        <input type="text" placeholder="Поиск" id="search-mob">
+                        <label for="search">
+                            <img src="images/vector.png" alt="Search">
+                        </label>
+                    </li>
+                    <li><a href="#">Питомцы</a></li>
+                    <li><a href="#">Специалисты</a></li>
+                    <li><a href="#">Моя радость</a></li>
+                    <li class="active-menu"><a href="#">Конкурсы</a></li>
+                    <li><label class="link" for="hider" id="more">Ещё <span>...</span></label>
+                        <input type="checkbox" id="hider">
+                        <ul class="content">
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Рейтинг</a></li>
+                            <li><a href="#">Выставка</a></li>
+                            <li><a href="#">Благотворительность</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="search">
+                <input type="text" placeholder="Поиск" id="search">
+                <label for="search">
+                    <img src="images/vector.png" alt="Search">
+                </label>
+            </div>
+            <a href="#" class="user">
+                <div class="name-user">Иван</div>
+                <img src="images/user.png" alt="User Icon">
+            </a>
+        </div>
+    </div>
+</header>
+<!--END HEADER-->
+
+<!--STEP-THREE-->
+<section class="page-create-exhibition">
+    <div class="wrapper">
+        <div class="container-step-three">
+            <div class="title-create-exhibition">
+                <h1>Создание Выставки <span>Шаг 3</span></h1>
+                <img src="images/create-exhibition-step-three.png" alt="Step Three">
+                <ul class="stages">
+                    <li>Основное</li>
+                    <li>Критерии</li>
+                    <li class="active">Организационное</li>
+                    <li>Финиш</li>
+                </ul>
+            </div>
+            <div class="container-registration-exhibition">
+                <div class="information-about-exhibition">
+                    <div class="title-input">
+                        Название организации
+                    </div>
+                    <input type="text" placeholder="ООО организация"
+                           class="create-organization-exhibition styles-input">
+                    <div class="title-input">
+                        Телефон
+                    </div>
+                    <input type="tel" placeholder="+7 (953) 854 68-40"
+                           class="create-telephone-exhibition styles-input">
+                    <div class="title-input">
+                        Почта
+                    </div>
+                    <input type="text" placeholder="fyodorov.yan@gmail.com"
+                           class="create-email-exhibition styles-input">
+                    <div class="title-input">
+                        Сайт
+                    </div>
+                    <input type="text" placeholder="petmode.com"
+                           class="create-site-exhibition styles-input">
+
+                    <div class="title-input">
+                        Указать ссылки на мои соц. сети?
+                    </div>
+                    <div class="more-filter">
+                        <ul class="yes-or-no">
+                            <li><a href="#" class="filter-yes">Да</a></li>
+                            <li><a href="#" class="filter-no active-more-filter">Нет</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="information-about-exhibition">
+                    <div class="title-input">
+                        Дата проведения
+                    </div>
+                    <input type="date" placeholder="25.08.2018" class="create-date-holding-exhibition styles-input">
+                    <div class="title-input">
+                        Адрес проведения <span><a href="#">Указать на карте</a></span>
+                    </div>
+                    <input type="text" placeholder="Мира 17" class="create-address-exhibition styles-input">
+                    <div class="title-input">
+                        Прикрепить документы
+                    </div>
+                    <div class="loading-document">
+                        <button class="btn-loading-documents">Загрузить документ <img src="images/add-icon.png"
+                                                                                      alt="Add icon"></button>
+                        <button class="btn-loading-documents-small"><img src="images/add-icon.png" alt="Add icon">
+                        </button>
+                        <button class="btn-loading-documents-small"><img src="images/add-icon.png" alt="Add icon">
+                        </button>
+                    </div>
+                    <p class="terms-of-use"><input type="radio" id="price1" name="price" class="styles-checkbox"/>
+                        <label for="price1">Я согласен с</label> <a href="#">пользовательским соглашением</a></p>
+
+                    <input type="button" value="Опубликовать" class="publish-create-exhibition">
+
+                </div>
+            </div>
+        </div>
+</section>
+
+<!--END STEP THREE-->
+</body>
+</html>
