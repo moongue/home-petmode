@@ -1,10 +1,15 @@
-.page-create-competition, .page-create-exhibition {
-  .container-step-one, .container-step-two, .container-step-three, .container-create-finish {
+.page-create-competition,
+.page-create-exhibition {
+  .container-step-one,
+  .container-step-two,
+  .container-step-three,
+  .container-create-finish {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 93px;
-    .title-create-competition, .title-create-exhibition {
+    .title-create-competition,
+    .title-create-exhibition {
       text-align: center;
       padding-top: 36px;
       color: $black-font;
@@ -38,7 +43,8 @@
         }
       }
     }
-    .container-registration-competition, .container-registration-exhibition {
+    .container-registration-competition,
+    .container-registration-exhibition {
       display: flex;
       justify-content: space-between;
       padding-top: 45px;
@@ -115,7 +121,10 @@
           }
         }
       }
-      .next-step-create, .next-personal-account, .next-step-create-exhibition, .publish-create-exhibition {
+      .next-step-create,
+      .next-personal-account,
+      .next-step-create-exhibition,
+      .publish-create-exhibition {
         background: none;
         outline: none;
         border: 1px solid $sunflower-yellow;
@@ -127,7 +136,9 @@
         height: 40px;
         cursor: pointer;
         margin-top: 24px;
-        &.next-step-create-exhibition, &.publish-create-exhibition, &.next-personal-account {
+        &.next-step-create-exhibition,
+        &.publish-create-exhibition,
+        &.next-personal-account {
           border: none;
           background-color: $yellow-three;
           color: $black-80;
@@ -217,7 +228,8 @@
 
           @include md(width, 330px);
           @include xs(width, 300px);
-          .btn-loading-documents, .btn-loading-documents-small {
+          .btn-loading-documents,
+          .btn-loading-documents-small {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -249,7 +261,9 @@
       .information-about-competition-winner {
         width: 780px;
         align-items: center;
-        .first-place, .second-place, .third-place {
+        .first-place,
+        .second-place,
+        .third-place {
           display: flex;
           justify-content: center;
           padding-top: 28px;
@@ -260,7 +274,9 @@
           @include md-block() {
             flex-direction: column;
           }
-          .first-place-block, .second-place-block, .third-place-block {
+          .first-place-block,
+          .second-place-block,
+          .third-place-block {
             width: 370px;
             margin: 0 15px;
             @include md-block() {
@@ -294,14 +310,16 @@
         }
       }
     }
-    .create-competition-complete, .create-exhibition-complete  {
+    .create-competition-complete,
+    .create-exhibition-complete  {
       padding-top: 108px;
       display: block;
       img {
         width: 100%;
         height: auto;
       }
-      .registration-competition-congratulation, .registration-exhibition-congratulation {
+      .registration-competition-congratulation,
+      .registration-exhibition-congratulation {
         display: flex;
         flex-direction: column;
         align-items: center;

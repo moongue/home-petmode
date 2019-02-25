@@ -1,0 +1,205 @@
+#organizations {
+  .bgc {
+    background-color: $white-bg-two;
+    .container-organizations-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 90px 0 70px;
+
+      h1 {
+        color: $black-font;
+        font-size: 32px;
+        line-height: 43px;
+        text-align: center;
+      }
+      p {
+        font-size: 16px;
+        color: $black-font;
+        padding-top: 17px;
+        font-weight: normal;
+      }
+      .search-company {
+        width: 370px;
+        height: 32px;
+        padding-left: 13px;
+        border: 1px solid $white-bg;
+        background-color: $white;
+        border-radius: 4px;
+        outline: none;
+        font-size: 14px;
+        color: $black-60;
+        font-weight: normal;
+        margin-top: 32px;
+
+        @include xs(width, 100%);
+      }
+      .btn-create-organization {
+        margin-top: 32px;
+        width: 170px;
+      }
+    }
+  }
+  .container-organizations {
+    .filter-organizations {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include sm-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+      .one-filter {
+        @include sm(margin-top, 10px);
+      }
+      .reliable-first {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+
+        @include md(padding-left, 0);
+        @include sm(margin-top, 10px);
+        a {
+          text-decoration: none;
+          font-weight: normal;
+          color: $black-60;
+          border-bottom: 1px dotted $black-60;
+        }
+      }
+      .all-offers {
+        font-size: 14px;
+        color: $black-60;
+        font-weight: normal;
+        flex-grow: 2;
+        text-align: center;
+        padding-right: 110px;
+
+        @include lg-block() {
+          flex-grow: 0;
+          padding-right: 0;
+        }
+        @include sm-block() {
+          order: -1;
+        }
+      }
+      .more-filter {
+        padding-top: 0;
+
+        @include sm(margin-top, 25px);
+        .cat-or-dog-filter {
+
+          @include md(margin-top, 0);
+          a {
+            font-weight: normal;
+            &.active-more-filter {
+              background-color: $yellow-three;
+              border: 1px solid $white-bg;
+            }
+          }
+        }
+      }
+    }
+    .blocks-organizations {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 30px;
+
+      @include fix-block() {
+        justify-content: space-around;
+      }
+      .one-block-organization {
+        width: 370px;
+        height: 248px;
+        border: 1px solid $white-bg;
+        border-radius: 8px;
+        text-decoration: none;
+        padding: 23px 20px 0;
+        margin-top: 23px;
+        box-sizing: border-box;
+        &.active-block-organization {
+          border: none;
+          box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.1);
+        }
+        .block-cap {
+          border-bottom: 1px solid $white-bg;
+          padding-bottom: 14px;
+          .block-img-company {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+              text-decoration: none;
+            }
+            .reliable {
+              display: flex;
+              align-items: center;
+              color: $green;
+              font-weight: normal;
+              padding-top: 0;
+              img {
+                padding-left: 6px;
+              }
+            }
+          }
+          p {
+            padding-top: 30px;
+            font-weight: normal;
+            color: $black-font;
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+        .discount {
+          font-size: 16px;
+          color: $black-font;
+          line-height: 22px;
+          padding-top: 20px;
+          font-weight: normal;
+          max-width: 323px;
+          .bold {
+            font-weight: bold;
+          }
+        }
+        .block-descr {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 39px;
+          font-weight: normal;
+          .wait {
+            font-size: 14px;
+            color: $black-font;
+            p {
+              display: flex;
+              align-items: center;
+              img {
+                padding-right: 8px;
+              }
+            }
+          }
+          .detailed {
+            font-size: 14px;
+            text-decoration: none;
+            color: $black-60;
+            margin-right: auto;
+            margin-left: 10px;
+          }
+          .smile {
+            font-size: 14px;
+            color: $black-font;
+            p {
+              display: flex;
+              align-items: center;
+              img {
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

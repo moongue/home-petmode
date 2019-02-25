@@ -272,6 +272,7 @@ h3 {
 //LOADING
 .loading {
   margin: 0 auto;
+  display: block;
   padding-top: 65px;
   padding-bottom: 72px;
   width: 52px;
@@ -342,7 +343,12 @@ h3 {
 
 //BTN REGISTER SPECIALIST
 
-.register-specialist, #register-club, #register-shelter,#btn-place-an-exhibition, #apply {
+.register-specialist,
+#register-club,
+#register-shelter,
+#btn-place-an-exhibition,
+#apply,
+.btn-create-organization{
   width: 300px;
   display: flex;
   align-items: center;
@@ -515,7 +521,7 @@ textarea {
 
 //HEADER CONTAINER FILTER
 
-.container-services, .container-specialist {
+.container-services, .container-specialist, .container-organizations {
   padding-top: 48px;
   .title-services-button, .title-specialist-button {
     display: flex;
@@ -571,7 +577,7 @@ textarea {
       margin-top: 5px;
     }
   }
-  .filter-services, .filter-specialist {
+  .filter-services, .filter-specialist, .filter-organizations {
     padding-top: 18px;
     display: flex;
     flex-wrap: wrap;
