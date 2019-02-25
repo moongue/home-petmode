@@ -43,6 +43,19 @@
         list-style: none;
         display: flex;
         align-items: center;
+        &.small-menu {
+          li {
+            @include lg(padding, 0 4px);
+            a {
+              color: $black-40;
+            }
+          }
+        }
+        .search-show-sm {
+          @include sm-block() {
+            display: block;
+          }
+        }
         .search-hide-desktop {
           display: none;
           @include xs-block() {
@@ -52,6 +65,15 @@
         }
         li {
           padding: 28px 15px;
+          &.buy-pro-account {
+            display: none;
+            @include xs-block() {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              border-radius: 4px;
+            }
+          }
           a {
             text-decoration: none;
             color: $black-font;
@@ -60,6 +82,9 @@
               color: $sunflower-yellow;
               transition: all .4s;
             }
+          }
+          .color-grey {
+            color: $black-40 !important;
           }
           #more {
             color: $black-font;
@@ -100,6 +125,7 @@
         padding-left: 30px;
         background-color: $white;
         box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+        z-index: 300;
         ul li .content {
           display: none;
           position: inherit;
@@ -130,7 +156,19 @@
       background-color: #f3f3f3;
       padding: 5px 15px;
       border-radius: 15px;
-
+      &.bg-none {
+        background: none;
+      }
+      &.margin-fix {
+        @include md-block() {
+          margin-right: 0;
+        }
+      }
+      &.search-fix {
+        @include sm-block() {
+          display: none;
+        }
+      }
       @include md-block() {
         margin-right: 100px;
       }
@@ -183,6 +221,10 @@
       font-size: 15px;
       color: $black-two-50;
       background-color: $white-bg-two;
+
+      @include xs-block() {
+        display: none;
+      }
       .pro {
         display: flex;
         align-items: center;
@@ -211,5 +253,10 @@
         padding-right: 15px;
       }
     }
+  }
+  .container-banner {
+    background: url("../images/bgc-img.png") no-repeat;
+    height: 260px;
+    width: 100%;
   }
 }

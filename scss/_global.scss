@@ -343,12 +343,18 @@ h3 {
 
 //BTN REGISTER SPECIALIST
 
-.register-specialist,
-#register-club,
-#register-shelter,
+.btn-create-organization,
 #btn-place-an-exhibition,
+.register-specialist,
+#register-shelter,
+#show-telephone,
+#leave-feedback,
+#register-club,
+#request-call,
+#complain,
+#add-user,
 #apply,
-.btn-create-organization{
+#write {
   width: 300px;
   display: flex;
   align-items: center;

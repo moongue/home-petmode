@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Специалисты</title>
+    <title>Карточка организации</title>
 </head>
 <body>
 
@@ -28,8 +28,8 @@
         </a>
 
         <nav class="menu">
-            <ul class="menu-a">
-                <li class="search-hide-desktop search">
+            <ul class="menu-a small-menu">
+                <li class="search-hide-desktop search search-show-sm">
                     <input type="text" placeholder="Поиск" id="search-mob">
                     <label for="search">
                         <img src="images/vector.png" alt="Search">
@@ -39,7 +39,7 @@
                 <li><a href="#">Специалисты</a></li>
                 <li><a href="#">Моя радость</a></li>
                 <li class="active-menu"><a href="#">Конкурсы</a></li>
-                <li><label class="link" for="hider" id="more">Ещё <span>...</span></label>
+                <li><label class="link color-grey" for="hider" id="more">Ещё <span>...</span></label>
                     <input type="checkbox" id="hider">
                     <ul class="content">
                         <li><a href="#">Новости</a></li>
@@ -48,18 +48,27 @@
                         <li><a href="#">Благотворительность</a></li>
                     </ul>
                 </li>
+                <li class="buy-pro-account buy-pro-account-show-sm">
+                    <div class="pro">
+                        <div class="pro-bd">Pro</div>
+                        <p>Аккаунт</p>
+                    </div>
+                    <a href="#" class="btn-buy-pro-account">Купить</a>
+                </li>
             </ul>
         </nav>
 
-        <div class="search">
-            <input type="text" placeholder="Поиск" id="search">
+        <div class="search bg-none margin-fix search-fix">
             <label for="search">
                 <img src="images/vector.png" alt="Search">
             </label>
+            <input type="text" placeholder="Поиск" id="search">
+
         </div>
         <div class="buy-pro-account">
             <div class="pro">
-                <div class="pro-bd">Pro</div> <p>Аккаунт</p>
+                <div class="pro-bd">Pro</div>
+                <p>Аккаунт</p>
             </div>
             <a href="#" class="btn-buy-pro-account">Купить</a>
         </div>
@@ -68,13 +77,205 @@
             <img src="images/user.png" alt="User Icon">
         </a>
     </div>
-
-    <!--BANNER-->
-    <div class="container-banner">
-
-    </div>
 </header>
 <!--END HEADER-->
+
+<section id="organization-card">
+    <div class="banner-organization">
+        <div class="wrapper">
+            <div class="container-banner-organization">
+                <div class="rating">
+                    <div class="rating-organization">
+                        <p>Рейтинг</p>
+                        <div class="count-rating-organization">
+                            2 253
+                        </div>
+                        <img src="images/wreath-organization.png" alt="Wreath" class="wreaths">
+                    </div>
+                    <div class="position-organization">
+                        <p>Место <img src="images/icon-up.png" alt="Up"><span class="count-position-company">3</span>
+                        </p>
+                        <div class="count-rating-organization">
+                            53
+                        </div>
+                        <img src="images/wreath-organization.png" alt="Wreath" class="wreaths">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="container-content-organization">
+            <div class="title-organization">
+                <div class="cup-organization">
+                    <div class="title">
+                        <img src="images/icon-activated.png" alt="Activated">
+                        <div class="name">ООО «Айболит»</div>
+                        <p class="reliable">Надежный <img src="images/icon-reliable.png" alt="Reliable"></p>
+                    </div>
+                    <div class="logo-organization-social">
+                        <a href="#"><img src="images/icon-company-google.png" alt="Google">
+                        </a>
+                        <div class="horizontal-line"></div>
+                        <ul class="social-network">
+                            <li><a href="#"><img src="images/icon-vk-social-logotype.png" alt="VK"></a></li>
+                            <li><a href="#"><img src="images/icon-instagram-social-logotype.png" alt="Instagram"></a>
+                            </li>
+                            <li><a href="#"><img src="images/icon-facebook-social-logotype.png" alt="Facebook"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="description-organization">
+                    <div class="block-left">
+                        <img src="images/rating.png" alt="Rating" class="rating">
+                        <div class="organization">Организация</div>
+                        <a href="#" class="location">Красноярск, ул. Мира 17, офис 35 <img
+                                src="images/icon-location-blue.png" alt="Location"></a>
+                    </div>
+                    <div class="block-right">
+                        <a href="#" class="site">aibolit.com</a>
+                        <a href="#" class="email">info@aibolit.com </a>
+                    </div>
+                </div>
+                <div class="block-buttons">
+                    <input type="button" value="Показать телефон" id="show-telephone">
+                    <button id="request-call" class="yellow-theme"><img src="images/icon-request-call.png"
+                                                                        alt="Icon call"> Заказать звонок
+                    </button>
+                    <input type="button" value="Написать" id="write">
+                    <button id="add-user"><img src="images/icon-add-user.png" alt="Add user"></button>
+                    <div class="block-reviews">
+                        <div class="reviews-good">
+                            12 <img src="images/icon-reviews-smile.png" alt="Smile">
+                        </div>
+                        <div class="reviews-bad">
+                            2 <img src="images/icon-reviews-sad.png" alt="Sad">
+                        </div>
+                    </div>
+                    <input type="button" value="Оставить отзыв" id="leave-feedback">
+                    <input type="button" value="Пожаловаться" id="complain">
+
+                </div>
+            </div>
+            <div class="about-organization">
+                <div class="title">
+                    О компании
+                </div>
+                <p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
+                    превратился в страшное насекомое. Грегор Замза обнаружил, что он у себя в постели превратился Лежа
+                    на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый Проснувшись
+                    однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в
+                    страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой
+                    коричневый</p>
+                <img src="images/map-image.png" alt="Map" class="map">
+                <div class="services">
+                    <div class="title-services">
+                        Услуги <span class="count-services-organization">4</span>
+                        <a href="#">Показать Все</a>
+                    </div>
+                    <div class="blocks-services">
+                        <a href="#" class="one-block-services">
+                            <div class="img-block">
+                                <img src="images/img-services.png" alt="Image">
+                                <div class="price">9 000 &#8381;</div>
+                                <div class="description-services">Модельная стрижка питомцев</div>
+                            </div>
+                            <div class="description-one-block-service">
+                                <div class="organization">
+                                    Организация
+                                </div>
+                                <div class="city-services">Москва</div>
+                                <div class="rating">
+                                    <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span
+                                        class="all-count">150</span> / 3)</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="one-block-services">
+                            <div class="img-block">
+                                <img src="images/img-services.png" alt="Image">
+                                <div class="price">9 000 &#8381;</div>
+                                <div class="description-services">Модельная стрижка питомцев</div>
+                            </div>
+                            <div class="description-one-block-service">
+                                <div class="organization">
+                                    Организация
+                                </div>
+                                <div class="city-services">Москва</div>
+                                <div class="rating">
+                                    <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span
+                                        class="all-count">150</span> / 3)</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="one-block-services">
+                            <div class="img-block">
+                                <img src="images/img-services.png" alt="Image">
+                                <div class="price">9 000 &#8381;</div>
+                                <div class="description-services">Модельная стрижка питомцев</div>
+                            </div>
+                            <div class="description-one-block-service">
+                                <div class="organization">
+                                    Организация
+                                </div>
+                                <div class="city-services">Москва</div>
+                                <div class="rating">
+                                    <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span
+                                        class="all-count">150</span> / 3)</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="one-block-services">
+                            <div class="img-block">
+                                <img src="images/img-services.png" alt="Image">
+                                <div class="price">9 000 &#8381;</div>
+                                <div class="description-services">Модельная стрижка питомцев</div>
+                            </div>
+                            <div class="description-one-block-service">
+                                <div class="organization">
+                                    Организация
+                                </div>
+                                <div class="city-services">Москва</div>
+                                <div class="rating">
+                                    <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span
+                                        class="all-count">150</span> / 3)</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="show-more">
+                        <a href="#">Все услуги (15)</a>
+                    </div>
+                </div>
+                <div class="block-more-image">
+                    <div class="title">
+                        <a href="#" class="active">Награды <span class="count-awards">35</span></a>
+                        <a href="#">Документы <span class="count-documents">43</span></a>
+                        <a href="#">Сертификаты <span class="count-certificates">43</span></a>
+                    </div>
+                    <div class="blocks-image">
+                        <div class="one-block">
+                            <img src="images/img-award.png" alt="Award">
+                        </div>
+                        <div class="one-block">
+                            <img src="images/img-award.png" alt="Award">
+                        </div>
+                        <div class="one-block">
+                            <img src="images/img-award.png" alt="Award">
+                        </div>
+                    </div>
+                </div>
+                <div class="block-employees">
+                    <div class="title-employees">
+                        Услуги <span class="count-services-organization">4</span>
+                        <a href="#">Показать Все</a>
+                    </div>
+                    .blocks-employees
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

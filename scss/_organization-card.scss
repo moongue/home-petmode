@@ -1,0 +1,385 @@
+#organization-card {
+  .banner-organization {
+    background: url("../images/bg-banner-organization.png") no-repeat 0 70%;
+    height: 260px;
+    background-size: cover;
+    @include md-block() {
+      background-position: 80% 70%;
+    }
+    .container-banner-organization {
+      display: flex;
+      height: 260px;
+      align-items: flex-end;
+      .rating {
+        display: flex;
+        margin-bottom: 64px;
+        margin-left: 15px;
+        .rating-organization, .position-organization {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &.position-organization {
+            padding-left: 50px;
+          }
+          p {
+            color: $white;
+            opacity: .6;
+            line-height: 26px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: normal;
+            font-style: italic;
+            img {
+              vertical-align: text-top;
+              padding: 0 3px;
+            }
+          }
+          .count-rating-organization {
+            font-size: 16px;
+            color: $white;
+            padding-top: 2px;
+          }
+          .wreaths {
+            position: absolute;
+            bottom: -12px;
+          }
+        }
+      }
+    }
+  }
+  .container-content-organization {
+    .title-organization {
+      padding-top: 46px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid $white-bg;
+      .cup-organization {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include arrow-block() {
+          flex-direction: column;
+          align-items: center;
+
+        }
+        .title {
+          display: flex;
+          align-items: center;
+          .name {
+            font-size: 24px;
+            line-height: 32px;
+            color: $black-font;
+            padding-left: 13px;
+
+            @include xs(font-size, 22px);
+          }
+          .reliable {
+            font-size: 14px;
+            line-height: 22px;
+            color: $green;
+            font-weight: normal;
+            padding-left: 13px;
+          }
+        }
+        .logo-organization-social {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 260px;
+
+          @include arrow(margin-top, 10px);
+          .horizontal-line {
+            width: 0;
+            height: 34px;
+            border-right: 1px solid $white-bg;
+          }
+          .social-network {
+            width: 115px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+      .description-organization {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+
+        @include sm-block() {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .block-left {
+          display: flex;
+          justify-content: space-between;
+
+          @include xs-block() {
+            flex-direction: column;
+            align-items: center;
+          }
+          .rating {
+            height: 18px;
+            width: 102px;
+          }
+          .organization {
+            background-color: $yellow-two;
+            border-radius: 4px;
+            padding: 7px 12px;
+            color: $black-80;
+            font-size: 12px;
+            font-weight: normal;
+            margin-left: 16px;
+
+            @include xs-block {
+              margin-left: 0;
+              margin-top: 10px;
+            }
+          }
+          .location {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: normal;
+            color: $dull-blue;
+            margin-left: 18px;
+
+            @include xs-block() {
+              margin-left: 0;
+              margin-top: 10px;
+            }
+            img {
+              padding-left: 5px;
+            }
+          }
+        }
+        .block-right {
+          display: flex;
+
+          @include sm-block() {
+            margin-top: 15px;
+          }
+          a {
+            text-decoration: none;
+            color: $black-60;
+            font-size: 14px;
+            font-weight: normal;
+            &.email {
+              margin-left: 17px;
+            }
+          }
+        }
+      }
+      .block-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 25px;
+
+        @include md-block() {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
+        #show-telephone,
+        #request-call,
+        #write,
+        #add-user,
+        #leave-feedback,
+        #complain {
+          padding: 13px 25px;
+          width: auto;
+          margin-top: 0;
+
+          @include md-block() {
+            margin-top: 10px;
+          }
+        }
+        #complain {
+          background-color: $red-two;
+        }
+        #add-user {
+          padding: 13px 13px;
+          img {
+            padding-right: 0;
+          }
+        }
+        #request-call {
+          min-width: 170px;
+        }
+        .block-reviews {
+          display: flex;
+          font-weight: normal;
+          align-items: center;
+          justify-content: center;
+          flex-basis: 350px;
+
+          @include md-block() {
+            flex-basis: auto;
+            margin-top: 10px;
+          }
+          .reviews-good, .reviews-bad {
+            display: flex;
+            align-items: center;
+
+            img {
+              padding-left: 5px;
+            }
+          }
+          .reviews-bad {
+            padding-left: 18px;
+          }
+        }
+      }
+    }
+    .about-organization {
+      width: 770px;
+      .title {
+        font-size: 16px;
+        color: $black-font;
+      }
+      p {
+        padding-top: 21px;
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: normal;
+        color: $black-60;
+      }
+      .map {
+        padding-top: 32px;
+        width: 100%;
+        height: auto;
+      }
+      .services {
+        padding-top: 30px;
+        .title-services {
+          font-size: 14px;
+          color: $black-font;
+          padding-bottom: 9px;
+          border-bottom: 1px solid $white-bg;
+          .count-services-organization {
+            padding-left: 5px;
+            font-weight: normal;
+          }
+          a {
+            text-decoration: none;
+            color: $black-60;
+            font-size: 14px;
+            font-weight: normal;
+            padding-left: 21px;
+          }
+        }
+        .blocks-services {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .one-block-services {
+            width: 370px;
+            text-decoration: none;
+            padding-top: 24px;
+            .img-block {
+              position: relative;
+              color: $white;
+              font-size: 16px;
+              .price {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+              }
+              .description-services {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+              }
+            }
+            .description-one-block-service {
+              display: flex;
+              justify-content: space-between;
+              font-weight: normal;
+              align-items: center;
+              padding-top: 16px;
+              .organization {
+                padding: 5px 11px;
+                background: $yellow-two;
+                color: $black-60;
+                font-size: 14px;
+              }
+              .city-services {
+                color: $black-60;
+                font-size: 14px;
+                margin-right: auto;
+                padding-left: 12px;
+              }
+              .rating {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: $black-font;
+                .all {
+                  padding-left: 7px;
+                  .all-count {
+                    color: $sunflower-yellow;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .show-more {
+        margin-top: 24px;
+      }
+      .block-more-image {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        .title {
+          display: flex;
+          align-items: center;
+          padding-bottom: 9px;
+          border-bottom: 1px solid $white-bg;
+          a {
+            font-size: 14px;
+            color: $black-font;
+            text-decoration: none;
+            margin-right: 45px;
+            font-weight: normal;
+            &.active {
+              font-weight: bold;
+            }
+            span {
+              font-weight: normal;
+            }
+          }
+        }
+        .blocks-image {
+          display: flex;
+          justify-content: space-between;
+          .one-block {
+            padding-top: 24px;
+          }
+        }
+        .block-employees {
+          .title-employees {
+            font-size: 14px;
+            color: $black-font;
+            padding-bottom: 9px;
+            border-bottom: 1px solid $white-bg;
+            .count-services-organization {
+              padding-left: 5px;
+              font-weight: normal;
+            }
+            a {
+              text-decoration: none;
+              color: $black-60;
+              font-size: 14px;
+              font-weight: normal;
+              padding-left: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
