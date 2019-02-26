@@ -46,6 +46,12 @@ body {
   }
 }
 
+.wrapper-small {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 input::-webkit-input-placeholder {
   text-indent: 0;
   -webkit-transition: text-indent 0.4s ease;
@@ -4075,7 +4081,7 @@ textarea {
 
 @media screen and (max-width: 1100px) {
   #header-ch .container-header .menu ul.small-menu li {
-    padding: 0 4px;
+    padding: 28px 4px;
   }
 }
 
@@ -11120,8 +11126,6 @@ textarea {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-preferred-size: 350px;
-  flex-basis: 350px;
 }
 
 @media screen and (max-width: 960px) {
@@ -11151,8 +11155,203 @@ textarea {
   padding-left: 18px;
 }
 
+#organization-card .container-content-organization .two-blocks {
+  margin-top: 28px;
+}
+
+@media screen and (max-width: 960px) {
+  #organization-card .container-content-organization .side-panel {
+    display: none;
+  }
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions,
+#organization-card .container-content-organization .side-panel .accounts {
+  font-weight: normal;
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions p,
+#organization-card .container-content-organization .side-panel .accounts p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions p .count-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts p .count-subscriptions {
+  padding-left: 10px;
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions .search-subscriptions-block,
+#organization-card .container-content-organization .side-panel .subscriptions .search-accounts-block,
+#organization-card .container-content-organization .side-panel .accounts .search-subscriptions-block,
+#organization-card .container-content-organization .side-panel .accounts .search-accounts-block {
+  position: relative;
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions .search-subscriptions-block #search-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .search-subscriptions-block #search-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .search-accounts-block #search-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .search-accounts-block #search-accounts,
+#organization-card .container-content-organization .side-panel .accounts .search-subscriptions-block #search-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .search-subscriptions-block #search-accounts,
+#organization-card .container-content-organization .side-panel .accounts .search-accounts-block #search-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .search-accounts-block #search-accounts {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #e9e9e9;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 12px 20px 12px 0;
+  margin-top: 6px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions .search-subscriptions-block label,
+#organization-card .container-content-organization .side-panel .subscriptions .search-accounts-block label,
+#organization-card .container-content-organization .side-panel .accounts .search-subscriptions-block label,
+#organization-card .container-content-organization .side-panel .accounts .search-accounts-block label {
+  position: absolute;
+  right: 0;
+  bottom: 16px;
+  opacity: .3;
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-accounts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 26px;
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-subscriptions .description-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-subscriptions .description-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-accounts .description-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-accounts .description-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-subscriptions .description-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-subscriptions .description-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-accounts .description-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-accounts .description-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-subscriptions .description-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-subscriptions .description-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-accounts .description-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-accounts .description-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-subscriptions .description-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-subscriptions .description-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-accounts .description-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-accounts .description-accounts {
+  padding-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-subscriptions .description-subscriptions p,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-subscriptions .description-accounts p,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-accounts .description-subscriptions p,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-accounts .description-accounts p,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-subscriptions .description-subscriptions p,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-subscriptions .description-accounts p,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-accounts .description-subscriptions p,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-accounts .description-accounts p,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-subscriptions .description-subscriptions p,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-subscriptions .description-accounts p,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-accounts .description-subscriptions p,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-accounts .description-accounts p,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-subscriptions .description-subscriptions p,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-subscriptions .description-accounts p,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-accounts .description-subscriptions p,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-accounts .description-accounts p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-subscriptions .description-subscriptions .name-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-subscriptions .description-subscriptions .name-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-subscriptions .description-accounts .name-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-subscriptions .description-accounts .name-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-accounts .description-subscriptions .name-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-accounts .description-subscriptions .name-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-accounts .description-accounts .name-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-subscriptions .one-block-accounts .description-accounts .name-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-subscriptions .description-subscriptions .name-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-subscriptions .description-subscriptions .name-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-subscriptions .description-accounts .name-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-subscriptions .description-accounts .name-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-accounts .description-subscriptions .name-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-accounts .description-subscriptions .name-accounts,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-accounts .description-accounts .name-subscriptions,
+#organization-card .container-content-organization .side-panel .subscriptions .blocks-accounts .one-block-accounts .description-accounts .name-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-subscriptions .description-subscriptions .name-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-subscriptions .description-subscriptions .name-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-subscriptions .description-accounts .name-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-subscriptions .description-accounts .name-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-accounts .description-subscriptions .name-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-accounts .description-subscriptions .name-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-accounts .description-accounts .name-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-subscriptions .one-block-accounts .description-accounts .name-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-subscriptions .description-subscriptions .name-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-subscriptions .description-subscriptions .name-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-subscriptions .description-accounts .name-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-subscriptions .description-accounts .name-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-accounts .description-subscriptions .name-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-accounts .description-subscriptions .name-accounts,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-accounts .description-accounts .name-subscriptions,
+#organization-card .container-content-organization .side-panel .accounts .blocks-accounts .one-block-accounts .description-accounts .name-accounts {
+  font-size: 14px;
+  color: #4c4c4c;
+}
+
+#organization-card .container-content-organization .side-panel .accounts {
+  margin-top: 26px;
+}
+
+#organization-card .container-content-organization .side-panel .accounts .search-accounts {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #e9e9e9;
+  outline: none;
+  padding: 12px 0;
+  margin-top: 6px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+
 #organization-card .container-content-organization .about-organization {
   width: 770px;
+}
+
+@media screen and (max-width: 780px) {
+  #organization-card .container-content-organization .about-organization {
+    width: 100%;
+  }
 }
 
 #organization-card .container-content-organization .about-organization .title {
@@ -11172,6 +11371,12 @@ textarea {
   padding-top: 32px;
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 560px) {
+  #organization-card .container-content-organization .about-organization .map {
+    height: 160px;
+  }
 }
 
 #organization-card .container-content-organization .about-organization .services {
@@ -11209,16 +11414,35 @@ textarea {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 780px) {
+  #organization-card .container-content-organization .about-organization .services .blocks-services {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 #organization-card .container-content-organization .about-organization .services .blocks-services .one-block-services {
   width: 370px;
   text-decoration: none;
   padding-top: 24px;
 }
 
+@media screen and (max-width: 560px) {
+  #organization-card .container-content-organization .about-organization .services .blocks-services .one-block-services {
+    max-width: 370px;
+  }
+}
+
 #organization-card .container-content-organization .about-organization .services .blocks-services .one-block-services .img-block {
   position: relative;
   color: #ffffff;
   font-size: 16px;
+}
+
+#organization-card .container-content-organization .about-organization .services .blocks-services .one-block-services .img-block img {
+  width: 100%;
+  height: auto;
 }
 
 #organization-card .container-content-organization .about-organization .services .blocks-services .one-block-services .img-block .price {
@@ -11329,30 +11553,809 @@ textarea {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 780px) {
+  #organization-card .container-content-organization .about-organization .block-more-image .blocks-image {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
 }
 
 #organization-card .container-content-organization .about-organization .block-more-image .blocks-image .one-block {
   padding-top: 24px;
 }
 
-#organization-card .container-content-organization .about-organization .block-more-image .block-employees .title-employees {
+#organization-card .container-content-organization .about-organization .block-employees .title-employees {
   font-size: 14px;
   color: #4c4c4c;
   padding-bottom: 9px;
   border-bottom: 1px solid #e9e9e9;
+  padding-top: 29px;
 }
 
-#organization-card .container-content-organization .about-organization .block-more-image .block-employees .title-employees .count-services-organization {
+#organization-card .container-content-organization .about-organization .block-employees .title-employees .count-employees-organization {
   padding-left: 5px;
   font-weight: normal;
 }
 
-#organization-card .container-content-organization .about-organization .block-more-image .block-employees .title-employees a {
+#organization-card .container-content-organization .about-organization .block-employees .title-employees a {
   text-decoration: none;
   color: rgba(52, 52, 52, 0.6);
   font-size: 14px;
   font-weight: normal;
   padding-left: 21px;
+}
+
+#organization-card .container-content-organization .about-organization .block-employees .blocks-employees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 560px) {
+  #organization-card .container-content-organization .about-organization .block-employees .blocks-employees {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+#organization-card .container-content-organization .about-organization .block-employees .blocks-employees .one-employee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 170px;
+  margin-top: 24px;
+}
+
+#organization-card .container-content-organization .about-organization .block-employees .blocks-employees .one-employee .block-more-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #e9e9e9;
+  border-top: none;
+  font-weight: normal;
+  width: 170px;
+  padding: 20px 0 17px;
+}
+
+#organization-card .container-content-organization .about-organization .block-employees .blocks-employees .one-employee .block-more-information .qualification {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#organization-card .container-content-organization .about-organization .block-employees .blocks-employees .one-employee .block-more-information .name {
+  padding-top: 2px;
+  font-size: 14px;
+  color: #4c4c4c;
+}
+
+#organization-card .container-content-organization .about-organization .photo-video-block .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e9e9e9;
+  margin-top: 29px;
+}
+
+#organization-card .container-content-organization .about-organization .photo-video-block .title a {
+  font-size: 14px;
+  color: #4c4c4c;
+  text-decoration: none;
+  margin-right: 45px;
+  font-weight: normal;
+}
+
+#organization-card .container-content-organization .about-organization .photo-video-block .title a.active {
+  font-weight: bold;
+}
+
+#organization-card .container-content-organization .about-organization .photo-video-block .title a span {
+  font-weight: normal;
+}
+
+#organization-card .container-content-organization .about-organization .photo-video-block .blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 780px) {
+  #organization-card .container-content-organization .about-organization .photo-video-block .blocks {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+#organization-card .container-content-organization .about-organization .photo-video-block .blocks img {
+  margin-top: 24px;
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .title-pets {
+  font-size: 14px;
+  color: #4c4c4c;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e9e9e9;
+  padding-top: 29px;
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .title-pets .count-pets-organization {
+  padding-left: 5px;
+  font-weight: normal;
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .title-pets a {
+  text-decoration: none;
+  color: rgba(52, 52, 52, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  padding-left: 21px;
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .blocks-pet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 780px) {
+  #organization-card .container-content-organization .about-organization .block-pets .blocks-pet {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .blocks-pet .one-block-pet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 170px;
+  margin-top: 24px;
+  padding-right: 30px;
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .blocks-pet .one-block-pet .block-img {
+  position: relative;
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .blocks-pet .one-block-pet .block-img .settings {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0 4px;
+  width: 68px;
+  height: 37px;
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .blocks-pet .one-block-pet .block-img .settings button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .blocks-pet .one-block-pet .block-more-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #e9e9e9;
+  border-top: none;
+  font-weight: normal;
+  width: 170px;
+  padding: 20px 0 17px;
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .blocks-pet .one-block-pet .block-more-information .sex {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#organization-card .container-content-organization .about-organization .block-pets .blocks-pet .one-block-pet .block-more-information .name {
+  padding-top: 2px;
+  font-size: 14px;
+  color: #4c4c4c;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .title-announcement {
+  font-size: 14px;
+  color: #4c4c4c;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e9e9e9;
+  padding-top: 29px;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .title-announcement .count-announcement-organization {
+  padding-left: 5px;
+  font-weight: normal;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .title-announcement a {
+  text-decoration: none;
+  color: rgba(52, 52, 52, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  padding-left: 21px;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 780px) {
+  #organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement {
+  width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 560px) {
+  #organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement {
+    max-width: 370px;
+  }
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .cup-announcement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 21px 23px;
+  border: 1px solid #e9e9e9;
+  border-bottom: none;
+  border-radius: 4px;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .cup-announcement .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 160px;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .cup-announcement p {
+  color: rgba(52, 52, 52, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .img-block {
+  position: relative;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .img-block > img {
+  width: 100%;
+  height: auto;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .img-block .name-announcement {
+  position: absolute;
+  bottom: 40px;
+  left: 24px;
+  font-size: 16px;
+  color: #ffffff;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .img-block .description-announcement {
+  font-size: 14px;
+  color: rgba(255, 255, 155, 0.6);
+  position: absolute;
+  left: 24px;
+  bottom: 17px;
+  font-weight: normal;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .img-block .rating-announcement {
+  position: absolute;
+  right: 25px;
+  bottom: 17px;
+  color: rgba(255, 255, 155, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .block-footer {
+  border: 1px solid #e9e9e9;
+  border-top: none;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 34px 23px 17px;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .block-footer .price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 25px;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .block-footer .price-block .price {
+  color: #343434;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 560px) {
+  #organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .block-footer .price-block .price {
+    font-size: 22px;
+  }
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .block-footer .price-block .btn-buy {
+  height: 40px;
+  width: 170px;
+  color: rgba(52, 52, 52, 0.8);
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 4px;
+  background-color: #ffef99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .activity-competition .time {
+  color: #40cb3d;
+  font-size: 14px;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 25px;
+}
+
+#organization-card .container-content-organization .about-organization .block-announcement .blocks-announcement .one-block-announcement .activity-competition .time img {
+  padding-right: 7px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .title-competition,
+#organization-card .container-content-organization .about-organization .block-competition .title-history,
+#organization-card .container-content-organization .about-organization .block-history .title-competition,
+#organization-card .container-content-organization .about-organization .block-history .title-history {
+  font-size: 14px;
+  color: #4c4c4c;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e9e9e9;
+  padding-top: 29px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .title-competition .count-competition-organization,
+#organization-card .container-content-organization .about-organization .block-competition .title-history .count-competition-organization,
+#organization-card .container-content-organization .about-organization .block-history .title-competition .count-competition-organization,
+#organization-card .container-content-organization .about-organization .block-history .title-history .count-competition-organization {
+  padding-left: 5px;
+  font-weight: normal;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .title-competition a,
+#organization-card .container-content-organization .about-organization .block-competition .title-history a,
+#organization-card .container-content-organization .about-organization .block-history .title-competition a,
+#organization-card .container-content-organization .about-organization .block-history .title-history a {
+  text-decoration: none;
+  color: rgba(52, 52, 52, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  padding-left: 21px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .title-competition .add-history,
+#organization-card .container-content-organization .about-organization .block-competition .title-history .add-history,
+#organization-card .container-content-organization .about-organization .block-history .title-competition .add-history,
+#organization-card .container-content-organization .about-organization .block-history .title-history .add-history {
+  float: right;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 780px) {
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-competition,
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-history,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-competition,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-history {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition > img,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history > img,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition > img,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history > img {
+  border-radius: 0 8px 8px 0;
+  width: 100%;
+  height: auto;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 29px 27px 22px 30px;
+  border: 1px solid #e9e9e9;
+  border-left: none;
+  border-radius: 4px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 780px) {
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description,
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description {
+    margin-top: 15px;
+    border-bottom: 1px solid #e9e9e9;
+    border-right: none;
+    border-top: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description,
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .cup-competition,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .cup-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .cup-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .cup-competition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .cup-competition .block,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .cup-competition .block,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .cup-competition .block,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .cup-competition .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 160px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .cup-competition p,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .cup-competition p,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .cup-competition p,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .cup-competition p {
+  color: rgba(52, 52, 52, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .cup-competition p:first-child,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .cup-competition p:first-child,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .cup-competition p:first-child,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .cup-competition p:first-child {
+  color: #4c4c4c;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .cup-competition p .icon-ads,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .cup-competition p .icon-ads,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .cup-competition p .icon-ads,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .cup-competition p .icon-ads {
+  padding-right: 6px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .information-competition,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .information-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .information-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .information-competition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: normal;
+  padding-top: 30px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .information-competition img,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .information-competition img,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .information-competition img,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .information-competition img {
+  padding-left: 13px;
+  padding-right: 6px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .name-competition,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .name-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .name-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .name-competition {
+  font-size: 17px;
+  color: #343434;
+  padding-top: 12px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description p,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description p,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description p,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description p {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(52, 52, 52, 0.6);
+  padding-top: 21px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .block-buttons,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .block-buttons,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .block-buttons,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .block-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 22px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .block-buttons .buy-competition,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .block-buttons .buy-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .block-buttons .buy-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .block-buttons .buy-competition {
+  width: 105px;
+  border: 1px solid #ffd800;
+  border-radius: 4px;
+  height: 32px;
+  color: #343434;
+  font-size: 14px;
+  font-weight: normal;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .block-buttons .write-competition,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .block-buttons .write-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .block-buttons .write-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .block-buttons .write-competition {
+  width: 105px;
+  border: none;
+  background-color: rgba(233, 233, 233, 0.3);
+  border-radius: 4px;
+  height: 32px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: normal;
+  outline: none;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .block-buttons .read-further,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .block-buttons .read-further,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .block-buttons .read-further,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .block-buttons .read-further {
+  text-decoration: none;
+  font-size: 14px;
+  color: #4c4c4c;
+  border-bottom: 1px dotted #4c4c4c;
+  font-weight: normal;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .block-buttons .price-competition,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .block-buttons .price-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .block-buttons .price-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .block-buttons .price-competition {
+  font-size: 24px;
+  color: #343434;
+  font-weight: normal;
+  margin-left: 32px;
+}
+
+@media screen and (max-width: 560px) {
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .block-buttons .price-competition,
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .block-buttons .price-competition,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .block-buttons .price-competition,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .block-buttons .price-competition {
+    font-size: 18px;
+    margin-left: 3px;
+  }
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .activity-competition,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .activity-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .activity-competition,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .activity-competition {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e9e9e9;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .activity-competition.margin-top,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .activity-competition.margin-top,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .activity-competition.margin-top,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .activity-competition.margin-top {
+  margin-top: 49px;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .activity-competition .person,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .activity-competition .person,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .activity-competition .person,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .activity-competition .person {
+  font-size: 14px;
+  color: #4c4c4c;
+  font-weight: normal;
+  margin-right: auto;
+}
+
+#organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .activity-competition .person span,
+#organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .activity-competition .person span,
+#organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .activity-competition .person span,
+#organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .activity-competition .person span {
+  color: rgba(0, 0, 0, 0.4);
+  padding-left: 6px;
+}
+
+@media screen and (max-width: 560px) {
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-competition .block-with-description .activity-competition .person,
+  #organization-card .container-content-organization .about-organization .block-competition .one-block-history .block-with-description .activity-competition .person,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-competition .block-with-description .activity-competition .person,
+  #organization-card .container-content-organization .about-organization .block-history .one-block-history .block-with-description .activity-competition .person {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=maps/style.css.map */
