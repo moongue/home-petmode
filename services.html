@@ -21,23 +21,29 @@
     <div class="wrapper">
         <div class="container-header">
             <div class="logo">
-                <a href="#"><img src="images/small-logo.png" alt="Logo"></a>
+                <a href="#"><img src="images/icons/icon-logo.svg" alt="Logo"></a>
             </div>
 
             <a href="#" class="lines">
-                <img src="images/lines.png" alt="lines">
+                <img src="images/lines.svg" alt="lines">
             </a>
 
             <nav class="menu">
                 <ul class="menu-a">
+                    <li class="search-hide-desktop search">
+                        <input type="text" placeholder="Поиск" id="search-mob">
+                        <label for="search">
+                            <img src="images/icons/icon-search.svg" alt="Search">
+                        </label>
+                    </li>
                     <li><a href="#">Питомцы</a></li>
                     <li><a href="#">Специалисты</a></li>
                     <li><a href="#">Моя радость</a></li>
-                    <li class="active-menu"><a href="#">Конкурсы</a></li>
+                    <li><a href="#">Конкурсы</a></li>
                     <li><label class="link" for="hider" id="more">Ещё <span>...</span></label>
                         <input type="checkbox" id="hider">
                         <ul class="content">
-                            <li><a href="#news">Новости</a></li>
+                            <li><a href="#">Новости</a></li>
                             <li><a href="#">Рейтинг</a></li>
                             <li><a href="#">Выставка</a></li>
                             <li><a href="#">Благотворительность</a></li>
@@ -49,12 +55,12 @@
             <div class="search">
                 <input type="text" placeholder="Поиск" id="search">
                 <label for="search">
-                    <img src="images/vector.png" alt="Search">
+                    <img src="images/icons/icon-search.svg" alt="Search">
                 </label>
             </div>
             <a href="#" class="user">
                 <div class="name-user">Иван</div>
-                <img src="images/user.png" alt="User Icon">
+                <img src="images/icons/icon-circle-user.svg" alt="User Icon">
             </a>
         </div>
     </div>
@@ -69,7 +75,7 @@
             <div class="title-services-button">
                 <h1> Качественные услуги специалистов</h1>
                 <button class="register-specialist">
-                    <img src="images/register-specialist.png" alt="Register">Зарегистрироваться специалистом
+                    <img src="images/icons/icon-register-user.svg" alt="Register">Зарегистрироваться специалистом
                 </button>
             </div>
             <div class="search-services">
@@ -89,7 +95,7 @@
             </div>
             <div class="filter-services">
                 <div class="one-filter">
-                    <button class="btn-filter city">Москва <img src="images/select-icon-two.png" alt="select"></button>
+                    <button class="btn-filter city">Москва <img src="images/icons/icon-select.svg" alt="select"></button>
                     <div class="fix-menu">
                         <ul class="hide-dropdown">
                             <li><input type="radio" id="city1" name="city" class="styles-checkbox"/>
@@ -102,7 +108,7 @@
                     </div>
                 </div>
                 <div class="one-filter">
-                    <button class="btn-filter pet-view">Вид питомца <img src="images/select-icon-two.png" alt="select"></button>
+                    <button class="btn-filter pet-view">Вид питомца <img src="images/icons/icon-select.svg" alt="select"></button>
                     <div class="fix-menu">
                         <ul class="hide-dropdown">
                             <li><input type="radio" id="pet-view1" name="pet-view" class="styles-checkbox"/>
@@ -115,7 +121,7 @@
                     </div>
                 </div>
                 <div class="one-filter">
-                    <button class="btn-filter kind-of-specialist">Вид специалиста <img src="images/select-icon-two.png" alt="select"></button>
+                    <button class="btn-filter kind-of-specialist">Вид специалиста <img src="images/icons/icon-select.svg" alt="select"></button>
                     <div class="fix-menu">
                         <ul class="hide-dropdown">
                             <li><input type="radio" id="specialist1" name="specialist" class="styles-checkbox"/>
@@ -128,7 +134,7 @@
                     </div>
                 </div>
                 <div class="one-filter">
-                    <button class="btn-filter price-filter">Цена <img src="images/select-icon-two.png" alt="select"></button>
+                    <button class="btn-filter price-filter">Цена <img src="images/icons/icon-select.svg" alt="select"></button>
                     <div class="fix-menu">
                         <ul class="hide-dropdown">
                             <li><input type="radio" id="price1" name="price" class="styles-checkbox"/>
@@ -141,7 +147,7 @@
                     </div>
                 </div>
                 <div class="one-filter">
-                    <button class="btn-filter by-popularity">По популярности <img src="images/select-icon-two.png" alt="select"></button>
+                    <button class="btn-filter by-popularity">По популярности <img src="images/icons/icon-select.svg" alt="select"></button>
                     <div class="fix-menu">
                         <ul class="hide-dropdown">
                             <li><input type="radio" id="by-popular1" name="by-popular" class="styles-checkbox"/>
@@ -159,21 +165,21 @@
                 <div class="blocks-services">
                     <a href="#" class="one-block-services">
                         <div class="img-block">
-                            <img src="images/img-services.png" alt="Image">
-                            <div class="price">9 000 &#8381;</div>
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">9 000 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                             <div class="description-services">Модельная стрижка питомцев</div>
                         </div>
                         <div class="person-services">
                             <div class="block-flex">
-                                <img src="images/image-person-services.png" alt="Image person">
+                                <img src="images/img/image-user-circle-42x42.svg" alt="Image person" class="image-person">
                                 <div class="block-description-person">
                                     <div class="block-top">
                                         <div class="name">Иван Иванов</div>
                                         <div class="qualification">Ветеринар</div>
                                         <div class="city">Москва</div>
                                     </div>
-                                    <div class="rating">
-                                        <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
+                                    <div class="rating-star">
+                                        <img src="images/icons/icon-star.svg" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
                                     </div>
                                 </div>
                             </div>
@@ -184,21 +190,21 @@
                     </a>
                     <a href="#" class="one-block-services">
                         <div class="img-block">
-                            <img src="images/img-services.png" alt="Image">
-                            <div class="price">9 000 &#8381;</div>
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">9 000 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                             <div class="description-services">Модельная стрижка питомцев</div>
                         </div>
                         <div class="person-services">
                             <div class="block-flex">
-                                <img src="images/image-person-services.png" alt="Image person">
+                                <img src="images/img/image-user-circle-42x42.svg" alt="Image person" class="image-person">
                                 <div class="block-description-person">
                                     <div class="block-top">
                                         <div class="name">Иван Иванов</div>
                                         <div class="qualification">Ветеринар</div>
                                         <div class="city">Москва</div>
                                     </div>
-                                    <div class="rating">
-                                        <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
+                                    <div class="rating-star">
+                                        <img src="images/icons/icon-star.svg" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
                                     </div>
                                 </div>
                             </div>
@@ -208,50 +214,25 @@
                         </div>
                     </a>
                     <a href="#" class="one-block-services">
-                        <div class="block-adv"></div>
+                        <div class="block-adv"><img src="images/img/image-adv-370x328.svg" alt=""></div>
                     </a>
                     <a href="#" class="one-block-services">
                         <div class="img-block">
-                            <img src="images/img-services.png" alt="Image">
-                            <div class="price">9 000 &#8381;</div>
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">9 000 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                             <div class="description-services">Модельная стрижка питомцев</div>
                         </div>
                         <div class="person-services">
                             <div class="block-flex">
-                                <img src="images/image-person-services.png" alt="Image person">
+                                <img src="images/img/image-user-circle-42x42.svg" alt="Image person" class="image-person">
                                 <div class="block-description-person">
                                     <div class="block-top">
                                         <div class="name">Иван Иванов</div>
                                         <div class="qualification">Ветеринар</div>
                                         <div class="city">Москва</div>
                                     </div>
-                                    <div class="rating">
-                                        <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="description-qualification">
-                                Специалист с высшим (ветеринарный врач) или средним (ветеринарный фельдшер) специальным
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="one-block-services">
-                        <div class="img-block">
-                            <img src="images/img-services.png" alt="Image">
-                            <div class="price">9 000 &#8381;</div>
-                            <div class="description-services">Модельная стрижка питомцев</div>
-                        </div>
-                        <div class="person-services">
-                            <div class="block-flex">
-                                <img src="images/image-person-services.png" alt="Image person">
-                                <div class="block-description-person">
-                                    <div class="block-top">
-                                        <div class="name">Иван Иванов</div>
-                                        <div class="qualification">Ветеринар</div>
-                                        <div class="city">Москва</div>
-                                    </div>
-                                    <div class="rating">
-                                        <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
+                                    <div class="rating-star">
+                                        <img src="images/icons/icon-star.svg" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
                                     </div>
                                 </div>
                             </div>
@@ -262,21 +243,21 @@
                     </a>
                     <a href="#" class="one-block-services">
                         <div class="img-block">
-                            <img src="images/img-services.png" alt="Image">
-                            <div class="price">9 000 &#8381;</div>
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">9 000 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                             <div class="description-services">Модельная стрижка питомцев</div>
                         </div>
                         <div class="person-services">
                             <div class="block-flex">
-                                <img src="images/image-person-services.png" alt="Image person">
+                                <img src="images/img/image-user-circle-42x42.svg" alt="Image person" class="image-person">
                                 <div class="block-description-person">
                                     <div class="block-top">
                                         <div class="name">Иван Иванов</div>
                                         <div class="qualification">Ветеринар</div>
                                         <div class="city">Москва</div>
                                     </div>
-                                    <div class="rating">
-                                        <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
+                                    <div class="rating-star">
+                                        <img src="images/icons/icon-star.svg" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
                                     </div>
                                 </div>
                             </div>
@@ -287,21 +268,21 @@
                     </a>
                     <a href="#" class="one-block-services">
                         <div class="img-block">
-                            <img src="images/img-services.png" alt="Image">
-                            <div class="price">9 000 &#8381;</div>
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">9 000 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                             <div class="description-services">Модельная стрижка питомцев</div>
                         </div>
                         <div class="person-services">
                             <div class="block-flex">
-                                <img src="images/image-person-services.png" alt="Image person">
+                                <img src="images/img/image-user-circle-42x42.svg" alt="Image person" class="image-person">
                                 <div class="block-description-person">
                                     <div class="block-top">
                                         <div class="name">Иван Иванов</div>
                                         <div class="qualification">Ветеринар</div>
                                         <div class="city">Москва</div>
                                     </div>
-                                    <div class="rating">
-                                        <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
+                                    <div class="rating-star">
+                                        <img src="images/icons/icon-star.svg" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
                                     </div>
                                 </div>
                             </div>
@@ -312,21 +293,21 @@
                     </a>
                     <a href="#" class="one-block-services">
                         <div class="img-block">
-                            <img src="images/img-services.png" alt="Image">
-                            <div class="price">9 000 &#8381;</div>
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">9 000 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                             <div class="description-services">Модельная стрижка питомцев</div>
                         </div>
                         <div class="person-services">
                             <div class="block-flex">
-                                <img src="images/image-person-services.png" alt="Image person">
+                                <img src="images/img/image-user-circle-42x42.svg" alt="Image person" class="image-person">
                                 <div class="block-description-person">
                                     <div class="block-top">
                                         <div class="name">Иван Иванов</div>
                                         <div class="qualification">Ветеринар</div>
                                         <div class="city">Москва</div>
                                     </div>
-                                    <div class="rating">
-                                        <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
+                                    <div class="rating-star">
+                                        <img src="images/icons/icon-star.svg" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
                                     </div>
                                 </div>
                             </div>
@@ -337,21 +318,46 @@
                     </a>
                     <a href="#" class="one-block-services">
                         <div class="img-block">
-                            <img src="images/img-services.png" alt="Image">
-                            <div class="price">9 000 &#8381;</div>
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">9 000 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                             <div class="description-services">Модельная стрижка питомцев</div>
                         </div>
                         <div class="person-services">
                             <div class="block-flex">
-                                <img src="images/image-person-services.png" alt="Image person">
+                                <img src="images/img/image-user-circle-42x42.svg" alt="Image person" class="image-person">
                                 <div class="block-description-person">
                                     <div class="block-top">
                                         <div class="name">Иван Иванов</div>
                                         <div class="qualification">Ветеринар</div>
                                         <div class="city">Москва</div>
                                     </div>
-                                    <div class="rating">
-                                        <img src="images/star.png" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
+                                    <div class="rating-star">
+                                        <img src="images/icons/icon-star.svg" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description-qualification">
+                                Специалист с высшим (ветеринарный врач) или средним (ветеринарный фельдшер) специальным
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="one-block-services">
+                        <div class="img-block">
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">9 000 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
+                            <div class="description-services">Модельная стрижка питомцев</div>
+                        </div>
+                        <div class="person-services">
+                            <div class="block-flex">
+                                <img src="images/img/image-user-circle-42x42.svg" alt="Image person" class="image-person">
+                                <div class="block-description-person">
+                                    <div class="block-top">
+                                        <div class="name">Иван Иванов</div>
+                                        <div class="qualification">Ветеринар</div>
+                                        <div class="city">Москва</div>
+                                    </div>
+                                    <div class="rating-star">
+                                        <img src="images/icons/icon-star.svg" alt="Star"> 4.6 <span class="all">( <span class="all-count">150</span> / 3)</span>
                                     </div>
                                 </div>
                             </div>
@@ -362,7 +368,7 @@
                     </a>
                 </div>
                 <div class="pages">
-                    <a href="#" class="arrow-page-prev"><img src="images/arrow-page-prev.png" alt="Prev"></a>
+                    <a href="#" class="arrow-page-prev"><img src="images/icons/icon-arrow-prev.svg" alt="Prev"></a>
                     <ul class="list-pages">
                         <li><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
@@ -371,7 +377,7 @@
                         <li><a href="#">5</a></li>
                         <li><a href="#" class="all-pages">Все</a></li>
                     </ul>
-                    <a href="#" class="arrow-page-next"><img src="images/arrow-page-next.png" alt="Next"></a>
+                    <a href="#" class="arrow-page-next"><img src="images/icons/icon-arrow-next.svg" alt="Next"></a>
                 </div>
             </div>
         </div>
@@ -400,20 +406,20 @@
                 </ul>
             </div>
 
-            <button class="register-specialist">
-                <img src="images/register-specialist.png" alt="Register">Зарегистрироваться специалистом
+            <button class="register-specialist yellow-theme">
+                <img src="images/icons/icon-register-user.svg" alt="Register">Зарегистрироваться специалистом
             </button>
         </div>
 
         <div class="specialists">
             <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
-                    <img src="images/specialist-photo-1.png" alt="Specialist Photo">
+                    <img src="images/img/image-user-circle-110x110.svg" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
                     <div class="specialistsBlockDescription__name">Игорь Титов</div>
                     <div class="specialistsBlockDescription__qualification">
-                        <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
@@ -423,12 +429,12 @@
             </a>
             <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
-                    <img src="images/specialist-photo-2.png" alt="Specialist Photo">
+                    <img src="images/img/image-user-circle-110x110.svg" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
                     <div class="specialistsBlockDescription__name">Наталья Смирнова</div>
                     <div class="specialistsBlockDescription__qualification">
-                        <p>Фотограф <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
+                        <p>Фотограф <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
@@ -438,12 +444,12 @@
             </a>
             <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
-                    <img src="images/specialist-photo-3.png" alt="Specialist Photo">
+                    <img src="images/img/image-user-circle-110x110.svg" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
                     <div class="specialistsBlockDescription__name">Ольга Иванова</div>
                     <div class="specialistsBlockDescription__qualification">
-                        <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
@@ -453,12 +459,12 @@
             </a>
             <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
-                    <img src="images/specialist-photo-4.png" alt="Specialist Photo">
+                    <img src="images/img/image-user-circle-110x110.svg" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
                     <div class="specialistsBlockDescription__name">Александр Иванов</div>
                     <div class="specialistsBlockDescription__qualification">
-                        <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
@@ -468,12 +474,12 @@
             </a>
             <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
-                    <img src="images/specialist-photo-5.png" alt="Specialist Photo">
+                    <img src="images/img/image-user-circle-110x110.svg" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
                     <div class="specialistsBlockDescription__name">Мария Титова</div>
                     <div class="specialistsBlockDescription__qualification">
-                        <p>Фотограф <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
+                        <p>Фотограф <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
@@ -483,12 +489,12 @@
             </a>
             <a href="#" class="specialistsBlock">
                 <div class="specialistsBlock__img">
-                    <img src="images/specialist-photo-6.png" alt="Specialist Photo">
+                    <img src="images/img/image-user-circle-110x110.svg" alt="Specialist Photo">
                 </div>
                 <div class="specialistsBlockDescription">
                     <div class="specialistsBlockDescription__name">Николай Смирнов</div>
                     <div class="specialistsBlockDescription__qualification">
-                        <p>Ветеринар <img src="images/star.png" alt="Star"> <span class="quantity">4.6</span><span
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
                                 class="number">(150)</span></p>
                     </div>
                     <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
@@ -497,8 +503,8 @@
                 </div>
             </a>
         </div>
-        <div class="show-more">
-            <a href="#">Смотреть всех специалистов (1 520)</a>
+        <div class="show-more show-more-yellow">
+            <a href="#" class="yellow-theme">Смотреть всех специалистов (1 520)</a>
         </div>
     </div>
 </section>
@@ -511,29 +517,29 @@
             <div class="title">
                 <h2>Более 10 000 ухоженных питомцев</h2>
                 <button class="place-an-ad">
-                    <img src="images/do-advertise-icon.png" alt="Icon">Дать обьявление
+                    <img src="images/icons/icon-tag.svg" alt="Icon">Подать обьявление
                 </button>
             </div>
             <div class="containerPets">
                 <a href="#" class="containerPetsBlock">
-                    <div class="containerPetsBlock__img"><img src="images/pets-1.png" alt="Pet">
-                        <div class="containerPetsBlock__img--price">9 900 &#8381;</div>
+                    <div class="containerPetsBlock__img"><img src="images/img/image-pet-370.svg" alt="Pet">
+                        <div class="containerPetsBlock__img--price">9 900 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                         <div class="containerPetsBlock__img--selling">Продам щенка</div>
                     </div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
                 </a>
                 <a href="#" class="containerPetsBlock">
-                    <div class="containerPetsBlock__img"><img src="images/pets-1.png" alt="Pet">
-                        <div class="containerPetsBlock__img--price">9 900 &#8381;</div>
+                    <div class="containerPetsBlock__img"><img src="images/img/image-pet-370.svg" alt="Pet">
+                        <div class="containerPetsBlock__img--price">9 900 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                         <div class="containerPetsBlock__img--selling">Продам щенка</div>
                     </div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
                     <div class="containerPetsBlock__sex-birth">Мальчик, 4мес.</div>
                 </a>
                 <a href="#" class="containerPetsBlock">
-                    <div class="containerPetsBlock__img"><img src="images/pets-1.png" alt="Pet">
-                        <div class="containerPetsBlock__img--price">9 900 &#8381;</div>
+                    <div class="containerPetsBlock__img"><img src="images/img/image-pet-370.svg" alt="Pet">
+                        <div class="containerPetsBlock__img--price">9 900 <img src="images/icons/icon-ruble.svg" alt="ruble"></div>
                         <div class="containerPetsBlock__img--selling">Продам щенка</div>
                     </div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>

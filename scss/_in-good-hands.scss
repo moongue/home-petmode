@@ -1,43 +1,44 @@
 #in-good-hands {
   padding-top: 70px;
-  .wrapper{
+  .wrapper {
     border-bottom: 1px solid $white-two;
     border-bottom: 69px;
     .title {
       padding-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+
+      @include sm-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+      span {
+        font-weight: bold;
+      }
     }
     .containerPets {
       padding-top: 5px;
+      display: flex;
       justify-content: space-between;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
 
-      @include row-flex();
       @include lg-block() {
-        justify-content: center;
+        justify-content: space-around;
       }
 
       .containerPetsBlock {
-        padding-top: 10px;
+        margin-top: 10px;
         position: relative;
         user-select: none;
         text-decoration: none;
-        max-width: 220px;
-
-        @include col();
-        @include size(2.4);
-        @include size-fix(4);
-        @include size-sm(6);
-        @include size-xs(12);
-
-        &__add {
-          background-color: $pale-grey;
-          border-radius: 3px;
-          padding-top: 0;
+        &__img img {
+          width: 100%;
+          height: auto;
         }
         &__will-give {
           position: absolute;
-          top: 15px;
-          left: 10px;
+          top: 20px;
+          left: 20px;
           color: $white;
 
           &:hover {
@@ -48,50 +49,38 @@
           }
         }
         &__breed {
-          font-size: 14.5px;
-          color: $mocha;
-          text-transform: uppercase;
-          padding-top: 10px;
-          &-cat {
-            color: $light-plum;
-          }
+          font-size: 14px;
+          color: $black-60;
+          padding: 5px 8px;
+          background-color: $yellow-two;
+          border-radius: 4px;
+          display: inline-block;
+          font-weight: normal;
+          margin-top: 21px;
+
         }
         &__selling {
-          font-size: 22.5px;
-          color: $black;
-          padding-top: 10px;
+          position: absolute;
+          bottom: 64px;
+          left: 20px;
+          font-size: 16px;
+          color: $white;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+
+          @include xs(font-size, 14px);
         }
         &__sex-birth {
-          font-size: 14.5px;
-          color: $warm-grey;
+          margin-top: 21px;
+          font-size: 14px;
+          display: inline-block;
+          float: right;
+          color: $grey-60;
           font-weight: normal;
         }
       }
-      .place-an-ad {
-        flex-direction: column;
-        margin-top: 10px;
-        background-color: $pale-grey;
-        display: flex;
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-        flex-basis: 220px;
-        min-height: 218px;
-        > div {
-          text-decoration: none;
-          font-size: 16px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          color: $dull-blue;
-          img {
-            padding-bottom: 20px;
-          }
-           p {
-             border-bottom: 1px dotted $dull-blue-two;
-           }
-        }
-      }
+    }
+    .show-more {
+      margin-top: 41px;
     }
   }
 }

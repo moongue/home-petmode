@@ -272,6 +272,7 @@
 
     .buttons {
       padding-top: 49px;
+      display: flex;
 
       @include xs-block() {
         display: flex;
@@ -281,7 +282,15 @@
         width: 100%;
       }
 
-      #sell-pet, #have-a-pet {
+      .register-specialist {
+        color: $grey-60;
+        font-size: 14px;
+        margin: 0;
+
+        @include xs(width, 280px);
+      }
+
+      #sell-pet, #have-a-pet, #go-in   {
         background: none;
         border-radius: 4px;
         color: $white;
@@ -289,11 +298,10 @@
         font-size: 14px;
         font-weight: bold;
         border: 1px solid $white;
-        padding: 14px 50px ;
+        width: 170px;
+        height: 40px;
 
-        @include sm-block() {
-          padding: 19px 0;
-          width: 100%;
+        @include xs-block() {
           margin-left: 0;
           margin-top: 10px;
         }
@@ -301,19 +309,13 @@
         &:nth-child(2n) {
           margin-left: 20px;
 
-          @include sm-block() {
-            margin-left: 0;
-            margin-top: 10px;
-          }
+          @include xs(margin-left, 0);
         }
       }
       #have-a-pet {
         outline: none;
         background-color: $white;
         color: $black-60;
-      }
-      #sell-pet {
-        padding: 14px 70px;
       }
     }
     .register-specialist-banner {

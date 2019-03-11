@@ -1,0 +1,44 @@
+#successfully-added-home {
+  .container-successfully-added {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 184px;
+    max-width: 442px;
+    margin: 0 auto;
+
+    @include xs-block() {
+      padding-top: 60px;
+    }
+    h2 {
+      line-height: 32px;
+      font-size: 24px;
+      color: $black-font;
+    }
+    p {
+      color: $grey-60;
+      font-weight: normal;
+      font-size: 14px;
+      padding-top: 22px;
+      line-height: 20px;
+      text-align: center;
+    }
+    .average-moderation {
+      padding-top: 31px;
+      color: $black-font;
+      font-size: 16px;
+      span {
+        color: $dull-blue;
+      }
+    }
+    .btn-back-home {
+      width: 310px;
+      color: $black-80;
+      font-size: 14px;
+      margin-top: 48px;
+      @include xs-block() {
+        width: 80%;
+      }
+    }
+  }
+}

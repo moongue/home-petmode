@@ -38,6 +38,7 @@
       .content {
         position: absolute;
         display: none;
+        z-index: 100;
       }
       ul {
         list-style: none;
@@ -184,8 +185,8 @@
         border: none;
         outline: none;
         padding-left: 10px;
-        color: $black-font;
-        width: 80px;
+        color: $black-40;
+        width: 120px ;
         &::-webkit-input-placeholder {
           color: $camo-green;
         }
@@ -200,7 +201,6 @@
         }
       }
       img {
-        filter: opacity(30%);
         @include xs-block() {
           padding-right: 10px;
         }

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="plugins/slick-slider/slick.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="plugins/slick-slider/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Объявления</title>
+</head>
+<body>
+<!--HEADER-->
+<header id="header-ch">
+    <div class="wrapper">
+        <div class="container-header">
+            <div class="logo">
+                <a href="#"><img src="images/icons/icon-logo.svg" alt="Logo"></a>
+            </div>
+
+            <a href="#" class="lines">
+                <img src="images/lines.svg" alt="lines">
+            </a>
+
+            <nav class="menu">
+                <ul class="menu-a">
+                    <li class="search-hide-desktop search">
+                        <input type="text" placeholder="Поиск" id="search-mob">
+                        <label for="search">
+                            <img src="images/icons/icon-search.svg" alt="Search">
+                        </label>
+                    </li>
+                    <li><a href="#">Питомцы</a></li>
+                    <li><a href="#">Специалисты</a></li>
+                    <li><a href="#">Моя радость</a></li>
+                    <li><a href="#">Конкурсы</a></li>
+                    <li><label class="link" for="hider" id="more">Ещё <span>...</span></label>
+                        <input type="checkbox" id="hider">
+                        <ul class="content">
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Рейтинг</a></li>
+                            <li><a href="#">Выставка</a></li>
+                            <li><a href="#">Благотворительность</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="search">
+                <input type="text" placeholder="Поиск" id="search">
+                <label for="search">
+                    <img src="images/icons/icon-search.svg" alt="Search">
+                </label>
+            </div>
+            <a href="#" class="user">
+                <div class="name-user">Иван</div>
+                <img src="images/icons/icon-circle-user.svg" alt="User Icon">
+            </a>
+        </div>
+    </div>
+</header>
+<!--END HEADER-->
+
+<!--ADS-->
+<section id="ads">
+    <div class="wrapper">
+        <div class="container-ads">
+            <div class="title-ads">
+                10 000 объявлений с питомцами
+                <div class="more-filter">
+                    <ul class="specific-filter">
+                        <li><a href="#" class="first active-more-filter">Продам</a></li>
+                        <li><a href="#">Отдам</a></li>
+                        <li><a href="#">Вязка</a></li>
+                    </ul>
+                </div>
+                <button class="submit-an-announcement yellow-theme">
+                    <img src="images/icons/icon-tag.svg" alt="Icon">Подать обьявление
+                </button>
+            </div>
+            <div class="filter-ads">
+                <div class="one-filter">
+                    <button class="btn-filter country">Россия <img src="images/icons/icon-select.svg" alt="select">
+                    </button>
+                    <div class="fix-menu">
+                        <ul class="hide-dropdown">
+                            <li><input type="radio" id="country1" name="country" class="styles-checkbox"/>
+                                <label for="country1">Страна</label></li>
+                            <li><input type="radio" id="country2" name="country" class="styles-checkbox"/>
+                                <label for="country2">Страна</label></li>
+                            <li><input type="radio" id="country3" name="country" class="styles-checkbox"/>
+                                <label for="country3">Страна</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="one-filter">
+                    <button class="btn-filter city">Вид питомца <img src="images/icons/icon-select.svg" alt="select">
+                    </button>
+                    <div class="fix-menu">
+                        <ul class="hide-dropdown">
+                            <li><input type="radio" id="pet-view1" name="pet-view" class="styles-checkbox"/>
+                                <label for="pet-view1">Вид питомца</label></li>
+                            <li><input type="radio" id="pet-view2" name="pet-view" class="styles-checkbox"/>
+                                <label for="pet-view2">Вид питомца</label></li>
+                            <li><input type="radio" id="pet-view3" name="pet-view" class="styles-checkbox"/>
+                                <label for="pet-view3">Вид питомца</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="one-filter">
+                    <button class="btn-filter experience">Пол <img src="images/icons/icon-select.svg"
+                                                                   alt="select"></button>
+                    <div class="fix-menu">
+                        <ul class="hide-dropdown">
+                            <li><input type="radio" id="sex1" name="sex" class="styles-checkbox"/>
+                                <label for="sex1">Пол</label></li>
+                            <li><input type="radio" id="sex2" name="sex" class="styles-checkbox"/>
+                                <label for="sex2">Пол</label></li>
+                            <li><input type="radio" id="sex3" name="sex" class="styles-checkbox"/>
+                                <label for="sex3">Пол</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="one-filter">
+                    <button class="btn-filter experience">Порода <img src="images/icons/icon-select.svg"
+                                                                      alt="select"></button>
+                    <div class="fix-menu">
+                        <ul class="hide-dropdown">
+                            <li><input type="radio" id="breed1" name="breed" class="styles-checkbox"/>
+                                <label for="breed1">Порода</label></li>
+                            <li><input type="radio" id="breed2" name="breed" class="styles-checkbox"/>
+                                <label for="breed2">Порода</label></li>
+                            <li><input type="radio" id="breed3" name="breed" class="styles-checkbox"/>
+                                <label for="breed3">Порода</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="one-filter">
+                    <button class="btn-filter experience">Цена <img src="images/icons/icon-select.svg"
+                                                                    alt="select"></button>
+                    <div class="fix-menu">
+                        <ul class="hide-dropdown">
+                            <li><input type="radio" id="price1" name="price" class="styles-checkbox"/>
+                                <label for="price1">Цена</label></li>
+                            <li><input type="radio" id="price2" name="price" class="styles-checkbox"/>
+                                <label for="price2">Цена</label></li>
+                            <li><input type="radio" id="price3" name="price" class="styles-checkbox"/>
+                                <label for="price3">Цена</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="one-filter to-pres-right">
+                    <button class="btn-filter sorting-by-rating">По популярности<img
+                            src="images/icons/icon-select.svg" alt="select"></button>
+                    <div class="fix-menu">
+                        <ul class="hide-dropdown">
+                            <li><input type="radio" id="sorting-by-rating1" name="sorting-by-rating"
+                                       class="styles-checkbox"/>
+                                <label for="sorting-by-rating1">Сортировка</label></li>
+                            <li><input type="radio" id="sorting-by-rating2" name="sorting-by-rating"
+                                       class="styles-checkbox"/>
+                                <label for="sorting-by-rating2">Сортировка</label></li>
+                            <li><input type="radio" id="sorting-by-rating3" name="sorting-by-rating"
+                                       class="styles-checkbox"/>
+                                <label for="sorting-by-rating3">Сортировка</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="top-ads-top">
+                <div class="blocks-ads">
+                    <a href="#" class="one-ads">
+                        <div class="img-block">
+                            <div class="slider-img">
+                                <img src="images/img/image-pet-370.svg" alt="Image">
+                                <img src="images/img/image-pet-370.svg" alt="Image">
+                                <img src="images/img/image-pet-370.svg" alt="Image">
+                            </div>
+                            <div class="price">
+                                9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                            </div>
+                            <div class="sentence">
+                                Продам щенка
+                            </div>
+                            <div class="recomended">
+                                <img src="images/icons/icon-recomended.svg" alt="Recomended">
+                            </div>
+                        </div>
+                        <div class="descr-ads">
+                            <div class="breed">
+                                Вельш-корги-пемброк
+                            </div>
+                            <div class="sex-birth">
+                                Мальчик, 4 мес
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="one-ads">
+                        <div class="img-block">
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">
+                                9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                            </div>
+                            <div class="sentence">
+                                Продам щенка
+                            </div>
+                            <div class="recomended">
+                                <img src="images/icons/icon-recomended.svg" alt="Recomended">
+                            </div>
+                        </div>
+                        <div class="descr-ads">
+                            <div class="breed">
+                                Вельш-корги-пемброк
+                            </div>
+                            <div class="sex-birth">
+                                Мальчик, 4 мес
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="one-ads">
+                        <div class="img-block">
+                            <img src="images/img/image-pet-370.svg" alt="Image">
+                            <div class="price">
+                                9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                            </div>
+                            <div class="sentence">
+                                Продам щенка
+                            </div>
+                            <div class="recomended">
+                                <img src="images/icons/icon-recomended.svg" alt="Recomended">
+                            </div>
+                        </div>
+                        <div class="descr-ads">
+                            <div class="breed">
+                                Вельш-корги-пемброк
+                            </div>
+                            <div class="sex-birth">
+                                Мальчик, 4 мес
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="blocks-ads">
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                        <div class="recomended">
+                            <img src="images/icons/icon-recomended.svg" alt="Recomended">
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads one-ads-top">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                        <div class="recomended">
+                            <img src="images/icons/icon-recomended.svg" alt="Recomended">
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="one-ads">
+                    <div class="img-block">
+                        <img src="images/img/image-pet-370.svg" alt="Image">
+                        <div class="price">
+                            9 900 <img src="images/icons/icon-ruble.svg" alt="">
+                        </div>
+                        <div class="sentence">
+                            Продам щенка
+                        </div>
+                    </div>
+                    <div class="descr-ads">
+                        <div class="breed">
+                            Вельш-корги-пемброк
+                        </div>
+                        <div class="sex-birth">
+                            Мальчик, 4 мес
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="show-more">
+                <a href="#">Показать ещё (1 531)</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--END ADS-->
+
+<!--BEST SPECIALISTS-->
+<section id="best-specialist">
+    <div class="wrapper">
+        <div class="title-with-button">
+            <div class="title">
+                <h2>Лучшие специалисты для ваших питомцев</h2>
+
+
+                <ul class="profession">
+                    <li><a href="#">Ветеринар</a></li>
+                    <li><a href="#">Кинолог</a></li>
+                    <li><a href="#">Грумер</a></li>
+                    <li><a href="#">Дресировщик</a></li>
+                    <li><a href="#">Фотограф</a></li>
+                    <li><a href="#">Дизайнер-модельер</a></li>
+                    <li><a href="#">Животновод</a></li>
+                    <li><a href="#">Хэндлер</a></li>
+                </ul>
+            </div>
+
+            <button class="register-specialist yellow-theme">
+                <img src="images/icons/icon-register-user.svg" alt="Register">Зарегистрироваться специалистом
+            </button>
+        </div>
+
+        <div class="specialists">
+            <a href="#" class="specialistsBlock">
+                <div class="specialistsBlock__img">
+                    <img src="images/img/img-photo-specialist.svg" alt="Specialist Photo">
+                </div>
+                <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Игорь Титов</div>
+                    <div class="specialistsBlockDescription__qualification">
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                class="number">(150)</span></p>
+                    </div>
+                    <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
+                        средним
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="specialistsBlock">
+                <div class="specialistsBlock__img">
+                    <img src="images/img/img-photo-specialist.svg" alt="Specialist Photo">
+                </div>
+                <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Наталья Смирнова</div>
+                    <div class="specialistsBlockDescription__qualification">
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                class="number">(150)</span></p>
+                    </div>
+                    <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
+                        средним
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="specialistsBlock">
+                <div class="specialistsBlock__img">
+                    <img src="images/img/img-photo-specialist.svg" alt="Specialist Photo">
+                </div>
+                <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Ольга Иванова</div>
+                    <div class="specialistsBlockDescription__qualification">
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                class="number">(150)</span></p>
+                    </div>
+                    <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
+                        средним
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="specialistsBlock">
+                <div class="specialistsBlock__img">
+                    <img src="images/img/img-photo-specialist.svg" alt="Specialist Photo">
+                </div>
+                <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Александр Иванов</div>
+                    <div class="specialistsBlockDescription__qualification">
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                class="number">(150)</span></p>
+                    </div>
+                    <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
+                        средним
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="specialistsBlock">
+                <div class="specialistsBlock__img">
+                    <img src="images/img/img-photo-specialist.svg" alt="Specialist Photo">
+                </div>
+                <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Мария Титова</div>
+                    <div class="specialistsBlockDescription__qualification">
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                class="number">(150)</span></p>
+                    </div>
+                    <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
+                        средним
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="specialistsBlock">
+                <div class="specialistsBlock__img">
+                    <img src="images/img/img-photo-specialist.svg" alt="Specialist Photo">
+                </div>
+                <div class="specialistsBlockDescription">
+                    <div class="specialistsBlockDescription__name">Николай Смирнов</div>
+                    <div class="specialistsBlockDescription__qualification">
+                        <p>Ветеринар <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                class="number">(150)</span></p>
+                    </div>
+                    <div class="specialistsBlockDescription__merits">Специалист с высшим (ветеринарный врач) или
+                        средним
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="show-more show-more-yellow">
+            <a href="#">Смотреть всех специалистов (800+)</a>
+        </div>
+    </div>
+</section>
+<!--END BEST SPECIALIST-->
+
+<!--POPULAR PETS-->
+<section id="popular-pets" class="margin-top">
+    <div class="wrapper">
+        <div class="title">
+            <h2>Страница самых популярных питомцев</h2>
+        </div>
+        <div class="container">
+            <div class="popularPets">
+                <a href="#" class="popularPetsBlock">
+                    <div class="popularPets__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="popularPetsBlockDescription">
+                        <div class="popularPetsBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="popularPetsBlockDescription__name">Зов предков</div>
+                    </div>
+                </a>
+                <a href="#" class="popularPetsBlock">
+                    <div class="popularPets__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="popularPetsBlockDescription">
+                        <div class="popularPetsBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="popularPetsBlockDescription__name">Зов предков</div>
+                    </div>
+                </a>
+                <a href="#" class="popularPetsBlock">
+                    <div class="popularPets__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="popularPetsBlockDescription">
+                        <div class="popularPetsBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="popularPetsBlockDescription__name">Зов предков</div>
+                    </div>
+                </a>
+                <a href="#" class="popularPetsBlock">
+                    <div class="popularPets__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="popularPetsBlockDescription">
+                        <div class="popularPetsBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="popularPetsBlockDescription__name">Зов предков</div>
+                    </div>
+                </a>
+                <a href="#" class="popularPetsBlock">
+                    <div class="popularPets__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="popularPetsBlockDescription">
+                        <div class="popularPetsBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="popularPetsBlockDescription__name">Зов предков</div>
+                    </div>
+                </a>
+                <a href="#" class="popularPetsBlock">
+                    <div class="popularPets__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="popularPetsBlockDescription">
+                        <div class="popularPetsBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="popularPetsBlockDescription__name">Зов предков</div>
+                    </div>
+                </a>
+                <a href="#" class="popularPetsBlock">
+                    <div class="popularPets__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="popularPetsBlockDescription">
+                        <div class="popularPetsBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="popularPetsBlockDescription__name">Зов предков</div>
+                    </div>
+                </a>
+                <a href="#" class="popularPetsBlock">
+                    <div class="popularPets__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="popularPetsBlockDescription">
+                        <div class="popularPetsBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="popularPetsBlockDescription__name">Зов предков</div>
+                    </div>
+                </a>
+            </div>
+            <div class="show-more">
+                <a href="#">Смотреть все страницы питомцев (531)</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--END POPULAR PETS-->
+
+<!--CLUBS AND SHELTERS-->
+<section id="clubs-and-shelters" class="margin-bottom">
+    <div class="wrapper">
+        <div class="title">
+            <h2>Клубы и приюты</h2>
+        </div>
+        <div class="container">
+            <div class="shelter">
+                <a href="#" class="shelterBlock">
+                    <div class="shelterBlock__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="shelterBlockDescription">
+                        <div class="shelterBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="shelterBlockDescription__name">Зов предков</div>
+                    </div>
+                </a>
+                <a href="#" class="shelterBlock">
+                    <div class="shelterBlock__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="shelterBlockDescription">
+                        <div class="shelterBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="shelterBlockDescription__name">Эко-Бирюлево</div>
+                    </div>
+                </a>
+                <a href="#" class="shelterBlock">
+                    <div class="shelterBlock__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="shelterBlockDescription">
+                        <div class="shelterBlockDescription__qualification">
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="shelterBlockDescription__name">Дубовая Роща</div>
+                    </div>
+                </a>
+                <a href="#" class="shelterBlock">
+                    <div class="shelterBlock__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="shelterBlockDescription">
+                        <div class="shelterBlockDescription__qualification">
+                            <p>Приют<img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="shelterBlockDescription__name">Дубовая роща</div>
+                    </div>
+                </a>
+                <a href="#" class="shelterBlock">
+                    <div class="shelterBlock__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="shelterBlockDescription">
+                        <div class="shelterBlockDescription__qualification">
+                            <p>Приют <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="shelterBlockDescription__name">Красная сосна</div>
+                    </div>
+                </a>
+                <a href="#" class="shelterBlock">
+                    <div class="shelterBlock__img">
+                        <img src="images/img/image-circle-70x70.svg" alt="Icon club">
+                    </div>
+                    <div class="shelterBlockDescription">
+                        <div class="shelterBlockDescription__qualification">
+                            <p>Приют <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                                    class="number">(150)</span></p>
+                        </div>
+                        <div class="shelterBlockDescription__name">Бим</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="buttons">
+                <button id="register-club" class="yellow-theme">Зарегестрировать клуб</button>
+                <button id="register-shelter" class="yellow-theme">Зарегестрировать приют</button>
+            </div>
+        </div>
+        <div class="two-blocks">
+            <div class="show-more bg-30">
+                <a href="#">Все клубы (531)</a>
+            </div>
+            <div class="show-more bg-30">
+                <a href="#">Все Приюты (531)</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--AND CLUBS AND SHELTERS-->
+</body>
+</html>

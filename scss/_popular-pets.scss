@@ -1,0 +1,122 @@
+#popular-pets {
+  &.margin-top {
+    margin-top: 78px;
+  }
+  .wrapper {
+    border-bottom: 1px solid $white-two;
+    border-bottom: 69px;
+  }
+  &.bottom-indent {
+    margin-bottom: 100px;
+    padding-top: 0;
+  }
+  .title {
+
+    @include lg-block() {
+      text-align: center;
+    }
+
+  }
+  .container {
+    margin-top: 35px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid $white-bg;
+
+    @include lg-block() {
+      flex-direction: column;
+    }
+
+    .popularPets {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+
+      @include lg-block() {
+        margin: 0 auto;
+      }
+      @include md-block() {
+        flex-wrap: wrap;
+      }
+      @include sm-block() {
+        justify-content: space-around;
+      }
+      @include xs-block() {
+        justify-content: center;
+      }
+
+      &Block {
+        flex-basis: 25%;
+        margin-top: 20px;
+        text-decoration: none;
+        display: flex;
+
+        &Description {
+          padding-left: 27px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          &__qualification {
+            color: $warm-grey;
+            font-size: 14.5px;
+            p {
+              display: flex;
+              align-items: center;
+              font-weight: normal;
+              img {
+                padding-left: 12px;
+              }
+              .quantity {
+                color: $black;
+                padding-left: 10px;
+                font-weight: normal;
+              }
+              .number {
+                font-weight: normal;
+                padding-left: 7px;
+              }
+            }
+          }
+          &__name {
+            font-size: 16px;
+            color: $black-font;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .buttons {
+    @include lg-block() {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    > button {
+      margin-top: 20px;
+      @include lg-block() {
+        width: 48%;
+        margin: 0;
+      }
+    }
+  }
+  .two-blocks {
+    @include lg(margin-top, 15px);
+    @include xs-block() {
+      flex-direction: column;
+      align-items: center;
+    }
+    .show-more {
+      width: 48%;
+      @include lg(margin-top, 0);
+      &:nth-child(2n) {
+        @include xs-block() {
+          margin-top: 10px;
+        }
+      }
+      @include xs-block() {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 #news {
   padding-top: 70px;
-  .content-my-joy {
+  .content-news {
     display: flex;
     justify-content: space-between;
 
@@ -35,20 +35,25 @@
 
       }
       &Flex {
+        padding-left: 30px;
+
+        @include xs(padding-left, 0);
         &__title {
-          font-size: 24.5px;
-          color: $black;
+          font-size: 16px;
+          color: $black-font;
+          line-height: 21px;
           max-width: 430px;
           text-decoration: none;
 
           @include sm(font-size, 24px);
         }
         &__description {
-          padding-top: 10px;
+          padding-top: 18px;
           font-weight: normal;
-          font-size: 16px;
-          color: $warm-grey;
-          max-width: 484px;
+          line-height: 20px;
+          font-size: 14px;
+          color: $black-60;
+          max-width: 418px;
           .read-more {
             color: $dull-blue;
             font-size: 14px;
@@ -59,18 +64,21 @@
           display: flex;
           align-items: center;
           padding-top: 20px;
-          &Information {
-
-            &__date {
-              font-size: 14px;
-              color: $warm-grey;
-
+          font-size: 14px;
+          color: $black-40;
+          font-weight: normal;
+          > div {
+            display: flex;
+            align-items: center;
+            img {
+              padding-right: 9px;
             }
           }
-          &__like {
-            padding-left: 24px;
-            color: $warm-grey;
-            font-size: 14px;
+          &__repost {
+            margin-left: 22px;
+          }
+          &__date {
+            margin-left: 24px;
           }
         }
       }

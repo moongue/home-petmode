@@ -5,6 +5,15 @@
     padding-bottom: 75px;
 
   }
+  .title {
+    display: flex;
+    justify-content: space-between;
+
+  @include sm-block() {
+    flex-direction: column;
+    align-items: center;
+  }
+  }
   .content-pets-on-binding {
     display: flex;
     justify-content: space-between;
@@ -16,28 +25,37 @@
 
     .containerPets {
       padding-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      width: 770px;
 
-      @include row-flex();
-      @include lg-block() {
-        justify-content: center;
+      @include md-block() {
+        flex-wrap: wrap;
+        width: 100%;
       }
+    @include sm-block() {
+      justify-content: center;
+    }
 
       .containerPetsBlock {
-        padding-top: 30px;
+        margin-top: 30px;
         text-decoration: none;
         position: relative;
         user-select: none;
-        max-width: 220px;
+        max-width: 370px;
 
-        @include col();
-        @include size(3.8);
-        @include size-lg(6);
-        @include size-md(12);
+        &__img {
+          position: relative;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
 
         &__price {
           position: absolute;
-          top: 40px;
-          left: 10px;
+          top: 20px;
+          left: 20px;
           color: $white;
 
           &:hover {
@@ -48,22 +66,32 @@
           }
         }
         &__breed {
-          font-size: 14.5px;
-          color: $mocha;
-          text-transform: uppercase;
-          padding-top: 10px;
+          margin-top: 16px;
+          font-size: 14px;
+          padding: 5px 8px;
+          background-color: $yellow-two;
+          font-weight: normal;
+          color: $black-60;
+          border-radius: 4px;
+          display: inline-block;
           &-cat {
             color: $light-plum;
           }
         }
         &__selling {
-          font-size: 22.5px;
-          color: $black;
-          padding-top: 10px;
+          position: absolute;
+          font-size: 16px;
+          color: $white;
+          left: 20px;
+          bottom: 60px;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
         }
         &__sex-birth {
-          font-size: 14.5px;
-          color: $warm-grey;
+          display: inline-block;
+          margin-top: 16px;
+          float: right;
+          font-size: 14px;
+          color: $grey-60;
           font-weight: normal;
         }
       }
@@ -80,10 +108,6 @@
     }
   }
   .show-more {
-
-    @include lg-block() {
-      padding-top: 20px;
-    }
     @include md(text-align, center);
 
   }

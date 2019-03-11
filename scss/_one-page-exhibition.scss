@@ -200,7 +200,7 @@
                 text-decoration: none;
                 color: $black-40;
                 font-weight: normal;
-                border-bottom: 1px dotted $black-40;
+                border-bottom: 1px dashed $black-40;
               }
             }
           }
@@ -257,11 +257,13 @@
           #apply {
             width: 170px;
             height: 48px;
+            color: $grey-80;
+            font-size: 16px;
           }
           .block-time {
             width: 384px;
             height: 48px;
-            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
             background-color: $white;
             display: flex;
             justify-content: space-between;
@@ -277,6 +279,9 @@
             }
             p {
               color: $black-40;
+              img {
+                vertical-align: bottom;
+              }
             }
             .time {
               color: $black-font;

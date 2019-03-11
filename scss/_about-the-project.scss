@@ -70,35 +70,4 @@
       }
     }
   }
-  #sections {
-    margin-top: 48px;
-    padding: 36px 0 0 30px;
-    background-color: $yellow-two;
-    width: 299px;
-    height: 272px;
-
-    @include md-block() {
-      display: none;
-    }
-    .sections {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding-top: 21px;
-      li {
-        line-height: 20px;
-        padding: 2px 0;
-        a {
-          font-size: 14px;
-          color: $black-60;
-          text-decoration: none;
-          font-weight: normal;
-          &.active-sections {
-            font-weight: bold;
-            color: $black;
-          }
-        }
-      }
-    }
-  }
 }

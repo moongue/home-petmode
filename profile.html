@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Профиль</title>
+</head>
+<body>
+
+<!--HEADER-->
+<header id="header-ch" style="padding: 0 24px">
+    <div class="container-header">
+        <div class="logo">
+            <a href="#"><img src="images/icons/icon-logo.svg" alt="Logo"></a>
+        </div>
+
+        <a href="#" class="lines">
+            <img src="images/lines.svg" alt="lines">
+        </a>
+
+        <nav class="menu">
+            <ul class="menu-a small-menu">
+                <li class="search-hide-desktop search search-show-sm">
+                    <input type="text" placeholder="Поиск" id="search-mob">
+                    <label for="search">
+                        <img src="images/icons/icon-search.svg" alt="Search">
+                    </label>
+                </li>
+                <li><a href="#">Питомцы</a></li>
+                <li><a href="#">Специалисты</a></li>
+                <li><a href="#">Моя радость</a></li>
+                <li class="active-menu"><a href="#">Конкурсы</a></li>
+                <li><label class="link color-grey" for="hider" id="more">Ещё <span>...</span></label>
+                    <input type="checkbox" id="hider">
+                    <ul class="content">
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Рейтинг</a></li>
+                        <li><a href="#">Выставка</a></li>
+                        <li><a href="#">Благотворительность</a></li>
+                    </ul>
+                </li>
+                <li class="buy-pro-account buy-pro-account-show-sm">
+                    <div class="pro">
+                        <div class="pro-bd">Pro</div>
+                        <p>Аккаунт</p>
+                    </div>
+                    <a href="#" class="btn-buy-pro-account">Купить</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="search bg-none margin-fix search-fix">
+            <label for="search">
+                <img src="images/icons/icon-search.svg" alt="Search">
+            </label>
+            <input type="text" placeholder="Поиск" id="search">
+
+        </div>
+        <div class="buy-pro-account">
+            <div class="pro">
+                <div class="pro-bd">Pro</div>
+                <p>Аккаунт</p>
+            </div>
+            <a href="#" class="btn-buy-pro-account">Купить</a>
+        </div>
+        <a href="#" class="user">
+            <div class="name-user">Иван</div>
+            <img src="images/icons/icon-circle-user.svg" alt="User Icon">
+        </a>
+    </div>
+</header>
+<!--END HEADER-->
+
+<!--SIDEBAR-->
+<div class="sidebar-menu">
+    <input type="checkbox" id="show-sidebar">
+    <label for="show-sidebar"><img src="images/icons/icon-sidebar-add.svg" alt="select-icon"></label>
+    <ul class="sidebar">
+        <li><a href="#"><img src="images/icons/icon-sidebar-user.svg" alt="Icon User"></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-alert.svg" alt="Icon Alert"></a><a href="#"
+                                                                                               class="notification-bg"><img
+                src="images/icons/icon-sidebar-notofication-bg.svg" alt="Notification" class="notification-bg"><span
+                class="notification-count">2</span></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-message.svg" alt="Icon Message"></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-store.svg" alt="Icon Store"></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-add.svg" alt="Icon Add"></a></li>
+    </ul>
+</div>
+<!--END SIDEBAR-->
+
+
+<section id="profile">
+    <div class="wrapper-small">
+        <div class="container-profile">
+            <div class="blocks-user-content">
+                <div class="block-user">
+                    <div class="loading-photo-profile">
+                        <a href="#"><img src="images/icons/icon-photo-camera.svg" alt=""></a>
+                        <a href="#" class="load-photo">Загрузит Фото</a>
+                    </div>
+                    <div class="buttons">
+                        <input class="btn-write" type="button" value="Написать">
+                        <button class="add-user"><img src="images/icons/icon-add-user.svg" alt="Add user"></button>
+                    </div>
+                    <div class="side-panel">
+                        <div class="subscriptions">
+                            <p>Подписки <span class="count-subscriptions">35</span></p>
+                            <div class="search-subscriptions-block">
+                                <input type="text" id="search-subscriptions" placeholder="Пушистик">
+                                <label for="search-subscriptions">
+                                    <img src="images/icons/icon-search.svg" alt="Search">
+                                </label>
+                            </div>
+                            <div class="blocks-subscriptions">
+                                <div class="one-block-subscriptions">
+                                    <img src="images/img/image-circle-38x38.svg" alt="Image subscriptions">
+                                    <div class="description-subscriptions">
+                                        <p>Клуб</p>
+                                        <div class="name-subscriptions">«Пушистик»</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accounts">
+                            <div class="search-accounts-block">
+                                <input type="text" id="search-accounts" placeholder="Аккаунты  6">
+                                <label for="search-accounts">
+                                    <img src="images/icons/icon-search.svg" alt="Search">
+                                </label>
+                            </div>
+                            <div class="blocks-accounts">
+                                <div class="one-block-accounts">
+                                    <img src="images/img/image-circle-38x38.svg" alt="Image subscriptions">
+                                    <div class="description-accounts">
+                                        <p>Клуб</p>
+                                        <div class="name-accounts">«Пушистик»</div>
+                                    </div>
+                                </div>
+                                <div class="one-block-accounts">
+                                    <img src="images/img/image-circle-38x38.svg" alt="Image subscriptions">
+                                    <div class="description-accounts">
+                                        <p>Питомник</p>
+                                        <div class="name-accounts">Дези Делайт</div>
+                                    </div>
+                                </div>
+                                <div class="one-block-accounts">
+                                    <img src="images/img/image-circle-38x38.svg" alt="Image subscriptions">
+                                    <div class="description-accounts">
+                                        <p>Специалист</p>
+                                        <div class="name-accounts">Илья Петров</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-user">
+                    <div class="cup-profile">
+                        <div class="header-user">
+                            <div class="qualification">Заводчик</div>
+                            <div class="online">Online</div>
+                            <div class="block-reviews">
+                                <div class="reviews-good">
+                                    12 <img src="images/icons/icon-smile.svg" alt="Smile">
+                                </div>
+                                <div class="reviews-bad">
+                                    2 <img src="images/icons/icon-sad.svg" alt="Sad">
+                                </div>
+                            </div>
+                            <div class="days-registration">638 дней</div>
+                            <img src="images/icons/icon-rating.svg" alt="rating">
+                        </div>
+                        <div class="block-name">
+                            <div class="name">
+                                <img src="images/icons/icon-activated.svg" alt="">
+                                Александр Иванов
+                            </div>
+                            <div class="buttons">
+                                <input type="button" value="Оставить отзыв" id="leave-feedback">
+                                <input type="button" value="Пожаловаться" id="complain">
+                            </div>
+                        </div>
+                        <div class="location">Красноярск, Россия</div>
+
+                        <div class="information">
+                            <div class="block">
+                                <button id="request-call"><img src="images/icons/icon-request-call.svg" alt=""> Показать
+                                    телефон
+                                </button>
+                                <div class="e-mail">fyodorov.yan@gmail.com</div>
+                            </div>
+                            <div class="block">
+                                <div class="rating-top">
+                                    <div class="points">
+                                        <p><span>2 253</span>баллов</p>
+                                    </div>
+                                    <div class="position">
+                                        <p><span>52</span>место <img src="images/icons/icon-up.svg" alt="up">3</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="application-form">
+                            <div class="block">
+                                <div class="occupancy">
+                                    <img src="images/icons/icon-60%25.svg" alt="">
+                                    <div class="occupancy-count">60%</div>
+                                </div>
+                                <div class="text">
+                                    <p>Анкета Заполнена всего на 60%</p>
+                                    <div class="plus-points">
+                                        <span>+ 100 баллов</span> за <a href="#">заполнение</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="social-network">
+                                <li><a href="#"><img src="images/icons/icon-vk.svg" alt="VK"></a></li>
+                                <li><a href="#"><img src="images/icons/icon-instagram.svg" alt="Instagram"></a>
+                                </li>
+                                <li><a href="#"><img src="images/icons/icon-facebook.svg" alt="Facebook"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="wall-profile">
+                        <div class="block-more-image">
+                            <div class="title">
+                                <a href="#" class="active">Награды <span class="count-awards">35</span></a>
+                                <a href="#">Документы <span class="count-documents">43</span></a>
+                                <a href="#">Сертификаты <span class="count-certificates">43</span></a>
+                            </div>
+                            <div class="blocks-image">
+                                <div class="one-block">
+                                    <img src="images/img/image-materials-240x160.svg" alt="Award">
+                                </div>
+                                <div class="one-block">
+                                    <img src="images/img/image-materials-240x160.svg" alt="Award">
+                                </div>
+                                <div class="one-block">
+                                    <img src="images/img/image-materials-240x160.svg" alt="Award">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-video-block">
+                            <div class="title">
+                                <a href="#" class="active">Фото <span class="count-photo">35</span></a>
+                                <a href="#">Видео <span class="count-video">43</span></a>
+                            </div>
+                            <div class="blocks">
+                                <img src="images/img/image-materials-240x160.svg" alt="Photo">
+                                <img src="images/img/image-materials-240x160.svg" alt="Photo">
+                                <img src="images/img/image-materials-240x160.svg" alt="Photo">
+                            </div>
+                        </div>
+                        <div class="block-pets">
+                            <div class="title-pets">
+                                <img src="images/icons/icon-pawprint.svg" alt="Pawprint"> Питомцы <span
+                                    class="count-pets-organization">12</span>
+                                <a href="#">Показать Все</a>
+                            </div>
+                            <div class="blocks-pet">
+                                <div class="one-block-pet">
+                                    <div class="block-img">
+                                        <img src="images/img/image-employee-170x128.svg" alt="Employee">
+                                        <div class="settings">
+                                            <button class="setting"><img src="images/icons/icon-gear.svg" alt="Settings"></button>
+                                            <button class="close"><img src="images/icons/icon-close-pets.svg" alt="Close">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="block-more-information">
+                                        <div class="sex">
+                                            Мальчик
+                                        </div>
+                                        <div class="name">
+                                            Пушок
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one-block-pet">
+                                    <div class="block-img">
+                                        <img src="images/img/image-employee-170x128.svg" alt="Employee">
+
+                                    </div>
+                                    <div class="block-more-information">
+                                        <div class="sex">
+                                            Мальчик
+                                        </div>
+                                        <div class="name">
+                                            Шарик
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one-block-pet">
+                                    <div class="block-img">
+                                        <img src="images/img/image-employee-170x128.svg" alt="Employee">
+
+                                    </div>
+                                    <div class="block-more-information">
+                                        <div class="sex">
+                                            Мальчик
+                                        </div>
+                                        <div class="name">
+                                            Пушок
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-announcement">
+                            <div class="title-announcement">
+                                <img src="images/icons/icon-tag.svg" alt="Ads"> Объявления <span
+                                    class="count-announcement-organization">16</span>
+                                <a href="#">Показать Все</a>
+                            </div>
+                            <div class="blocks-announcement">
+                                <div class="one-block-announcement">
+                                    <div class="cup-announcement">
+                                        <div class="block">
+                                            <p>Обьявление</p>
+                                            <p><img src="images/vertical-line.png" alt=""></p>
+                                            <p>Сегодня</p>
+                                        </div>
+                                        <a href="#"><img src="images/icon-more-ads.png" alt="More"></a>
+                                    </div>
+                                    <div class="img-block">
+                                        <img src="images/img/image-adv-370x224.svg" alt="Image">
+                                        <div class="name-announcement">
+                                            Вельш-корги-пемброк
+                                        </div>
+                                        <div class="description-announcement">
+                                            Мальчик, 7 лет
+                                        </div>
+                                        <div class="rating-announcement">
+                                            <img src="images/icon-rating-announcement.png" alt="Rating"> <span
+                                                class="count-rating-announcement">243</span>
+                                        </div>
+                                    </div>
+                                    <div class="block-footer">
+                                        <div class="price-block">
+                                            <div class="price">9 900 <img src="images/icons/icon-ruble-big.svg" alt="ruble">
+                                            </div>
+                                            <button class="btn-buy">Купить</button>
+                                        </div>
+                                        <div class="activity-competition">
+                                            <div class="like">
+                                                <img src="images/icons/icon-like.svg" alt="Like"> 25
+                                            </div>
+                                            <div class="took-part">
+                                                <img src="images/icons/icon-repost.svg" alt="Repost icon"> 6
+                                            </div>
+                                            <div class="time">
+                                                <img src="images/icons/icon-time-green.svg" alt="Time"> 24 дня
+                                            </div>
+                                            <div class="seen">
+                                                <img src="images/icons/icon-seen.svg" alt="Seen Icon"> 153
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="one-block-announcement">
+                                    <div class="cup-announcement">
+                                        <div class="block">
+                                            <p>Обьявление</p>
+                                            <p><img src="images/vertical-line.png" alt=""></p>
+                                            <p>Сегодня</p>
+                                        </div>
+                                        <a href="#"><img src="images/icon-more-ads.png" alt="More"></a>
+                                    </div>
+                                    <div class="img-block">
+                                        <img src="images/img/image-adv-370x224.svg" alt="Image">
+                                        <div class="name-announcement">
+                                            Вельш-корги-пемброк
+                                        </div>
+                                        <div class="description-announcement">
+                                            Мальчик, 7 лет
+                                        </div>
+                                        <div class="rating-announcement">
+                                            <img src="images/icon-rating-announcement.png" alt="Rating"> <span
+                                                class="count-rating-announcement">243</span>
+                                        </div>
+                                    </div>
+                                    <div class="block-footer">
+                                        <div class="price-block">
+                                            <div class="price">9 900 <img src="images/icons/icon-ruble-big.svg" alt="ruble">
+                                            </div>
+                                            <button class="btn-buy">Купить</button>
+                                        </div>
+                                        <div class="activity-competition">
+                                            <div class="like">
+                                                <img src="images/icons/icon-like.svg" alt="Like"> 25
+                                            </div>
+                                            <div class="took-part">
+                                                <img src="images/icons/icon-repost.svg" alt="Repost icon"> 6
+                                            </div>
+                                            <div class="time">
+                                                <img src="images/icons/icon-time-green.svg" alt="Time"> 24 дня
+                                            </div>
+                                            <div class="seen">
+                                                <img src="images/icons/icon-seen.svg" alt="Seen Icon"> 153
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-competition">
+                            <div class="title-competition">
+                                <img src="images/icons/icon-competition.svg" alt="Competition"> Объявления <span
+                                    class="count-competition-organization">16</span>
+                                <a href="#">Показать Все</a>
+                            </div>
+                            <div class="blocks-competition">
+                                <div class="one-block-competition">
+                                    <img src="images/img/image-pet-340x384.svg" alt="Image competition">
+                                    <div class="block-with-description">
+                                        <div class="cup-competition">
+                                            <div class="block">
+                                                <p><img src="images/icons/icon-tag.svg" alt="Ads" class="icon-ads">Обьявление</p>
+                                                <p><img src="images/vertical-line.png" alt=""></p>
+                                                <p>Сегодня</p>
+                                            </div>
+                                            <a href="#"><img src="images/icon-more-ads.png" alt="More"></a>
+                                        </div>
+                                        <div class="information-competition">
+                                            Мальчик, 7 лет
+                                            <img src="images/icon-rating-announcement.png" alt="Rating"> <span
+                                                class="count-rating-announcement">243</span>
+                                        </div>
+                                        <div class="name-competition">
+                                            Доберман
+                                        </div>
+                                        <p>
+                                            Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он
+                                            у
+                                            себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине,
+                                            он
+                                            видел, стоило ему приподнять голову, свой коричневый
+                                        </p>
+                                        <div class="block-buttons">
+                                            <input type="button" value="Купить" class="buy-competition">
+                                            <input type="button" value="Написать" class="write-competition">
+                                            <div class="price-competition">9 900 <img src="images/icons/icon-ruble-big.svg" alt="ruble"></div>
+                                        </div>
+                                        <div class="activity-competition">
+                                            <div class="like">
+                                                <img src="images/icons/icon-like.svg" alt="Like"> 25
+                                            </div>
+                                            <div class="took-part">
+                                                <img src="images/icons/icon-repost.svg" alt="Repost icon"> 6
+                                            </div>
+                                            <div class="person">
+                                                Иван Иванов <span>Специалист</span>
+                                            </div>
+                                            <div class="seen">
+                                                <img src="images/icons/icon-seen.svg" alt="Seen Icon"> 153
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-history">
+                            <div class="title-history">
+                                <img src="images/icons/icon-history.svg" alt="History"> Истории <span
+                                    class="count-competition-organization">16</span>
+                                <a href="#">Показать Все</a>
+                                <a href="#" class="add-history">Добавить Историю</a>
+                            </div>
+                            <div class="blocks-history">
+                                <div class="one-block-history">
+                                    <img src="images/img/image-pet-340x384.svg" alt="Image competition">
+                                    <div class="block-with-description">
+                                        <div class="cup-competition">
+                                            <div class="block">
+                                                <p><img src="images/icons/icon-tag.svg" alt="Ads" class="icon-ads">Обьявление</p>
+                                                <p><img src="images/vertical-line.png" alt=""></p>
+                                                <p>Сегодня</p>
+                                            </div>
+                                            <a href="#"><img src="images/icon-more-ads.png" alt="More"></a>
+                                        </div>
+                                        <div class="information-competition">
+                                            Мальчик, 7 лет
+                                            <img src="images/icon-rating-announcement.png" alt="Rating"> <span
+                                                class="count-rating-announcement">243</span>
+                                        </div>
+                                        <div class="name-competition">
+                                            Доберман
+                                        </div>
+                                        <p>
+                                            Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он
+                                            у
+                                            себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине,
+                                            он
+                                            видел, стоило ему приподнять голову, свой коричневый
+                                        </p>
+                                        <div class="block-buttons">
+                                            <a href="#" class="read-further">Читать далее</a>
+                                        </div>
+                                        <div class="activity-competition margin-top">
+                                            <div class="like">
+                                                <img src="images/icons/icon-like.svg" alt="Like"> 25
+                                            </div>
+                                            <div class="took-part">
+                                                <img src="images/icons/icon-repost.svg" alt="Repost icon"> 6
+                                            </div>
+                                            <div class="person">
+                                                Иван Иванов <span>Специалист</span>
+                                            </div>
+                                            <div class="seen">
+                                                <img src="images/icons/icon-seen.svg" alt="Seen Icon"> 153
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

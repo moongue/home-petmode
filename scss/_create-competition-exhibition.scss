@@ -78,7 +78,6 @@
                 font-weight: normal;
                 &.active-more-filter {
                   background-color: $yellow-three;
-                  border: 1px solid $white-bg;
                 }
               }
             }
@@ -125,24 +124,17 @@
       .next-personal-account,
       .next-step-create-exhibition,
       .publish-create-exhibition {
-        background: none;
         outline: none;
-        border: 1px solid $sunflower-yellow;
         border-radius: 4px;
         font-size: 14px;
-        color: $black-two-50;
+        color: $grey-80;
         font-weight: normal;
         width: 170px;
         height: 40px;
         cursor: pointer;
         margin-top: 24px;
-        &.next-step-create-exhibition,
-        &.publish-create-exhibition,
-        &.next-personal-account {
-          border: none;
-          background-color: $yellow-three;
-          color: $black-80;
-        }
+        border: none;
+        background-color: $yellow-three;
       }
       .on-page-competition {
         font-size: 14px;
@@ -193,7 +185,7 @@
           padding-top: 16px;
           padding-bottom: 8px;
           button {
-            background-color: $white-bg-30;
+            background-color: $white-bg-40;
             border-radius: 4px;
             color: $black-80;
             font-size: 14px;
@@ -311,7 +303,7 @@
       }
     }
     .create-competition-complete,
-    .create-exhibition-complete  {
+    .create-exhibition-complete {
       padding-top: 108px;
       display: block;
       img {

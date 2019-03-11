@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Конкурсы</title>
+    <title>Добавления услуги</title>
 </head>
 <body>
 
@@ -21,11 +21,11 @@
     <div class="wrapper">
         <div class="container-header">
             <div class="logo">
-                <a href="#"><img src="images/small-logo.png" alt="Logo"></a>
+                <a href="#"><img src="images/icons/icon-logo.svg" alt="Logo"></a>
             </div>
 
             <a href="#" class="lines">
-                <img src="images/lines.png" alt="lines">
+                <img src="images/lines.svg" alt="lines">
             </a>
 
             <nav class="menu">
@@ -33,7 +33,7 @@
                     <li class="search-hide-desktop search">
                         <input type="text" placeholder="Поиск" id="search-mob">
                         <label for="search">
-                            <img src="images/vector.png" alt="Search">
+                            <img src="images/icons/icon-search.svg" alt="Search">
                         </label>
                     </li>
                     <li><a href="#">Питомцы</a></li>
@@ -55,12 +55,12 @@
             <div class="search">
                 <input type="text" placeholder="Поиск" id="search">
                 <label for="search">
-                    <img src="images/vector.png" alt="Search">
+                    <img src="images/icons/icon-search.svg" alt="Search">
                 </label>
             </div>
             <a href="#" class="user">
                 <div class="name-user">Иван</div>
-                <img src="images/user.png" alt="User Icon">
+                <img src="images/icons/icon-circle-user.svg" alt="User Icon">
             </a>
         </div>
     </div>
@@ -71,20 +71,20 @@
 <!--ADD SERVICES-->
 <section id="add-services">
     <div class="wrapper">
-        <div class="container-add-services">
+        <div class="container-add">
             <h1>Добавления услуг</h1>
             <div class="two-blocks-add">
                 <div class="first-block">
                     <div class="title-block">
                         Общая информация
                     </div>
-                    <div class="select-services-block">
-                        <select name="service-section" id="service-section">
+                    <div class="select-add-block">
+                        <select name="add-section" id="service-section" class="styles-select">
                             <option>Раздел услуги</option>
                             <option>Раздел услуги</option>
                             <option>Раздел услуги</option>
                         </select>
-                        <select name="type-of-service" id="type-of-service">
+                        <select name="type-of-service" id="type-of-service" class="styles-select">
                             <option>Вид услуги</option>
                             <option>Вид услуги</option>
                             <option>Вид услуги</option>
@@ -99,17 +99,26 @@
 
                     <div class="teg-block">
                         <button class="teg cat">
-                            Кошка <a href="#"><img src="images/delete-teg-icon.png" alt="Delete"></a>
+                            Кошка <a href="#"><img src="images/icons/icon-delete-tag.svg" alt="Delete"></a>
                         </button>
                         <button class="teg humor">
-                            Юмор <a href="#"><img src="images/delete-teg-icon.png" alt="Delete"></a>
+                            Юмор <a href="#"><img src="images/icons/icon-delete-tag.svg" alt="Delete"></a>
                         </button>
                     </div>
                     <p>Не больше 10 тегов</p>
 
                     <input type="text" placeholder="Стоимость" class="styles-input input-price">
-
-                    <div class="additional-service">
+                    <div class="second-block-add lg-show">
+                        <div class="title-block">
+                            Фото услуги
+                        </div>
+                        <div class="loading-photo-block">
+                            <img src="images/icons/icon-loading-photo.svg" alt="Loading Photo">
+                            <a href="#">Загрузить Фото</a>
+                        </div>
+                        <p>Допустимый формат изображений: png, jpg, gif</p>
+                    </div>
+                    <div class="additional-add">
                         <ul>
                             <li>
                                 <div class="block">
@@ -117,7 +126,7 @@
                                     <label for="city1">Выделить объявление</label>
                                     <p>Яркое выделение среди других предложений</p>
                                 </div>
-                                <div class="price">100 &#8381;</div>
+                                <div class="price">100 <img src="images/icons/icon-ruble-blue.svg" alt="ruble"></div>
                             </li>
                             <li>
                                 <div class="block">
@@ -125,7 +134,7 @@
                                     <label for="city2">Закрепить объявление</label>
                                     <p>Закрявляем объявление на 24 часа в начале страницы</p>
                                 </div>
-                                <div class="price">150 &#8381;</div>
+                                <div class="price">150 <img src="images/icons/icon-ruble-blue.svg" alt="ruble"></div>
                             </li>
                             <li>
                                 <div class="block">
@@ -133,23 +142,24 @@
                                     <label for="city3">Опубликовать немедленно</label>
                                     <p>Публикуем объявление без модерации</p>
                                 </div>
-                                <div class="price">50 &#8381;</div>
+                                <div class="price">50 <img src="images/icons/icon-ruble-blue.svg" alt="ruble"></div>
                             </li>
                         </ul>
                     </div>
                     <div class="button-with-text">
                         <input type="button" value="Отправить на модерацию" class="send-for-moderation">
                         <div class="the-cost">
-                            К оплате <span class="count-the-cost">100 руб.</span> Деньги спишутся с вашего счета после прохождения модерации
+                            К оплате <span class="count-the-cost">100 руб.</span> Деньги спишутся с вашего счета после
+                            прохождения модерации
                         </div>
                     </div>
                 </div>
-                <div class="second-block">
+                <div class="second-block-add">
                     <div class="title-block">
                         Фото услуги
                     </div>
                     <div class="loading-photo-block">
-                        <img src="images/loading-icon.png" alt="Loading Photo">
+                        <img src="images/icons/icon-loading-photo.svg" alt="Loading Photo">
                         <a href="#">Загрузить Фото</a>
                     </div>
                     <p>Допустимый формат изображений: png, jpg, gif</p>
@@ -158,12 +168,13 @@
                             Возможности с аккаунтом
                         </div>
                         <ul class="features">
-                            <li>— Бесплатное выделение объявления, раз в неделю </li>
+                            <li>— Бесплатное выделение объявления, раз в неделю</li>
                             <li>— Бесплатное закрепление объявлений, 2 раз в неделю</li>
                             <li>— Мгновенная публикация объявлений</li>
                         </ul>
                         <div class="price">
-                            Стоимость <span class="count-price">700 &#8381; / месяц </span>
+                            Стоимость <span class="count-price">700 <img src="images/icons/icon-ruble-blue.svg"
+                                                                         alt="ruble"> / месяц </span>
                         </div>
                         <input type="button" value="Активировать PRO" class="activated-pro">
                     </div>

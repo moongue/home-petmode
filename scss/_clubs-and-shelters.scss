@@ -1,5 +1,8 @@
 #clubs-and-shelters {
   padding-top: 65px;
+  &.margin-bottom {
+    margin-bottom: 113px;
+  }
   .wrapper {
     border-bottom: 1px solid $white-two;
     border-bottom: 69px;
@@ -46,13 +49,13 @@
         margin-top: 20px;
         text-decoration: none;
         display: flex;
-        &:nth-child(n + 3) {
-          margin-top: 35px;
-        }
+
+
         &Description {
-          padding-left: 27px;
+          padding-left: 16px;
           display: flex;
           flex-direction: column;
+          justify-content: center;
           &__qualification {
             color: $warm-grey;
             font-size: 14.5px;
@@ -75,8 +78,8 @@
             }
           }
           &__name {
-            font-size: 22.5px;
-            color: $black;
+            font-size: 16px;
+            color: $black-font;
             padding-top: 10px;
           }
         }

@@ -17,16 +17,16 @@
         }
         a {
           padding: 11px 32px;
-          color: $black-two-50;
+          color: $grey-60;
           font-size: 14px;
           font-weight: normal;
           text-decoration: none;
-          border: 1px solid $sunflower-yellow;
+          border: 1px solid $white-bg;
           border-left: none;
 
           @include xs-block {
             border: none;
-            border-bottom: 1px solid $sunflower-yellow;
+            border-bottom: 1px solid $white-bg;
           }
           &.first {
             border-radius: 4px 0 0 4px;
@@ -38,10 +38,9 @@
             @include xs(border-radius, 0);
           }
           &.active {
-            color: #000000;
-            font-weight: bold;
-            background-color: $sunflower-yellow;
-            border: 1px solid $sunflower-yellow;
+            color: $grey-80;
+            background-color: $yellow-three;
+            border: 1px solid $yellow-three;
             @include xs(border-radius, 4px);
           }
         }
@@ -135,7 +134,7 @@
         }
         &.slick-prev {
           left: -325px;
-          background: url("../images/slick-arrow-prev.png") no-repeat;
+          background: url("../images/icons/icon-arrow-slick-prev.svg") no-repeat;
           @include sidebar(left, -230px);
           @include lg(left, -120px);
           @include md(left, -43px);
@@ -144,7 +143,7 @@
         }
         &.slick-next {
           right: -325px;
-          background: url("../images/slick-arrow-next.png") no-repeat;
+          background: url("../images/icons/icon-arrow-slick-next.svg") no-repeat;
           @include sidebar(right, -230px);
           @include lg(right, -120px);
           @include md(right, -43px);

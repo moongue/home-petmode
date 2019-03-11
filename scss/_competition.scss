@@ -2,8 +2,7 @@
   .title-competition {
     font-size: 24px;
     color: $black-font;
-    font-weight: normal;
-    padding-top: 45px;
+    padding-top: 65px;
 
     @include xs(text-align, center);
   }
@@ -11,172 +10,193 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    .competition-block {
+      max-width: 370px;
+
+      @include lg-block() {
+        margin-top: 15px;
+      }
+      &.competition-big-block {
+        max-width: 570px;
+        margin-right: 10px;
+      }
+      .img-with-icon {
+        position: relative;
+        a > img {
+          width: 100%;
+          height: auto;
+        }
+        .name {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          color: $white;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        }
+        .seen {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+          color: $white;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
     .row-competition {
       display: flex;
       justify-content: space-between;
       padding-top: 30px;
+      text-align: center;
+
+      @include lg-block() {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+      }
+      &.fix-padding {
+        padding-top: 0;
+
+        @include lg-block() {
+          width: 570px;
+        }
+      }
+    }
+    .col-competition {
+      max-width: 572px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include lg-block() {
+        margin-top: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+    .take-part {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: 1px solid $white-bg;
+      max-width: 366px;
+      padding-bottom: 20px;
 
       @include fix-block() {
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        margin-bottom: 15px;
       }
 
-      :nth-child(2) {
-        margin-left: 20px;
-      }
+      .take-part-block {
+        border: 1px solid $white-bg;
+        border-radius: 8px;
+        padding: 50px 0 0 36px;
+        height: 556px;
+        width: 370px;
+        box-sizing: border-box;
 
-      @include sm-block() {
-        :nth-child(2) {
-          margin-left: 0;
-        }
-      }
-      .col-competition {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        @include fix-block() {
-          flex-direction: row;
-        }
-        @include sm-block() {
-          flex-direction: column;
-          :nth-child(2) {
-            margin-left: 0;
-          }
-        }
-      }
-      .take-part {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-bottom: 1px solid $white-bg;
-        width: 366px;
-        padding-bottom: 20px;
-
-        @include fix-block() {
-          margin-bottom: 15px;
-        }
         @include xs-block() {
-          max-width: 366px;
           width: 100%;
         }
-        .take-part-block {
-          border: 1px solid $white-bg;
-          border-radius: 8px;
-          padding: 50px 0 0 36px;
-          height: 556px;
-          width: 370px;
-          box-sizing: border-box;
-
-          @include xs-block() {
-            width: 100%;
-          }
-          .title-take-part {
-            font-size: 40px;
-            width: 224px;
-            color: $black-font;
-            font-weight: bold;
-            span {
-              font-weight: normal;
-            }
-          }
-          .description-take-part {
-            font-size: 14px;
-            width: 240px;
+        .title-take-part {
+          font-size: 40px;
+          width: 224px;
+          color: $black-font;
+          font-weight: bold;
+          text-align: left;
+          span {
             font-weight: normal;
-            line-height: 24px;
-            color: $black-two-50;
-            padding-top: 43px;
-          }
-          #btn-take-part {
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 70px;
-            color: #000;
-            background: none;
-            outline: none;
-            padding: 13px 36px;
-            border: 1px solid $sunflower-yellow;
-            border-radius: 8px;
           }
         }
-        .name-competition {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding-top: 20px;
-          margin-left: 0 !important;
-          width: 366px;
-
-          @include xs-block() {
-            width: 100%;
-          }
-          a {
-            text-decoration: none;
-            font-size: 16px;
-            color: $black-font;
-          }
-        }
-        .activity-competition {
-          display: flex;
-          justify-content: space-between;
-          color: $black-two-50;
-          padding-top: 19px;
+        .description-take-part {
           font-size: 14px;
-          width: 366px;
-
-          @include xs-block() {
-            width: 100%;
-          }
-          .like {
-            display: flex;
-            align-items: center;
-            img {
-              padding-right: 10px;
-            }
-          }
-          .took-part {
-            display: flex;
-            align-items: center;
-            margin-left: 18px;
-            margin-right: auto;
-
-            img {
-              padding-right: 10px;
-            }
-          }
+          width: 240px;
+          font-weight: normal;
+          line-height: 24px;
+          color: $black-two-50;
+          padding-top: 43px;
+          text-align: left;
+        }
+        #btn-take-part {
+          cursor: pointer;
+          font-size: 16px;
+          margin-top: 70px;
+          color: #000;
+          background: none;
+          display: flex;
+          outline: none;
+          padding: 13px 36px;
+          border: 1px solid $sunflower-yellow;
+          border-radius: 8px;
         }
       }
-      .competition-block {
-        border-bottom: 1px solid $white-bg;
-        padding-bottom: 20px;
-
-        @include fix-block() {
-          margin-bottom: 15px;
+      .sale-price {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 100%;
+        color: $black-font;
+        a {
+          color: $black-font;
+          text-decoration: none;
         }
-        .img-with-icon {
-          position: relative;
-          a {
-            :first-child {
-              display: block;
-              width: 100%;
-              height: auto;
-            }
-          }
-          .icon {
-            position: absolute;
-            top: 0;
-            right: 0;
-          }
-          &.big-img-with-icon {
-            width: 570px;
-
-            @include sm-block() {
-              width: 100%;
-            }
-          }
+      }
+      .activity-competition {
+        width: 100% ;
+        .conditions {
+          font-size: 14px;
+          color: $black-40;
+          font-weight: normal;
+          text-decoration: none;
+          flex-grow: 1;
         }
+      }
+    }
+    .create-competition {
+      margin-top: 24px;
+      max-width: 570px;
+      width: 570px;
+      height: 249px;
+      border: 1px solid $white-bg;
+      border-radius: 8px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      @include lg-block() {
+        max-width: 100%;
+        width: 100%;
+      }
+      @include sm(width, 98%);
+      .semicircle-left {
+        position: absolute;
+        left: -16px;
+      }
+      .semicircle-right {
+        position: absolute;
+        transform: rotate(180deg);
+        right: -16px;
+      }
+      .title-competition-block {
+        font-size: 24px;
+        color: $black-font;
+        span {
+          color: $sunflower-yellow;
+        }
+      }
+      #create-competition-two {
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 14px;
+        padding: 13px 35px;
+        color: #000;
+        border: none;
+        border-radius: 4px;
+        background-color: $yellow-three;
       }
     }
   }

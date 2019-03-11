@@ -16,8 +16,19 @@
         font-size: 24px;
         color: $black-font;
         font-weight: normal;
+        position: relative;
 
         @include md(text-align, center);
+        @include xs(font-size, 20px);
+        .count-all-entries {
+          color: $black-40;
+          font-size: 14px;
+          position: absolute;
+          right: -25px;
+          top: -10px;
+
+          @include xs(right, -10px);
+        }
       }
       #create-competition {
         margin-left: auto;
@@ -37,24 +48,23 @@
         li {
           a {
             padding: 11px 32px;
-            color: $black-two-50;
+            color: $grey-60;
             font-size: 14px;
             font-weight: normal;
             text-decoration: none;
-            border: 1px solid $sunflower-yellow;
+            border: 1px solid $white-bg;
             border-left: none;
             &.first {
               border-radius: 4px 0 0 4px;
               border-left: 1px solid $white-bg;
             }
             &.last {
-              border-radius: 0 8px 8px 0;
+              border-radius: 0 4px 4px 0;
             }
             &.active-filter {
-              color: #000000;
-              font-weight: bold;
-              background-color: $sunflower-yellow;
-              border: 1px solid $sunflower-yellow;
+              color: $grey-80;
+              background-color: $yellow-three;
+              border: 1px solid $yellow-three;
             }
           }
         }
@@ -70,10 +80,8 @@
         justify-content: space-around;
       }
       .block-entries {
-        border-bottom: 1px solid $white-bg;
-        padding-bottom: 20px;
         padding-top: 31px;
-        max-width: 330px;
+        max-width: 370px;
 
         @include fix-block() {
           margin-bottom: 15px;
@@ -81,10 +89,18 @@
         .img-entries {
           position: relative;
           a {
-            :first-child {
               display: block;
+              text-decoration: none;
+            img {
               width: 100%;
               height: auto;
+            }
+            p {
+              text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+              color: $white;
+              position: absolute;
+              bottom: 20px;
+              left: 20px;
             }
           }
         }

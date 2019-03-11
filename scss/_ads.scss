@@ -1,0 +1,167 @@
+#ads {
+  margin-bottom: 72px;
+  .container-ads {
+    .title-ads {
+      line-height: 32px;
+      font-size: 24px;
+      color: $black-font;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+
+      @include md-block() {
+        flex-wrap: wrap;
+      }
+      @include xs-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+      .more-filter {
+        padding-top: 0;
+      }
+      .specific-filter {
+        @include sm-block() {
+          display: flex;
+          margin-top: 15px;
+        }
+        li a {
+          @include xs-block() {
+            padding: 11px 26px;
+          }
+        }
+      }
+    }
+    .top-ads-top {
+      .blocks-ads {
+        .one-ads {
+          .descr-ads {
+            .breed {
+              background-color: $yellow-30;
+            }
+          }
+        }
+      }
+      &:before {
+        content: "";
+        background: $yellow-two;
+        position: absolute;
+        z-index: -1;
+        height: auto;
+        min-height: 328px;
+        width: 100%;
+        left: 0;
+
+        @include md-block() {
+          min-height: 615px;
+        }
+        @include xs-block() {
+          min-height: 925px;
+        }
+      }
+    }
+    .blocks-ads {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      @include row-flex();
+      @include md-block() {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .one-ads {
+        text-decoration: none;
+        max-width: 370px;
+        margin: 40px 10px 0;
+
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        @include size-xs(12);
+
+        .img-block {
+          position: relative;
+          color: $white;
+          > img {
+            width: 100%;
+            height: auto;
+          }
+          .price {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+          }
+          .sentence {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 16px;
+          }
+          .recomended {
+            position: absolute;
+            right: 23px;
+            top: 0;
+          }
+          .slider-img {
+            position: relative;
+            > img {
+              width: 100%;
+              height: auto;
+            }
+            .slick-arrow {
+              position: absolute;
+              outline: none;
+              font-size: 0;
+              height: 23px;
+              width: 5px;
+              border: none;
+              background-color: $white;
+              z-index: 998;
+              &.slick-prev {
+                background: url("../images/icons/icon-arrow-slick-prev-img.svg") no-repeat;
+                left: 21px;
+                top: calc((100% - 23px) / 2);
+              }
+              &.slick-next {
+                background: url("../images/icons/icon-arrow-slick-next-img.svg") no-repeat;
+                right: 21px;
+                top: calc((100% - 23px) / 2);
+              }
+            }
+          }
+          
+        }
+        .descr-ads {
+          padding-top: 16px;
+          font-weight: normal;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .breed {
+            padding: 5px 8px;
+            background-color: $yellow-two;
+            color: $black-60;
+            font-size: 14px;
+            border-radius: 4px;
+          }
+          .sex-birth {
+            color: $grey-60;
+            font-size: 14px;
+          }
+        }
+        &.one-ads-top {
+          padding: 9px;
+          border: 2px solid $sunflower-yellow;
+          border-radius: 8px;
+          background-color: $yellow-20;
+          .descr-ads {
+            .breed {
+              background-color: $yellow-30;
+            }
+          }
+        }
+      }
+    }
+  }
+}

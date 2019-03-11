@@ -37,6 +37,16 @@ function menuLogicCh() {
     });
 }
 
+function showTelephone() {
+    $('.block-show-telephone').click(function(){
+        $('.hide-telephone').hide('slow', function() {
+            $('.show-telephone').show('slow');
+        });
+    });
+}
+
+
+
 function closePopup() {
     $.magnificPopup.close();
 }
@@ -50,13 +60,31 @@ function popup() {
         showCloseBtn: false,
         fixedContentPos: true
     });
+    $('.save-and-send').magnificPopup({
+        showCloseBtn: false,
+        fixedContentPos: true
+    });
 }
 
 function tabs() {
     $('.tabs').lightTabs();
 }
 
+function sliderImg() {
+    $('.slider-img').slick({
+        infinity: true,
+        arrows: true,
+        dots: false
+    });
+}
 
+function sliderImgAds() {
+    $('.image-ads-slider').slick({
+        infinity: true,
+        arrows: true,
+        dots: true
+    });
+}
 
 
 function slider() {
@@ -94,4 +122,8 @@ $(window).on('load', function () {
     closePopup();
     tabs();
     slider();
+    sliderImg();
+    sliderImgAds();
+    showTelephone();
+    showSidebar();
 });

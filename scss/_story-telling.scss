@@ -1,0 +1,188 @@
+#story-telling {
+  padding-top: 36px;
+  padding-bottom: 80px;
+  .container-story-telling {
+    padding-left: 40px;
+
+    @include xs-block() {
+      padding-left: 0;
+    }
+    .title-story-telling {
+      font-size: 16px;
+      line-height: 24px;
+      color: $black-font-two;
+      padding-bottom: 24px;
+      border-bottom: 1px solid $white-bg;
+    }
+    .subtitle-story-telling {
+      padding-top: 20px;
+      font-size: 16px;
+      line-height: 24px;
+      color: $black-font-two;
+    }
+    p {
+      color: $black-40;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 364px;
+
+    }
+    .block-pickup-unit {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 23px;
+      .one-block-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid $white-bg;
+        border-top: none;
+        margin-right: 30px;
+        border-radius: 4px;
+        .img-unit {
+          position: relative;
+        }
+        .icon-accept {
+          position: absolute;
+          background-color: $black-40;
+          width: 170px;
+          height: 128px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .information-unit {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          font-weight: normal;
+          p {
+            font-size: 12px;
+            color: $black-40;
+            text-align: center;
+          }
+          .name-unit {
+            padding-top: 5px;
+            color: $black-font;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .block-download-img {
+      .block {
+        display: flex;
+        padding-top: 19px;
+
+        @include xs-block() {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .block-add {
+          text-decoration: none;
+          width: 270px;
+          height: 168px;
+          background-color: $white-four;
+          border-radius: 8px;
+          border: 1px solid $white-bg;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .block-input {
+          width: 370px;
+          padding-left: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          @include xs-block() {
+            padding-left: 0;
+            margin-top: 15px;
+            width: 100%;
+          }
+          .specify-title-history {
+            height: 32px;
+          }
+          #description-history {
+            height: 56px;
+          }
+        }
+      }
+    }
+    .terms-of-use {
+      margin-top: 37px;
+      .terms-of-use-checkbox + label:before {
+        width: 15px;
+        height: 15px;
+        font-size: 13px;
+        line-height: 18px;
+      }
+      .terms-of-use-checkbox:checked + label:before {
+        background: none;
+      }
+    }
+    .save-and-send {
+      width: 200px;
+      margin-top: 36px;
+      font-weight: normal;
+      font-size: 14px;
+      color: $black-80;
+      text-decoration: none;
+    }
+
+  }
+}
+
+#publication {
+  margin: 0 auto;
+  width: 770px;
+  height: 376px;
+  background-color: #fff;
+  padding: 44px 97px 56px 70px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  position: relative;
+  .mfp-close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+  }
+  .title {
+    text-align: center;
+    font-size: 16px;
+    color: $black-font;
+  }
+  .loading-photo-block {
+    width: 302px;
+    height: 232px;
+    margin-top: 24px;
+    img {
+      padding-top: 80px;
+    }
+  }
+  .first-block {
+    padding-right: 14px;
+  }
+  .second-block {
+    padding-top: 32px;
+    padding-left: 14px;
+    .styles-input {
+      width: 273px ;
+      height: 32px;
+    }
+    textarea {
+      width: 273px;
+      height: 136px;
+      resize: none;
+      color: $black-60;
+      font-size: 14px;
+      font-weight: normal;
+    }
+    .publish {
+      width: 170px;
+      margin-top: 13px;
+    }
+  }
+}

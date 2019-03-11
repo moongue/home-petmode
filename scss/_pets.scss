@@ -5,7 +5,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      h2 {
+        position: relative;
+        .all-announcements {
+          font-size: 14px;
+          color: $grey-60;
+          font-weight: normal;
+          text-decoration: none;
+          position: absolute;
+          right: -95px;
+          top: -15px;
 
+          @include xs(right, 0);
+        }
+      }
       @include sm-block() {
         flex-direction: column;
       }
@@ -68,6 +81,10 @@
             top: 20px;
             left: 20px;
             color: $white;
+            > img {
+              width: 9px;
+              height: 10px;
+            }
           }
           &--selling {
             position: absolute;
@@ -81,9 +98,9 @@
           margin-top: 20px;
           font-size: 14px;
           padding: 5px 8px;
-          background-color: $yellow-three;
+          background-color: $yellow-two;
           font-weight: normal;
-          color: $black-80;
+          color: $black-60;
           border-radius: 4px;
           &-cat {
             color: $light-plum;

@@ -1,5 +1,4 @@
 #services {
-
   .all-services {
     padding-top: 30px;
     .title-count {
@@ -48,6 +47,10 @@
             left: 20px;
             font-size: 14px;
             color: $white;
+            > img {
+              width: 9px;
+              height: 10px;
+            }
           }
           .description-services {
             position: absolute;
@@ -66,6 +69,7 @@
             display: flex;
             img {
               border-radius: 50%;
+
             }
             .block-description-person {
               display: flex;
@@ -96,7 +100,7 @@
                   font-size: 14px;
                 }
               }
-              .rating {
+              .rating-star {
                 display: flex;
                 align-items: center;
                 font-size: 14px;
