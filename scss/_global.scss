@@ -6,12 +6,21 @@ body {
 
 .wrapper {
   @include wrapper();
+  &.is-open {
+    padding-left: 60px;
+  }
 }
 
 .wrapper-small {
   max-width: 980px;
   margin: 0 auto;
   padding: 0 15px;
+  &.is-open {
+    padding-left: 60px;
+    @include lg-block() {
+      padding-left: 0;
+    }
+  }
 }
 
 //INPUTS
@@ -162,6 +171,7 @@ h3 {
 
 .read-more {
   color: $dull-blue;
+  text-decoration: none;
   font-size: 14px;
   cursor: pointer;
   font-weight: normal;
@@ -285,8 +295,44 @@ h3 {
 
 //END ACTIVITY COMPETITION
 
-//GRADATION PAGE
+.skills-pet {
+  padding-top: 28px;
+  .title {
+    font-size: 16px;
+    color: $black-font;
+    line-height: 24px;
+    font-weight: normal;
+  }
+  .block-skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    .one-skill {
+      padding: 5px 10px;
+      background-color: $white-four;
+      border-radius: 4px;
+      color: $grey-60;
+      font-size: 14px;
+      font-weight: normal;
+      margin-right: 8px;
+      margin-top: 8px;
+    }
+    .btn-add-skill {
+      padding: 0 10px;
+      height: 24px;
+      margin-top: 8px;
+      background-color: $yellow-three;
+      color: $grey-80;
+      font-size: 14px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
 
+//GRADATION PAGE
 .pages {
   display: flex;
   align-items: center;
@@ -338,23 +384,196 @@ h3 {
 
 //END LOADING
 
-//SIDEBAR MENU
+//CONTAINER POPUP
+.container-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 630px;
+  height: auto;
+  padding-bottom: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  position: relative;
+  &.fix-padding {
+    padding-bottom: 0;
+  }
+  .block-fast-registration {
+    display: none;
+    & > .container-popup {
+      box-shadow: none;
+    }
+  }
 
+  @include sm-block () {
+    width: 100%;
+  }
+  &.fix-height {
+    height: 272px;
+  }
+  .mfp-close {
+    position: absolute;
+    right: 13px;
+    top: 13px;
+  }
+  .title {
+    margin-top: 36px;
+    line-height: normal;
+    color: $black-font;
+    font-size: 16px;
+    text-align: center;
+    &.margin-bottom {
+      margin-bottom: 24px;
+    }
+  }
+  .icon-complete-registration {
+    margin-top: 32px;
+  }
+  .step {
+    line-height: 20px;
+    font-size: 14px;
+    margin-top: 13px;
+    color: $black-font;
+    font-weight: normal;
+  }
+  .two-blocks-wider {
+    margin-top: 28px;
+    width: 288px;
+    display: flex;
+    justify-content: space-between;
+  }
+  p {
+    line-height: 20px;
+    padding: 0 10px;
+    color: $grey-60;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: normal;
+    max-width: 474px;
+    text-align: center;
+    &.black-font {
+      color: $black-font;
+    }
+    .try-free {
+      text-decoration: none;
+      background-color: $yellow-three;
+      color: $grey-60;
+      padding: 0 3px;
+      border-radius: 8px;
+    }
+  }
+  .input-styles-popup {
+    width: 230px;
+    height: 32px;
+    border: 1px solid $white-bg;
+    margin-top: 23px;
+    box-sizing: border-box;
+    padding-left: 12px;
+    outline: none;
+    border-radius: 4px;
+    &.margin-top {
+      margin-top: 8px;
+    }
+    &.margin-bottom {
+      margin-bottom: 8px;
+    }
+  }
+  .two-blocks {
+    width: 230px;
+    align-items: center;
+    margin-top: 16px;
+    &.small {
+      width: 165px;
+    }
+  }
+  .tooltip {
+    margin-top: 17px;
+    color: $warm-grey-two;
+    line-height: 20px;
+    text-align: center;
+    max-width: 254px;
+    font-size: 14px;
+    font-weight: normal;
+    a {
+      text-decoration: none;
+      color: $grey-80;
+    }
+  }
+  .social-network {
+    display: flex;
+    li {
+      margin-left: 8px;
+    }
+  }
+  .entry {
+    margin-top: 28px;
+    line-height: 20px;
+    margin-bottom: 4px;
+    color: $black-font;
+    font-weight: normal;
+  }
+  .btn-popup {
+    width: 152px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: $yellow-three;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: $grey-80;
+    font-size: 14px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    &.fix-margin {
+      margin-top: 0;
+    }
+    &.full-width {
+      width: 230px;
+    }
+  }
+  .styles-link-popup {
+    margin-top: 21px;
+    text-decoration: none;
+    color: $dull-blue;
+    font-size: 14px;
+    font-weight: normal;
+    &.fix-margin {
+      margin-top: 0;
+    }
+  }
+}
+
+//END CONTAINER POPUP
+
+//SIDEBAR MENU
 .sidebar-menu {
   position: fixed;
+  top: 130px;
   left: 22px;
   z-index: 999;
 
+  @include sidebar-block() {
+    bottom: 65px;
+  }
+
   .notification-bg {
-    position: absolute;
-    left: 15px;
+    position: relative;
     bottom: 0;
+    left: -13px;
+    > img {
+      background: none !important;
+    }
   }
   .notification-count {
     color: $white;
     position: absolute;
-    bottom: 2px;
-    right: 3px;
+    bottom: 6px;
+    left: 6px;
   }
   #show-sidebar {
     display: none;
@@ -392,8 +611,8 @@ h3 {
       padding-top: 15px;
       a {
         text-decoration: none;
-        img {
-          background-color: #fff;
+        > img {
+          background: #fff;
           border-radius: 50%;
         }
       }
@@ -410,6 +629,7 @@ h3 {
 .register-specialist,
 .submit-an-announcement,
 #register-shelter,
+.btn-verification,
 #show-telephone,
 #leave-feedback,
 #register-club,
@@ -489,6 +709,7 @@ h3 {
   }
   &.add {
     padding-left: 38px;
+    color: $black-font-two;
     font-size: 13px;
     cursor: pointer;
     text-align: left;
@@ -543,6 +764,10 @@ textarea {
   color: #000;
 }
 
+.grey-color {
+  color: $black-40;
+}
+
 .styles-checkbox:checked + label {
   color: $black-80;
   font-weight: bold;
@@ -583,6 +808,11 @@ textarea {
   align-items: center;
   justify-content: center;
 
+  &.margin-zero {
+    @include md-block() {
+      margin-top: 0;
+    }
+  }
   @include md-block() {
     flex-basis: auto;
     margin-top: 10px;
@@ -617,6 +847,10 @@ textarea {
       color: $black-font;
       text-decoration: none;
       margin-right: 45px;
+
+      @include xs-block() {
+        margin-right: 20px;
+      }
       font-weight: normal;
       &.active {
         font-weight: bold;
@@ -643,6 +877,44 @@ textarea {
 
 //END BLOCK MORE IMAGE
 
+.photo-video-block, .block-pets, .block-announcement, .block-competition, .block-history {
+  .title, .title-pets, .title-announcement, .title-competition, .title-history {
+    position: relative;
+    .add-more {
+      float: right;
+      color: $black-60;
+      &.pos-right {
+        position: absolute;
+        right: 65px;
+        @include xs-block() {
+          float: inherit;
+          position: absolute;
+          top: 10px;
+          right: 0;
+        }
+      }
+      @include xs-block() {
+        float: inherit;
+        position: absolute;
+        top: 10px;
+        right: 0;
+      }
+    }
+    .add-more-another {
+      position: absolute;
+      right: 0;
+      margin-right: 0;
+      color: $black-60;
+
+      @include xs-block() {
+        position: absolute;
+        right: 0;
+        top: -10px;
+      }
+    }
+  }
+}
+
 //PHOTO VIDEO BLOCK
 .photo-video-block {
   .title {
@@ -657,6 +929,10 @@ textarea {
       text-decoration: none;
       margin-right: 45px;
       font-weight: normal;
+
+      @include xs-block() {
+        margin-right: 5px;
+      }
       &.active {
         font-weight: bold;
       }
@@ -676,8 +952,23 @@ textarea {
     img {
       margin-top: 24px;
     }
+    .block-add {
+      width: 240px;
+      height: 160px;
+      background-color: $white-bg-40;
+      border-radius: 4px;
+      color: $black-40;
+      font-size: 14px;
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      margin-top: 24px;
+    }
   }
 }
+
 //END PHOTO VIDEO BLOCK
 
 //BLOCK PETS
@@ -700,6 +991,20 @@ textarea {
       padding-left: 21px;
     }
   }
+  .block-add {
+    width: 170px;
+    height: 200px;
+    background-color: $white-bg-40;
+    border-radius: 4px;
+    color: $black-40;
+    font-size: 14px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 24px;
+  }
   .blocks-pet {
     display: flex;
     flex-wrap: wrap;
@@ -714,6 +1019,10 @@ textarea {
       width: 170px;
       margin-top: 24px;
       padding-right: 30px;
+
+      @include sm-block() {
+        padding-right: 0;
+      }
       .block-img {
         position: relative;
         .settings {
@@ -757,6 +1066,7 @@ textarea {
     }
   }
 }
+
 //END BLOCK PETS
 
 //BLOCK ANNOUNCEMENT
@@ -796,6 +1106,7 @@ textarea {
 
       @include xs-block() {
         max-width: 370px;
+        width: 100%;
       }
       .cup-announcement {
         display: flex;
@@ -901,6 +1212,7 @@ textarea {
     }
   }
 }
+
 //END BLOCK ANNOUNCEMENT
 
 //BLOCK COMPETITION AND BLOCK HOSTORY
@@ -911,6 +1223,7 @@ textarea {
     padding-bottom: 9px;
     border-bottom: 1px solid $white-bg;
     padding-top: 29px;
+    position: relative;
 
     .count-competition-organization {
       padding-left: 5px;
@@ -925,6 +1238,13 @@ textarea {
     }
     .add-history {
       float: right;
+
+      @include xs-block() {
+        float: inherit;
+        position: absolute;
+        top: 10px;
+        right: 0;
+      }
     }
   }
   .one-block-competition, .one-block-history {
@@ -949,7 +1269,6 @@ textarea {
       border-left: none;
       border-radius: 0 8px 8px 0;
       justify-content: space-between;
-
 
       @include sm-block() {
         margin-top: 15px;
@@ -1082,9 +1401,8 @@ textarea {
     }
   }
 }
+
 //END BLOCK COMPETITION AND BLOCK HOSTORY
-
-
 
 //SIDE PANEL
 .side-panel {
@@ -1563,25 +1881,29 @@ textarea {
 
 //SIDEBAR
 #sidebar-menu-hider {
-  #checkbox_toggle:checked ~ .sidebar-menu-hider {
-    display: block;
-  }
 
   .sidebar-menu-hider {
-    //display: none;
     position: fixed;
-    left: 0;
+    left: -250px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     width: 268px;
     padding: 28px 38px 120px 89px;
     box-sizing: border-box;
     background-color: #fff;
     z-index: 233;
+    &.is-open {
+      left: 0;
+      //transition: ;
+    }
+    &.active {
+      top: 0;
+    }
     .show-sidebar {
       position: absolute;
       right: -36px;
       top: calc((100% - 15px) / 2);
       cursor: pointer;
+
     }
 
     .block-user {

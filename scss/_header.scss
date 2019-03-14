@@ -1,10 +1,10 @@
 #header {
-  background: url(../images/bgc-img.png) no-repeat center center;
+  background: url(../images/img/image-bg-banner.svg) no-repeat center center;
   background-size: cover;
   height: 558px;
 
   @include sm-block() {
-    background: url(../images/bgc-img.png) no-repeat 80% 80%;
+    background: url(../images/img/image-bg-banner.svg) no-repeat 80% 80%;
   }
   .container-header {
     position: relative;
@@ -144,6 +144,8 @@
       background-color: $white-bg-30;
       padding: 5px 15px;
       border-radius: 15px;
+      box-sizing: border-box;
+      width: 170px;
 
       @include md-block() {
         margin-right: 100px;
@@ -162,7 +164,7 @@
         outline: none;
         padding-left: 10px;
         color: $white;
-        width: 80px;
+        width: 120px;
         &::-webkit-input-placeholder {
           color: $white;
         }
@@ -177,7 +179,6 @@
         }
       }
       img {
-        filter: contrast(10%);
         @include xs-block() {
           padding-right: 10px;
         }
@@ -352,278 +353,5 @@
 
 
 
-#sign-in-form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 4px;
-  color: $warm-grey;
-  font-size: 14px;
-  margin: 0 auto;
-  height: 450px;
-  max-width: 540px;
-  background-color: $white;
-  font-weight: normal;
-  a {
-    text-decoration: none;
-    color: $dull-blue;
-    border-bottom: 1px dotted $dull-blue-two;
-    font-size: 14px;
-  }
-  .title {
-    padding-top: 55px;
-    font-weight: bold;
-    h2 {
-      text-align: center;
-    }
-  }
-
-  .login-with {
-    padding-top: 20px;
-    font-weight: normal;
-  }
-  .inputs {
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    input {
-      background: none;
-      border: 1px solid $camo-green;
-      border-radius: 4px;
-      outline: none;
-      box-sizing: border-box;
-      padding-left: 15px;
-      padding-right: 55px;
-      color: $warm-grey;
-      font-size: 16px;
-      max-width: 376px;
-      height: 47px;
-
-      &:focus,
-      active {
-        color: $black;
-      }
-    }
-    .password {
-      margin-top: 17px;
-      background: url("../images/password-icon.png") no-repeat 96% 50%;
-    }
-    .email {
-      background: url("../images/email-icon.png") no-repeat 96% 50%;
-    }
-  }
-  .go-in {
-    margin-top: 30px;
-    padding-top: 4px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    color: $black;
-    font-weight: bold;
-    width: 270px;
-    height: 48px;
-    background-color: $sunflower-yellow;
-    cursor: pointer;
-  }
-  .no-account {
-    padding-top: 30px;
-  }
-  .mfp-close {
-    position: absolute;
-    background: none;
-    border: none;
-    outline: none;
-    top: 0;
-    right: 0;
-  }
-}
-
-#sign-up-form {
-  max-width: 720px;
-  height: auto;
-  background-color: $white;
-  border-radius: 4px;
-  margin: 0 auto;
-  position: relative;
-  color: $warm-grey;
-  font-size: 14px;
-  font-weight: normal;
-  a {
-    text-decoration: none;
-    color: $dull-blue;
-    border-bottom: 1px dotted $dull-blue-two;
-    font-size: 14px;
-  }
-  > div {
-    .register-user,
-    .register-specialist-form,
-    .register-breeder,
-    .register-club,
-    .register-shelter {
-      text-align: center;
-      padding-top: 25px;
-      max-width: 584px;
-      margin: 0 auto;
-      .title {
-        font-weight: bold;
-        padding-top: 40px;
-      }
-      .login-with {
-        padding-top: 25px;
-      }
-      .inputs {
-        .inputs-name, .work-experience-and-qualification {
-          display: flex;
-          justify-content: space-between;
-          padding: 35px 0 17px;
-          .name, .surname, .work-experience, .qualification {
-            width: 285px;
-            border: 1px solid $camo-green;
-            border-radius: 4px;
-            outline: none;
-            box-sizing: border-box;
-            padding-left: 15px;
-            padding-right: 55px;
-            color: $warm-grey;
-            font-size: 16px;
-            height: 47px;
-
-            background: url("../images/icon-register-user.png") no-repeat 89% 50%;
-            &:focus,
-            active {
-              color: $black;
-            }
-          }
-        }
-        .inputs-name, .work-experience-and-qualification {
-          .qualification {
-            background: url("../images/select-icon.png") no-repeat 89% 50%;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-          }
-          .work-experience {
-            background: url("../images/icon-star.png") no-repeat 89% 50%;
-          }
-          @include sm-block() {
-            display: flex;
-            flex-direction: column;
-            .name, .surname, .work-experience, .qualification {
-              width: 100%;
-              background-position: 95% 50%;
-            }
-            .surname, .work-experience {
-              margin-top: 17px;
-            }
-          }
-
-        }
-        .work-experience-and-qualification {
-          padding-top: 0;
-        }
-        .password, .email {
-          width: 100%;
-          height: 47px;
-          background: none;
-          border: 1px solid $camo-green;
-          border-radius: 4px;
-          outline: none;
-          box-sizing: border-box;
-          padding-left: 15px;
-          padding-right: 55px;
-          color: $warm-grey;
-          font-size: 16px;
-          &:focus,
-          active {
-            color: $black;
-          }
-        }
-        .password {
-          margin-top: 17px;
-          background: url("../images/password-icon.png") no-repeat 95% 50%;
-        }
-        .email {
-          background: url("../images/email-icon.png") no-repeat 95% 50%;
-        }
-      }
-      .go-in {
-        margin-top: 30px;
-        padding-top: 4px;
-        border-radius: 4px;
-        border: none;
-        outline: none;
-        font-size: 16px;
-        color: $black;
-        font-weight: bold;
-        width: 270px;
-        height: 48px;
-        background-color: $sunflower-yellow;
-        cursor: pointer;
-      }
-      .have-account {
-        padding-top: 30px;
-        padding-bottom: 30px;
-      }
-    }
-
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    @include sm-block() {
-      flex-direction: column;
-    }
-
-    li {
-      margin: 0;
-      cursor: pointer;
-      display: block;
-      width: 144px;
-      padding: 20px 0;
-      border-right: 1px solid $white-two;
-      border-bottom: 1px solid $white-two;
-      color: $warm-grey;
-      text-align: center;
-
-      @include sm-block() {
-        width: 100%;
-        padding: 10px 0;
-        font-size: 16px;
-      }
-
-      &.active, .active:hover {
-        background-color: $white-two;
-        font-weight: bold;
-        color: $black;
-        border-bottom: 2px solid $sunflower-yellow;
-      }
-      &:hover {
-        background: #d6d6d7;
-      }
-      &:last-child {
-        border-right: none;
-        border-top-right-radius: 4px;
-      }
-      &:first-child {
-        border-top-left-radius: 4px;
-      }
-    }
-  }
-  .mfp-close {
-    position: absolute;
-    background: none;
-    border: none;
-    outline: none;
-    top: 0;
-    right: 0;
-  }
-}
 
 

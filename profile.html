@@ -24,7 +24,7 @@
         </div>
 
         <a href="#" class="lines">
-            <img src="images/lines.svg" alt="lines">
+            <img src="images/icons/icon-lines.svg" alt="lines">
         </a>
 
         <nav class="menu">
@@ -88,7 +88,7 @@
         <li><a href="#"><img src="images/icons/icon-sidebar-user.svg" alt="Icon User"></a></li>
         <li><a href="#"><img src="images/icons/icon-sidebar-alert.svg" alt="Icon Alert"></a><a href="#"
                                                                                                class="notification-bg"><img
-                src="images/icons/icon-sidebar-notofication-bg.svg" alt="Notification" class="notification-bg"><span
+                src="images/icons/icon-sidebar-notofication-bg.svg" alt="Notification"><span
                 class="notification-count">2</span></a></li>
         <li><a href="#"><img src="images/icons/icon-sidebar-message.svg" alt="Icon Message"></a></li>
         <li><a href="#"><img src="images/icons/icon-sidebar-store.svg" alt="Icon Store"></a></li>
@@ -97,7 +97,7 @@
 </div>
 <!--END SIDEBAR-->
 
-
+<!--PROFILE-->
 <section id="profile">
     <div class="wrapper-small">
         <div class="container-profile">
@@ -168,7 +168,7 @@
                         <div class="header-user">
                             <div class="qualification">Заводчик</div>
                             <div class="online">Online</div>
-                            <div class="block-reviews">
+                            <div class="block-reviews margin-zero">
                                 <div class="reviews-good">
                                     12 <img src="images/icons/icon-smile.svg" alt="Smile">
                                 </div>
@@ -177,23 +177,27 @@
                                 </div>
                             </div>
                             <div class="days-registration">638 дней</div>
-                            <img src="images/icons/icon-rating.svg" alt="rating">
+                            <div class="rating-profile">
+                                <img src="images/icons/icon-rating.svg" alt="rating">
+                            </div>
                         </div>
                         <div class="block-name">
                             <div class="name">
-                                <img src="images/icons/icon-activated.svg" alt="">
-                                Александр Иванов
+                                <p><img src="images/icons/icon-activated.svg" alt="">
+                                    Александр Иванов</p>
+                                <div class="location">Красноярск, Россия</div>
                             </div>
                             <div class="buttons">
                                 <input type="button" value="Оставить отзыв" id="leave-feedback">
                                 <input type="button" value="Пожаловаться" id="complain">
                             </div>
                         </div>
-                        <div class="location">Красноярск, Россия</div>
+
 
                         <div class="information">
                             <div class="block">
-                                <button id="request-call"><img src="images/icons/icon-request-call.svg" alt=""> Показать
+                                <button id="request-call" class="margin-zero"><img
+                                        src="images/icons/icon-request-call.svg" alt=""> Показать
                                     телефон
                                 </button>
                                 <div class="e-mail">fyodorov.yan@gmail.com</div>
@@ -254,6 +258,8 @@
                             <div class="title">
                                 <a href="#" class="active">Фото <span class="count-photo">35</span></a>
                                 <a href="#">Видео <span class="count-video">43</span></a>
+                                <a href="#" class="add-more pos-right">Добавить Фото</a>
+                                <a href="#" class="add-more-another">Добавить Видео</a>
                             </div>
                             <div class="blocks">
                                 <img src="images/img/image-materials-240x160.svg" alt="Photo">
@@ -266,14 +272,18 @@
                                 <img src="images/icons/icon-pawprint.svg" alt="Pawprint"> Питомцы <span
                                     class="count-pets-organization">12</span>
                                 <a href="#">Показать Все</a>
+                                <a href="#" class="add-more">Добавить Питомца</a>
+
                             </div>
                             <div class="blocks-pet">
                                 <div class="one-block-pet">
                                     <div class="block-img">
                                         <img src="images/img/image-employee-170x128.svg" alt="Employee">
                                         <div class="settings">
-                                            <button class="setting"><img src="images/icons/icon-gear.svg" alt="Settings"></button>
-                                            <button class="close"><img src="images/icons/icon-close-pets.svg" alt="Close">
+                                            <button class="setting"><img src="images/icons/icon-gear.svg"
+                                                                         alt="Settings"></button>
+                                            <button class="close"><img src="images/icons/icon-close-pets.svg"
+                                                                       alt="Close">
                                             </button>
                                         </div>
                                     </div>
@@ -318,19 +328,20 @@
                         </div>
                         <div class="block-announcement">
                             <div class="title-announcement">
-                                <img src="images/icons/icon-tag.svg" alt="Ads"> Объявления <span
+                                <img src="images/icons/icon-annoucement.svg" alt="Ads"> Мои объявления <span
                                     class="count-announcement-organization">16</span>
                                 <a href="#">Показать Все</a>
+                                <a href="#" class="add-more">Добавить Объявление</a>
                             </div>
                             <div class="blocks-announcement">
                                 <div class="one-block-announcement">
                                     <div class="cup-announcement">
                                         <div class="block">
                                             <p>Обьявление</p>
-                                            <p><img src="images/vertical-line.png" alt=""></p>
+                                            <p><img src="images/icons/icon-vertical-line-small.svg" alt=""></p>
                                             <p>Сегодня</p>
                                         </div>
-                                        <a href="#"><img src="images/icon-more-ads.png" alt="More"></a>
+                                        <a href="#"><img src="images/icons/icon-more-ads.svg" alt="More"></a>
                                     </div>
                                     <div class="img-block">
                                         <img src="images/img/image-adv-370x224.svg" alt="Image">
@@ -341,13 +352,14 @@
                                             Мальчик, 7 лет
                                         </div>
                                         <div class="rating-announcement">
-                                            <img src="images/icon-rating-announcement.png" alt="Rating"> <span
+                                            <img src="images/icons/icon-rating-pet.svg" alt="Rating"> <span
                                                 class="count-rating-announcement">243</span>
                                         </div>
                                     </div>
                                     <div class="block-footer">
                                         <div class="price-block">
-                                            <div class="price">9 900 <img src="images/icons/icon-ruble-big.svg" alt="ruble">
+                                            <div class="price">9 900 <img src="images/icons/icon-ruble-big.svg"
+                                                                          alt="ruble">
                                             </div>
                                             <button class="btn-buy">Купить</button>
                                         </div>
@@ -371,10 +383,10 @@
                                     <div class="cup-announcement">
                                         <div class="block">
                                             <p>Обьявление</p>
-                                            <p><img src="images/vertical-line.png" alt=""></p>
+                                            <p><img src="images/icons/icon-vertical-line-small.svg" alt=""></p>
                                             <p>Сегодня</p>
                                         </div>
-                                        <a href="#"><img src="images/icon-more-ads.png" alt="More"></a>
+                                        <a href="#"><img src="images/icons/icon-more-ads.svg" alt="More"></a>
                                     </div>
                                     <div class="img-block">
                                         <img src="images/img/image-adv-370x224.svg" alt="Image">
@@ -385,13 +397,14 @@
                                             Мальчик, 7 лет
                                         </div>
                                         <div class="rating-announcement">
-                                            <img src="images/icon-rating-announcement.png" alt="Rating"> <span
+                                            <img src="images/icons/icon-rating-pet.svg" alt="Rating"> <span
                                                 class="count-rating-announcement">243</span>
                                         </div>
                                     </div>
                                     <div class="block-footer">
                                         <div class="price-block">
-                                            <div class="price">9 900 <img src="images/icons/icon-ruble-big.svg" alt="ruble">
+                                            <div class="price">9 900 <img src="images/icons/icon-ruble-big.svg"
+                                                                          alt="ruble">
                                             </div>
                                             <button class="btn-buy">Купить</button>
                                         </div>
@@ -418,6 +431,8 @@
                                 <img src="images/icons/icon-competition.svg" alt="Competition"> Объявления <span
                                     class="count-competition-organization">16</span>
                                 <a href="#">Показать Все</a>
+                                <a href="#" class="add-more">Добавить Конкурс</a>
+
                             </div>
                             <div class="blocks-competition">
                                 <div class="one-block-competition">
@@ -425,31 +440,35 @@
                                     <div class="block-with-description">
                                         <div class="cup-competition">
                                             <div class="block">
-                                                <p><img src="images/icons/icon-tag.svg" alt="Ads" class="icon-ads">Обьявление</p>
-                                                <p><img src="images/vertical-line.png" alt=""></p>
+                                                <p><img src="images/icons/icon-tag.svg" alt="Ads" class="icon-ads">Обьявление
+                                                </p>
+                                                <p><img src="images/icons/icon-vertical-line-small.svg" alt=""></p>
                                                 <p>Сегодня</p>
                                             </div>
-                                            <a href="#"><img src="images/icon-more-ads.png" alt="More"></a>
+                                            <a href="#"><img src="images/icons/icon-more-ads.svg" alt="More"></a>
                                         </div>
                                         <div class="information-competition">
                                             Мальчик, 7 лет
-                                            <img src="images/icon-rating-announcement.png" alt="Rating"> <span
+                                            <img src="images/icons/icon-rating-pet.svg" alt="Rating"> <span
                                                 class="count-rating-announcement">243</span>
                                         </div>
                                         <div class="name-competition">
                                             Доберман
                                         </div>
                                         <p>
-                                            Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он
+                                            Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил,
+                                            что он
                                             у
-                                            себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине,
+                                            себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой
+                                            спине,
                                             он
                                             видел, стоило ему приподнять голову, свой коричневый
                                         </p>
                                         <div class="block-buttons">
                                             <input type="button" value="Купить" class="buy-competition">
                                             <input type="button" value="Написать" class="write-competition">
-                                            <div class="price-competition">9 900 <img src="images/icons/icon-ruble-big.svg" alt="ruble"></div>
+                                            <div class="price-competition">9 900 <img
+                                                    src="images/icons/icon-ruble-big.svg" alt="ruble"></div>
                                         </div>
                                         <div class="activity-competition">
                                             <div class="like">
@@ -482,24 +501,27 @@
                                     <div class="block-with-description">
                                         <div class="cup-competition">
                                             <div class="block">
-                                                <p><img src="images/icons/icon-tag.svg" alt="Ads" class="icon-ads">Обьявление</p>
-                                                <p><img src="images/vertical-line.png" alt=""></p>
+                                                <p><img src="images/icons/icon-tag.svg" alt="Ads" class="icon-ads">Обьявление
+                                                </p>
+                                                <p><img src="images/icons/icon-vertical-line-small.svg" alt=""></p>
                                                 <p>Сегодня</p>
                                             </div>
-                                            <a href="#"><img src="images/icon-more-ads.png" alt="More"></a>
+                                            <a href="#"><img src="images/icons/icon-more-ads.svg" alt="More"></a>
                                         </div>
                                         <div class="information-competition">
                                             Мальчик, 7 лет
-                                            <img src="images/icon-rating-announcement.png" alt="Rating"> <span
+                                            <img src="images/icons/icon-rating-pet.svg" alt="Rating"> <span
                                                 class="count-rating-announcement">243</span>
                                         </div>
                                         <div class="name-competition">
                                             Доберман
                                         </div>
                                         <p>
-                                            Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он
+                                            Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил,
+                                            что он
                                             у
-                                            себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине,
+                                            себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой
+                                            спине,
                                             он
                                             видел, стоило ему приподнять голову, свой коричневый
                                         </p>

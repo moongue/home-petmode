@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Профиль</title>
+</head>
+<body>
+
+<!--HEADER-->
+<header id="header-ch" style="padding: 0 24px">
+    <div class="container-header">
+        <div class="logo">
+            <a href="#"><img src="images/icons/icon-logo.svg" alt="Logo"></a>
+        </div>
+
+        <a href="#" class="lines">
+            <img src="images/icons/icon-lines.svg" alt="lines">
+        </a>
+
+        <nav class="menu">
+            <ul class="menu-a small-menu">
+                <li class="search-hide-desktop search search-show-sm">
+                    <input type="text" placeholder="Поиск" id="search-mob">
+                    <label for="search">
+                        <img src="images/icons/icon-search.svg" alt="Search">
+                    </label>
+                </li>
+                <li><a href="#">Питомцы</a></li>
+                <li><a href="#">Специалисты</a></li>
+                <li><a href="#">Моя радость</a></li>
+                <li class="active-menu"><a href="#">Конкурсы</a></li>
+                <li><label class="link color-grey" for="hider" id="more">Ещё <span>...</span></label>
+                    <input type="checkbox" id="hider">
+                    <ul class="content">
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Рейтинг</a></li>
+                        <li><a href="#">Выставка</a></li>
+                        <li><a href="#">Благотворительность</a></li>
+                    </ul>
+                </li>
+                <li class="buy-pro-account buy-pro-account-show-sm">
+                    <div class="pro">
+                        <div class="pro-bd">Pro</div>
+                        <p>Аккаунт</p>
+                    </div>
+                    <a href="#" class="btn-buy-pro-account">Купить</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="search bg-none margin-fix search-fix">
+            <label for="search">
+                <img src="images/icons/icon-search.svg" alt="Search">
+            </label>
+            <input type="text" placeholder="Поиск" id="search">
+
+        </div>
+        <div class="buy-pro-account">
+            <div class="pro">
+                <div class="pro-bd">Pro</div>
+                <p>Аккаунт</p>
+            </div>
+            <a href="#" class="btn-buy-pro-account">Купить</a>
+        </div>
+        <a href="#" class="user">
+            <div class="name-user">Иван</div>
+            <img src="images/icons/icon-circle-user.svg" alt="User Icon">
+        </a>
+    </div>
+</header>
+<!--END HEADER-->
+
+<!--SIDEBAR-->
+<div class="sidebar-menu">
+    <input type="checkbox" id="show-sidebar">
+    <label for="show-sidebar"><img src="images/icons/icon-sidebar-add.svg" alt="select-icon"></label>
+    <ul class="sidebar">
+        <li><a href="#"><img src="images/icons/icon-sidebar-user.svg" alt="Icon User"></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-alert.svg" alt="Icon Alert"></a><a href="#"
+                                                                                               class="notification-bg"><img
+                src="images/icons/icon-sidebar-notofication-bg.svg" alt="Notification"><span
+                class="notification-count">2</span></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-message.svg" alt="Icon Message"></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-store.svg" alt="Icon Store"></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-add.svg" alt="Icon Add"></a></li>
+    </ul>
+</div>
+<!--END SIDEBAR-->
+
+<!--SIDEBAR MENU HIDE-->
+<section id="sidebar-menu-hider">
+
+    <div class="sidebar-menu-hider">
+        <div class="show-sidebar"><img src="images/icons/icon-toggle-sidebar-menu.svg"></div>
+        <div class="rating another-theme">
+            <div class="rating-organization">
+                <p>Рейтинг</p>
+                <div class="count-rating-organization">
+                    2 253
+                </div>
+                <img src="images/icons/icon-small-wreaths.svg" alt="Wreath" class="wreaths">
+            </div>
+            <div class="position-organization">
+                <p>Место <img src="images/icons/icon-up.svg" alt="Up"><span
+                        class="count-position-company">3</span>
+                </p>
+                <div class="count-rating-organization">
+                    53
+                </div>
+                <img src="images/icons/icon-small-wreaths.svg" alt="Wreath" class="wreaths">
+            </div>
+        </div>
+        <a href="#" class="block-user">
+            <img src="images/icons/icon-circle-user.svg" alt="User">
+            <div class="block-name">
+                <div class="name">
+                    Александр
+                </div>
+                <div class="surname">
+                    Иванов
+                </div>
+            </div>
+        </a>
+        <div class="block-change">
+            <input type="button" value="Изменить" class="change">
+            <img src="images/icons/icon-attendance-rating.svg" alt="">
+        </div>
+        <ul class="menu-site">
+            <li><a href="#"><img src="images/icons/icon-menu-my-profile.svg" alt="">Мой профиль</a></li>
+            <li><a href="#"><img src="images/icons/icon-menu-news.svg" alt="">Новости</a></li>
+            <li><a href="#"><img src="images/icons/icon-menu-my-pets.svg" alt="">Мои Питомцы</a></li>
+            <li><a href="#"><img src="images/icons/icon-menu-photo-video.svg" alt="">Фото,
+                Видео</a></li>
+            <li><a href="#"><img src="images/icons/icon-history.svg" alt="">Истории</a></li>
+            <li><a href="#"><img src="images/icons/icon-menu-tag.svg" alt="">Объявления</a></li>
+            <li><a href="#"><img src="images/icons/icon-menu-cup.svg" alt="">Конкурсы</a></li>
+            <li><a href="#"><img src="images/icons/icon-menu-favourites.svg" alt="">Избранное</a></li>
+        </ul>
+        <a href="#" class="settings-menu"><img src="images/icons/icon-menu-settings.svg" alt="">Настройки</a>
+
+    </div>
+</section>
+<!--END SIDEBAR HIDE-->
+
+<!--PROFILE-->
+<section id="profile">
+    <div class="wrapper-small">
+        <div class="container-profile">
+            <div class="blocks-user-content">
+                <div class="block-user">
+                    <div class="loading-photo-profile">
+                        <a href="#"><img src="images/icons/icon-photo-camera.svg" alt=""></a>
+                        <a href="#" class="load-photo">Загрузит Фото</a>
+                    </div>
+                    <div class="buttons">
+                        <input class="btn-write" type="button" value="Написать">
+                        <button class="add-user"><img src="images/icons/icon-add-user.svg" alt="Add user"></button>
+                    </div>
+                    <div class="side-panel">
+                        <div class="subscriptions">
+                            <p>Подписки <span class="count-subscriptions">35</span></p>
+                            <div class="search-subscriptions-block">
+                                <input type="text" id="search-subscriptions" placeholder="Пушистик">
+                                <label for="search-subscriptions">
+                                    <img src="images/icons/icon-search.svg" alt="Search">
+                                </label>
+                            </div>
+                            <div class="blocks-subscriptions">
+                                <div class="one-block-subscriptions">
+                                    <img src="images/img/image-circle-38x38.svg" alt="Image subscriptions">
+                                    <div class="description-subscriptions">
+                                        <p>Клуб</p>
+                                        <div class="name-subscriptions">«Пушистик»</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accounts">
+                            <div class="search-accounts-block">
+                                <input type="text" id="search-accounts" placeholder="Аккаунты  6">
+                                <label for="search-accounts">
+                                    <img src="images/icons/icon-search.svg" alt="Search">
+                                </label>
+                            </div>
+                            <div class="blocks-accounts">
+                                <div class="one-block-accounts">
+                                    <img src="images/img/image-circle-38x38.svg" alt="Image subscriptions">
+                                    <div class="description-accounts">
+                                        <p>Клуб</p>
+                                        <div class="name-accounts">«Пушистик»</div>
+                                    </div>
+                                </div>
+                                <div class="one-block-accounts">
+                                    <img src="images/img/image-circle-38x38.svg" alt="Image subscriptions">
+                                    <div class="description-accounts">
+                                        <p>Питомник</p>
+                                        <div class="name-accounts">Дези Делайт</div>
+                                    </div>
+                                </div>
+                                <div class="one-block-accounts">
+                                    <img src="images/img/image-circle-38x38.svg" alt="Image subscriptions">
+                                    <div class="description-accounts">
+                                        <p>Специалист</p>
+                                        <div class="name-accounts">Илья Петров</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-user with-setting">
+                    <div class="settings-profile">
+                        <div class="title">
+                            Основное
+                        </div>
+                        <div class="one-block-input">
+                            <p>Имя</p>
+                            <div class="name">Иван Иванов</div>
+                            <a href="#" class="dop-input">Изменить</a>
+                        </div>
+                        <div class="one-block-input fix-flex">
+                            <p class="margin-top">Email</p>
+                            <div class="block-new-string">
+                                <input type="text" class="input-styles-profile" placeholder="Новый email">
+                                <input type="button" class="btn-styles" value="Сохранить">
+                            </div>
+                            <a href="#" class="margin-top dop-input">Отмена</a>
+
+                        </div>
+                        <div class="one-block-input">
+                            <p>Пароль</p>
+                            <div class="password"> &bull; &bull; &bull; &bull; &bull; &bull;</div>
+                            <a href="#" class="dop-input">Изменить</a>
+                        </div>
+                        <div class="one-block-input fix-jc border-bottom-none">
+                            <p class="not-verification">Не верифицирован</p>
+                            <a href="#verification" class="btn-verification">Пройти верификацию</a>
+                        </div>
+                        <div id="verification" class="mfp-hide white-popup-block">
+                            <div class="container-popup">
+                                <button type="button" onClick="closePopup();" class="mfp-close"><img
+                                        src="images/icons/icon-small-close.svg" alt="Close">
+                                </button>
+                                <div class="title">
+                                    Верификация
+                                </div>
+                                <div class="step">
+                                    Шаг 1
+                                </div>
+                                <p>На какой телефон отправить код подтверждения?</p>
+                                <input type="text" class="input-styles-popup" placeholder="Телефон">
+                                <a href="#verification2" class="btn-popup next-step-verification">Далее</a>
+                            </div>
+                        </div>
+                        <div id="verification2" class="mfp-hide white-popup-block">
+                            <div class="container-popup">
+                                <button type="button" onClick="closePopup();" class="mfp-close"><img
+                                        src="images/icons/icon-small-close.svg" alt="Close">
+                                </button>
+                                <div class="title">
+                                    Введите код подтверждения
+                                </div>
+                                <div class="step">
+                                    Шаг 2
+                                </div>
+                                <p>На какой телефон отправить код подтверждения?</p>
+                                <input type="text" class="input-styles-popup" placeholder=" Код подтверждения">
+                                <a href="#" class="btn-popup">Код подтверждения</a>
+                            </div>
+                        </div>
+                        <div class="title padding-top">
+                            Изменить специализации
+                        </div>
+                        <div class="one-block-input border-bottom-none">
+                            <input type="button" value="Стать заводчиком" class="btn-styles fix-width margin-top">
+                        </div>
+                        <div class="title padding-top">
+                            Ссылки
+                            <p>Укажите ваши контакты в соц.сетях</p>
+                        </div>
+                        <div class="one-block-input border-bottom-none padding margin-top">
+                            <p>Vkontakte</p>
+                            <input type="text" class="input-styles-profile" placeholder="Ссылка">
+                            <a href="#" class="dop-input">Изменить</a>
+                        </div>
+                        <div class="one-block-input border-bottom-none padding">
+                            <p>Instagram</p>
+                            <input type="text" class="input-styles-profile" placeholder="Ссылка">
+                            <a href="#" class="dop-input">Изменить</a>
+                        </div>
+                        <div class="one-block-input border-bottom-none padding">
+                            <p>OK</p>
+                            <input type="text" class="input-styles-profile" placeholder="Ссылка">
+                            <a href="#" class="dop-input">Изменить</a>
+                        </div>
+                        <div class="one-block-input border-bottom-none padding">
+                            <p>Facebook</p>
+                            <input type="text" class="input-styles-profile" placeholder="Ссылка">
+                            <a href="#" class="dop-input">Изменить</a>
+                        </div>
+                        <div class="title padding-top">
+                            Уведомления
+                            <p>Отметьте нужные уведомления</p>
+                        </div>
+                        <div class="one-block-input border-bottom-none">
+                            <ul class="notification">
+                                <li><input type="radio" id="city1" name="city1" class="styles-checkbox bg-none"/>
+                                    <label for="city1" class="grey-color">О новых сообщениях</label></li>
+                                <li><input type="radio" id="city2" name="city2" class="styles-checkbox"/>
+                                    <label for="city2" class="grey-color">О новых подписчиках</label></li>
+                                <li><input type="radio" id="city3" name="city3" class="styles-checkbox"/>
+                                    <label for="city3" class="grey-color">Закончился срок объявления</label></li>
+                                <li><input type="radio" id="city4" name="city4" class="styles-checkbox"/>
+                                    <label for="city4" class="grey-color">О победах в конкурсах</label></li>
+                            </ul>
+                        </div>
+                        <div class="one-block-input padding-only-top padding-bottom">
+                            <input type="button" class="btn-styles margin-top white-bg" value="Сохранить">
+                        </div>
+                        <div class="one-block-input border-bottom-none">
+                            <a href="#delete-acc" class="btn-delete-acc btn-styles white-bg full-width">Удалить аккаунт</a>
+                        </div>
+                        <div id="delete-acc" class="mfp-hide white-popup-block">
+                            <div class="container-popup fix-height">
+                                <button type="button" onClick="closePopup();" class="mfp-close"><img
+                                        src="images/icons/icon-small-close.svg" alt="Close">
+                                </button>
+                                <div class="title">
+                                    Удаление аккаунта
+                                </div>
+                                <div class="step">
+                                    Подождите!
+                                </div>
+                                <p>Сперва <a href="" class="try-free">бесплатно</a> попробуйте месяц Pro Аккаунта </p>
+                                <a href="#" class="btn-popup">Попробовать</a>
+                                <a href="#" class="styles-link-popup">Удалить аккаунт</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-block">
+                        <div class="title">
+                            Настройки
+                        </div>
+                        <div class="one-block-input border-bottom-none">
+                            <ul class="menu-settings">
+                                <li><a href="#">Основное</a></li>
+                                <li><a href="#">Специализация</a></li>
+                                <li><a href="#">Ссылки</a></li>
+                                <li><a href="#" class="active">Уведомления</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

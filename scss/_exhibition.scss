@@ -46,9 +46,10 @@
         position: absolute;
         font-weight: normal;
         top: -10px;
-        left: 193px;
+        left: 225px;
         @include xs-block() {
-          position: inherit;
+          left: inherit;
+          right: 60px;
         }
       }
       .in-month {

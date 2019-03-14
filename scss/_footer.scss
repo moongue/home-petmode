@@ -1,11 +1,32 @@
 #footer {
   padding-bottom: 39px;
+  margin-top: 30px;
   .container {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    //display: flex;
+    //align-items: center;
+    //flex-direction: row;
+    //flex-wrap: wrap;
+    .top-footer {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 48px;
+      border-bottom: 1px solid $white-bg;
 
+      @include md-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .bottom-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include md-block() {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
     @include fix-block {
       justify-content: center;
       flex-direction: column;
@@ -23,7 +44,6 @@
         width: 126px;
       }
       .menu {
-        padding-left: 97px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -52,7 +72,8 @@
 
           a {
             text-decoration: none;
-            color: $black;
+            color: $grey-80;
+            font-weight: normal;
             font-size: 16px;
           }
         }
@@ -68,28 +89,35 @@
         }
 
         li {
-          padding: 0 10px;
+          padding: 0 4px;
         }
       }
       .copyright {
         font-size: 14px;
-        color: $black-two-50;
+        color: $grey-40;
         font-weight: normal;
       }
       .another-menu {
-        padding-left: 90px;
         display: flex;
         flex-direction: row;
 
         @include fix-block {
           padding: 15px 0;
         }
-
+        @include xs-block() {
+          flex-direction: column;
+          align-items: center;
+        }
         li {
-          padding: 0 7px;
+          padding: 0 20px;
+
+          @include xs-block{
+            padding-top: 10px;
+          }
           a {
             text-decoration: none;
-            color: $black;
+            color: $grey-80;
+            font-weight: normal;
             font-size: 14px;
           }
         }
@@ -98,22 +126,11 @@
         font-size: 14px;
         color: $black-two-50;
         font-weight: normal;
-      }
-      &.order {
-
-        @include fix-block() {
-          order: 1;
-          padding-top: 15px;
+        a {
+          text-decoration: none;
+          color: $dull-blue;
+          font-size: 14px;
         }
-
-      }
-      &.righted {
-        margin-left: auto;
-
-        @include fix-block() {
-          margin-left: 0;
-        }
-
       }
     }
   }

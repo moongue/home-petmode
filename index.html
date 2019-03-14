@@ -24,7 +24,7 @@
             </div>
 
             <a href="#" class="lines">
-                <img src="images/lines.svg" alt="lines">
+                <img src="images/icons/icon-lines.svg" alt="lines">
             </a>
 
             <nav class="menu">
@@ -54,7 +54,7 @@
             <div class="search">
                 <input type="text" placeholder="Поиск" id="search">
                 <label for="search">
-                    <img src="images/icons/icon-search.svg" alt="Search">
+                    <img src="images/icons/icon-search-white.svg" alt="Search">
                 </label>
             </div>
 
@@ -66,185 +66,124 @@
                 </ul>
             </div>
             <div id="sign-up-form" class="mfp-hide white-popup-block">
-                <button type="button" onClick="closePopup();" class="mfp-close"><img src="images/close.png" alt="Close">
-                </button>
-                <div class="tabs">
-                    <ul>
-                        <li>Пользователь</li>
-                        <li>Специалист</li>
-                        <li>Заводчик</li>
-                        <li>Клуб</li>
-                        <li>Приют</li>
-                    </ul>
-                    <div>
-                        <div class="register-user">
-                            <div class="title"><h2>Регистрация</br> пользователя</h2></div>
-                            <div class="login-with">
-                                <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a
-                                        href="#">Google</a>
-                                </p>
-                            </div>
+                <div class="container-popup">
 
-                            <div class="inputs">
-                                <div class="inputs-name">
-                                    <input type="text" placeholder="Имя" class="name">
-                                    <input type="text" placeholder="Фамилия" class="surname">
-                                </div>
-                                <input type="email" placeholder="Адрес електронной почты" class="email">
-                                <input type="password" placeholder="Пароль" class="password">
-                            </div>
-                            <button class="go-in" type="button">Зарегестрироваться</button>
-                            <div class="have-account">
-                                <p>У вас уже есть аккаунт? <a href="#">Войти</a></p>
-                            </div>
+                    <button type="button" onClick="closePopup();" class="mfp-close"><img
+                            src="images/icons/icon-close.svg" alt="Close">
+                    </button>
+                        <div class="title margin-bottom">
+                            Быстрая Регистрация
                         </div>
-                        <div class="register-specialist-form">
-                            <div class="title"><h2>Регистрация</br> специалиста</h2></div>
-                            <div class="login-with">
-                                <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a
-                                        href="#">Google</a>
-                                </p>
-                            </div>
+                        <input type="text" class="input-styles-popup margin-top margin-bottom" placeholder="Имя">
+                        <input type="text" class="input-styles-popup margin-top" placeholder="E-mail">
+                        <input type="text" class="input-styles-popup margin-top" placeholder="Пароль">
+                        <input type="text" class="input-styles-popup margin-top" placeholder="Повторите Пароль">
+                        <a href="#complete-registration" class="btn-popup next-step-verification full-width">Зарегистрироваться</a>
 
-                            <div class="inputs">
-                                <div class="inputs-name">
-                                    <input type="text" placeholder="Имя" class="name">
-                                    <input type="text" placeholder="Фамилия" class="surname">
-                                </div>
-                                <div class="work-experience-and-qualification">
-                                    <select name="selectQualification" class="qualification">
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                    </select>
-                                    <input type="text" placeholder="Опыт работы" class="work-experience">
-                                </div>
-                                <input type="email" placeholder="Адрес електронной почты" class="email">
-                                <input type="password" placeholder="Пароль" class="password">
-                            </div>
-                            <button class="go-in" type="button">Зарегестрироваться</button>
-                            <div class="have-account">
-                                <p>У вас уже есть аккаунт? <a href="#">Войти</a></p>
-                            </div>
-                        </div>
-                        <div class="register-breeder">
-                            <div class="title"><h2>Регистрация</br> заводчика</h2></div>
-                            <div class="login-with">
-                                <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a
-                                        href="#">Google</a>
-                                </p>
-                            </div>
-
-                            <div class="inputs">
-                                <div class="inputs-name">
-                                    <input type="text" placeholder="Имя" class="name">
-                                    <input type="text" placeholder="Фамилия" class="surname">
-                                </div>
-                                <div class="work-experience-and-qualification">
-                                    <select name="selectQualification" class="qualification">
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                    </select>
-                                    <input type="text" placeholder="Опыт работы" class="work-experience">
-                                </div>
-                                <input type="email" placeholder="Адрес електронной почты" class="email">
-                                <input type="password" placeholder="Пароль" class="password">
-                            </div>
-                            <button class="go-in" type="button">Зарегестрироваться</button>
-                            <div class="have-account">
-                                <p>У вас уже есть аккаунт? <a href="#">Войти</a></p>
-                            </div>
-                        </div>
-
-                        <div class="register-club">
-                            <div class="title"><h2>Регистрация</br> клуба</h2></div>
-                            <div class="login-with">
-                                <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a
-                                        href="#">Google</a>
-                                </p>
-                            </div>
-
-                            <div class="inputs">
-                                <div class="inputs-name">
-                                    <input type="text" placeholder="Имя" class="name">
-                                    <input type="text" placeholder="Фамилия" class="surname">
-                                </div>
-                                <div class="work-experience-and-qualification">
-                                    <select name="selectQualification" class="qualification">
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                    </select>
-                                    <input type="text" placeholder="Опыт работы" class="work-experience">
-                                </div>
-                                <input type="email" placeholder="Адрес електронной почты" class="email">
-                                <input type="password" placeholder="Пароль" class="password">
-                            </div>
-                            <button class="go-in" type="button">Зарегестрироваться</button>
-                            <div class="have-account">
-                                <p>У вас уже есть аккаунт? <a href="#">Войти</a></p>
-                            </div>
-                        </div>
-
-                        <div class="register-shelter">
-                            <div class="title"><h2>Регистрация</br> приюта</h2></div>
-                            <div class="login-with">
-                                <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a
-                                        href="#">Google</a>
-                                </p>
-                            </div>
-
-                            <div class="inputs">
-                                <div class="inputs-name">
-                                    <input type="text" placeholder="Имя" class="name">
-                                    <input type="text" placeholder="Фамилия" class="surname">
-                                </div>
-                                <div class="work-experience-and-qualification">
-                                    <select name="selectQualification" class="qualification">
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                        <option>Специальность</option>
-                                    </select>
-                                    <input type="text" placeholder="Опыт работы" class="work-experience">
-                                </div>
-                                <input type="email" placeholder="Адрес електронной почты" class="email">
-                                <input type="password" placeholder="Пароль" class="password">
-                            </div>
-                            <button class="go-in" type="button">Зарегестрироваться</button>
-                            <div class="have-account">
-                                <p>У вас уже есть аккаунт? <a href="#">Войти</a></p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
             </div>
 
             <div id="sign-in-form" class="mfp-hide white-popup-block">
-                <button type="button" onClick="closePopup();" class="mfp-close"><img src="images/close.png" alt="Close">
-                </button>
-                <div class="title"><h2>Вход</h2></div>
-                <div class="login-with">
-                    <p>С помощью <a href="#">Facebook</a>, <a href="#">Вконтакте</a> или <a href="#">Google</a>
-                    </p>
+                <div class="container-popup">
+                    <button type="button" onClick="closePopup();" class="mfp-close"><img
+                            src="images/icons/icon-close.svg" alt="Close">
+                    </button>
+                    </button>
+                    <div class="title">
+                        Требуется Вход
+                    </div>
+                    <div class="tooltip">
+                        Для публикации выставки выполните <a href="#">вход</a> или пройдите <a href="#">быструю
+                        регистрацию</a>
+                    </div>
+                    <div class="entry">
+                        Вход
+                    </div>
+                    <input type="text" class="input-styles-popup margin-top" placeholder="Email">
+                    <input type="text" class="input-styles-popup margin-top" placeholder="Пароль">
+                    <div class="two-blocks">
+                        <a href="#" class="btn-popup fix-margin">Далее</a>
+                        <ul class="social-network">
+                            <li><a href="#"><img src="images/icons/icon-vk.svg" width="24px" height="24px" alt=""></a>
+                            </li>
+                            <li><a href="#"><img src="images/icons/icon-facebook.svg" width="24px" height="24px" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="two-blocks-wider">
+                        <a href="#" class="styles-link-popup fix-margin show-fast-registration">
+                            Быстрая Регистрация
+                        </a>
+                        <a href="#restore-password" class="btn-restore-password styles-link-popup fix-margin">
+                            Восстановить пароль
+                        </a>
+                    </div>
+                    <div class="block-fast-registration">
+                        <div class="container-popup fix-padding">
+                            <div class="title margin-bottom">
+                                Быстрая Регистрация
+                            </div>
+                            <input type="text" class="input-styles-popup margin-top margin-bottom" placeholder="Имя">
+                            <input type="text" class="input-styles-popup margin-top" placeholder="E-mail">
+                            <input type="text" class="input-styles-popup margin-top" placeholder="Пароль">
+                            <input type="text" class="input-styles-popup margin-top" placeholder="Повторите Пароль">
+                            <a href="#complete-registration" class="btn-popup next-step-verification full-width">Зарегистрироваться</a>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div id="complete-registration" class="mfp-hide white-popup-block">
+                <div class="container-popup">
+                    <button type="button" onClick="closePopup();" class="mfp-close"><img
+                            src="images/icons/icon-close.svg" alt="Close">
+                    </button>
+                    <div class="title">
+                        Поздравляем вы успешно зарегистрировались
+                    </div>
+                    <img src="images/icons/icon-complete.svg" alt="complete" class="icon-complete-registration">
+                    <p class="black-font">На Вашу электронную почту мы отправили письмо. Пожалуйста подтвердите, что
+                        электронная почта Ваша. Спасибо</p>
+                    <a href="#" class="btn-popup" onClick="closePopup();">Закрыть</a>
 
-                <div class="inputs">
-                    <input type="email" placeholder="Адрес електронной почты" class="email">
-                    <input type="password" placeholder="Пароль" class="password">
                 </div>
-                <button class="go-in" type="button">Войти</button>
-                <div class="no-account">
-                    <p>У вас нет аккаунта? <a href="#">Зарегистрируйтесь</a></p>
+            </div>
+            <div id="restore-password" class="mfp-hide white-popup-block">
+                <div class="container-popup">
+                    <button type="button" onClick="closePopup();" class="mfp-close"><img
+                            src="images/icons/icon-close.svg" alt="Close">
+                    </button>
+                    <div class="title">
+                        Восстановление пароля
+                    </div>
+                    <div class="tooltip">
+                        На какой эмеил отправить новый пароль?
+                    </div>
+                    <input type="text" class="input-styles-popup margin-top" placeholder="E-mail">
+                    <a href="#" class="btn-popup">Востановить</a>
+
+                    <div class="two-blocks small">
+                        <a href="#" class="styles-link-popup fix-margin show-fast-registration">
+                            Быстрая Регистрация
+                        </a>
+                        <a href="#sign-in-form" class="sign-in styles-link-popup fix-margin">
+                            Вход
+                        </a>
+                    </div>
+                    <div class="block-fast-registration">
+                        <div class="container-popup fix-padding">
+                            <div class="title margin-bottom">
+                                Быстрая Регистрация
+                            </div>
+                            <input type="text" class="input-styles-popup margin-top margin-bottom" placeholder="Имя">
+                            <input type="text" class="input-styles-popup margin-top" placeholder="E-mail">
+                            <input type="text" class="input-styles-popup margin-top" placeholder="Пароль">
+                            <input type="text" class="input-styles-popup margin-top" placeholder="Повторите Пароль">
+                            <a href="#complete-registration" class="btn-popup next-step-verification full-width">Зарегистрироваться</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
         <!--BANNER-->
         <div class="container-banner">
             <h1>Petmode — крупнейшее сообщество
@@ -258,8 +197,27 @@
             </div>
         </div>
     </div>
+    <div class="eyeliner">
+    </div>
 </header>
 <!--END HEADER-->
+
+<!--SIDEBAR-->
+<div class="sidebar-menu">
+    <input type="checkbox" id="show-sidebar">
+    <label for="show-sidebar"><img src="images/icons/icon-sidebar-add.svg" alt="select-icon"></label>
+    <ul class="sidebar">
+        <li><a href="#"><img src="images/icons/icon-sidebar-user.svg" alt="Icon User"></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-alert.svg" alt="Icon Alert"></a><a href="#"
+                                                                                               class="notification-bg"><img
+                src="images/icons/icon-sidebar-notofication-bg.svg" alt="Notification"><span
+                class="notification-count">2</span></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-message.svg" alt="Icon Message"></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-store.svg" alt="Icon Store"></a></li>
+        <li><a href="#"><img src="images/icons/icon-sidebar-add.svg" alt="Icon Add"></a></li>
+    </ul>
+</div>
+<!--END SIDEBAR-->
 
 <!--PETS-->
 <section id="pets">
@@ -274,7 +232,8 @@
             <div class="containerPets">
                 <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/img/image-pet-370.svg" alt="Pet">
-                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg" alt="Ruble"></div>
+                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg"
+                                                                               alt="Ruble"></div>
                         <div class="containerPetsBlock__img--selling">Продам щенка</div>
                     </div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
@@ -282,7 +241,8 @@
                 </a>
                 <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/img/image-pet-370.svg" alt="Pet">
-                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg" alt="Ruble"></div>
+                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg"
+                                                                               alt="Ruble"></div>
                         <div class="containerPetsBlock__img--selling">Продам щенка</div>
                     </div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
@@ -290,7 +250,8 @@
                 </a>
                 <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/img/image-pet-370.svg" alt="Pet">
-                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg" alt="Ruble"></div>
+                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg"
+                                                                               alt="Ruble"></div>
                         <div class="containerPetsBlock__img--selling">Продам щенка</div>
                     </div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
@@ -298,7 +259,8 @@
                 </a>
                 <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/img/image-pet-370.svg" alt="Pet">
-                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg" alt="Ruble"></div>
+                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg"
+                                                                               alt="Ruble"></div>
                         <div class="containerPetsBlock__img--selling">Продам щенка</div>
                     </div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
@@ -306,7 +268,8 @@
                 </a>
                 <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/img/image-pet-370.svg" alt="Pet">
-                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg" alt="Ruble"></div>
+                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg"
+                                                                               alt="Ruble"></div>
                         <div class="containerPetsBlock__img--selling">Продам щенка</div>
                     </div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
@@ -314,7 +277,8 @@
                 </a>
                 <a href="#" class="containerPetsBlock">
                     <div class="containerPetsBlock__img"><img src="images/img/image-pet-370.svg" alt="Pet">
-                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg" alt="Ruble"></div>
+                        <div class="containerPetsBlock__img--price">3 000 <img src="images/icons/icon-ruble.svg"
+                                                                               alt="Ruble"></div>
                         <div class="containerPetsBlock__img--selling">Продам щенка</div>
                     </div>
                     <div class="containerPetsBlock__breed">Вельш-корги-пемброк</div>
@@ -334,7 +298,9 @@
     <div class="wrapper">
         <div class="title">
             <h2>Питомцы на вязку</h2>
-            <button class="submit-an-announcement yellow-theme"><img src="images/icons/icon-tag.svg" alt="">Подать объявление</button>
+            <button class="submit-an-announcement yellow-theme"><img src="images/icons/icon-tag.svg" alt="">Подать
+                объявление
+            </button>
         </div>
         <div class="content-pets-on-binding">
             <div class="block-with-button">
@@ -637,7 +603,9 @@
         <div class="container">
             <div class="title">
                 <h2>В добрые руки <span> — помогаем каждому питомцу обрести свой дом</span></h2>
-                <button class="submit-an-announcement yellow-theme"><img src="images/icons/icon-tag.svg" alt="">Подать объявление</button>
+                <button class="submit-an-announcement yellow-theme"><img src="images/icons/icon-tag.svg" alt="">Подать
+                    объявление
+                </button>
 
             </div>
             <div class="containerPets">
@@ -684,7 +652,8 @@
                     <div class="myJoyNews__img"><img src="images/img/image-pet-270.svg" alt="Pets"></div>
 
                     <div class="myJoyNewsFlex">
-                        <a href="#" class="myJoyNewsFlex__title">День защиты черного кота: как соцсети помогают бороться с суевериями
+                        <a href="#" class="myJoyNewsFlex__title">День защиты черного кота: как соцсети помогают бороться
+                            с суевериями
                         </a>
                         <div class="myJoyNewsFlex__description">Потрясающий нюх собак давно используется для помощи
                             человеку, но оказывается, их обоняние помогает не только давно используется для помощи
@@ -709,7 +678,8 @@
                     <div class="myJoyNews__img"><img src="images/img/image-pet-270.svg" alt="Pets"></div>
 
                     <div class="myJoyNewsFlex">
-                        <a href="#" class="myJoyNewsFlex__title">День защиты черного кота: как соцсети помогают бороться с суевериями
+                        <a href="#" class="myJoyNewsFlex__title">День защиты черного кота: как соцсети помогают бороться
+                            с суевериями
                         </a>
                         <div class="myJoyNewsFlex__description">Потрясающий нюх собак давно используется для помощи
                             человеку, но оказывается, их обоняние помогает не только давно используется для помощи
@@ -756,7 +726,8 @@
                     </div>
                     <div class="shelterBlockDescription">
                         <div class="shelterBlockDescription__qualification">
-                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span
+                                    class="quantity">4.6</span><span
                                     class="number">(150)</span></p>
                         </div>
                         <div class="shelterBlockDescription__name">Зов предков</div>
@@ -768,7 +739,8 @@
                     </div>
                     <div class="shelterBlockDescription">
                         <div class="shelterBlockDescription__qualification">
-                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span
+                                    class="quantity">4.6</span><span
                                     class="number">(150)</span></p>
                         </div>
                         <div class="shelterBlockDescription__name">Эко-Бирюлево</div>
@@ -780,7 +752,8 @@
                     </div>
                     <div class="shelterBlockDescription">
                         <div class="shelterBlockDescription__qualification">
-                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                            <p>Клуб <img src="images/icons/icon-star.svg" alt="Star"> <span
+                                    class="quantity">4.6</span><span
                                     class="number">(150)</span></p>
                         </div>
                         <div class="shelterBlockDescription__name">Дубовая Роща</div>
@@ -792,7 +765,8 @@
                     </div>
                     <div class="shelterBlockDescription">
                         <div class="shelterBlockDescription__qualification">
-                            <p>Приют<img src="images/icons/icon-star.svg" alt="Star"> <span class="quantity">4.6</span><span
+                            <p>Приют<img src="images/icons/icon-star.svg" alt="Star"> <span
+                                    class="quantity">4.6</span><span
                                     class="number">(150)</span></p>
                         </div>
                         <div class="shelterBlockDescription__name">Дубовая роща</div>
@@ -845,45 +819,52 @@
 <footer id="footer">
     <div class="wrapper">
         <div class="container">
-            <div class="one-block logo">
-                <a href="#"><img src="images/icons/icon-logo.svg" alt="Logo"></a>
-            </div>
-            <div class="one-block">
-                <ul class="menu">
-                    <li><a href="#pets">Питомцы</a></li>
-                    <li><a href="#best-specialist">Специалисты</a></li>
-                    <li><a href="#my-joy">Моя радость</a></li>
-                    <li><a href="#">Конкурсы</a></li>
-                    <li><a href="#news">Новости</a></li>
-                    <li><a href="#">Рейтинг</a></li>
-                    <li><a href="#">Выставка</a></li>
-                    <li><a href="#">Благотворительность</a></li>
-                </ul>
-            </div>
-            <div class="one-block">
-                <ul class="social-network">
-                    <li><a href="#"><img src="images/telegram-icon.png" alt="Telegram Icon"></a></li>
-                    <li><a href="#"><img src="images/instagram-icon.png" alt="Instagram Icon"></a></li>
-                    <li><a href="#"><img src="images/vk-icon.png" alt="VK Icon"></a></li>
-                </ul>
-            </div>
-            <div class="one-block order">
-                <div class="copyright">
-                    © 2017, Petdmode</br>
-                    Все права защищены
+            <div class="top-footer">
+                <div class="one-block logo">
+                    <a href="#"><img src="images/icons/icon-logo.svg" alt="Logo"></a>
+                </div>
+                <div class="one-block">
+                    <ul class="menu">
+                        <li><a href="#pets">Питомцы</a></li>
+                        <li><a href="#my-joy">Моя радость</a></li>
+                        <li><a href="#best-specialist">Специалисты</a></li>
+                        <li><a href="#">Рейтинг</a></li>
+                        <li><a href="#">Выставки</a></li>
+                        <li><a href="#">Конкурсы</a></li>
+                        <li><a href="#">Благотворительность</a></li>
+                        <li><a href="#news">Новости</a></li>
+                    </ul>
+                </div>
+                <div class="one-block">
+                    <ul class="social-network">
+                        <li><a href="#"><img src="images/icons/icon-vk-logotype.svg" width="24px" height="24px"
+                                             alt="Telegram Icon"></a></li>
+                        <li><a href="#"><img src="images/icons/icon-instagram-logotype.svg" width="24px" height="24px"
+                                             alt="Instagram Icon"></a></li>
+                        <li><a href="#"><img src="images/icons/icon-facebook-logotype.svg" width="24px" height="24px"
+                                             alt="VK Icon"></a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="one-block">
-                <ul class="another-menu">
-                    <li><a href="#">О проекте</a></li>
-                    <li><a href="#">Помощь</a></li>
-                    <li><a href="#">Реклама</a></li>
-                    <li><a href="#">Правила</a></li>
-                </ul>
-            </div>
-            <div class="one-block righted">
-                <div class="yod">
-                    <p>Разработано <img src="images/yod.png" alt="YOD"></p>
+            <div class="bottom-footer">
+                <div class="one-block">
+                    <div class="copyright">
+                        PetMode, Все права защищены © 2018
+                    </div>
+                </div>
+
+                <div class="one-block">
+                    <ul class="another-menu">
+                        <li><a href="#">О проекте</a></li>
+                        <li><a href="#">Помощь</a></li>
+                        <li><a href="#">Реклама</a></li>
+                        <li><a href="#">Правила</a></li>
+                    </ul>
+                </div>
+                <div class="one-block righted">
+                    <div class="yod">
+                        <p>Разработано в <a href="#">YOD BRANDING CREATIVE</a></p>
+                    </div>
                 </div>
             </div>
         </div>

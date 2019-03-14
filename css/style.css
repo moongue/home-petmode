@@ -46,10 +46,24 @@ body {
   }
 }
 
+.wrapper.is-open {
+  padding-left: 60px;
+}
+
 .wrapper-small {
   max-width: 980px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.wrapper-small.is-open {
+  padding-left: 60px;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper-small.is-open {
+    padding-left: 0;
+  }
 }
 
 input::-webkit-input-placeholder {
@@ -236,6 +250,7 @@ h3 span {
 
 .read-more {
   color: #506aa1;
+  text-decoration: none;
   font-size: 14px;
   cursor: pointer;
   font-weight: normal;
@@ -410,6 +425,50 @@ h3 span {
   margin-right: 7px;
 }
 
+.skills-pet {
+  padding-top: 28px;
+}
+
+.skills-pet .title {
+  font-size: 16px;
+  color: #4c4c4c;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.skills-pet .block-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.skills-pet .block-skills .one-skill {
+  padding: 5px 10px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  color: rgba(45, 45, 45, 0.6);
+  font-size: 14px;
+  font-weight: normal;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+.skills-pet .block-skills .btn-add-skill {
+  padding: 0 10px;
+  height: 24px;
+  margin-top: 8px;
+  background-color: #ffef99;
+  color: rgba(45, 45, 45, 0.8);
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .pages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -468,23 +527,251 @@ h3 span {
   height: 51px;
 }
 
+.container-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 630px;
+  height: auto;
+  padding-bottom: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  position: relative;
+}
+
+.container-popup.fix-padding {
+  padding-bottom: 0;
+}
+
+.container-popup .block-fast-registration {
+  display: none;
+}
+
+.container-popup .block-fast-registration > .container-popup {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 780px) {
+  .container-popup {
+    width: 100%;
+  }
+}
+
+.container-popup.fix-height {
+  height: 272px;
+}
+
+.container-popup .mfp-close {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+}
+
+.container-popup .title {
+  margin-top: 36px;
+  line-height: normal;
+  color: #4c4c4c;
+  font-size: 16px;
+  text-align: center;
+}
+
+.container-popup .title.margin-bottom {
+  margin-bottom: 24px;
+}
+
+.container-popup .icon-complete-registration {
+  margin-top: 32px;
+}
+
+.container-popup .step {
+  line-height: 20px;
+  font-size: 14px;
+  margin-top: 13px;
+  color: #4c4c4c;
+  font-weight: normal;
+}
+
+.container-popup .two-blocks-wider {
+  margin-top: 28px;
+  width: 288px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.container-popup p {
+  line-height: 20px;
+  padding: 0 10px;
+  color: rgba(45, 45, 45, 0.6);
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: normal;
+  max-width: 474px;
+  text-align: center;
+}
+
+.container-popup p.black-font {
+  color: #4c4c4c;
+}
+
+.container-popup p .try-free {
+  text-decoration: none;
+  background-color: #ffef99;
+  color: rgba(45, 45, 45, 0.6);
+  padding: 0 3px;
+  border-radius: 8px;
+}
+
+.container-popup .input-styles-popup {
+  width: 230px;
+  height: 32px;
+  border: 1px solid #e9e9e9;
+  margin-top: 23px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 12px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.container-popup .input-styles-popup.margin-top {
+  margin-top: 8px;
+}
+
+.container-popup .input-styles-popup.margin-bottom {
+  margin-bottom: 8px;
+}
+
+.container-popup .two-blocks {
+  width: 230px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.container-popup .two-blocks.small {
+  width: 165px;
+}
+
+.container-popup .tooltip {
+  margin-top: 17px;
+  color: #9f9f9f;
+  line-height: 20px;
+  text-align: center;
+  max-width: 254px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.container-popup .tooltip a {
+  text-decoration: none;
+  color: rgba(45, 45, 45, 0.8);
+}
+
+.container-popup .social-network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-popup .social-network li {
+  margin-left: 8px;
+}
+
+.container-popup .entry {
+  margin-top: 28px;
+  line-height: 20px;
+  margin-bottom: 4px;
+  color: #4c4c4c;
+  font-weight: normal;
+}
+
+.container-popup .btn-popup {
+  width: 152px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: #ffef99;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: rgba(45, 45, 45, 0.8);
+  font-size: 14px;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.container-popup .btn-popup.fix-margin {
+  margin-top: 0;
+}
+
+.container-popup .btn-popup.full-width {
+  width: 230px;
+}
+
+.container-popup .styles-link-popup {
+  margin-top: 21px;
+  text-decoration: none;
+  color: #506aa1;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.container-popup .styles-link-popup.fix-margin {
+  margin-top: 0;
+}
+
 .sidebar-menu {
   position: fixed;
+  top: 130px;
   left: 22px;
   z-index: 999;
 }
 
+@media screen and (max-width: 1380px) {
+  .sidebar-menu {
+    bottom: 65px;
+  }
+}
+
 .sidebar-menu .notification-bg {
-  position: absolute;
-  left: 15px;
+  position: relative;
   bottom: 0;
+  left: -13px;
+}
+
+.sidebar-menu .notification-bg > img {
+  background: none !important;
 }
 
 .sidebar-menu .notification-count {
   color: #ffffff;
   position: absolute;
-  bottom: 2px;
-  right: 3px;
+  bottom: 6px;
+  left: 6px;
 }
 
 .sidebar-menu #show-sidebar {
@@ -548,8 +835,8 @@ h3 span {
   text-decoration: none;
 }
 
-.sidebar-menu .sidebar li a img {
-  background-color: #fff;
+.sidebar-menu .sidebar li a > img {
+  background: #fff;
   border-radius: 50%;
 }
 
@@ -558,6 +845,7 @@ h3 span {
 .register-specialist,
 .submit-an-announcement,
 #register-shelter,
+.btn-verification,
 #show-telephone,
 #leave-feedback,
 #register-club,
@@ -598,6 +886,7 @@ h3 span {
   .register-specialist,
   .submit-an-announcement,
   #register-shelter,
+  .btn-verification,
   #show-telephone,
   #leave-feedback,
   #register-club,
@@ -621,6 +910,7 @@ h3 span {
 .register-specialist.yellow-theme,
 .submit-an-announcement.yellow-theme,
 #register-shelter.yellow-theme,
+.btn-verification.yellow-theme,
 #show-telephone.yellow-theme,
 #leave-feedback.yellow-theme,
 #register-club.yellow-theme,
@@ -643,6 +933,7 @@ h3 span {
 .register-specialist img,
 .submit-an-announcement img,
 #register-shelter img,
+.btn-verification img,
 #show-telephone img,
 #leave-feedback img,
 #register-club img,
@@ -666,6 +957,7 @@ h3 span {
   .register-specialist,
   .submit-an-announcement,
   #register-shelter,
+  .btn-verification,
   #show-telephone,
   #leave-feedback,
   #register-club,
@@ -690,6 +982,7 @@ h3 span {
 .register-specialist#btn-place-an-exhibition,
 .submit-an-announcement#btn-place-an-exhibition,
 #register-shelter#btn-place-an-exhibition,
+.btn-verification#btn-place-an-exhibition,
 #show-telephone#btn-place-an-exhibition,
 #leave-feedback#btn-place-an-exhibition,
 #register-club#btn-place-an-exhibition,
@@ -715,6 +1008,7 @@ h3 span {
   .register-specialist#btn-place-an-exhibition,
   .submit-an-announcement#btn-place-an-exhibition,
   #register-shelter#btn-place-an-exhibition,
+  .btn-verification#btn-place-an-exhibition,
   #show-telephone#btn-place-an-exhibition,
   #leave-feedback#btn-place-an-exhibition,
   #register-club#btn-place-an-exhibition,
@@ -772,6 +1066,7 @@ textarea::-webkit-input-placeholder {
 .styles-input.add,
 textarea.add {
   padding-left: 38px;
+  color: #2d2d2d;
   font-size: 13px;
   cursor: pointer;
   text-align: left;
@@ -829,6 +1124,10 @@ textarea {
 .styles-checkbox:checked + label:before {
   background-color: #ffd800;
   color: #000;
+}
+
+.grey-color {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .styles-checkbox:checked + label {
@@ -890,6 +1189,12 @@ textarea {
 }
 
 @media screen and (max-width: 960px) {
+  .block-reviews.margin-zero {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
   .block-reviews {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -946,6 +1251,12 @@ textarea {
   font-weight: normal;
 }
 
+@media screen and (max-width: 560px) {
+  .block-more-image .title a {
+    margin-right: 20px;
+  }
+}
+
 .block-more-image .title a.active {
   font-weight: bold;
 }
@@ -976,6 +1287,221 @@ textarea {
   padding-top: 24px;
 }
 
+.photo-video-block .title,
+.photo-video-block .title-pets,
+.photo-video-block .title-announcement,
+.photo-video-block .title-competition,
+.photo-video-block .title-history,
+.block-pets .title,
+.block-pets .title-pets,
+.block-pets .title-announcement,
+.block-pets .title-competition,
+.block-pets .title-history,
+.block-announcement .title,
+.block-announcement .title-pets,
+.block-announcement .title-announcement,
+.block-announcement .title-competition,
+.block-announcement .title-history,
+.block-competition .title,
+.block-competition .title-pets,
+.block-competition .title-announcement,
+.block-competition .title-competition,
+.block-competition .title-history,
+.block-history .title,
+.block-history .title-pets,
+.block-history .title-announcement,
+.block-history .title-competition,
+.block-history .title-history {
+  position: relative;
+}
+
+.photo-video-block .title .add-more,
+.photo-video-block .title-pets .add-more,
+.photo-video-block .title-announcement .add-more,
+.photo-video-block .title-competition .add-more,
+.photo-video-block .title-history .add-more,
+.block-pets .title .add-more,
+.block-pets .title-pets .add-more,
+.block-pets .title-announcement .add-more,
+.block-pets .title-competition .add-more,
+.block-pets .title-history .add-more,
+.block-announcement .title .add-more,
+.block-announcement .title-pets .add-more,
+.block-announcement .title-announcement .add-more,
+.block-announcement .title-competition .add-more,
+.block-announcement .title-history .add-more,
+.block-competition .title .add-more,
+.block-competition .title-pets .add-more,
+.block-competition .title-announcement .add-more,
+.block-competition .title-competition .add-more,
+.block-competition .title-history .add-more,
+.block-history .title .add-more,
+.block-history .title-pets .add-more,
+.block-history .title-announcement .add-more,
+.block-history .title-competition .add-more,
+.block-history .title-history .add-more {
+  float: right;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.photo-video-block .title .add-more.pos-right,
+.photo-video-block .title-pets .add-more.pos-right,
+.photo-video-block .title-announcement .add-more.pos-right,
+.photo-video-block .title-competition .add-more.pos-right,
+.photo-video-block .title-history .add-more.pos-right,
+.block-pets .title .add-more.pos-right,
+.block-pets .title-pets .add-more.pos-right,
+.block-pets .title-announcement .add-more.pos-right,
+.block-pets .title-competition .add-more.pos-right,
+.block-pets .title-history .add-more.pos-right,
+.block-announcement .title .add-more.pos-right,
+.block-announcement .title-pets .add-more.pos-right,
+.block-announcement .title-announcement .add-more.pos-right,
+.block-announcement .title-competition .add-more.pos-right,
+.block-announcement .title-history .add-more.pos-right,
+.block-competition .title .add-more.pos-right,
+.block-competition .title-pets .add-more.pos-right,
+.block-competition .title-announcement .add-more.pos-right,
+.block-competition .title-competition .add-more.pos-right,
+.block-competition .title-history .add-more.pos-right,
+.block-history .title .add-more.pos-right,
+.block-history .title-pets .add-more.pos-right,
+.block-history .title-announcement .add-more.pos-right,
+.block-history .title-competition .add-more.pos-right,
+.block-history .title-history .add-more.pos-right {
+  position: absolute;
+  right: 65px;
+}
+
+@media screen and (max-width: 560px) {
+  .photo-video-block .title .add-more.pos-right,
+  .photo-video-block .title-pets .add-more.pos-right,
+  .photo-video-block .title-announcement .add-more.pos-right,
+  .photo-video-block .title-competition .add-more.pos-right,
+  .photo-video-block .title-history .add-more.pos-right,
+  .block-pets .title .add-more.pos-right,
+  .block-pets .title-pets .add-more.pos-right,
+  .block-pets .title-announcement .add-more.pos-right,
+  .block-pets .title-competition .add-more.pos-right,
+  .block-pets .title-history .add-more.pos-right,
+  .block-announcement .title .add-more.pos-right,
+  .block-announcement .title-pets .add-more.pos-right,
+  .block-announcement .title-announcement .add-more.pos-right,
+  .block-announcement .title-competition .add-more.pos-right,
+  .block-announcement .title-history .add-more.pos-right,
+  .block-competition .title .add-more.pos-right,
+  .block-competition .title-pets .add-more.pos-right,
+  .block-competition .title-announcement .add-more.pos-right,
+  .block-competition .title-competition .add-more.pos-right,
+  .block-competition .title-history .add-more.pos-right,
+  .block-history .title .add-more.pos-right,
+  .block-history .title-pets .add-more.pos-right,
+  .block-history .title-announcement .add-more.pos-right,
+  .block-history .title-competition .add-more.pos-right,
+  .block-history .title-history .add-more.pos-right {
+    float: inherit;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .photo-video-block .title .add-more,
+  .photo-video-block .title-pets .add-more,
+  .photo-video-block .title-announcement .add-more,
+  .photo-video-block .title-competition .add-more,
+  .photo-video-block .title-history .add-more,
+  .block-pets .title .add-more,
+  .block-pets .title-pets .add-more,
+  .block-pets .title-announcement .add-more,
+  .block-pets .title-competition .add-more,
+  .block-pets .title-history .add-more,
+  .block-announcement .title .add-more,
+  .block-announcement .title-pets .add-more,
+  .block-announcement .title-announcement .add-more,
+  .block-announcement .title-competition .add-more,
+  .block-announcement .title-history .add-more,
+  .block-competition .title .add-more,
+  .block-competition .title-pets .add-more,
+  .block-competition .title-announcement .add-more,
+  .block-competition .title-competition .add-more,
+  .block-competition .title-history .add-more,
+  .block-history .title .add-more,
+  .block-history .title-pets .add-more,
+  .block-history .title-announcement .add-more,
+  .block-history .title-competition .add-more,
+  .block-history .title-history .add-more {
+    float: inherit;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+}
+
+.photo-video-block .title .add-more-another,
+.photo-video-block .title-pets .add-more-another,
+.photo-video-block .title-announcement .add-more-another,
+.photo-video-block .title-competition .add-more-another,
+.photo-video-block .title-history .add-more-another,
+.block-pets .title .add-more-another,
+.block-pets .title-pets .add-more-another,
+.block-pets .title-announcement .add-more-another,
+.block-pets .title-competition .add-more-another,
+.block-pets .title-history .add-more-another,
+.block-announcement .title .add-more-another,
+.block-announcement .title-pets .add-more-another,
+.block-announcement .title-announcement .add-more-another,
+.block-announcement .title-competition .add-more-another,
+.block-announcement .title-history .add-more-another,
+.block-competition .title .add-more-another,
+.block-competition .title-pets .add-more-another,
+.block-competition .title-announcement .add-more-another,
+.block-competition .title-competition .add-more-another,
+.block-competition .title-history .add-more-another,
+.block-history .title .add-more-another,
+.block-history .title-pets .add-more-another,
+.block-history .title-announcement .add-more-another,
+.block-history .title-competition .add-more-another,
+.block-history .title-history .add-more-another {
+  position: absolute;
+  right: 0;
+  margin-right: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 560px) {
+  .photo-video-block .title .add-more-another,
+  .photo-video-block .title-pets .add-more-another,
+  .photo-video-block .title-announcement .add-more-another,
+  .photo-video-block .title-competition .add-more-another,
+  .photo-video-block .title-history .add-more-another,
+  .block-pets .title .add-more-another,
+  .block-pets .title-pets .add-more-another,
+  .block-pets .title-announcement .add-more-another,
+  .block-pets .title-competition .add-more-another,
+  .block-pets .title-history .add-more-another,
+  .block-announcement .title .add-more-another,
+  .block-announcement .title-pets .add-more-another,
+  .block-announcement .title-announcement .add-more-another,
+  .block-announcement .title-competition .add-more-another,
+  .block-announcement .title-history .add-more-another,
+  .block-competition .title .add-more-another,
+  .block-competition .title-pets .add-more-another,
+  .block-competition .title-announcement .add-more-another,
+  .block-competition .title-competition .add-more-another,
+  .block-competition .title-history .add-more-another,
+  .block-history .title .add-more-another,
+  .block-history .title-pets .add-more-another,
+  .block-history .title-announcement .add-more-another,
+  .block-history .title-competition .add-more-another,
+  .block-history .title-history .add-more-another {
+    position: absolute;
+    right: 0;
+    top: -10px;
+  }
+}
+
 .photo-video-block .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -994,6 +1520,12 @@ textarea {
   text-decoration: none;
   margin-right: 45px;
   font-weight: normal;
+}
+
+@media screen and (max-width: 560px) {
+  .photo-video-block .title a {
+    margin-right: 5px;
+  }
 }
 
 .photo-video-block .title a.active {
@@ -1026,6 +1558,27 @@ textarea {
   margin-top: 24px;
 }
 
+.photo-video-block .blocks .block-add {
+  width: 240px;
+  height: 160px;
+  background-color: rgba(233, 233, 233, 0.4);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 24px;
+}
+
 .block-pets .title-pets {
   font-size: 14px;
   color: #4c4c4c;
@@ -1045,6 +1598,27 @@ textarea {
   font-size: 14px;
   font-weight: normal;
   padding-left: 21px;
+}
+
+.block-pets .block-add {
+  width: 170px;
+  height: 200px;
+  background-color: rgba(233, 233, 233, 0.4);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 24px;
 }
 
 .block-pets .blocks-pet {
@@ -1076,6 +1650,12 @@ textarea {
   width: 170px;
   margin-top: 24px;
   padding-right: 30px;
+}
+
+@media screen and (max-width: 780px) {
+  .block-pets .blocks-pet .one-block-pet {
+    padding-right: 0;
+  }
 }
 
 .block-pets .blocks-pet .one-block-pet .block-img {
@@ -1192,6 +1772,7 @@ textarea {
 @media screen and (max-width: 560px) {
   .block-announcement .blocks-announcement .one-block-announcement {
     max-width: 370px;
+    width: 100%;
   }
 }
 
@@ -1349,6 +1930,7 @@ textarea {
   padding-bottom: 9px;
   border-bottom: 1px solid #e9e9e9;
   padding-top: 29px;
+  position: relative;
 }
 
 .block-competition .title-competition .count-competition-organization,
@@ -1375,6 +1957,18 @@ textarea {
 .block-history .title-competition .add-history,
 .block-history .title-history .add-history {
   float: right;
+}
+
+@media screen and (max-width: 560px) {
+  .block-competition .title-competition .add-history,
+  .block-competition .title-history .add-history,
+  .block-history .title-competition .add-history,
+  .block-history .title-history .add-history {
+    float: inherit;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
 }
 
 .block-competition .one-block-competition,
@@ -2952,13 +3546,9 @@ textarea {
   bottom: -12px;
 }
 
-#sidebar-menu-hider #checkbox_toggle:checked ~ .sidebar-menu-hider {
-  display: block;
-}
-
 #sidebar-menu-hider .sidebar-menu-hider {
   position: fixed;
-  left: 0;
+  left: -250px;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   width: 268px;
@@ -2967,6 +3557,14 @@ textarea {
   box-sizing: border-box;
   background-color: #fff;
   z-index: 233;
+}
+
+#sidebar-menu-hider .sidebar-menu-hider.is-open {
+  left: 0;
+}
+
+#sidebar-menu-hider .sidebar-menu-hider.active {
+  top: 0;
 }
 
 #sidebar-menu-hider .sidebar-menu-hider .show-sidebar {
@@ -3689,14 +4287,14 @@ textarea {
 }
 
 #header {
-  background: url(../images/bgc-img.png) no-repeat center center;
+  background: url(../images/img/image-bg-banner.svg) no-repeat center center;
   background-size: cover;
   height: 558px;
 }
 
 @media screen and (max-width: 780px) {
   #header {
-    background: url(../images/bgc-img.png) no-repeat 80% 80%;
+    background: url(../images/img/image-bg-banner.svg) no-repeat 80% 80%;
   }
 }
 
@@ -3908,6 +4506,9 @@ textarea {
   background-color: rgba(255, 255, 155, 0.1);
   padding: 5px 15px;
   border-radius: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 170px;
 }
 
 @media screen and (max-width: 960px) {
@@ -3935,7 +4536,7 @@ textarea {
   outline: none;
   padding-left: 10px;
   color: #ffffff;
-  width: 80px;
+  width: 120px;
 }
 
 #header .container-header .search #search::-webkit-input-placeholder,
@@ -3956,11 +4557,6 @@ textarea {
 #header .container-header .search #search:-ms-input-placeholder,
 #header .container-header .search #search-mob:-ms-input-placeholder {
   color: #ffffff;
-}
-
-#header .container-header .search img {
-  -webkit-filter: contrast(10%);
-  filter: contrast(10%);
 }
 
 @media screen and (max-width: 560px) {
@@ -4213,611 +4809,6 @@ textarea {
   position: absolute;
   top: 72px;
   z-index: 1;
-}
-
-#sign-in-form {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 4px;
-  color: #807b76;
-  font-size: 14px;
-  margin: 0 auto;
-  height: 450px;
-  max-width: 540px;
-  background-color: #ffffff;
-  font-weight: normal;
-}
-
-#sign-in-form a {
-  text-decoration: none;
-  color: #506aa1;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.13);
-  font-size: 14px;
-}
-
-#sign-in-form .title {
-  padding-top: 55px;
-  font-weight: bold;
-}
-
-#sign-in-form .title h2 {
-  text-align: center;
-}
-
-#sign-in-form .login-with {
-  padding-top: 20px;
-  font-weight: normal;
-}
-
-#sign-in-form .inputs {
-  padding-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-#sign-in-form .inputs input {
-  background: none;
-  border: 1px solid rgba(209, 193, 174, 0.7);
-  border-radius: 4px;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 55px;
-  color: #807b76;
-  font-size: 16px;
-  max-width: 376px;
-  height: 47px;
-}
-
-#sign-in-form .inputs input:focus,
-#sign-in-form .inputs input active {
-  color: #343434;
-}
-
-#sign-in-form .inputs .password {
-  margin-top: 17px;
-  background: url("../images/password-icon.png") no-repeat 96% 50%;
-}
-
-#sign-in-form .inputs .email {
-  background: url("../images/email-icon.png") no-repeat 96% 50%;
-}
-
-#sign-in-form .go-in {
-  margin-top: 30px;
-  padding-top: 4px;
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #343434;
-  font-weight: bold;
-  width: 270px;
-  height: 48px;
-  background-color: #ffd800;
-  cursor: pointer;
-}
-
-#sign-in-form .no-account {
-  padding-top: 30px;
-}
-
-#sign-in-form .mfp-close {
-  position: absolute;
-  background: none;
-  border: none;
-  outline: none;
-  top: 0;
-  right: 0;
-}
-
-#sign-up-form {
-  max-width: 720px;
-  height: auto;
-  background-color: #ffffff;
-  border-radius: 4px;
-  margin: 0 auto;
-  position: relative;
-  color: #807b76;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-#sign-up-form a {
-  text-decoration: none;
-  color: #506aa1;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.13);
-  font-size: 14px;
-}
-
-#sign-up-form > div .register-user,
-#sign-up-form > div .register-specialist-form,
-#sign-up-form > div .register-breeder,
-#sign-up-form > div .register-club,
-#sign-up-form > div .register-shelter {
-  text-align: center;
-  padding-top: 25px;
-  max-width: 584px;
-  margin: 0 auto;
-}
-
-#sign-up-form > div .register-user .title,
-#sign-up-form > div .register-specialist-form .title,
-#sign-up-form > div .register-breeder .title,
-#sign-up-form > div .register-club .title,
-#sign-up-form > div .register-shelter .title {
-  font-weight: bold;
-  padding-top: 40px;
-}
-
-#sign-up-form > div .register-user .login-with,
-#sign-up-form > div .register-specialist-form .login-with,
-#sign-up-form > div .register-breeder .login-with,
-#sign-up-form > div .register-club .login-with,
-#sign-up-form > div .register-shelter .login-with {
-  padding-top: 25px;
-}
-
-#sign-up-form > div .register-user .inputs .inputs-name,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-breeder .inputs .inputs-name,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-club .inputs .inputs-name,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-shelter .inputs .inputs-name,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 35px 0 17px;
-}
-
-#sign-up-form > div .register-user .inputs .inputs-name .name,
-#sign-up-form > div .register-user .inputs .inputs-name .surname,
-#sign-up-form > div .register-user .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-user .inputs .inputs-name .qualification,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .name,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .name,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .surname,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .name,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-breeder .inputs .inputs-name .name,
-#sign-up-form > div .register-breeder .inputs .inputs-name .surname,
-#sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-breeder .inputs .inputs-name .qualification,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .name,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-club .inputs .inputs-name .name,
-#sign-up-form > div .register-club .inputs .inputs-name .surname,
-#sign-up-form > div .register-club .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-club .inputs .inputs-name .qualification,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .name,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-shelter .inputs .inputs-name .name,
-#sign-up-form > div .register-shelter .inputs .inputs-name .surname,
-#sign-up-form > div .register-shelter .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-shelter .inputs .inputs-name .qualification,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .name,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .qualification {
-  width: 285px;
-  border: 1px solid rgba(209, 193, 174, 0.7);
-  border-radius: 4px;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 55px;
-  color: #807b76;
-  font-size: 16px;
-  height: 47px;
-  background: url("../images/icon-register-user.png") no-repeat 89% 50%;
-}
-
-#sign-up-form > div .register-user .inputs .inputs-name .name:focus,
-#sign-up-form > div .register-user .inputs .inputs-name .name active,
-#sign-up-form > div .register-user .inputs .inputs-name .surname:focus,
-#sign-up-form > div .register-user .inputs .inputs-name .surname active,
-#sign-up-form > div .register-user .inputs .inputs-name .work-experience:focus,
-#sign-up-form > div .register-user .inputs .inputs-name .work-experience active,
-#sign-up-form > div .register-user .inputs .inputs-name .qualification:focus,
-#sign-up-form > div .register-user .inputs .inputs-name .qualification active,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .name:focus,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .name active,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname:focus,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname active,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience:focus,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience active,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification:focus,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification active,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .name:focus,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .name active,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .surname:focus,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .surname active,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience:focus,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience active,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification:focus,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification active,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .name:focus,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .name active,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname:focus,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname active,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience:focus,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience active,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification:focus,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification active,
-#sign-up-form > div .register-breeder .inputs .inputs-name .name:focus,
-#sign-up-form > div .register-breeder .inputs .inputs-name .name active,
-#sign-up-form > div .register-breeder .inputs .inputs-name .surname:focus,
-#sign-up-form > div .register-breeder .inputs .inputs-name .surname active,
-#sign-up-form > div .register-breeder .inputs .inputs-name .work-experience:focus,
-#sign-up-form > div .register-breeder .inputs .inputs-name .work-experience active,
-#sign-up-form > div .register-breeder .inputs .inputs-name .qualification:focus,
-#sign-up-form > div .register-breeder .inputs .inputs-name .qualification active,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .name:focus,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .name active,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname:focus,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname active,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience:focus,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience active,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification:focus,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification active,
-#sign-up-form > div .register-club .inputs .inputs-name .name:focus,
-#sign-up-form > div .register-club .inputs .inputs-name .name active,
-#sign-up-form > div .register-club .inputs .inputs-name .surname:focus,
-#sign-up-form > div .register-club .inputs .inputs-name .surname active,
-#sign-up-form > div .register-club .inputs .inputs-name .work-experience:focus,
-#sign-up-form > div .register-club .inputs .inputs-name .work-experience active,
-#sign-up-form > div .register-club .inputs .inputs-name .qualification:focus,
-#sign-up-form > div .register-club .inputs .inputs-name .qualification active,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .name:focus,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .name active,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname:focus,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname active,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience:focus,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience active,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .qualification:focus,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .qualification active,
-#sign-up-form > div .register-shelter .inputs .inputs-name .name:focus,
-#sign-up-form > div .register-shelter .inputs .inputs-name .name active,
-#sign-up-form > div .register-shelter .inputs .inputs-name .surname:focus,
-#sign-up-form > div .register-shelter .inputs .inputs-name .surname active,
-#sign-up-form > div .register-shelter .inputs .inputs-name .work-experience:focus,
-#sign-up-form > div .register-shelter .inputs .inputs-name .work-experience active,
-#sign-up-form > div .register-shelter .inputs .inputs-name .qualification:focus,
-#sign-up-form > div .register-shelter .inputs .inputs-name .qualification active,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .name:focus,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .name active,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname:focus,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname active,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience:focus,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience active,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .qualification:focus,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .qualification active {
-  color: #343434;
-}
-
-#sign-up-form > div .register-user .inputs .inputs-name .qualification,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-breeder .inputs .inputs-name .qualification,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-club .inputs .inputs-name .qualification,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .qualification,
-#sign-up-form > div .register-shelter .inputs .inputs-name .qualification,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .qualification {
-  background: url("../images/select-icon.png") no-repeat 89% 50%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-#sign-up-form > div .register-user .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-club .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience,
-#sign-up-form > div .register-shelter .inputs .inputs-name .work-experience,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience {
-  background: url("../images/icon-star.png") no-repeat 89% 50%;
-}
-
-@media screen and (max-width: 780px) {
-  #sign-up-form > div .register-user .inputs .inputs-name,
-  #sign-up-form > div .register-user .inputs .work-experience-and-qualification,
-  #sign-up-form > div .register-specialist-form .inputs .inputs-name,
-  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification,
-  #sign-up-form > div .register-breeder .inputs .inputs-name,
-  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification,
-  #sign-up-form > div .register-club .inputs .inputs-name,
-  #sign-up-form > div .register-club .inputs .work-experience-and-qualification,
-  #sign-up-form > div .register-shelter .inputs .inputs-name,
-  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  #sign-up-form > div .register-user .inputs .inputs-name .name,
-  #sign-up-form > div .register-user .inputs .inputs-name .surname,
-  #sign-up-form > div .register-user .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-user .inputs .inputs-name .qualification,
-  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .name,
-  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .qualification,
-  #sign-up-form > div .register-specialist-form .inputs .inputs-name .name,
-  #sign-up-form > div .register-specialist-form .inputs .inputs-name .surname,
-  #sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-specialist-form .inputs .inputs-name .qualification,
-  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .name,
-  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .qualification,
-  #sign-up-form > div .register-breeder .inputs .inputs-name .name,
-  #sign-up-form > div .register-breeder .inputs .inputs-name .surname,
-  #sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-breeder .inputs .inputs-name .qualification,
-  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .name,
-  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .qualification,
-  #sign-up-form > div .register-club .inputs .inputs-name .name,
-  #sign-up-form > div .register-club .inputs .inputs-name .surname,
-  #sign-up-form > div .register-club .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-club .inputs .inputs-name .qualification,
-  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .name,
-  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .qualification,
-  #sign-up-form > div .register-shelter .inputs .inputs-name .name,
-  #sign-up-form > div .register-shelter .inputs .inputs-name .surname,
-  #sign-up-form > div .register-shelter .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-shelter .inputs .inputs-name .qualification,
-  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .name,
-  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .qualification {
-    width: 100%;
-    background-position: 95% 50%;
-  }
-
-  #sign-up-form > div .register-user .inputs .inputs-name .surname,
-  #sign-up-form > div .register-user .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-user .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-specialist-form .inputs .inputs-name .surname,
-  #sign-up-form > div .register-specialist-form .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-breeder .inputs .inputs-name .surname,
-  #sign-up-form > div .register-breeder .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-breeder .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-club .inputs .inputs-name .surname,
-  #sign-up-form > div .register-club .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-club .inputs .work-experience-and-qualification .work-experience,
-  #sign-up-form > div .register-shelter .inputs .inputs-name .surname,
-  #sign-up-form > div .register-shelter .inputs .inputs-name .work-experience,
-  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .surname,
-  #sign-up-form > div .register-shelter .inputs .work-experience-and-qualification .work-experience {
-    margin-top: 17px;
-  }
-}
-
-#sign-up-form > div .register-user .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-specialist-form .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-breeder .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-club .inputs .work-experience-and-qualification,
-#sign-up-form > div .register-shelter .inputs .work-experience-and-qualification {
-  padding-top: 0;
-}
-
-#sign-up-form > div .register-user .inputs .password,
-#sign-up-form > div .register-user .inputs .email,
-#sign-up-form > div .register-specialist-form .inputs .password,
-#sign-up-form > div .register-specialist-form .inputs .email,
-#sign-up-form > div .register-breeder .inputs .password,
-#sign-up-form > div .register-breeder .inputs .email,
-#sign-up-form > div .register-club .inputs .password,
-#sign-up-form > div .register-club .inputs .email,
-#sign-up-form > div .register-shelter .inputs .password,
-#sign-up-form > div .register-shelter .inputs .email {
-  width: 100%;
-  height: 47px;
-  background: none;
-  border: 1px solid rgba(209, 193, 174, 0.7);
-  border-radius: 4px;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 55px;
-  color: #807b76;
-  font-size: 16px;
-}
-
-#sign-up-form > div .register-user .inputs .password:focus,
-#sign-up-form > div .register-user .inputs .password active,
-#sign-up-form > div .register-user .inputs .email:focus,
-#sign-up-form > div .register-user .inputs .email active,
-#sign-up-form > div .register-specialist-form .inputs .password:focus,
-#sign-up-form > div .register-specialist-form .inputs .password active,
-#sign-up-form > div .register-specialist-form .inputs .email:focus,
-#sign-up-form > div .register-specialist-form .inputs .email active,
-#sign-up-form > div .register-breeder .inputs .password:focus,
-#sign-up-form > div .register-breeder .inputs .password active,
-#sign-up-form > div .register-breeder .inputs .email:focus,
-#sign-up-form > div .register-breeder .inputs .email active,
-#sign-up-form > div .register-club .inputs .password:focus,
-#sign-up-form > div .register-club .inputs .password active,
-#sign-up-form > div .register-club .inputs .email:focus,
-#sign-up-form > div .register-club .inputs .email active,
-#sign-up-form > div .register-shelter .inputs .password:focus,
-#sign-up-form > div .register-shelter .inputs .password active,
-#sign-up-form > div .register-shelter .inputs .email:focus,
-#sign-up-form > div .register-shelter .inputs .email active {
-  color: #343434;
-}
-
-#sign-up-form > div .register-user .inputs .password,
-#sign-up-form > div .register-specialist-form .inputs .password,
-#sign-up-form > div .register-breeder .inputs .password,
-#sign-up-form > div .register-club .inputs .password,
-#sign-up-form > div .register-shelter .inputs .password {
-  margin-top: 17px;
-  background: url("../images/password-icon.png") no-repeat 95% 50%;
-}
-
-#sign-up-form > div .register-user .inputs .email,
-#sign-up-form > div .register-specialist-form .inputs .email,
-#sign-up-form > div .register-breeder .inputs .email,
-#sign-up-form > div .register-club .inputs .email,
-#sign-up-form > div .register-shelter .inputs .email {
-  background: url("../images/email-icon.png") no-repeat 95% 50%;
-}
-
-#sign-up-form > div .register-user .go-in,
-#sign-up-form > div .register-specialist-form .go-in,
-#sign-up-form > div .register-breeder .go-in,
-#sign-up-form > div .register-club .go-in,
-#sign-up-form > div .register-shelter .go-in {
-  margin-top: 30px;
-  padding-top: 4px;
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #343434;
-  font-weight: bold;
-  width: 270px;
-  height: 48px;
-  background-color: #ffd800;
-  cursor: pointer;
-}
-
-#sign-up-form > div .register-user .have-account,
-#sign-up-form > div .register-specialist-form .have-account,
-#sign-up-form > div .register-breeder .have-account,
-#sign-up-form > div .register-club .have-account,
-#sign-up-form > div .register-shelter .have-account {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-#sign-up-form ul {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-@media screen and (max-width: 780px) {
-  #sign-up-form ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-#sign-up-form ul li {
-  margin: 0;
-  cursor: pointer;
-  display: block;
-  width: 144px;
-  padding: 20px 0;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  color: #807b76;
-  text-align: center;
-}
-
-@media screen and (max-width: 780px) {
-  #sign-up-form ul li {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-  }
-}
-
-#sign-up-form ul li.active,
-#sign-up-form ul li .active:hover {
-  background-color: #eeeeee;
-  font-weight: bold;
-  color: #343434;
-  border-bottom: 2px solid #ffd800;
-}
-
-#sign-up-form ul li:hover {
-  background: #d6d6d7;
-}
-
-#sign-up-form ul li:last-child {
-  border-right: none;
-  border-top-right-radius: 4px;
-}
-
-#sign-up-form ul li:first-child {
-  border-top-left-radius: 4px;
-}
-
-#sign-up-form .mfp-close {
-  position: absolute;
-  background: none;
-  border: none;
-  outline: none;
-  top: 0;
-  right: 0;
 }
 
 #pets {
@@ -6455,21 +6446,54 @@ textarea {
 
 #footer {
   padding-bottom: 39px;
+  margin-top: 30px;
 }
 
-#footer .container {
+#footer .container .top-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+@media screen and (max-width: 960px) {
+  #footer .container .top-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+#footer .container .bottom-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 960px) {
+  #footer .container .bottom-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -6505,7 +6529,6 @@ textarea {
 }
 
 #footer .container .one-block .menu {
-  padding-left: 97px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6558,7 +6581,8 @@ textarea {
 
 #footer .container .one-block .menu li a {
   text-decoration: none;
-  color: #343434;
+  color: rgba(45, 45, 45, 0.8);
+  font-weight: normal;
   font-size: 16px;
 }
 
@@ -6579,17 +6603,16 @@ textarea {
 }
 
 #footer .container .one-block .social-network li {
-  padding: 0 10px;
+  padding: 0 4px;
 }
 
 #footer .container .one-block .copyright {
   font-size: 14px;
-  color: rgba(52, 52, 52, 0.5);
+  color: rgba(45, 45, 45, 0.4);
   font-weight: normal;
 }
 
 #footer .container .one-block .another-menu {
-  padding-left: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6605,13 +6628,32 @@ textarea {
   }
 }
 
+@media screen and (max-width: 560px) {
+  #footer .container .one-block .another-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 #footer .container .one-block .another-menu li {
-  padding: 0 7px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 560px) {
+  #footer .container .one-block .another-menu li {
+    padding-top: 10px;
+  }
 }
 
 #footer .container .one-block .another-menu li a {
   text-decoration: none;
-  color: #343434;
+  color: rgba(45, 45, 45, 0.8);
+  font-weight: normal;
   font-size: 14px;
 }
 
@@ -6621,23 +6663,10 @@ textarea {
   font-weight: normal;
 }
 
-@media screen and (max-width: 1200px) {
-  #footer .container .one-block.order {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-    padding-top: 15px;
-  }
-}
-
-#footer .container .one-block.righted {
-  margin-left: auto;
-}
-
-@media screen and (max-width: 1200px) {
-  #footer .container .one-block.righted {
-    margin-left: 0;
-  }
+#footer .container .one-block .yod a {
+  text-decoration: none;
+  color: #506aa1;
+  font-size: 14px;
 }
 
 #header-ch {
@@ -6675,8 +6704,6 @@ textarea {
 }
 
 #header-ch .container-header .menu {
-  -ms-flex-preferred-size: 745px;
-  flex-basis: 745px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6920,7 +6947,7 @@ textarea {
   outline: none;
   padding-left: 10px;
   color: rgba(0, 0, 0, 0.4);
-  width: 120px;
+  width: 80px;
 }
 
 #header-ch .container-header .search #search::-webkit-input-placeholder,
@@ -6973,6 +7000,12 @@ textarea {
   background-color: #fbfbfb;
 }
 
+@media screen and (max-width: 960px) {
+  #header-ch .container-header .buy-pro-account {
+    margin-right: 15px;
+  }
+}
+
 @media screen and (max-width: 560px) {
   #header-ch .container-header .buy-pro-account {
     display: none;
@@ -7022,7 +7055,7 @@ textarea {
 }
 
 #header-ch .container-banner {
-  background: url("../images/bgc-img.png") no-repeat;
+  background: url("../images/img/image-bg-banner.svg") no-repeat;
   height: 260px;
   width: 100%;
 }
@@ -11645,12 +11678,13 @@ textarea {
   position: absolute;
   font-weight: normal;
   top: -10px;
-  left: 193px;
+  left: 225px;
 }
 
 @media screen and (max-width: 560px) {
   #exhibition .container-exhibition .title-exhibition .date {
-    position: inherit;
+    left: inherit;
+    right: 60px;
   }
 }
 
@@ -12612,7 +12646,7 @@ textarea {
 }
 
 #organization-card .banner-organization {
-  background: url("../images/bg-banner-organization.png") no-repeat 0 70%;
+  background: url("../images/img/image-bg-banner.svg") no-repeat 0 55%;
   height: 260px;
   background-size: cover;
 }
@@ -14948,14 +14982,37 @@ textarea {
   padding-bottom: 154px;
 }
 
+@media screen and (max-width: 960px) {
+  #profile .container-profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 #profile .container-profile .blocks-user-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content {
+    width: 100%;
+  }
+}
+
 #profile .container-profile .blocks-user-content .block-user {
   width: 170px;
+}
+
+@media screen and (max-width: 960px) {
+  #profile .container-profile .blocks-user-content .block-user {
+    display: none;
+  }
 }
 
 #profile .container-profile .blocks-user-content .block-user .loading-photo-profile {
@@ -15007,6 +15064,7 @@ textarea {
   color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
   cursor: pointer;
+  outline: none;
 }
 
 #profile .container-profile .blocks-user-content .block-user .buttons .add-user {
@@ -15016,6 +15074,7 @@ textarea {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 #profile .container-profile .blocks-user-content .block-user .side-panel {
@@ -15026,6 +15085,20 @@ textarea {
   -ms-flex-preferred-size: 79%;
   flex-basis: 79%;
   padding-left: 30px;
+}
+
+#profile .container-profile .blocks-user-content .content-user.with-setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 960px) {
+  #profile .container-profile .blocks-user-content .content-user {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    padding-left: 0;
+  }
 }
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .header-user {
@@ -15040,6 +15113,16 @@ textarea {
   align-items: center;
   color: rgba(45, 45, 45, 0.6);
   font-weight: normal;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .header-user {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .header-user .qualification {
@@ -15060,8 +15143,22 @@ textarea {
   font-style: italic;
 }
 
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .header-user .days-registration {
+    margin-right: 0;
+  }
+}
+
 #profile .container-profile .blocks-user-content .content-user .cup-profile .header-user .block-reviews {
   margin-right: 23px;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .header-user .rating-profile {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name {
@@ -15074,13 +15171,43 @@ textarea {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-top: 35px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .name {
   color: #4c4c4c;
   font-size: 24px;
   line-height: 32px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .name .location {
+  font-style: italic;
+  color: rgba(45, 45, 45, 0.6);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .name .location {
+    text-align: center;
+  }
 }
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .buttons {
@@ -15093,23 +15220,75 @@ textarea {
   width: 288px;
 }
 
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .buttons {
+    margin-top: 15px;
+  }
+}
+
 #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .buttons input {
   width: 138px;
   height: 32px;
 }
 
-#profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .buttons .complain {
+@media screen and (max-width: 1100px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .buttons input {
+    margin: 0;
+  }
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .buttons #complain {
   background-color: rgba(255, 15, 0, 0.1);
 }
 
-#profile .container-profile .blocks-user-content .content-user .cup-profile .location {
-  font-style: italic;
-  color: rgba(45, 45, 45, 0.6);
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .verification {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 22px;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .verification {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .verification .btn-verification {
+  width: 170px;
+  height: 32px;
+  color: rgba(45, 45, 45, 0.8);
   font-size: 14px;
-  line-height: 26px;
+}
+
+@media screen and (max-width: 1100px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .verification .btn-verification {
+    margin: 0;
+  }
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .verification p {
+  color: rgba(216, 108, 101, 0.8);
+  font-size: 14px;
   font-weight: normal;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #e9e9e9;
+  padding-left: 21px;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .block-name .verification p {
+    margin-top: 10px;
+    padding-left: 0;
+  }
 }
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .information {
@@ -15128,6 +15307,15 @@ textarea {
   padding-top: 32px;
 }
 
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 #profile .container-profile .blocks-user-content .content-user .cup-profile .information .block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15137,20 +15325,48 @@ textarea {
   align-items: center;
 }
 
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .information .block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 #profile .container-profile .blocks-user-content .content-user .cup-profile .information .block #request-call {
   width: 170px;
   height: 40px;
   background-color: #ffef99;
 }
 
+@media screen and (max-width: 1100px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .information .block #request-call.margin-zero {
+    margin-top: 0;
+  }
+}
+
 #profile .container-profile .blocks-user-content .content-user .cup-profile .information .block .e-mail {
   margin-left: 23px;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .information .block .e-mail {
+    margin-left: 0;
+    margin-top: 15px;
+  }
 }
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .information .block .rating-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .information .block .rating-top {
+    margin-top: 15px;
+  }
 }
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .information .block .rating-top img {
@@ -15178,6 +15394,18 @@ textarea {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .cup-profile .application-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .application-form .block {
@@ -15234,6 +15462,428 @@ textarea {
 
 #profile .container-profile .blocks-user-content .content-user .cup-profile .application-form .social-network li {
   padding-left: 8px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile {
+  padding-bottom: 25px;
+  padding-top: 30px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .show-detailed-information {
+  cursor: pointer;
+  font-size: 14px;
+  color: rgba(45, 45, 45, 0.4);
+  line-height: normal;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet {
+  margin-top: 28px;
+  display: none;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .user-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .user-block .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .user-block .block .qualification {
+  line-height: normal;
+  font-size: 12px;
+  color: #4c4c4c;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .user-block .block p {
+  margin-top: 7px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .user-block .block p .name {
+  color: #4c4c4c;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .more-description-pet,
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .description-clubs-and-shelters {
+  margin-top: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .more-description-pet.description-clubs-and-shelters,
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .description-clubs-and-shelters.description-clubs-and-shelters {
+  margin-top: 30px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .more-description-pet.description-clubs-and-shelters ul,
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .description-clubs-and-shelters.description-clubs-and-shelters ul {
+  height: auto;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .more-description-pet ul,
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .description-clubs-and-shelters ul {
+  height: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-weight: normal;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .more-description-pet ul li,
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .description-clubs-and-shelters ul li {
+  line-height: normal;
+  margin: 3px 0;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .more-description-pet ul li .block,
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .description-clubs-and-shelters ul li .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .more-description-pet ul li p,
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .description-clubs-and-shelters ul li p {
+  color: rgba(0, 0, 0, 0.4);
+  width: 95px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .more-description-pet ul li span,
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .description-clubs-and-shelters ul li span {
+  color: #4c4c4c;
+}
+
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .more-description-pet ul li a,
+#profile .container-profile .blocks-user-content .content-user .cup-profile .block-show-more-profile .block-hide-pet .description-clubs-and-shelters ul li a {
+  text-decoration: none;
+  color: #506aa1;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile,
+#profile .container-profile .blocks-user-content .content-user .settings-block {
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  width: 470px;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .settings-profile,
+  #profile .container-profile .blocks-user-content .content-user .settings-block {
+    width: 100%;
+  }
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile.settings-block,
+#profile .container-profile .blocks-user-content .content-user .settings-block.settings-block {
+  width: 270px;
+  height: 240px;
+  padding: 30px 26px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 780px) {
+  #profile .container-profile .blocks-user-content .content-user .settings-profile.settings-block,
+  #profile .container-profile .blocks-user-content .content-user .settings-block.settings-block {
+    display: none;
+  }
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile.settings-block .menu-settings li:first-child,
+#profile .container-profile .blocks-user-content .content-user .settings-block.settings-block .menu-settings li:first-child {
+  padding-top: 0;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .title,
+#profile .container-profile .blocks-user-content .content-user .settings-block .title {
+  font-size: 16px;
+  line-height: 24px;
+  border-bottom: 1px solid #e9e9e9;
+  color: #2d2d2d;
+  padding-bottom: 20px;
+  font-weight: normal;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .title.padding-top,
+#profile .container-profile .blocks-user-content .content-user .settings-block .title.padding-top {
+  padding-top: 42px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .title p,
+#profile .container-profile .blocks-user-content .content-user .settings-block .title p {
+  padding-top: 17px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .input-styles-profile,
+#profile .container-profile .blocks-user-content .content-user .settings-block .input-styles-profile {
+  width: 170px;
+  height: 32px;
+  padding-left: 13px;
+  border: 1px solid #e9e9e9;
+  outline: none;
+  color: rgba(45, 45, 45, 0.4);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input {
+  font-weight: normal;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input.padding,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input.padding {
+  padding: 8px 0;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input.padding-only-top,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input.padding-only-top {
+  padding-top: 0;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input.padding-bottom,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input.padding-bottom {
+  padding-bottom: 40px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input.fix-flex,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input.fix-flex {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input.fix-jc,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input.fix-jc {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input.border-bottom-none,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input.border-bottom-none {
+  border-bottom: none;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input.margin-top,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input.margin-top {
+  margin-top: 20px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input p,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input p {
+  color: rgba(45, 45, 45, 0.8);
+  line-height: 20px;
+  width: 57px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input p.margin-top,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input p.margin-top {
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input p,
+  #profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input p {
+    width: auto;
+  }
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .name,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .name {
+  color: #2d2d2d;
+  width: 170px;
+  padding-left: 13px;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .name,
+  #profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .name {
+    width: auto;
+    padding-left: 0;
+  }
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input a,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input a {
+  color: rgba(45, 45, 45, 0.4);
+  text-decoration: none;
+  line-height: 20px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input a.margin-top,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input a.margin-top {
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input a.dop-input,
+  #profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input a.dop-input {
+    display: none;
+  }
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .block-new-string,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .block-new-string {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .btn-styles,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .btn-styles {
+  width: 95px;
+  height: 32px;
+  background-color: #ffd800;
+  border-radius: 4px;
+  color: rgba(45, 45, 45, 0.8);
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .btn-styles.btn-delete-acc,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .btn-styles.btn-delete-acc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: rgba(45, 45, 45, 0.8);
+  font-size: 14px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .btn-styles.white-bg,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .btn-styles.white-bg {
+  background-color: rgba(233, 233, 233, 0.4);
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .btn-styles.fix-width,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .btn-styles.fix-width {
+  width: auto;
+  padding: 0 19px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .btn-styles.margin-top,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .btn-styles.margin-top {
+  margin-top: 0;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .btn-styles.full-width,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .btn-styles.full-width {
+  width: 176px;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .password,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .password {
+  font-size: 18px;
+  color: #000;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .btn-verification,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .btn-verification {
+  width: 176px;
+  margin-left: 24px;
+  color: rgba(45, 45, 45, 0.8);
+}
+
+@media screen and (max-width: 560px) {
+  #profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .btn-verification,
+  #profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .btn-verification {
+    margin-left: 0;
+  }
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .not-verification,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .not-verification {
+  color: rgba(216, 108, 101, 0.8);
+  width: auto;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .notification li,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .notification li {
+  padding: 10px 0;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .menu-settings li,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .menu-settings li {
+  padding: 7px 0;
+  line-height: normal;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .menu-settings li a,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .menu-settings li a {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+#profile .container-profile .blocks-user-content .content-user .settings-profile .one-block-input .menu-settings li a.active,
+#profile .container-profile .blocks-user-content .content-user .settings-block .one-block-input .menu-settings li a.active {
+  color: #4c4c4c;
 }
 
 #profile .container-profile .blocks-user-content .wall-profile .block-competition .block-with-description p,
